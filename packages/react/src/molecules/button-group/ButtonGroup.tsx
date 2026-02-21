@@ -1,13 +1,11 @@
 import React from 'react';
 import { Button } from '../../atoms';
+import { ButtonGroupProps } from '@molecule-ui/types';
 
-type Props = {};
-
-const ButtonGroup = (props: Props) => {
+const ButtonGroup = ({ actions }: ButtonGroupProps) => {
   return (
     <div>
-      <Button label="One" />
-      <Button label="Two" />
+      {actions && actions.map((action) => <Button label={action.label} onClick={action.action} />)}
     </div>
   );
 };

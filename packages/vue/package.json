@@ -1,8 +1,8 @@
 {
-  "name": "@molecule-ui/react",
+  "name": "@molecule-ui/vue",
   "version": "0.0.1",
   "type": "module",
-  "description": "Molecule UI React components",
+  "description": "Molecule UI Vue components",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -23,36 +23,31 @@
   "scripts": {
     "build": "vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
     "dev": "vite build --watch",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6007",
     "build-storybook": "storybook build"
   },
   "peerDependencies": {
-    "react": "^18 || ^19",
-    "react-dom": "^18 || ^19"
+    "vue": "^3.4.0"
   },
   "dependencies": {
     "@molecule-ui/types": "workspace:*"
   },
   "devDependencies": {
+    "vue": "^3.5.0",
+    "vite": "^7.3.1",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "vue-tsc": "^3.2.4",
+    "storybook": "^10.2.10",
+    "@storybook/vue3-vite": "^10.2.10",
     "@chromatic-com/storybook": "^5.0.1",
+    "@storybook/addon-vitest": "^10.2.10",
     "@storybook/addon-a11y": "^10.2.10",
     "@storybook/addon-docs": "^10.2.10",
-    "@storybook/addon-vitest": "^10.2.10",
-    "@storybook/react-vite": "^10.2.10",
-    "@types/node": "^25.3.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.4",
-    "@vitest/browser-playwright": "^4.0.18",
-    "@vitest/coverage-v8": "^4.0.18",
     "eslint-plugin-storybook": "^10.2.10",
-    "playwright": "^1.58.2",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "storybook": "^10.2.10",
-    "typescript": "^5.9.3",
     "vitest": "^4.0.18",
-    "vite": "^7.3.1"
+    "playwright": "^1.58.2",
+    "@vitest/browser-playwright": "^4.0.18",
+    "@vitest/coverage-v8": "^4.0.18"
   },
   "keywords": [
     "design-system",

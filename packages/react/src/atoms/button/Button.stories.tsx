@@ -15,5 +15,6 @@ export const Default: ButtonStory = {
   render: (args) => <Button {...args} />,
   args: {
     label: 'Click me',
+    onClick: () => alert('Clicked'),
   },
 };
