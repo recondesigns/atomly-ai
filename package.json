@@ -1,11 +1,12 @@
 {
   "name": "molecule-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "React and Vue component library for the molecule-ui design system.",
   "main": "index.js",
   "scripts": {
-    "storybook:react": "pnpm -F @molecule-ui/react storybook"
+    "storybook:react": "pnpm -F @molecule-ui/react storybook",
+    "storybook:vue": "pnpm -F @molecule-ui/vue storybook"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
