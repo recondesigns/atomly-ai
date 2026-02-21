@@ -16,5 +16,25 @@
     "build": "tsc --project tsconfig.build.json",
     "dev": "tsc --project tsconfig.build.json --watch"
   },
+  "keywords": [
+    "design-system",
+    "component-library",
+    "react",
+    "vue"
+  ],
+  "contributors": [
+    {
+      "name": "Stedman",
+      "url": "https://github.com/recondesigns"
+    }
+  ],
+  "author": {
+    "name": "Stedman",
+    "url": "https://github.com/recondesigns"
+  },
+  "homepage": "https://github.com/recondesigns/molecule-ui#readme",
+  "bugs": {
+    "url": "https://github.com/recondesigns/molecule-ui/issues"
+  },
   "license": "MIT"
 }
