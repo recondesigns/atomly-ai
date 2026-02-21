@@ -5,6 +5,9 @@
   "description": "React and Vue component library for the molecule-ui design system.",
   "main": "index.js",
   "scripts": {
+    "build:types": "pnpm -F @molecule-ui/types build",
+    "build:types-all": "pnpm -F @molecule-ui/types build && pnpm -F @molecule-ui/react build && pnpm -F @molecule-ui/vue build",
+    "dev:website": "pnpm -F @molecule-ui/website dev",
     "storybook:react": "pnpm -F @molecule-ui/react storybook",
     "storybook:vue": "pnpm -F @molecule-ui/vue storybook"
   },
