@@ -1,17 +1,40 @@
 {
-    "name": "@molecule-ui/types",
-    "version": "0.0.0",
-    "description": "Type definitions for molecule-ui.",
-    "license": "MIT",
-    "type": "module",
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts"
-        }
-    },
-    "files": ["dist"],
-    "scripts": {
-        "build": "tsc",
-        "typecheck": "tsc --noEmit"
+  "name": "@molecule-ui/types",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Shared types for Molecule UI",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "dev": "tsc --project tsconfig.build.json --watch"
+  },
+  "keywords": [
+    "design-system",
+    "component-library",
+    "react",
+    "vue"
+  ],
+  "contributors": [
+    {
+      "name": "Stedman",
+      "url": "https://github.com/recondesigns"
+    }
+  ],
+  "author": {
+    "name": "Stedman",
+    "url": "https://github.com/recondesigns"
+  },
+  "homepage": "https://github.com/recondesigns/molecule-ui#readme",
+  "bugs": {
+    "url": "https://github.com/recondesigns/molecule-ui/issues"
+  },
+  "license": "MIT"
 }
