@@ -1,0 +1,86 @@
+{
+  "name": "@molecule-ui/react",
+  "version": "0.0.0",
+  "description": "Molecule UI React components",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./atoms": {
+      "types": "./dist/atoms/index.d.ts",
+      "import": "./dist/atoms/index.js"
+    },
+    "./molecules": {
+      "types": "./dist/molecules/index.d.ts",
+      "import": "./dist/molecules/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
+    "dev": "vite build --watch",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
+  },
+  "dependencies": {
+    "@molecule-ui/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^5.0.1",
+    "@storybook/addon-a11y": "^10.2.10",
+    "@storybook/addon-docs": "^10.2.10",
+    "@storybook/addon-vitest": "^10.2.10",
+    "@storybook/react-vite": "^10.2.10",
+    "@types/node": "^25.3.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
+    "@vitest/browser-playwright": "^4.0.18",
+    "@vitest/coverage-v8": "^4.0.18",
+    "eslint-plugin-storybook": "^10.2.10",
+    "playwright": "^1.58.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "storybook": "^10.2.10",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "keywords": [
+    "design-system",
+    "component-library",
+    "react",
+    "vue"
+  ],
+  "contributors": [
+    {
+      "name": "Stedman",
+      "url": "https://github.com/recondesigns"
+    }
+  ],
+  "author": {
+    "name": "Stedman",
+    "url": "https://github.com/recondesigns"
+  },
+  "homepage": "https://github.com/recondesigns/molecule-ui#readme",
+  "bugs": {
+    "url": "https://github.com/recondesigns/molecule-ui/issues"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/recondesigns/molecule-ui.git"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
+}
