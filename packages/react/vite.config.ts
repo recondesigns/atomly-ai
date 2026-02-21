@@ -4,7 +4,9 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 export default defineConfig({
-    plugins: [react()],
+    plugins: [react({
+        jsxImportSource: '@emotion/react'
+    })],
     build: {
         lib: {
             entry: {
@@ -19,12 +21,12 @@ export default defineConfig({
                 'react',
                 'react-dom',
                 'react/jsx-runtime',
-                // '@emotion/react',
-                // '@emotion/styled',
-                // 'react-aria',
-                // /^react-aria\/.*/,
-                // /^@react-aria\/.*/,
-                // /^@react-stately\/.*/,
+                '@emotion/react',
+                '@emotion/styled',
+                'react-aria',
+                /^react-aria\/.*/,
+                /^@react-aria\/.*/,
+                /^@react-stately\/.*/,
             ],
             output: {
                 preserveModules: true,
