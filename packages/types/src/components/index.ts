@@ -1,5 +1,3 @@
-// export type { ButtonProps } from './components/button'
-// export type { ButtonProps } from './button'
-// export * from './atoms'
-export type { ButtonType, ButtonVariant, ButtonSize, FullWidth } from './atoms'
+// export type { ButtonType, ButtonVariant, ButtonSize, FullWidth } from './atoms'
+export * from './atoms'
 export * from './molecules'

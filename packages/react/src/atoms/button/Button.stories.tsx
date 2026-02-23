@@ -24,6 +24,9 @@ const meta = {
       control: 'inline-radio',
       options: ['sm', 'md', 'lg'],
     },
+    isLoading: {
+      control: 'boolean',
+    },
     isDisabled: { control: 'boolean' },
     fullWidth: { control: 'boolean' },
     // onPress: { action: 'pressed' },
@@ -36,7 +39,17 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => <Button {...args} />,
   args: {
+    buttonType: 'contained',
+    variant: 'primary',
+    size: 'md',
     children: 'Button',
+    isLoading: false,
+    isDisabled: false,
+  },
+  parameters: {
+    controls: {
+      exclude: ['fullWidth', 'aria-label', 'data-testid'],
+    },
   },
 };
 
@@ -48,7 +61,15 @@ export const Type: Story = {
   },
   parameters: {
     controls: {
-      exclude: ['variant', 'size', 'fullWidth', 'isDisabled', 'aria-label', 'data-testid'],
+      exclude: [
+        'variant',
+        'size',
+        'fullWidth',
+        'isDisabled',
+        'isLoading',
+        'aria-label',
+        'data-testid',
+      ],
     },
   },
 };
@@ -61,7 +82,15 @@ export const Variant: Story = {
   },
   parameters: {
     controls: {
-      exclude: ['buttonType', 'size', 'fullWidth', 'isDisabled', 'aria-label', 'data-testid'],
+      exclude: [
+        'buttonType',
+        'size',
+        'fullWidth',
+        'isDisabled',
+        'isLoading',
+        'aria-label',
+        'data-testid',
+      ],
     },
   },
 };
@@ -74,7 +103,7 @@ export const Size: Story = {
   },
   parameters: {
     controls: {
-      exclude: ['fullWidth', 'isDisabled', 'aria-label', 'data-testid'],
+      exclude: ['fullWidth', 'isDisabled', 'isLoading', 'aria-label', 'data-testid'],
     },
   },
 };
@@ -88,7 +117,20 @@ export const FullWidth: Story = {
   parameters: {
     layout: 'padded',
     controls: {
-      exclude: ['size', 'isDisabled', 'aria-label', 'data-testid'],
+      exclude: ['size', 'isDisabled', 'isLoading', 'aria-label', 'data-testid'],
+    },
+  },
+};
+
+export const Loading: Story = {
+  ...Default,
+  args: {
+    isLoading: true,
+    children: 'Button',
+  },
+  parameters: {
+    controls: {
+      exclude: ['size', 'fullWidth', 'isDisabled', 'aria-label', 'data-testid'],
     },
   },
 };
@@ -107,6 +149,7 @@ export const Disabled: Story = {
         'variant',
         'size',
         'fullWidth',
+        'isLoading',
         'aria-label',
         'data-testid',
       ],

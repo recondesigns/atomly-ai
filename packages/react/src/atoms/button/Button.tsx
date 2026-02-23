@@ -11,6 +11,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size = 'md',
       isDisabled = false,
       fullWidth = false,
+      isLoading = false,
       onPress,
       onPressChange,
       children,
@@ -47,6 +48,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         $fullWidth={fullWidth}
         data-testid={testId}
       >
+        {isLoading && (
+          <div style={{ width: '20px', height: '20px', border: '1px solid white' }}></div>
+        )}
         {children}
       </StyledButton>
     );
