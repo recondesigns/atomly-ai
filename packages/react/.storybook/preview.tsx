@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react-vite';
+import { MoleculeProvider } from '../src/theme';
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +17,13 @@ const preview: Preview = {
       test: 'todo',
     },
   },
+  decorators: [
+    (Story) => (
+      <MoleculeProvider>
+        <Story />
+      </MoleculeProvider>
+    ),
+  ],
 };
 
 export default preview;
