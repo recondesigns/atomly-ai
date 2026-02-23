@@ -21,6 +21,8 @@ export default defineConfig({
                 'react',
                 'react-dom',
                 'react/jsx-runtime',
+                /^@emotion\/.*/,
+                'stylis',
                 '@emotion/react',
                 '@emotion/styled',
                 'react-aria',

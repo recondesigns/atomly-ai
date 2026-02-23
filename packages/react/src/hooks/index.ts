@@ -5,4 +5,5 @@
  * a simplified, Molecule-UI-specific API.
  */
 
-export { }
+export { useButton } from './useButton';
+export type { UseButtonOptions, UseButtonReturn } from './useButton';

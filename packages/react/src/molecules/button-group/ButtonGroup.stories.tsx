@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import ButtonGroup from './ButtonGroup';
-import type { ButtonGroupProps } from '@molecule-ui/types';
+// import type { ButtonGroupProps } from '@molecule-ui/types';
+import type { ButtonGroupProps } from './ButtonGroup';
 
 const meta = {
   title: 'Molecules/Button Group',
