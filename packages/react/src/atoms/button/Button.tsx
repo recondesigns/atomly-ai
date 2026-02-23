@@ -1,14 +1,7 @@
 import React from 'react';
-// import type { ButtonProps } from '@molecule-ui/types';
 import type { ButtonProps } from './Button.types';
 import { useButton } from '../../hooks';
 import { StyledButton } from './Button.styles';
-
-// const Button = ({ label, onClick }: ButtonProps) => {
-//   return <button onClick={onClick}>{label}</button>;
-// };
-
-// export default Button;
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   function Button(props, forwardedRef) {

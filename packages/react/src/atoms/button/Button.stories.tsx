@@ -17,7 +17,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'success', 'destructive'],
+      options: ['primary', 'brand', 'success', 'destructive'],
     },
     size: {
       control: 'select',
@@ -42,21 +42,38 @@ export const Primary: Story = {
   },
 };
 
-// export const Secondary: Story = {
-//   args: {
-//     children: 'Secondary Button',
-//     variant: 'secondary',
-//     size: 'md',
-//   },
-// };
+export const Success: Story = {
+  args: {
+    children: 'Success',
+    variant: 'success',
+    size: 'md',
+  },
+};
 
-// export const Danger: Story = {
-//   args: {
-//     children: 'Delete',
-//     variant: 'danger',
-//     size: 'md',
-//   },
-// };
+export const Destructive: Story = {
+  args: {
+    children: 'Delete',
+    variant: 'destructive',
+    size: 'md',
+  },
+};
+
+export const Brand: Story = {
+  args: {
+    children: 'Brand',
+    variant: 'brand',
+    size: 'md',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children: 'Primary',
+    variant: 'primary',
+    size: 'md',
+    isDisabled: true,
+  },
+};
 
 // export const Ghost: Story = {
 //   args: {

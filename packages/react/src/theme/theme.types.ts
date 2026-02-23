@@ -15,9 +15,13 @@ export type MoleculeUITheme = {
         primaryHover: string;
         primaryActive: string;
 
-        secondary: string;
-        secondaryHover: string;
-        secondaryActive: string;
+        brand: string;
+        brandHover: string;
+        brandActive: string;
+
+        success: string;
+        successHover: string;
+        successActive: string;
 
         danger: string;
         dangerHover: string;
@@ -28,7 +32,7 @@ export type MoleculeUITheme = {
         surfaceHover: string;
 
         textPrimary: string;
-        textSecondary: string;
+        textSuccess: string;
         textOnPrimary: string;
         textOnSecondary: string;
         textOnDanger: string;

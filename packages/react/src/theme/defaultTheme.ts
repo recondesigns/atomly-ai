@@ -14,9 +14,13 @@ export const defaultTheme: MoleculeUITheme = {
         primaryHover: '#1D4ED8',
         primaryActive: '#1E40AF',
 
-        secondary: '#F1F5F9',
-        secondaryHover: '#E2E8F0',
-        secondaryActive: '#CBD5E1',
+        brand: '#FE9A00',
+        brandHover: '#E17100',
+        brandActive: '#E17100',
+
+        success: '#00A63E',
+        successHover: '#008236',
+        successActive: '#016630',
 
         danger: '#DC2626',
         dangerHover: '#B91C1C',
@@ -27,7 +31,7 @@ export const defaultTheme: MoleculeUITheme = {
         surfaceHover: '#F1F5F9',
 
         textPrimary: '#0F172A',
-        textSecondary: '#475569',
+        textSuccess: '#FFFFFF',
         textOnPrimary: '#FFFFFF',
         textOnSecondary: '#0F172A',
         textOnDanger: '#FFFFFF',
@@ -35,12 +39,6 @@ export const defaultTheme: MoleculeUITheme = {
 
         border: '#E2E8F0',
         borderFocus: '#2563EB',
-
-        // textPrimary: '#0F172A',
-        // textPrimaryInverse: '#FAFAFA',
-
-        // border: '#E2E8F0',
-        // borderFocus: '#2563EB'
 
         disabled: '#F1F5F9',
         focusRing: 'rgba(37, 99, 235, 0.4)',
