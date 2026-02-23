@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-// import type { ButtonProps } from './Button.types'
-import type { ButtonVariant, ButtonSize } from '../../../../types/dist/components/atoms/button';
+import type { ButtonType, ButtonVariant, ButtonSize } from '@molecule-ui/types'
 
 const sizeStyles: Record<ButtonSize, {
   padding: string;
@@ -25,6 +24,7 @@ const sizeStyles: Record<ButtonSize, {
 };
 
 export const StyledButton = styled.button<{
+  $buttonType: ButtonType;
   $variant: ButtonVariant;
   $size: ButtonSize;
   $isPressed: boolean;
@@ -57,12 +57,13 @@ export const StyledButton = styled.button<{
   width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
 
   /* Variant colors */
-  ${({ theme, $variant, $isPressed, $isDisabled }) => {
+  ${({ theme, $variant, $isPressed, $isDisabled, $buttonType }) => {
     // Fallback colors in case there's no theme provider
     const colors = theme.colors ?? {
       primary: '#2563EB',
       primaryHover: '#1D4ED8',
       primaryActive: '#1E40AF',
+      primaryLight: '#EFF6FF',
       success: '#00A63E',
       successHover: '#008236',
       successActive: '#016630',
@@ -87,34 +88,73 @@ export const StyledButton = styled.button<{
       `;
     }
 
-    const variants: Record<ButtonVariant, string> = {
-      primary: `
-        background-color: ${$isPressed ? colors.primaryActive : colors.primary};
-        color: ${colors.textOnPrimary};
-        &:hover:not(:disabled) {
-          background-color: ${colors.primaryHover};
-        }
-      `,
-      success: `
-        background-color: ${$isPressed ? colors.successActive : colors.success};
-        color: ${colors.textSuccess};
-        &:hover:not(:disabled) {
-          background-color: ${colors.successHover};
-        }
-      `,
-      destructive: `
-        background-color: ${$isPressed ? colors.dangerActive : colors.danger};
-        color: ${colors.textOnDanger};
-        &:hover:not(:disabled) {
-          background-color: ${colors.dangerHover};
-        }
-      `,
-      brand: `
-        background: ${$isPressed ? colors.brandActive : colors.brand};
-      `
-    };
+    const variantColors: Record<ButtonVariant, {
+      base: string;
+      hover: string;
+      active: string;
+      light: string;
+      contrastText: string;
+    }> = {
+      primary: {
+        base: colors.primary,
+        hover: colors.primaryHover,
+        active: colors.primaryActive,
+        light: colors.primaryLight,
+        contrastText: colors.textOnPrimary
+      },
+      success: {
+        base: colors.success,
+        hover: colors.successHover,
+        active: colors.successActive,
+        light: colors.successLight,
+        contrastText: colors.textOnPrimary
+      },
+      destructive: {
+        base: colors.danger,
+        hover: colors.dangerHover,
+        active: colors.dangerActive,
+        light: colors.dangerLight,
+        contrastText: colors.textOnPrimary
+      },
+      brand: {
+        base: colors.brand,
+        hover: colors.brandHover,
+        active: colors.brandActive,
+        light: colors.brandLight,
+        contrastText: colors.textOnPrimary
+      }
+    }
 
-    return variants[$variant];
+    const c = variantColors[$variant]
+
+    const typeStyles: Record<ButtonType, string> = {
+      contained: `
+        background: ${$isPressed ? c.active : c.base};
+        color: ${c.contrastText};
+        &:hover:not(:disabled) {
+          background: ${c.hover}
+        }
+      `,
+      outlined: `
+        background: ${$isPressed ? `${c.light}14` : `${c.light}`};
+        color: ${c.base};
+        border: 1px soild ${c.base};
+        &:hover:not(:disabled) {
+          background: ${c.base}0A;
+          border-color: ${c.hover};
+          color: ${c.hover};
+        }
+      `,
+      ghost: `
+        background: ${$isPressed ? `${c.base}14` : 'transparent'};
+        color: ${c.base};
+        &:hover:not(:disabled): {
+          background: ${c.base}0A;
+        }
+      `
+    }
+
+    return typeStyles[$buttonType]
   }}
 
   /* Focus ring — visible on keyboard focus, not click */

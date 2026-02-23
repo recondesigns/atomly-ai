@@ -13,18 +13,22 @@ export const defaultTheme: MoleculeUITheme = {
         primary: '#2563EB',
         primaryHover: '#1D4ED8',
         primaryActive: '#1E40AF',
+        primaryLight: '#EFF6FF',
 
         brand: '#FE9A00',
         brandHover: '#E17100',
         brandActive: '#E17100',
+        brandLight: '#FFFBEB',
 
         success: '#00A63E',
         successHover: '#008236',
         successActive: '#016630',
+        successLight: '#F0FDF4',
 
         danger: '#DC2626',
         dangerHover: '#B91C1C',
         dangerActive: '#991B1B',
+        dangerLight: '#FEF2F2',
 
         background: '#FFFFFF',
         surface: '#F8FAFC',

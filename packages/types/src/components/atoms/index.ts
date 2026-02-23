@@ -1,1 +1,1 @@
-export type { ButtonVariant, ButtonSize, FullWidth } from './button'
+export type { ButtonType, ButtonVariant, ButtonSize, FullWidth } from './button'

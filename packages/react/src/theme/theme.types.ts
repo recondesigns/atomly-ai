@@ -1,31 +1,24 @@
-/**
- * Theme type definitions for Molecule UI.
- *
- * These types define the shape of the theme object. Every component
- * reads from this structure, so changing it affects the entire system.
- *
- * For a junior engineer: Think of this as the "contract" between
- * the theme and the components. Components trust that these properties
- * exist. TypeScript enforces that trust at compile time.
- */
-
 export type MoleculeUITheme = {
     colors: {
         primary: string;
         primaryHover: string;
         primaryActive: string;
+        primaryLight: string;
 
         brand: string;
         brandHover: string;
         brandActive: string;
+        brandLight: string;
 
         success: string;
         successHover: string;
         successActive: string;
+        successLight: string;
 
         danger: string;
         dangerHover: string;
         dangerActive: string;
+        dangerLight: string;
 
         background: string;
         surface: string;
@@ -43,12 +36,6 @@ export type MoleculeUITheme = {
 
         disabled: string;
         focusRing: string;
-
-        // textPrimary: string;
-        // textPrimaryInverse: string;
-
-        // border: string;
-        // borderFocus: string;
     };
     spacing: {
         xs: string;   // 4px

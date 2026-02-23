@@ -1,12 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button } from './Button';
 
-/**
- * Button stories — demonstrates all variants, sizes, and states.
- *
- * Each export below is a "story" — a specific configuration of the
- * component. Storybook renders them as interactive examples.
- */
 const meta = {
   title: 'Atoms/Button',
   component: Button,
@@ -15,101 +9,110 @@ const meta = {
     layout: 'centered',
   },
   argTypes: {
+    buttonType: {
+      control: 'inline-radio',
+      options: ['contained', 'outlined', 'ghost'],
+    },
     variant: {
-      control: 'select',
+      control: 'inline-radio',
       options: ['primary', 'brand', 'success', 'destructive'],
     },
+    children: {
+      control: 'text',
+    },
     size: {
-      control: 'select',
+      control: 'inline-radio',
       options: ['sm', 'md', 'lg'],
     },
     isDisabled: { control: 'boolean' },
     fullWidth: { control: 'boolean' },
-    onPress: { action: 'pressed' },
+    // onPress: { action: 'pressed' },
   },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// ----- Individual stories -----
-
-export const Primary: Story = {
+export const Default: Story = {
+  render: (args) => <Button {...args} />,
   args: {
-    children: 'Primary Button',
+    children: 'Button',
+  },
+};
+
+export const Type: Story = {
+  ...Default,
+  args: {
+    buttonType: 'contained',
+    children: 'Button',
+  },
+  parameters: {
+    controls: {
+      exclude: ['variant', 'size', 'fullWidth', 'isDisabled', 'aria-label', 'data-testid'],
+    },
+  },
+};
+
+export const Variant: Story = {
+  ...Default,
+  args: {
     variant: 'primary',
-    size: 'md',
+    children: 'Button',
+  },
+  parameters: {
+    controls: {
+      exclude: ['buttonType', 'size', 'fullWidth', 'isDisabled', 'aria-label', 'data-testid'],
+    },
   },
 };
 
-export const Success: Story = {
+export const Size: Story = {
+  ...Default,
   args: {
-    children: 'Success',
-    variant: 'success',
-    size: 'md',
+    size: 'sm',
+    children: 'Button',
+  },
+  parameters: {
+    controls: {
+      exclude: ['fullWidth', 'isDisabled', 'aria-label', 'data-testid'],
+    },
   },
 };
 
-export const Destructive: Story = {
+export const FullWidth: Story = {
+  ...Default,
   args: {
-    children: 'Delete',
-    variant: 'destructive',
-    size: 'md',
+    fullWidth: true,
+    children: 'Button',
   },
-};
-
-export const Brand: Story = {
-  args: {
-    children: 'Brand',
-    variant: 'brand',
-    size: 'md',
+  parameters: {
+    layout: 'padded',
+    controls: {
+      exclude: ['size', 'isDisabled', 'aria-label', 'data-testid'],
+    },
   },
 };
 
 export const Disabled: Story = {
+  ...Default,
   args: {
-    children: 'Primary',
-    variant: 'primary',
-    size: 'md',
+    children: 'Button',
     isDisabled: true,
   },
+  parameters: {
+    controls: {
+      exclude: [
+        'children',
+        'buttonType',
+        'variant',
+        'size',
+        'fullWidth',
+        'aria-label',
+        'data-testid',
+      ],
+    },
+  },
 };
-
-// export const Ghost: Story = {
-//   args: {
-//     children: 'Cancel',
-//     variant: 'ghost',
-//     size: 'md',
-//   },
-// };
-
-// export const Small: Story = {
-//   args: {
-//     children: 'Small',
-//     size: 'sm',
-//   },
-// };
-
-// export const Large: Story = {
-//   args: {
-//     children: 'Large Button',
-//     size: 'lg',
-//   },
-// };
-
-// export const Disabled: Story = {
-//   args: {
-//     children: 'Disabled',
-//     isDisabled: true,
-//   },
-// };
-
-// export const FullWidth: Story = {
-//   args: {
-//     children: 'Full Width Button',
-//     fullWidth: true,
-//   },
-// };
 
 /**
  * All variants side by side — useful for visual comparison.
@@ -123,38 +126,4 @@ export const Disabled: Story = {
 //       <Button variant="ghost" onPress={() => {}}>Ghost</Button>
 //     </div>
 //   ),
-// };
-
-/**
- * All sizes side by side.
- */
-// export const AllSizes: Story = {
-//   render: () => (
-//     <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-//       <Button size="sm" onPress={() => {}}>Small</Button>
-//       <Button size="md" onPress={() => {}}>Medium</Button>
-//       <Button size="lg" onPress={() => {}}>Large</Button>
-//     </div>
-//   ),
-// };
-
-// import type { Meta, StoryObj } from '@storybook/react-vite';
-// import Button from './Button';
-
-// const meta = {
-//   title: 'Atoms/Button',
-//   component: Button,
-//   tags: ['autodocs'],
-// } satisfies Meta<typeof Button>;
-
-// export default meta;
-
-// type ButtonStory = StoryObj<typeof meta>;
-
-// export const Default: ButtonStory = {
-//   render: (args) => <Button {...args} />,
-//   args: {
-//     label: 'Click me',
-//     onClick: () => alert('Clicked'),
-//   },
 // };

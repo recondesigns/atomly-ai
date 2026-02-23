@@ -6,6 +6,7 @@ import { StyledButton } from './Button.styles';
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   function Button(props, forwardedRef) {
     const {
+      buttonType = 'contained',
       variant = 'primary',
       size = 'md',
       isDisabled = false,
@@ -38,6 +39,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             forwardedRef.current = node;
           }
         }}
+        $buttonType={buttonType}
         $variant={variant}
         $size={size}
         $isPressed={isPressed}
