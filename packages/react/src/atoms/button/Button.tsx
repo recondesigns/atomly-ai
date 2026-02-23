@@ -1,7 +1,62 @@
-import type { ButtonProps } from '@molecule-ui/types';
+import React from 'react';
+import type { ButtonProps } from './Button.types';
+import { useButton } from '../../hooks';
+import { StyledButton } from './Button.styles';
 
-const Button = ({ label, onClick }: ButtonProps) => {
-  return <button onClick={onClick}>{label}</button>;
-};
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  function Button(props, forwardedRef) {
+    const {
+      buttonType = 'contained',
+      variant = 'primary',
+      size = 'md',
+      isDisabled = false,
+      fullWidth = false,
+      isLoading = false,
+      onPress,
+      onPressChange,
+      children,
+      'aria-label': ariaLabel,
+      'data-testid': testId,
+    } = props;
+
+    const { buttonProps, isPressed, buttonRef } = useButton({
+      onPress,
+      onPressChange,
+      isDisabled,
+      elementType: 'button',
+      'aria-label': ariaLabel,
+    });
+
+    return (
+      <StyledButton
+        {...buttonProps}
+        ref={(node) => {
+          // Assign to both the internal ref (for react-aria)
+          // and the forwarded ref (for the consumer).
+          (buttonRef as React.MutableRefObject<HTMLElement | null>).current = node;
+          if (typeof forwardedRef === 'function') {
+            forwardedRef(node);
+          } else if (forwardedRef) {
+            forwardedRef.current = node;
+          }
+        }}
+        $buttonType={buttonType}
+        $variant={variant}
+        $size={size}
+        $isPressed={isPressed}
+        $isDisabled={isDisabled}
+        $fullWidth={fullWidth}
+        data-testid={testId}
+      >
+        {isLoading && (
+          <div style={{ width: '20px', height: '20px', border: '1px solid white' }}></div>
+        )}
+        {children}
+      </StyledButton>
+    );
+  }
+);
+
+Button.displayName = 'Button';
 
 export default Button;
