@@ -11,5 +11,32 @@
       "Bash(pnpm -F @molecule-ui/react vitest*)",
       "Bash(pnpm -F @molecule-ui/vue vitest*)"
     ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "matcher": "Edit|Write",
+            "hooks": [
+              {
+                "type": "command",
+                "command": "file=$(echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.file_path // empty'); if [[ \"$file\" =~ \\.(ts|tsx|vue)$ ]]; then cd /Users/mstedman/Development/projects/molecule-ui && pnpm lint \"$file\" --max-warnings=0 2>&1; fi"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.file_path // empty'); if [[ \"$file\" == *\"packages/types/src\"* ]]; then cd/Users/mstedman/Development/projects/molecule-ui && pnpm build:types 2>&1; fi"
+          }
+        ]
+      }
+    ]
   }
 }
