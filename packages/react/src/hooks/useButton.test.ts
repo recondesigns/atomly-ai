@@ -24,11 +24,13 @@ describe('useButton', () => {
   it('sets disabled when isDisabled is true', () => {
     const { result } = renderHook(() => useButton({ isDisabled: true }));
     // React Aria sets the native `disabled` attribute for button elements
+    // @ts-expect-error Property 'disabled' does not exist on type 'HTMLAttributes<HTMLElement>'
     expect(result.current.buttonProps.disabled).toBe(true);
   });
 
   it('does not set disabled when isDisabled is false', () => {
     const { result } = renderHook(() => useButton({ isDisabled: false }));
+    // @ts-expect-error Property 'disabled' does not exist on type 'HTMLAttributes<HTMLElement>'
     expect(result.current.buttonProps.disabled).toBeFalsy();
   });
 
