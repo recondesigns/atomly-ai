@@ -24,8 +24,8 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] Figma project created (Design Tokens file + Component Library file)
 - [x] Figma MCP authenticated
 - [x] `figma/figma.config.json` scaffolded for Code Connect
-- [ ] Design tokens defined in Figma (primitives: color, spacing, typography, radii, transitions)
-- [ ] Semantic/alias token layer in Figma
+- [x] Design tokens defined in Figma (primitives: color, spacing, typography, radii, transitions)
+- [x] Semantic/alias token layer in Figma
 - [ ] Component Library frames created for existing components (Button, Badge, ButtonGroup)
 - [ ] Figma libraries published (Design Tokens + Component Library)
 - [ ] Code Connect published for Button
@@ -47,12 +47,12 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 
 ## Testing
 
-- [ ] Vitest unit test setup for `packages/react/src/hooks/`
-- [ ] Vitest unit test setup for `packages/vue/src/composables/`
-- [ ] `useButton` unit tests
-- [ ] Chromatic installed and configured (`@chromatic-com/storybook` already in devDeps)
-- [ ] Chromatic running on PRs via GitHub Actions
-- [ ] Storybook a11y switched from `'todo'` to `'error'` for all components
+- [x] Vitest unit test setup for `packages/react/src/hooks/`
+- [x] Vitest unit test setup for `packages/vue/src/composables/`
+- [x] `useButton` unit tests
+- [x] Chromatic installed and configured (`@chromatic-com/storybook` already in devDeps)
+- [x] Chromatic running on PRs via GitHub Actions
+- [x] Storybook a11y switched from `'todo'` to `'error'` for all components
 
 ---
 
@@ -75,7 +75,7 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `pre-push` hook: TypeScript type check (`pnpm typecheck` across all packages)
 - [x] `pre-push` hook: `build:icons` diff-check (wired in during icon pipeline)
 - [x] GitHub Actions workflow: lint → build → test on PRs
-- [ ] GitHub Actions workflow: Chromatic on PRs
+- [x] GitHub Actions workflow: Chromatic on PRs
 - [ ] GitHub Actions workflow: publish to npm on release
 
 ---

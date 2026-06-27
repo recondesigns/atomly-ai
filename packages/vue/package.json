@@ -25,7 +25,9 @@
     "build:icons": "node scripts/build-icons.mjs",
     "dev": "vite build --watch",
     "storybook": "storybook dev -p 6007",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "peerDependencies": {
     "vue": "^3.4.0"
@@ -39,10 +41,13 @@
     "@storybook/addon-docs": "^10.2.10",
     "@storybook/addon-vitest": "^10.2.10",
     "@storybook/vue3-vite": "^10.2.10",
+    "@types/node": "^25.3.0",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vitest/browser-playwright": "^4.0.18",
     "@vitest/coverage-v8": "^4.0.18",
+    "@vue/test-utils": "^2.4.0",
     "eslint-plugin-storybook": "^10.2.10",
+    "jsdom": "^26.0.0",
     "playwright": "^1.58.2",
     "storybook": "^10.2.10",
     "svgo": "^4.0.1",

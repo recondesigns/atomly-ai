@@ -52,7 +52,7 @@ ref={(node) => {
 
 The Storybook `preview.tsx` wraps all stories in `MoleculeProvider` with no overrides so every story gets the default theme.
 
-A11y checks are configured as `test: 'todo'` in Storybook — violations appear in the test UI but don't fail CI yet.
+A11y checks are configured as `test: 'error'` in Storybook — violations fail the Vitest story test run.
 
 ## Build output
 
