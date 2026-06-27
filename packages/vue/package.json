@@ -22,6 +22,7 @@
   ],
   "scripts": {
     "build": "vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
+    "build:icons": "node scripts/build-icons.mjs",
     "dev": "vite build --watch",
     "storybook": "storybook dev -p 6007",
     "build-storybook": "storybook build"
@@ -33,21 +34,22 @@
     "@molecule-ui/types": "workspace:*"
   },
   "devDependencies": {
-    "vue": "^3.5.0",
-    "vite": "^7.3.1",
-    "@vitejs/plugin-vue": "^6.0.4",
-    "vue-tsc": "^3.2.4",
-    "storybook": "^10.2.10",
-    "@storybook/vue3-vite": "^10.2.10",
     "@chromatic-com/storybook": "^5.0.1",
-    "@storybook/addon-vitest": "^10.2.10",
     "@storybook/addon-a11y": "^10.2.10",
     "@storybook/addon-docs": "^10.2.10",
-    "eslint-plugin-storybook": "^10.2.10",
-    "vitest": "^4.0.18",
-    "playwright": "^1.58.2",
+    "@storybook/addon-vitest": "^10.2.10",
+    "@storybook/vue3-vite": "^10.2.10",
+    "@vitejs/plugin-vue": "^6.0.4",
     "@vitest/browser-playwright": "^4.0.18",
-    "@vitest/coverage-v8": "^4.0.18"
+    "@vitest/coverage-v8": "^4.0.18",
+    "eslint-plugin-storybook": "^10.2.10",
+    "playwright": "^1.58.2",
+    "storybook": "^10.2.10",
+    "svgo": "^4.0.1",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18",
+    "vue": "^3.5.0",
+    "vue-tsc": "^3.2.4"
   },
   "keywords": [
     "design-system",
@@ -74,10 +76,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/recondesigns/molecule-ui.git"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }
