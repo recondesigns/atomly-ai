@@ -1,0 +1,65 @@
+name: Chromatic
+
+on:
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  chromatic-react:
+    name: Chromatic (React)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Chromatic needs full git history for baselines
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build types
+        run: pnpm build:types
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          # Add CHROMATIC_PROJECT_TOKEN_REACT to your GitHub Actions secrets
+          # https://www.chromatic.com/docs/github-actions
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_REACT }}
+          workingDir: packages/react
+          onlyChanged: true
+
+  chromatic-vue:
+    name: Chromatic (Vue)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build types
+        run: pnpm build:types
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          # Add CHROMATIC_PROJECT_TOKEN_VUE to your GitHub Actions secrets
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_VUE }}
+          workingDir: packages/vue
+          onlyChanged: true

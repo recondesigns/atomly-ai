@@ -21,18 +21,22 @@ Every component is a Single File Component (`.vue`) using `<script lang="ts" set
 </template>
 
 <script lang="ts" setup>
-import type { NameProp } from '@molecule-ui/types'
+import type { NameProp } from '@molecule-ui/types';
 
-withDefaults(defineProps<{
-  variant?: NameVariant
-  'data-testid'?: string
-}>(), {
-  variant: 'default',
-})
+withDefaults(
+  defineProps<{
+    variant?: NameVariant;
+    'data-testid'?: string;
+  }>(),
+  {
+    variant: 'default',
+  }
+);
 </script>
 ```
 
 Rules:
+
 - Always include `<slot />` — Vue's equivalent of `children`
 - Always spread `data-testid` onto the root element (use `:data-testid="dataTestid"` after destructuring or bind directly)
 - Import prop type unions from `@molecule-ui/types` — do not redeclare them locally
@@ -87,7 +91,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = { args: { ... } }
 ```
 
-A11y checks are configured as `test: 'todo'` — violations appear in the test UI but don't fail CI yet.
+A11y checks are configured as `test: 'error'` — violations fail the Vitest story test run.
 
 ## Build output
 
