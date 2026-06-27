@@ -6,6 +6,7 @@ import vuePlugin from 'eslint-plugin-vue';
 import vueParser from 'vue-eslint-parser';
 import storybookPlugin from 'eslint-plugin-storybook';
 import * as mdxPlugin from 'eslint-plugin-mdx';
+import globals from 'globals';
 import prettier from 'eslint-config-prettier';
 
 export default tseslint.config(
@@ -14,6 +15,14 @@ export default tseslint.config(
   },
 
   js.configs.recommended,
+
+  // Node.js globals for script files
+  {
+    files: ['**/*.{mjs,cjs}'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 
   // TypeScript for all TS/TSX files
   {
