@@ -42,7 +42,7 @@ jobs:
         run: pnpm build
 
       - name: Install Playwright browsers
-        run: pnpm exec playwright install chromium --with-deps
+        run: pnpm -F @molecule-ui/react exec playwright install chromium --with-deps
 
       - name: Test
         run: pnpm -F @molecule-ui/react vitest run
