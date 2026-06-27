@@ -17,7 +17,8 @@ const componentNames = [];
 
 for (const file of files) {
   const name = basename(file, '.svg');
-  const componentName = `${name.charAt(0).toUpperCase()}${name.slice(1).replace(/-([a-z])/g, (_, c) => c.toUpperCase())}Icon`;
+  const componentName =
+    name.split('-').map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join('') + 'Icon';
 
   const raw = await readFile(join(iconsDir, file), 'utf8');
   const { data: svg } = optimize(raw, {
