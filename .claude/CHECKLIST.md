@@ -58,12 +58,12 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 
 ## ESLint
 
-- [ ] Root `eslint.config.js` (flat config, ESLint 10) covering all packages
-- [ ] `@typescript-eslint/recommended` rules for `.ts` and `.tsx` files
-- [ ] `eslint-plugin-react` + `eslint-plugin-react-hooks` for the React package
-- [ ] `eslint-plugin-vue` with `vue3-recommended` rules for the Vue package
-- [ ] Update `pnpm lint` script to remove deprecated `--ext` flag (not supported in ESLint 9+)
-- [ ] Confirm `pnpm lint` catches real errors across `packages/react`, `packages/vue`, and `packages/types`
+- [x] Root `eslint.config.js` (flat config, ESLint 9) covering all packages
+- [x] `@typescript-eslint/recommended` rules for `.ts` and `.tsx` files
+- [x] `eslint-plugin-react` + `eslint-plugin-react-hooks` for the React package
+- [x] `eslint-plugin-vue` with `vue3-recommended` rules for the Vue package
+- [x] Update `pnpm lint` script to remove deprecated `--ext` flag (not supported in ESLint 9+)
+- [x] Confirm `pnpm lint` catches real errors across `packages/react`, `packages/vue`, and `packages/types`
 
 ---
 

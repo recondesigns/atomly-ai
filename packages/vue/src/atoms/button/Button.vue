@@ -3,13 +3,8 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
-
-const props = withDefaults(
+withDefaults(
   defineProps<{
-    /**
-     * The label of the button
-     */
     label: string;
   }>(),
   {}

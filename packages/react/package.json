@@ -88,10 +88,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/recondesigns/molecule-ui.git"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }
