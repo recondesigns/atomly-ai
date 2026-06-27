@@ -1,1 +1,3 @@
 pnpm typecheck
+pnpm build:icons
+git diff --exit-code packages/react/src/atoms/icons packages/vue/src/atoms/icons

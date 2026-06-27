@@ -73,8 +73,8 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `pre-commit` hook: lint-staged (lint + format on staged files)
 - [x] `commit-msg` hook: commitlint with conventional commits
 - [x] `pre-push` hook: TypeScript type check (`pnpm typecheck` across all packages)
-- [ ] `pre-push` hook: `build:icons` diff-check (wired in during icon pipeline)
-- [ ] GitHub Actions workflow: lint → build → test on PRs
+- [x] `pre-push` hook: `build:icons` diff-check (wired in during icon pipeline)
+- [x] GitHub Actions workflow: lint → build → test on PRs
 - [ ] GitHub Actions workflow: Chromatic on PRs
 - [ ] GitHub Actions workflow: publish to npm on release
 
@@ -103,17 +103,17 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 
 Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG source files live in **one place** — `icons/` at the repo root. Both packages generate their own framework-specific components from that shared source. Generated files are committed; a diff-check at pre-push and CI ensures they stay in sync.
 
-- [ ] Create `icons/` folder at repo root — shared SVG source files (e.g. `alert.svg`, `close.svg`)
-- [ ] Install `@svgr/cli` in `packages/react` devDependencies
-- [ ] Add `build:icons` script to `packages/react` — runs SVGR CLI to generate `AlertIcon.tsx` etc. into `src/atoms/icons/`, with `currentColor`, title prop, and TypeScript output
-- [ ] Write `scripts/build-icons-vue.js` — custom Node.js script that reads `icons/*.svg`, optimizes with `svgo`, and wraps each in a `<script lang="ts" setup>` Vue SFC with `inheritAttrs: false`
-- [ ] Add `build:icons` script to `packages/vue` that runs `scripts/build-icons-vue.js`
-- [ ] Add root `build:icons` script: `pnpm -F @molecule-ui/react build:icons && pnpm -F @molecule-ui/vue build:icons`
-- [ ] Generated icon components auto-exported from `packages/react/src/atoms/index.ts` and `packages/vue/src/atoms/index.ts`
-- [ ] Add icon types to `packages/types` (shared `IconName` union, size prop, etc.)
-- [ ] Add Storybook stories for the icon set (grid view of all icons)
-- [ ] Husky `pre-push` hook — runs `pnpm build:icons` then `git diff --exit-code` on generated icon folders; blocks push if committed output is stale
-- [ ] CI step — same regenerate + diff-check as pre-push, runs before lint/build as a backstop against `--no-verify`
+- [x] Create `icons/` folder at repo root — shared SVG source files (`alert.svg`, `close.svg`, `check.svg`)
+- [x] Install `@svgr/core` + `@svgr/cli` in `packages/react` devDependencies
+- [x] Add `build:icons` script to `packages/react` — Node.js script using `@svgr/core` to generate `AlertIcon.tsx` etc. into `src/atoms/icons/`, with `currentColor`, title prop, TypeScript output, and auto-generated `index.ts`
+- [x] Write `packages/vue/scripts/build-icons.mjs` — Node.js script that reads `icons/*.svg`, optimizes with `svgo`, and wraps each in a `<script lang="ts" setup>` Vue SFC with `inheritAttrs: false`
+- [x] Add `build:icons` script to `packages/vue`
+- [x] Add root `build:icons` script: `pnpm -F @molecule-ui/react build:icons && pnpm -F @molecule-ui/vue build:icons`
+- [x] Generated icon components auto-exported from `packages/react/src/atoms/index.ts` and `packages/vue/src/atoms/index.ts`
+- [x] Add icon types to `packages/types` (`IconName` union, `IconSize`)
+- [x] Add Storybook stories for the icon set (AllIcons grid, Sizes, Colors — in both React and Vue)
+- [x] Husky `pre-push` hook — runs `pnpm build:icons` then `git diff --exit-code` on generated icon folders; blocks push if committed output is stale
+- [x] CI step — same regenerate + diff-check as pre-push, runs before lint/build as a backstop against `--no-verify`
 
 ---
 

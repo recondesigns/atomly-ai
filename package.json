@@ -10,6 +10,7 @@
     "dev:website": "pnpm -F @molecule-ui/website dev",
     "storybook:react": "pnpm -F @molecule-ui/react storybook",
     "storybook:vue": "pnpm -F @molecule-ui/vue storybook",
+    "build:icons": "pnpm -F @molecule-ui/react build:icons && pnpm -F @molecule-ui/vue build:icons",
     "lint": "eslint .",
     "format": "prettier --write .",
     "typecheck": "pnpm -F @molecule-ui/types exec tsc --noEmit && pnpm -F @molecule-ui/react exec tsc --noEmit && pnpm -F @molecule-ui/vue exec tsc --noEmit",
