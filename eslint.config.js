@@ -5,6 +5,7 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import vuePlugin from 'eslint-plugin-vue';
 import vueParser from 'vue-eslint-parser';
 import storybookPlugin from 'eslint-plugin-storybook';
+import * as mdxPlugin from 'eslint-plugin-mdx';
 import prettier from 'eslint-config-prettier';
 
 export default tseslint.config(
@@ -67,6 +68,10 @@ export default tseslint.config(
     ...config,
     files: ['**/*.stories.{ts,tsx,vue,js,jsx}'],
   })),
+
+  // MDX files (targets **/*.{md,mdx} automatically)
+  mdxPlugin.flat,
+  mdxPlugin.flatCodeBlocks,
 
   // Prettier compatibility — must be last
   prettier,

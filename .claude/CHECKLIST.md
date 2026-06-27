@@ -69,10 +69,11 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 
 ## Git & CI
 
-- [ ] Husky installed
-- [ ] `pre-commit` hook: lint-staged (lint + format on staged files)
-- [ ] `commit-msg` hook: commitlint with conventional commits
-- [ ] `pre-push` hook: TypeScript type check
+- [x] Husky installed
+- [x] `pre-commit` hook: lint-staged (lint + format on staged files)
+- [x] `commit-msg` hook: commitlint with conventional commits
+- [x] `pre-push` hook: TypeScript type check (`pnpm typecheck` across all packages)
+- [ ] `pre-push` hook: `build:icons` diff-check (wired in during icon pipeline)
 - [ ] GitHub Actions workflow: lint → build → test on PRs
 - [ ] GitHub Actions workflow: Chromatic on PRs
 - [ ] GitHub Actions workflow: publish to npm on release
