@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main, dev]
+  push:
+    branches: [main]
+
+jobs:
+  ci:
+    name: Lint, typecheck, build, and test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build types
+        run: pnpm build:types
+
+      - name: Check icons are up to date
+        run: |
+          pnpm build:icons
+          git diff --exit-code packages/react/src/atoms/icons packages/vue/src/atoms/icons
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Type check
+        run: pnpm typecheck
+
+      - name: Build
+        run: pnpm build
+
+      - name: Install Playwright browsers
+        run: |
+          pnpm -F @molecule-ui/react exec playwright install chromium --with-deps
+          pnpm -F @molecule-ui/vue exec playwright install chromium --with-deps
+
+      - name: Test (React)
+        run: pnpm -F @molecule-ui/react vitest run
+
+      - name: Test (Vue)
+        run: pnpm -F @molecule-ui/vue vitest run

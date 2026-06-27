@@ -18,13 +18,8 @@
         "matcher": "Edit|Write",
         "hooks": [
           {
-            "matcher": "Edit|Write",
-            "hooks": [
-              {
-                "type": "command",
-                "command": "file=$(echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.file_path // empty'); if [[ \"$file\" =~ \\.(ts|tsx|vue)$ ]]; then cd /Users/mstedman/Development/projects/molecule-ui && pnpm lint \"$file\" --max-warnings=0 2>&1; fi"
-              }
-            ]
+            "type": "command",
+            "command": "file=$(echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.file_path // empty'); if [[ \"$file\" =~ \\.(ts|tsx|vue)$ ]]; then cd /Users/mstedman/Development/projects/molecule-ui && pnpm lint \"$file\" --max-warnings=0 2>&1; fi"
           }
         ]
       },

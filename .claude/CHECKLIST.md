@@ -24,8 +24,8 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] Figma project created (Design Tokens file + Component Library file)
 - [x] Figma MCP authenticated
 - [x] `figma/figma.config.json` scaffolded for Code Connect
-- [ ] Design tokens defined in Figma (primitives: color, spacing, typography, radii, transitions)
-- [ ] Semantic/alias token layer in Figma
+- [x] Design tokens defined in Figma (primitives: color, spacing, typography, radii, transitions)
+- [x] Semantic/alias token layer in Figma
 - [ ] Component Library frames created for existing components (Button, Badge, ButtonGroup)
 - [ ] Figma libraries published (Design Tokens + Component Library)
 - [ ] Code Connect published for Button
@@ -47,34 +47,35 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 
 ## Testing
 
-- [ ] Vitest unit test setup for `packages/react/src/hooks/`
-- [ ] Vitest unit test setup for `packages/vue/src/composables/`
-- [ ] `useButton` unit tests
-- [ ] Chromatic installed and configured (`@chromatic-com/storybook` already in devDeps)
-- [ ] Chromatic running on PRs via GitHub Actions
-- [ ] Storybook a11y switched from `'todo'` to `'error'` for all components
+- [x] Vitest unit test setup for `packages/react/src/hooks/`
+- [x] Vitest unit test setup for `packages/vue/src/composables/`
+- [x] `useButton` unit tests
+- [x] Chromatic installed and configured (`@chromatic-com/storybook` already in devDeps)
+- [x] Chromatic running on PRs via GitHub Actions
+- [x] Storybook a11y switched from `'todo'` to `'error'` for all components
 
 ---
 
 ## ESLint
 
-- [ ] Root `eslint.config.js` (flat config, ESLint 10) covering all packages
-- [ ] `@typescript-eslint/recommended` rules for `.ts` and `.tsx` files
-- [ ] `eslint-plugin-react` + `eslint-plugin-react-hooks` for the React package
-- [ ] `eslint-plugin-vue` with `vue3-recommended` rules for the Vue package
-- [ ] Update `pnpm lint` script to remove deprecated `--ext` flag (not supported in ESLint 9+)
-- [ ] Confirm `pnpm lint` catches real errors across `packages/react`, `packages/vue`, and `packages/types`
+- [x] Root `eslint.config.js` (flat config, ESLint 9) covering all packages
+- [x] `@typescript-eslint/recommended` rules for `.ts` and `.tsx` files
+- [x] `eslint-plugin-react` + `eslint-plugin-react-hooks` for the React package
+- [x] `eslint-plugin-vue` with `vue3-recommended` rules for the Vue package
+- [x] Update `pnpm lint` script to remove deprecated `--ext` flag (not supported in ESLint 9+)
+- [x] Confirm `pnpm lint` catches real errors across `packages/react`, `packages/vue`, and `packages/types`
 
 ---
 
 ## Git & CI
 
-- [ ] Husky installed
-- [ ] `pre-commit` hook: lint-staged (lint + format on staged files)
-- [ ] `commit-msg` hook: commitlint with conventional commits
-- [ ] `pre-push` hook: TypeScript type check
-- [ ] GitHub Actions workflow: lint → build → test on PRs
-- [ ] GitHub Actions workflow: Chromatic on PRs
+- [x] Husky installed
+- [x] `pre-commit` hook: lint-staged (lint + format on staged files)
+- [x] `commit-msg` hook: commitlint with conventional commits
+- [x] `pre-push` hook: TypeScript type check (`pnpm typecheck` across all packages)
+- [x] `pre-push` hook: `build:icons` diff-check (wired in during icon pipeline)
+- [x] GitHub Actions workflow: lint → build → test on PRs
+- [x] GitHub Actions workflow: Chromatic on PRs
 - [ ] GitHub Actions workflow: publish to npm on release
 
 ---
@@ -95,6 +96,24 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [ ] `rollup-plugin-visualizer` added to Vite config for bundle composition inspection
 - [ ] Baseline bundle sizes documented after first stable release
 - [ ] Tree-shaking validated — confirm per-category imports (`@molecule-ui/react/atoms`) are smaller than full import
+
+---
+
+## Icon Pipeline
+
+Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG source files live in **one place** — `icons/` at the repo root. Both packages generate their own framework-specific components from that shared source. Generated files are committed; a diff-check at pre-push and CI ensures they stay in sync.
+
+- [x] Create `icons/` folder at repo root — shared SVG source files (`alert.svg`, `close.svg`, `check.svg`)
+- [x] Install `@svgr/core` + `@svgr/cli` in `packages/react` devDependencies
+- [x] Add `build:icons` script to `packages/react` — Node.js script using `@svgr/core` to generate `AlertIcon.tsx` etc. into `src/atoms/icons/`, with `currentColor`, title prop, TypeScript output, and auto-generated `index.ts`
+- [x] Write `packages/vue/scripts/build-icons.mjs` — Node.js script that reads `icons/*.svg`, optimizes with `svgo`, and wraps each in a `<script lang="ts" setup>` Vue SFC with `inheritAttrs: false`
+- [x] Add `build:icons` script to `packages/vue`
+- [x] Add root `build:icons` script: `pnpm -F @molecule-ui/react build:icons && pnpm -F @molecule-ui/vue build:icons`
+- [x] Generated icon components auto-exported from `packages/react/src/atoms/index.ts` and `packages/vue/src/atoms/index.ts`
+- [x] Add icon types to `packages/types` (`IconName` union, `IconSize`)
+- [x] Add Storybook stories for the icon set (AllIcons grid, Sizes, Colors — in both React and Vue)
+- [x] Husky `pre-push` hook — runs `pnpm build:icons` then `git diff --exit-code` on generated icon folders; blocks push if committed output is stale
+- [x] CI step — same regenerate + diff-check as pre-push, runs before lint/build as a backstop against `--no-verify`
 
 ---
 

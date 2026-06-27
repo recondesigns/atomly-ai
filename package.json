@@ -2,6 +2,7 @@
   "name": "molecule-ui",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "description": "React and Vue component library for the molecule-ui design system.",
   "scripts": {
     "build": "pnpm -F @molecule-ui/types build && pnpm -F @molecule-ui/react build && pnpm -F @molecule-ui/vue build",
@@ -9,15 +10,32 @@
     "dev:website": "pnpm -F @molecule-ui/website dev",
     "storybook:react": "pnpm -F @molecule-ui/react storybook",
     "storybook:vue": "pnpm -F @molecule-ui/vue storybook",
-    "lint": "eslint . --ext .ts,.tsx,.vue",
-    "format": "prettier --write ."
+    "build:icons": "pnpm -F @molecule-ui/react build:icons && pnpm -F @molecule-ui/vue build:icons",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "pnpm -F @molecule-ui/types exec tsc --noEmit && pnpm -F @molecule-ui/react exec tsc --noEmit && pnpm -F @molecule-ui/vue exec tsc --noEmit",
+    "prepare": "husky || true"
   },
   "devDependencies": {
-    "typescript": "^5.9.3",
-    "prettier": "^3.8.1",
-    "eslint": "^10.0.0",
+    "@commitlint/cli": "^21.1.0",
+    "@commitlint/config-conventional": "^21.1.0",
+    "@eslint/js": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^8.56.0",
-    "@typescript-eslint/parser": "^8.56.0"
+    "@typescript-eslint/parser": "^8.56.0",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-mdx": "^3.8.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-storybook": "^10.2.10",
+    "eslint-plugin-vue": "^10.9.2",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.62.0",
+    "vue-eslint-parser": "^10.4.1"
   },
   "engines": {
     "node": ">=20",
@@ -28,5 +46,14 @@
     "type": "git",
     "url": "git+https://github.com/recondesigns/molecule-ui.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "lint-staged": {
+    "*.{ts,tsx,vue,mdx,mjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,json,md}": [
+      "prettier --write"
+    ]
+  }
 }

@@ -22,18 +22,21 @@
   ],
   "scripts": {
     "build": "vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
+    "build:icons": "node scripts/build-icons.mjs",
     "dev": "vite build --watch",
     "storybook": "storybook dev -p 6006 --no-open",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "peerDependencies": {
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19"
   },
   "dependencies": {
-    "@molecule-ui/types": "workspace:*",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@molecule-ui/types": "workspace:*",
     "@react-aria/button": "^3.14.4",
     "@react-aria/focus": "^3.21.4",
     "@react-aria/interactions": "^3.27.0",
@@ -48,6 +51,9 @@
     "@storybook/addon-docs": "^10.2.10",
     "@storybook/addon-vitest": "^10.2.10",
     "@storybook/react-vite": "^10.2.10",
+    "@svgr/cli": "^8.1.0",
+    "@svgr/core": "^8.1.0",
+    "@testing-library/react": "^16.0.0",
     "@types/node": "^25.3.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -55,6 +61,7 @@
     "@vitest/browser-playwright": "^4.0.18",
     "@vitest/coverage-v8": "^4.0.18",
     "eslint-plugin-storybook": "^10.2.10",
+    "jsdom": "^26.0.0",
     "playwright": "^1.58.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -88,10 +95,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/recondesigns/molecule-ui.git"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }
