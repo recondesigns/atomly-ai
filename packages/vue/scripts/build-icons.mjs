@@ -1,4 +1,5 @@
 import { optimize } from 'svgo';
+import { format } from 'prettier';
 import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, basename, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -46,14 +47,16 @@ defineOptions({ inheritAttrs: false });
 </script>
 `;
 
-  await writeFile(join(outDir, `${componentName}.vue`), sfc);
+  const formatted = await format(sfc, { parser: 'vue', filepath: `${componentName}.vue` });
+  await writeFile(join(outDir, `${componentName}.vue`), formatted);
   componentNames.push(componentName);
   console.log(`  ✓ ${componentName}.vue`);
 }
 
-const index = componentNames
-  .map((n) => `export { default as ${n} } from './${n}.vue';`)
-  .join('\n') + '\n';
+const index = await format(
+  componentNames.map((n) => `export { default as ${n} } from './${n}.vue';`).join('\n'),
+  { parser: 'typescript' },
+);
 
 await writeFile(join(outDir, 'index.ts'), index);
 console.log(`  ✓ index.ts (${componentNames.length} icons)`);
