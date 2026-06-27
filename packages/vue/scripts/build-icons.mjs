@@ -1,5 +1,5 @@
 import { optimize } from 'svgo';
-import { format } from 'prettier';
+import { format, resolveConfig } from 'prettier';
 import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, basename, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const iconsDir = join(__dirname, '../../../icons');
 const outDir = join(__dirname, '../src/atoms/icons');
+const prettierConfig = (await resolveConfig(outDir)) ?? {};
 
 await mkdir(outDir, { recursive: true });
 
@@ -47,7 +48,7 @@ defineOptions({ inheritAttrs: false });
 </script>
 `;
 
-  const formatted = await format(sfc, { parser: 'vue', filepath: `${componentName}.vue` });
+  const formatted = await format(sfc, { ...prettierConfig, parser: 'vue' });
   await writeFile(join(outDir, `${componentName}.vue`), formatted);
   componentNames.push(componentName);
   console.log(`  ✓ ${componentName}.vue`);
@@ -55,7 +56,7 @@ defineOptions({ inheritAttrs: false });
 
 const index = await format(
   componentNames.map((n) => `export { default as ${n} } from './${n}.vue';`).join('\n'),
-  { parser: 'typescript' },
+  { ...prettierConfig, parser: 'typescript' },
 );
 
 await writeFile(join(outDir, 'index.ts'), index);
