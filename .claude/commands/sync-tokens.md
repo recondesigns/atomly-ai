@@ -1,37 +1,38 @@
-Sync design tokens from the Figma Design Tokens file into the codebase.
+Sync design tokens from Figma into the codebase via a Token Studio export.
 
 No arguments needed.
 
-The Figma Design Tokens file is at: https://www.figma.com/design/GFCI1ypTw7ZXlKJzrfGKdz/Design-tokens
+## Workflow
 
-Follow these steps:
+1. **Export from Token Studio** — in Figma, open the Token Studio plugin, export all tokens, and save the file as `tokens/figma-export.json` (overwrite the existing file)
 
-1. **Fetch token variables** from Figma using the MCP tool `get_variable_defs` on the Design Tokens file URL.
+2. **Run `pnpm sync:tokens`** — this does two things in sequence:
+   - `scripts/sync-figma-tokens.mjs` reads `tokens/figma-export.json`, maps the primitive values to the theme structure, and writes `tokens/primitives.json`
+   - `style-dictionary.config.mjs` reads `tokens/primitives.json` and regenerates all outputs
 
-2. **Write the raw Figma output to `tokens/primitives.json`** in DTCG format (`$value`, `$type`). This is the only file you edit manually. If semantic/alias tokens exist as a separate collection, write those to `tokens/semantic.json`.
-
-   Use this token structure (match existing key names exactly to avoid breaking the pipeline):
-   - Color variables → `color.*`
-   - Spacing variables → `spacing.*`
-   - Font family → `font-family.*`
-   - Font size → `font-size.*`
-   - Font weight → `font-weight.*` (use `$type: "number"` and numeric `$value`)
-   - Line height → `line-height.*` (use `$type: "number"`)
-   - Border radius → `border-radius.*`
-   - Transition/duration → `transition.*`
-
-   Special case: `color.focus-ring` uses no `$type` so its rgba value is preserved as-is across both CSS and JS outputs.
-
-3. **Run `pnpm build:tokens`** to regenerate all outputs via Style Dictionary:
-   - `packages/vue/src/tokens/primitives.css` — CSS custom properties (`--molecule-*`)
+3. **Verify the outputs** — confirm the following files were updated:
+   - `tokens/primitives.json` — source token values in DTCG format
+   - `packages/vue/src/tokens/primitives.css` — CSS custom properties
    - `packages/react/src/theme/tokens.generated.js` — ES6 named exports
    - `packages/react/src/theme/tokens.generated.d.ts` — TypeScript declarations
 
-   `packages/react/src/theme/defaultTheme.ts` picks up the new values automatically — do not edit it manually.
-
-4. **Run `pnpm typecheck`** to confirm the generated output satisfies the `MoleculeUITheme` type shape.
+4. **Run `pnpm typecheck`** to confirm the generated output still satisfies the `MoleculeUITheme` type shape.
 
 5. **Report a diff summary**:
-   - New tokens added
-   - Existing token values changed (list old → new)
-   - Figma variables that could not be mapped to an existing key (flag for manual review)
+   - Token values changed (list old → new)
+   - Any new tokens that were added
+   - Any tokens that fell back to hardcoded defaults (means the Figma variable name doesn't match the mapping in `scripts/sync-figma-tokens.mjs`)
+
+## Updating the mapping
+
+The script in `scripts/sync-figma-tokens.mjs` maps Figma primitive names (e.g. `blue/600`) to theme keys (e.g. `color.primary`). If new token categories are added in Figma that don't exist in the mapping, update the script and add the new entries to `tokens/primitives.json` and `packages/react/src/theme/theme.types.ts` as needed.
+
+## Files committed after a sync
+
+Commit all four generated files together with `tokens/figma-export.json`:
+
+- `tokens/figma-export.json`
+- `tokens/primitives.json`
+- `packages/vue/src/tokens/primitives.css`
+- `packages/react/src/theme/tokens.generated.js`
+- `packages/react/src/theme/tokens.generated.d.ts`

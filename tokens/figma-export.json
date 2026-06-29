@@ -1,0 +1,625 @@
+{
+  "Primitive/Value": {
+    "blue": {
+      "100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-blue-100"
+          }
+        },
+        "$value": "#eff6ff",
+        "$type": "color",
+        "$description": "Primitive · Blue scale · #EFF6FF · Lightest blue tint. Used as subtle primary action backgrounds. Reference via color/background/primary-subtle."
+      },
+      "200": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-blue-200"
+          }
+        },
+        "$value": "#dbeafe",
+        "$type": "color",
+        "$description": "Primitive · Blue scale · #DBEAFE · Light blue. Available for hover states or additional tinting."
+      },
+      "300": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-blue-300"
+          }
+        },
+        "$value": "#bfdbfe",
+        "$type": "color",
+        "$description": "Primitive · Blue scale · #BFDBFE · Medium-light blue. Used for thinking/streaming border states."
+      },
+      "400": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-blue-400"
+          }
+        },
+        "$value": "#60a5fa",
+        "$type": "color",
+        "$description": "Primitive · Blue scale · #60A5FA · Accessible blue on dark surfaces. Used for dark-mode primary text and icon colors."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-blue-500"
+          }
+        },
+        "$value": "#3b82f6",
+        "$type": "color",
+        "$description": "Primitive · Blue scale · #3B82F6 · Mid-range blue. Used as the primary action color in dark mode."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-blue-600"
+          }
+        },
+        "$value": "#2563eb",
+        "$type": "color",
+        "$description": "Primitive · Blue scale · #2563EB · Core brand blue. Primary action color in light mode. Reference via color/background/primary or color/text/primary."
+      },
+      "700": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-blue-700"
+          }
+        },
+        "$value": "#1d4ed8",
+        "$type": "color",
+        "$description": "Primitive · Blue scale · #1D4ED8 · Darker blue for hover states over primary actions in light mode."
+      },
+      "800": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-blue-800"
+          }
+        },
+        "$value": "#1e40af",
+        "$type": "color",
+        "$description": "Primitive · Blue scale · #1E40AF · Deep blue for active/pressed states in light mode."
+      },
+      "900": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-blue-900"
+          }
+        },
+        "$value": "#1e3a8a",
+        "$type": "color",
+        "$description": "Primitive · Blue scale · #1E3A8A · Darkest blue. Used as primary-subtle background in dark mode."
+      }
+    },
+    "amber": {
+      "100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-100"
+          }
+        },
+        "$value": "#fffbeb",
+        "$type": "color",
+        "$description": "Primitive · Amber scale · #FFFBEB · Lightest amber tint. Used as brand-subtle background in light mode."
+      },
+      "200": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-200"
+          }
+        },
+        "$value": "#fef3c7",
+        "$type": "color",
+        "$description": "Primitive · Amber scale · #FEF3C7 · Light amber. Available for additional amber tinting."
+      },
+      "400": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-400"
+          }
+        },
+        "$value": "#fcd34d",
+        "$type": "color",
+        "$description": "Primitive · Amber scale · #FCD34D · Medium amber. Available for brand accent highlights."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-500"
+          }
+        },
+        "$value": "#fe9a00",
+        "$type": "color",
+        "$description": "Primitive · Amber scale · #FE9A00 · Core brand amber. The signature brand color. Reference via color/background/brand."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-600"
+          }
+        },
+        "$value": "#e17100",
+        "$type": "color",
+        "$description": "Primitive · Amber scale · #E17100 · Darker amber for brand hover states and brand text in light mode."
+      },
+      "700": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-700"
+          }
+        },
+        "$value": "#b45309",
+        "$type": "color",
+        "$description": "Primitive · Amber scale · #B45309 · Deep amber. Used as brand-subtle surface in dark mode."
+      }
+    },
+    "green": {
+      "50": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-green-50"
+          }
+        },
+        "$value": "#f0fdf4",
+        "$type": "color",
+        "$description": "Primitive · Green scale · #F0FDF4 · Lightest green tint. Success subtle background in light mode."
+      },
+      "100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-green-100"
+          }
+        },
+        "$value": "#dcfce7",
+        "$type": "color",
+        "$description": "Primitive · Green scale · #DCFCE7 · Light green. Available for additional success tinting."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-green-500"
+          }
+        },
+        "$value": "#22c55e",
+        "$type": "color",
+        "$description": "Primitive · Green scale · #22C55E · Mid green. Used for success text/icons in dark mode."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-green-600"
+          }
+        },
+        "$value": "#00a63e",
+        "$type": "color",
+        "$description": "Primitive · Green scale · #00A63E · Core success green. Reference via color/background/success or color/text/success."
+      },
+      "700": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-green-700"
+          }
+        },
+        "$value": "#008236",
+        "$type": "color",
+        "$description": "Primitive · Green scale · #008236 · Darker green for success hover states."
+      },
+      "800": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-green-800"
+          }
+        },
+        "$value": "#016630",
+        "$type": "color",
+        "$description": "Primitive · Green scale · #016630 · Deep green. Success subtle background in dark mode."
+      }
+    },
+    "red": {
+      "50": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-50"
+          }
+        },
+        "$value": "#fef2f2",
+        "$type": "color",
+        "$description": "Primitive · Red scale · #FEF2F2 · Lightest red tint. Danger subtle background in light mode."
+      },
+      "100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-100"
+          }
+        },
+        "$value": "#fee2e2",
+        "$type": "color",
+        "$description": "Primitive · Red scale · #FEE2E2 · Light red. Available for additional danger tinting."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-500"
+          }
+        },
+        "$value": "#ef4444",
+        "$type": "color",
+        "$description": "Primitive · Red scale · #EF4444 · Mid red. Used for danger text/icons in dark mode."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-600"
+          }
+        },
+        "$value": "#dc2626",
+        "$type": "color",
+        "$description": "Primitive · Red scale · #DC2626 · Core danger red. Reference via color/background/danger or color/text/danger."
+      },
+      "700": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-700"
+          }
+        },
+        "$value": "#b91c1c",
+        "$type": "color",
+        "$description": "Primitive · Red scale · #B91C1C · Darker red for danger hover states."
+      },
+      "800": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-800"
+          }
+        },
+        "$value": "#991b1b",
+        "$type": "color",
+        "$description": "Primitive · Red scale · #991B1B · Deep red. Danger subtle background in dark mode."
+      }
+    },
+    "neutral": {
+      "0": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-0"
+          }
+        },
+        "$value": "#ffffff",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #FFFFFF · Pure white. Default page background in light mode and inverse text."
+      },
+      "50": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-50"
+          }
+        },
+        "$value": "#f8fafc",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #F8FAFC · Off-white. Subtle surface and assistant message background in light mode."
+      },
+      "100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-100"
+          }
+        },
+        "$value": "#f1f5f9",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #F1F5F9 · Light gray. Sunken surfaces, disabled backgrounds, inline code in light mode."
+      },
+      "200": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-200"
+          }
+        },
+        "$value": "#e2e8f0",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #E2E8F0 · Soft gray. Default border color in light mode."
+      },
+      "300": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-300"
+          }
+        },
+        "$value": "#cbd5e1",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #CBD5E1 · Medium-light gray. Disabled icon color in light mode."
+      },
+      "400": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-400"
+          }
+        },
+        "$value": "#94a3b8",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #94A3B8 · Mid gray. Disabled and subtlest text; subtle icon color in light mode."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-500"
+          }
+        },
+        "$value": "#64748b",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #64748B · Medium gray. Subtlest text in dark mode."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-600"
+          }
+        },
+        "$value": "#475569",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #475569 · Dark-medium gray. Default icon color and subtle text in light mode."
+      },
+      "700": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-700"
+          }
+        },
+        "$value": "#334155",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #334155 · Dark gray. Neutral-subtle surface and default border in dark mode."
+      },
+      "800": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-800"
+          }
+        },
+        "$value": "#1e293b",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #1E293B · Darker gray. Neutral surface, raised, and assistant surface in dark mode."
+      },
+      "900": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-900"
+          }
+        },
+        "$value": "#0f172a",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #0F172A · Near-black. Default page background in dark mode; primary text in light mode."
+      },
+      "1000": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-1000"
+          }
+        },
+        "$value": "#0a1628",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #0A1628 · Very dark. Sunken surface in dark mode."
+      },
+      "1100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-1100"
+          }
+        },
+        "$value": "#060d1c",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #060D1C · Almost black. Deep surface reserved for extreme contrast needs."
+      },
+      "1200": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-neutral-1200"
+          }
+        },
+        "$value": "#020509",
+        "$type": "color",
+        "$description": "Primitive · Neutral scale · #020509 · Darkest neutral. Reserved for maximum depth."
+      }
+    },
+    "white": {
+      "$extensions": {
+        "com.figma.hiddenFromPublishing": false,
+        "com.figma.codeSyntax": {
+          "Web": "--global-white"
+        }
+      },
+      "$value": "#ffffff",
+      "$type": "color",
+      "$description": "Primitive · Anchor · #FFFFFF · Alias for neutral/0. Used explicitly for on-color text (e.g. white text on filled buttons)."
+    },
+    "black": {
+      "$extensions": {
+        "com.figma.hiddenFromPublishing": false,
+        "com.figma.codeSyntax": {
+          "Web": "--global-black"
+        }
+      },
+      "$value": "#000000",
+      "$type": "color",
+      "$description": "Primitive · Anchor · #000000 · Pure black. Base for alpha/black overlay scale."
+    },
+    "alpha": {
+      "white": {
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-white-100"
+            }
+          },
+          "$value": "#ffffff0a",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(255,255,255,0.04) · 4% white overlay. Subtle highlight on dark surfaces."
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-white-200"
+            }
+          },
+          "$value": "#ffffff14",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(255,255,255,0.08) · 8% white overlay. Hover state tint on dark surfaces."
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-white-300"
+            }
+          },
+          "$value": "#ffffff1f",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(255,255,255,0.12) · 12% white overlay. Active state tint on dark surfaces."
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-white-400"
+            }
+          },
+          "$value": "#ffffff33",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(255,255,255,0.20) · 20% white overlay. Medium highlight on dark surfaces."
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-white-500"
+            }
+          },
+          "$value": "#ffffff5c",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(255,255,255,0.36) · 36% white overlay. Strong overlay for dark-mode scrims."
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-white-600"
+            }
+          },
+          "$value": "#ffffff99",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(255,255,255,0.60) · 60% white overlay. High-opacity scrim on dark surfaces."
+        }
+      },
+      "black": {
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-black-100"
+            }
+          },
+          "$value": "#0000000a",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(0,0,0,0.04) · 4% black overlay. Subtle dimming on light surfaces."
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-black-200"
+            }
+          },
+          "$value": "#00000014",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(0,0,0,0.08) · 8% black overlay. Hover tint on light surfaces."
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-black-300"
+            }
+          },
+          "$value": "#0000001f",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(0,0,0,0.12) · 12% black overlay. Active tint on light surfaces."
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-black-400"
+            }
+          },
+          "$value": "#00000033",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(0,0,0,0.20) · 20% black overlay. Medium dimming on light surfaces."
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-black-500"
+            }
+          },
+          "$value": "#0000005c",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(0,0,0,0.36) · 36% black overlay. Default modal/drawer scrim in light mode."
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--global-alpha-black-600"
+            }
+          },
+          "$value": "#00000099",
+          "$type": "color",
+          "$description": "Primitive · Alpha · rgba(0,0,0,0.60) · 60% black overlay. Strong scrim for dialogs in dark mode."
+        }
+      }
+    }
+  }
+}

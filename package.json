@@ -10,6 +10,7 @@
     "dev:website": "pnpm -F @molecule-ui/website dev",
     "storybook:react": "pnpm -F @molecule-ui/react storybook",
     "storybook:vue": "pnpm -F @molecule-ui/vue storybook",
+    "sync:tokens": "node scripts/sync-figma-tokens.mjs && node style-dictionary.config.mjs",
     "build:tokens": "node style-dictionary.config.mjs",
     "build:icons": "pnpm -F @molecule-ui/react build:icons && pnpm -F @molecule-ui/vue build:icons",
     "lint": "eslint .",
