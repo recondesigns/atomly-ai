@@ -51,6 +51,34 @@ function buildLookup(collection) {
 const collection = raw['Primitive/Value'] ?? raw;
 const lookup = buildLookup(collection);
 
+// Resolve a Token Studio alias like {neutral.100} to a concrete value.
+// Checks the primitive lookup first, then an optional secondary lookup.
+function resolveAlias(value, primLookup, secondaryLookup = {}) {
+  if (typeof value !== 'string') return value;
+  const match = value.match(/^\{(.+)\}$/);
+  if (!match) return value;
+  const key = match[1].replace(/\./g, '/');
+  return primLookup[key] ?? secondaryLookup[key] ?? value;
+}
+
+// Build a resolved lookup for Color/Light (semantic tokens → concrete hex values)
+const rawSemanticLookup = buildLookup(raw['Color/Light'] ?? {});
+const semanticLookup = {};
+for (const [key, val] of Object.entries(rawSemanticLookup)) {
+  semanticLookup[key] = resolveAlias(val, lookup);
+}
+
+// Build a resolved lookup for Component/Value (component tokens → concrete values)
+// Resolves aliases through semantics → primitives chain
+const rawComponentLookup = buildLookup(raw['Component/Value'] ?? {});
+const componentLookup = {};
+for (const [key, val] of Object.entries(rawComponentLookup)) {
+  componentLookup[key] = resolveAlias(val, lookup, semanticLookup);
+}
+
+// Helper: get a component token value by its path within Component/Value
+const compGet = (path, fallback) => componentLookup[`component/${path}`] ?? fallback;
+
 // Helper: get a value from the lookup, falling back to a hardcoded default
 const get = (name, fallback) => lookup[name] ?? fallback;
 
@@ -183,30 +211,30 @@ const primitives = {
 
   chip: {
     bg: {
-      default: { $value: get('chip/bg/default', '#F1F5F9'), $type: 'color' },
-      hover: { $value: get('chip/bg/hover', '#E2E8F0'), $type: 'color' },
-      primary: { $value: get('chip/bg/primary', '#EFF6FF'), $type: 'color' },
-      'primary-hover': { $value: get('chip/bg/primary-hover', '#DBEAFE'), $type: 'color' },
-      success: { $value: get('chip/bg/success', '#F0FDF4'), $type: 'color' },
-      'success-hover': { $value: get('chip/bg/success-hover', '#DCFCE7'), $type: 'color' },
-      danger: { $value: get('chip/bg/danger', '#FEF2F2'), $type: 'color' },
-      'danger-hover': { $value: get('chip/bg/danger-hover', '#FEE2E2'), $type: 'color' },
-      disabled: { $value: get('chip/bg/disabled', '#F1F5F9'), $type: 'color' },
+      default: { $value: compGet('chip/background/neutral', '#F1F5F9'), $type: 'color' },
+      hover: { $value: get('neutral/200', '#E2E8F0'), $type: 'color' },
+      primary: { $value: compGet('chip/background/primary', '#EFF6FF'), $type: 'color' },
+      'primary-hover': { $value: get('blue/200', '#DBEAFE'), $type: 'color' },
+      success: { $value: compGet('chip/background/success', '#F0FDF4'), $type: 'color' },
+      'success-hover': { $value: get('green/100', '#DCFCE7'), $type: 'color' },
+      danger: { $value: compGet('chip/background/danger', '#FEF2F2'), $type: 'color' },
+      'danger-hover': { $value: get('red/100', '#FEE2E2'), $type: 'color' },
+      disabled: { $value: compGet('chip/background/disabled', '#F1F5F9'), $type: 'color' },
     },
     text: {
-      default: { $value: get('chip/text/default', '#475569'), $type: 'color' },
-      primary: { $value: get('chip/text/primary', '#1D4ED8'), $type: 'color' },
-      success: { $value: get('chip/text/success', '#008236'), $type: 'color' },
-      danger: { $value: get('chip/text/danger', '#DC2626'), $type: 'color' },
-      disabled: { $value: get('chip/text/disabled', '#94A3B8'), $type: 'color' },
+      default: { $value: compGet('chip/text/neutral', '#475569'), $type: 'color' },
+      primary: { $value: compGet('chip/text/primary', '#2563EB'), $type: 'color' },
+      success: { $value: compGet('chip/text/success', '#00A63E'), $type: 'color' },
+      danger: { $value: compGet('chip/text/danger', '#DC2626'), $type: 'color' },
+      disabled: { $value: compGet('chip/text/disabled', '#94A3B8'), $type: 'color' },
     },
     border: {
-      default: { $value: get('chip/border/default', '#E2E8F0'), $type: 'color' },
-      primary: { $value: get('chip/border/primary', '#BFDBFE'), $type: 'color' },
-      success: { $value: get('chip/border/success', '#DCFCE7'), $type: 'color' },
-      danger: { $value: get('chip/border/danger', '#FEE2E2'), $type: 'color' },
-      focus: { $value: get('chip/border/focus', '#2563EB'), $type: 'color' },
-      disabled: { $value: get('chip/border/disabled', '#E2E8F0'), $type: 'color' },
+      default: { $value: compGet('chip/border/default', '#E2E8F0'), $type: 'color' },
+      primary: { $value: get('blue/300', '#BFDBFE'), $type: 'color' },
+      success: { $value: get('green/100', '#DCFCE7'), $type: 'color' },
+      danger: { $value: get('red/100', '#FEE2E2'), $type: 'color' },
+      focus: { $value: compGet('chip/border/focused', '#2563EB'), $type: 'color' },
+      disabled: { $value: compGet('chip/border/disabled', '#E2E8F0'), $type: 'color' },
     },
   },
 };

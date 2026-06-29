@@ -65,10 +65,10 @@
   --molecule-chip-bg-success-hover: #dcfce7;
   --molecule-chip-bg-danger: #fef2f2;
   --molecule-chip-bg-danger-hover: #fee2e2;
-  --molecule-chip-bg-disabled: #f1f5f9;
-  --molecule-chip-text-default: #475569;
-  --molecule-chip-text-primary: #1d4ed8;
-  --molecule-chip-text-success: #008236;
+  --molecule-chip-bg-disabled: #f8fafc;
+  --molecule-chip-text-default: #0f172a;
+  --molecule-chip-text-primary: #2563eb;
+  --molecule-chip-text-success: #00a63e;
   --molecule-chip-text-danger: #dc2626;
   --molecule-chip-text-disabled: #94a3b8;
   --molecule-chip-border-default: #e2e8f0;

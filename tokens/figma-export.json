@@ -483,254 +483,6 @@
       "$type": "color",
       "$description": "Primitive · Anchor · #000000 · Pure black. Base for alpha/black overlay scale."
     },
-    "chip": {
-      "bg": {
-        "default": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-bg-default"
-            },
-            "com.figma.scopes": ["ALL_FILLS"]
-          },
-          "$value": "#f1f5f9",
-          "$type": "color",
-          "$description": "Semantic · Chip · Background · #F1F5F9 · Default (neutral) chip background. Used for the filled neutral chip variant."
-        },
-        "hover": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-bg-hover"
-            },
-            "com.figma.scopes": ["ALL_FILLS"]
-          },
-          "$value": "#e2e8f0",
-          "$type": "color",
-          "$description": "Semantic · Chip · Background · #E2E8F0 · Neutral chip hover background. Applied on pointer-over for the default variant."
-        },
-        "primary": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-bg-primary"
-            },
-            "com.figma.scopes": ["ALL_FILLS"]
-          },
-          "$value": "#eff6ff",
-          "$type": "color",
-          "$description": "Semantic · Chip · Background · #EFF6FF · Primary chip background. Used for the filled primary (blue) chip variant."
-        },
-        "primary-hover": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-bg-primary-hover"
-            },
-            "com.figma.scopes": ["ALL_FILLS"]
-          },
-          "$value": "#dbeafe",
-          "$type": "color",
-          "$description": "Semantic · Chip · Background · #DBEAFE · Primary chip hover background. Applied on pointer-over for the primary variant."
-        },
-        "success": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-bg-success"
-            },
-            "com.figma.scopes": ["ALL_FILLS"]
-          },
-          "$value": "#f0fdf4",
-          "$type": "color",
-          "$description": "Semantic · Chip · Background · #F0FDF4 · Success chip background. Used for the filled success (green) chip variant."
-        },
-        "success-hover": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-bg-success-hover"
-            },
-            "com.figma.scopes": ["ALL_FILLS"]
-          },
-          "$value": "#dcfce7",
-          "$type": "color",
-          "$description": "Semantic · Chip · Background · #DCFCE7 · Success chip hover background. Applied on pointer-over for the success variant."
-        },
-        "danger": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-bg-danger"
-            },
-            "com.figma.scopes": ["ALL_FILLS"]
-          },
-          "$value": "#fef2f2",
-          "$type": "color",
-          "$description": "Semantic · Chip · Background · #FEF2F2 · Danger chip background. Used for the filled danger (red) chip variant."
-        },
-        "danger-hover": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-bg-danger-hover"
-            },
-            "com.figma.scopes": ["ALL_FILLS"]
-          },
-          "$value": "#fee2e2",
-          "$type": "color",
-          "$description": "Semantic · Chip · Background · #FEE2E2 · Danger chip hover background. Applied on pointer-over for the danger variant."
-        },
-        "disabled": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-bg-disabled"
-            },
-            "com.figma.scopes": ["ALL_FILLS"]
-          },
-          "$value": "#f1f5f9",
-          "$type": "color",
-          "$description": "Semantic · Chip · Background · #F1F5F9 · Disabled chip background. Applied to all variants when isDisabled is true."
-        }
-      },
-      "text": {
-        "default": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-text-default"
-            },
-            "com.figma.scopes": ["TEXT_FILL"]
-          },
-          "$value": "#475569",
-          "$type": "color",
-          "$description": "Semantic · Chip · Text · #475569 · Default chip label color. Used for neutral variant chip labels and icons."
-        },
-        "primary": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-text-primary"
-            },
-            "com.figma.scopes": ["TEXT_FILL"]
-          },
-          "$value": "#1d4ed8",
-          "$type": "color",
-          "$description": "Semantic · Chip · Text · #1D4ED8 · Primary chip label color. Used for the primary (blue) chip variant label and icon."
-        },
-        "success": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-text-success"
-            },
-            "com.figma.scopes": ["TEXT_FILL"]
-          },
-          "$value": "#008236",
-          "$type": "color",
-          "$description": "Semantic · Chip · Text · #008236 · Success chip label color. Used for the success (green) chip variant label and icon."
-        },
-        "danger": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-text-danger"
-            },
-            "com.figma.scopes": ["TEXT_FILL"]
-          },
-          "$value": "#dc2626",
-          "$type": "color",
-          "$description": "Semantic · Chip · Text · #DC2626 · Danger chip label color. Used for the danger (red) chip variant label and icon."
-        },
-        "disabled": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-text-disabled"
-            },
-            "com.figma.scopes": ["TEXT_FILL"]
-          },
-          "$value": "#94a3b8",
-          "$type": "color",
-          "$description": "Semantic · Chip · Text · #94A3B8 · Disabled chip label color. Applied to label and icon when isDisabled is true."
-        }
-      },
-      "border": {
-        "default": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-border-default"
-            },
-            "com.figma.scopes": ["STROKE_COLOR"]
-          },
-          "$value": "#e2e8f0",
-          "$type": "color",
-          "$description": "Semantic · Chip · Border · #E2E8F0 · Default chip border. Used for the outlined neutral chip variant stroke."
-        },
-        "primary": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-border-primary"
-            },
-            "com.figma.scopes": ["STROKE_COLOR"]
-          },
-          "$value": "#bfdbfe",
-          "$type": "color",
-          "$description": "Semantic · Chip · Border · #BFDBFE · Primary chip border. Used for the outlined primary (blue) chip variant stroke."
-        },
-        "success": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-border-success"
-            },
-            "com.figma.scopes": ["STROKE_COLOR"]
-          },
-          "$value": "#dcfce7",
-          "$type": "color",
-          "$description": "Semantic · Chip · Border · #DCFCE7 · Success chip border. Used for the outlined success (green) chip variant stroke."
-        },
-        "danger": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-border-danger"
-            },
-            "com.figma.scopes": ["STROKE_COLOR"]
-          },
-          "$value": "#fee2e2",
-          "$type": "color",
-          "$description": "Semantic · Chip · Border · #FEE2E2 · Danger chip border. Used for the outlined danger (red) chip variant stroke."
-        },
-        "focus": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-border-focus"
-            },
-            "com.figma.scopes": ["STROKE_COLOR"]
-          },
-          "$value": "#2563eb",
-          "$type": "color",
-          "$description": "Semantic · Chip · Border · #2563EB · Chip keyboard focus indicator. Rendered as a 2px outline on focus-visible for all chip variants."
-        },
-        "disabled": {
-          "$extensions": {
-            "com.figma.hiddenFromPublishing": false,
-            "com.figma.codeSyntax": {
-              "Web": "--component-chip-border-disabled"
-            },
-            "com.figma.scopes": ["STROKE_COLOR"]
-          },
-          "$value": "#e2e8f0",
-          "$type": "color",
-          "$description": "Semantic · Chip · Border · #E2E8F0 · Disabled chip border. Applied to the outlined variant border when isDisabled is true."
-        }
-      }
-    },
     "alpha": {
       "white": {
         "100": {
@@ -869,5 +621,2529 @@
         }
       }
     }
+  },
+  "Color/Light": {
+    "color": {
+      "background": {
+        "default": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-default)"
+            }
+          },
+          "$value": "{neutral.0}",
+          "$type": "color",
+          "$description": "Semantic · Background · Default page canvas. Light: #FFFFFF · Dark: #0F172A. Apply to the root layout surface — the furthest back layer in any view."
+        },
+        "neutral": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-neutral)"
+            }
+          },
+          "$value": "{neutral.50}",
+          "$type": "color",
+          "$description": "Semantic · Background · Neutral surface. Light: #F8FAFC · Dark: #1E293B. Use for sidebars, panels, and cards that sit one level above the default background."
+        },
+        "neutral-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-neutral-subtle)"
+            }
+          },
+          "$value": "{neutral.100}",
+          "$type": "color",
+          "$description": "Semantic · Background · Subtle neutral. Light: #F1F5F9 · Dark: #334155. Use for hover states on neutral surfaces, zebra-striped rows, and section dividers."
+        },
+        "raised": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-raised)"
+            }
+          },
+          "$value": "{neutral.0}",
+          "$type": "color",
+          "$description": "Semantic · Background · Raised surface. Light: #FFFFFF · Dark: #1E293B. Use for floating elements like cards and popovers that appear elevated above the page."
+        },
+        "sunken": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-sunken)"
+            }
+          },
+          "$value": "{neutral.100}",
+          "$type": "color",
+          "$description": "Semantic · Background · Sunken surface. Light: #F1F5F9 · Dark: #0A1628. Use for inset content areas such as code editors, input interiors, and wells."
+        },
+        "overlay": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-overlay)"
+            }
+          },
+          "$value": "{alpha.black.500}",
+          "$type": "color",
+          "$description": "Semantic · Background · Modal scrim/overlay. Light: rgba(0,0,0,0.36) · Dark: rgba(0,0,0,0.60). Apply behind modals, drawers, and dialogs to dim the content beneath."
+        },
+        "primary": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-primary)"
+            }
+          },
+          "$value": "{blue.600}",
+          "$type": "color",
+          "$description": "Semantic · Background · Primary action fill. Light: blue/600 (#2563EB) · Dark: blue/500 (#3B82F6). Use for primary buttons, active navigation items, and focused controls."
+        },
+        "primary-hover": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-primary-hover)"
+            }
+          },
+          "$value": "{blue.700}",
+          "$type": "color",
+          "$description": "Semantic · Background · Primary action hover. Light: blue/700 · Dark: blue/400. Applied on pointer hover over primary-filled elements."
+        },
+        "primary-active": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-primary-active)"
+            }
+          },
+          "$value": "{blue.800}",
+          "$type": "color",
+          "$description": "Semantic · Background · Primary action pressed. Light: blue/800 · Dark: blue/300. Applied on pointer down / active press of primary-filled elements."
+        },
+        "primary-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-primary-subtle)"
+            }
+          },
+          "$value": "{blue.100}",
+          "$type": "color",
+          "$description": "Semantic · Background · Primary tinted surface. Light: blue/100 (#EFF6FF) · Dark: blue/900 (#1E3A8A). Use for selected-state backgrounds, highlighted rows, and info banners."
+        },
+        "brand": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-brand)"
+            }
+          },
+          "$value": "{amber.500}",
+          "$type": "color",
+          "$description": "Semantic · Background · Brand fill. Light & Dark: amber/500 (#FE9A00). Use sparingly for signature brand moments — hero accents, marketing callouts, and brand badges."
+        },
+        "brand-hover": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-brand-hover)"
+            }
+          },
+          "$value": "{amber.600}",
+          "$type": "color",
+          "$description": "Semantic · Background · Brand hover. Light & Dark: amber/600 (#E17100). Applied on hover over brand-filled elements."
+        },
+        "brand-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-brand-subtle)"
+            }
+          },
+          "$value": "{amber.100}",
+          "$type": "color",
+          "$description": "Semantic · Background · Brand tinted surface. Light: amber/100 · Dark: amber/700. Use for brand-tinted info panels or promotional highlight areas."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-success)"
+            }
+          },
+          "$value": "{green.600}",
+          "$type": "color",
+          "$description": "Semantic · Background · Success fill. Light & Dark: green/600 (#00A63E). Use for success toasts, confirmation banners, and positive-state filled badges."
+        },
+        "success-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-success-subtle)"
+            }
+          },
+          "$value": "{green.50}",
+          "$type": "color",
+          "$description": "Semantic · Background · Success tinted surface. Light: green/50 · Dark: green/800. Use for success-state highlighted rows, inline validation backgrounds, and success banners."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-danger)"
+            }
+          },
+          "$value": "{red.600}",
+          "$type": "color",
+          "$description": "Semantic · Background · Danger fill. Light & Dark: red/600 (#DC2626). Use for destructive action buttons, error toasts, and critical-state filled badges."
+        },
+        "danger-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-danger-subtle)"
+            }
+          },
+          "$value": "{red.50}",
+          "$type": "color",
+          "$description": "Semantic · Background · Danger tinted surface. Light: red/50 · Dark: red/800. Use for error-state highlighted rows, inline validation backgrounds, and error banners."
+        },
+        "thinking": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-thinking)"
+            }
+          },
+          "$value": "{blue.100}",
+          "$type": "color",
+          "$description": "Semantic · Background · AI · Streaming/generating state. Light: blue/100 · Dark: blue/900. Apply as the background for components actively generating AI content. Pair with color/border/thinking and an animation for the full streaming effect."
+        }
+      },
+      "text": {
+        "default": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-default)"
+            }
+          },
+          "$value": "{neutral.900}",
+          "$type": "color",
+          "$description": "Semantic · Text · Primary body text. Light: neutral/900 (#0F172A) · Dark: neutral/0 (#FFFFFF). Use for headings, body copy, and any high-importance readable text."
+        },
+        "subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-subtle)"
+            }
+          },
+          "$value": "{neutral.600}",
+          "$type": "color",
+          "$description": "Semantic · Text · Secondary text. Light: neutral/600 (#475569) · Dark: neutral/400 (#94A3B8). Use for supporting copy, descriptions, and secondary labels."
+        },
+        "subtlest": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-subtlest)"
+            }
+          },
+          "$value": "{neutral.400}",
+          "$type": "color",
+          "$description": "Semantic · Text · Tertiary text. Light: neutral/400 · Dark: neutral/500. Use for placeholder text, hints, metadata, and very low-priority labels."
+        },
+        "disabled": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-disabled)"
+            }
+          },
+          "$value": "{neutral.400}",
+          "$type": "color",
+          "$description": "Semantic · Text · Disabled text. Light: neutral/400 · Dark: neutral/600. Apply to text inside disabled inputs, buttons, and interactive elements."
+        },
+        "inverse": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-inverse)"
+            }
+          },
+          "$value": "{neutral.0}",
+          "$type": "color",
+          "$description": "Semantic · Text · Inverse text. Light: neutral/0 (#FFFFFF) · Dark: neutral/900 (#0F172A). Use for text rendered on filled (non-white/black) backgrounds that need contrast reversal."
+        },
+        "on-primary": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-primary)"
+            }
+          },
+          "$value": "{white}",
+          "$type": "color",
+          "$description": "Semantic · Text · On-primary text. Light & Dark: white. Use for labels and icons rendered directly on color/background/primary surfaces."
+        },
+        "on-brand": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-brand)"
+            }
+          },
+          "$value": "{white}",
+          "$type": "color",
+          "$description": "Semantic · Text · On-brand text. Light & Dark: white. Use for labels and icons rendered directly on color/background/brand surfaces."
+        },
+        "on-success": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-success)"
+            }
+          },
+          "$value": "{white}",
+          "$type": "color",
+          "$description": "Semantic · Text · On-success text. Light & Dark: white. Use for labels inside success-filled badges, buttons, and toasts."
+        },
+        "on-danger": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-danger)"
+            }
+          },
+          "$value": "{white}",
+          "$type": "color",
+          "$description": "Semantic · Text · On-danger text. Light & Dark: white. Use for labels inside danger-filled buttons and error toasts."
+        },
+        "primary": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-primary)"
+            }
+          },
+          "$value": "{blue.600}",
+          "$type": "color",
+          "$description": "Semantic · Text · Primary action text color. Light: blue/600 (#2563EB) · Dark: blue/400 (#60A5FA). Use for links, interactive labels, and text-only action triggers."
+        },
+        "brand": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-brand)"
+            }
+          },
+          "$value": "{amber.600}",
+          "$type": "color",
+          "$description": "Semantic · Text · Brand text color. Light: amber/600 (#E17100) · Dark: amber/500 (#FE9A00). Use for brand-colored text links and inline brand accents."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-success)"
+            }
+          },
+          "$value": "{green.600}",
+          "$type": "color",
+          "$description": "Semantic · Text · Success text color. Light: green/600 · Dark: green/500. Use for positive validation messages and success status labels."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-danger)"
+            }
+          },
+          "$value": "{red.600}",
+          "$type": "color",
+          "$description": "Semantic · Text · Danger text color. Light: red/600 · Dark: red/500. Use for error messages, destructive action labels, and inline validation errors."
+        },
+        "code": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-code)"
+            }
+          },
+          "$value": "{neutral.700}",
+          "$type": "color",
+          "$description": "Semantic · Text · AI · Code text color. Light: neutral/700 (#334155) · Dark: neutral/200 (#E2E8F0). Use for text inside code blocks, inline code chips, and monospace AI output."
+        }
+      },
+      "border": {
+        "default": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-default)"
+            }
+          },
+          "$value": "{neutral.200}",
+          "$type": "color",
+          "$description": "Semantic · Border · Default divider and container outline. Light: neutral/200 (#E2E8F0) · Dark: neutral/700 (#334155). Use for cards, inputs, and section dividers at rest."
+        },
+        "bold": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-bold)"
+            }
+          },
+          "$value": "{neutral.400}",
+          "$type": "color",
+          "$description": "Semantic · Border · Emphasized border. Light: neutral/400 (#94A3B8) · Dark: neutral/600 (#475569). Use for stronger visual separation or hover state outlines."
+        },
+        "focused": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-focused)"
+            }
+          },
+          "$value": "{blue.600}",
+          "$type": "color",
+          "$description": "Semantic · Border · Keyboard focus outline. Light: blue/600 (#2563EB) · Dark: blue/500 (#3B82F6). Apply as the visible border on focused interactive elements. Always pair with color/focus-ring for accessibility."
+        },
+        "disabled": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-disabled)"
+            }
+          },
+          "$value": "{neutral.200}",
+          "$type": "color",
+          "$description": "Semantic · Border · Disabled element outline. Light: neutral/200 · Dark: neutral/700. Apply to the border of disabled inputs, buttons, and interactive containers."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-danger)"
+            }
+          },
+          "$value": "{red.600}",
+          "$type": "color",
+          "$description": "Semantic · Border · Error/danger outline. Light: red/600 (#DC2626) · Dark: red/500. Use for invalid input fields, error-state containers, and destructive confirmation borders."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-success)"
+            }
+          },
+          "$value": "{green.600}",
+          "$type": "color",
+          "$description": "Semantic · Border · Success outline. Light: green/600 (#00A63E) · Dark: green/500. Use for valid input fields and success-state component outlines."
+        },
+        "thinking": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-thinking)"
+            }
+          },
+          "$value": "{blue.400}",
+          "$type": "color",
+          "$description": "Semantic · Border · AI · Streaming/generating state border. Light: blue/400 (#60A5FA) · Dark: blue/500 (#3B82F6). Apply to containers actively streaming AI output. Pair with color/background/thinking and an animation for a pulsing ring effect."
+        }
+      },
+      "icon": {
+        "default": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-default)"
+            }
+          },
+          "$value": "{neutral.600}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Default icon fill. Light: neutral/600 (#475569) · Dark: neutral/400 (#94A3B8). Use for all standard UI icons at rest."
+        },
+        "subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-subtle)"
+            }
+          },
+          "$value": "{neutral.400}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Subtle icon fill. Light: neutral/400 (#94A3B8) · Dark: neutral/600 (#475569). Use for decorative, secondary, or low-priority icons."
+        },
+        "disabled": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-disabled)"
+            }
+          },
+          "$value": "{neutral.300}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Disabled icon fill. Light: neutral/300 (#CBD5E1) · Dark: neutral/700 (#334155). Apply to icons inside disabled controls."
+        },
+        "inverse": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-inverse)"
+            }
+          },
+          "$value": "{white}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Inverse icon fill. Light: white · Dark: neutral/900. Use for icons rendered on filled (dark or brand-colored) backgrounds."
+        },
+        "primary": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-primary)"
+            }
+          },
+          "$value": "{blue.600}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Primary action icon. Light: blue/600 (#2563EB) · Dark: blue/400 (#60A5FA). Use for icons that accompany or replace primary action text."
+        },
+        "brand": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-brand)"
+            }
+          },
+          "$value": "{amber.500}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Brand icon fill. Light: amber/500 (#FE9A00) · Dark: amber/400. Use for icons that carry the brand accent color."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-success)"
+            }
+          },
+          "$value": "{green.600}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Success icon fill. Light: green/600 (#00A63E) · Dark: green/500. Use for checkmarks, confirmation icons, and positive-state indicators."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-danger)"
+            }
+          },
+          "$value": "{red.600}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Danger icon fill. Light: red/600 (#DC2626) · Dark: red/500. Use for error icons, destructive warnings, and critical-state indicators."
+        }
+      },
+      "surface": {
+        "assistant": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-surface-assistant)"
+            }
+          },
+          "$value": "{neutral.50}",
+          "$type": "color",
+          "$description": "Semantic · Surface · AI · Assistant message background. Light: neutral/50 (#F8FAFC) · Dark: neutral/800 (#1E293B). Use as the background for AI-generated message bubbles and assistant response containers. Visually distinct from user messages."
+        },
+        "user": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-surface-user)"
+            }
+          },
+          "$value": "{blue.100}",
+          "$type": "color",
+          "$description": "Semantic · Surface · AI · User message background. Light: blue/100 (#EFF6FF) · Dark: blue/900 (#1E3A8A). Use as the background for user-authored message bubbles in chat UIs."
+        },
+        "code": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-surface-code)"
+            }
+          },
+          "$value": "{neutral.900}",
+          "$type": "color",
+          "$description": "Semantic · Surface · AI · Code block background. Light & Dark: neutral/900 → neutral/1000. Intentionally dark even in light mode to match the universal code-editor convention. Use for multi-line code blocks and syntax-highlighted content."
+        },
+        "code-inline": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-surface-code-inline)"
+            }
+          },
+          "$value": "{neutral.100}",
+          "$type": "color",
+          "$description": "Semantic · Surface · AI · Inline code chip background. Light: neutral/100 (#F1F5F9) · Dark: neutral/800 (#1E293B). Use for short inline code spans within prose — lighter than full code blocks."
+        }
+      },
+      "focus-ring": {
+        "$extensions": {
+          "com.figma.scopes": ["EFFECT_COLOR"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--color-focus-ring)"
+          }
+        },
+        "$value": "#2563eb66",
+        "$type": "color",
+        "$description": "Semantic · Effect · Keyboard focus ring glow. Light: rgba(37,99,235,0.40) — blue/600 at 40% opacity. Dark: rgba(59,130,246,0.40) — blue/500 at 40% opacity. Apply as a drop-shadow or outline offset effect on focused interactive elements alongside color/border/focused for WCAG-compliant focus visibility."
+      }
+    }
+  },
+  "Color/Dark": {
+    "color": {
+      "background": {
+        "default": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-default)"
+            }
+          },
+          "$value": "{neutral.900}",
+          "$type": "color",
+          "$description": "Semantic · Background · Default page canvas. Light: #FFFFFF · Dark: #0F172A. Apply to the root layout surface — the furthest back layer in any view."
+        },
+        "neutral": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-neutral)"
+            }
+          },
+          "$value": "{neutral.800}",
+          "$type": "color",
+          "$description": "Semantic · Background · Neutral surface. Light: #F8FAFC · Dark: #1E293B. Use for sidebars, panels, and cards that sit one level above the default background."
+        },
+        "neutral-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-neutral-subtle)"
+            }
+          },
+          "$value": "{neutral.700}",
+          "$type": "color",
+          "$description": "Semantic · Background · Subtle neutral. Light: #F1F5F9 · Dark: #334155. Use for hover states on neutral surfaces, zebra-striped rows, and section dividers."
+        },
+        "raised": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-raised)"
+            }
+          },
+          "$value": "{neutral.800}",
+          "$type": "color",
+          "$description": "Semantic · Background · Raised surface. Light: #FFFFFF · Dark: #1E293B. Use for floating elements like cards and popovers that appear elevated above the page."
+        },
+        "sunken": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-sunken)"
+            }
+          },
+          "$value": "{neutral.1000}",
+          "$type": "color",
+          "$description": "Semantic · Background · Sunken surface. Light: #F1F5F9 · Dark: #0A1628. Use for inset content areas such as code editors, input interiors, and wells."
+        },
+        "overlay": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-overlay)"
+            }
+          },
+          "$value": "{alpha.black.600}",
+          "$type": "color",
+          "$description": "Semantic · Background · Modal scrim/overlay. Light: rgba(0,0,0,0.36) · Dark: rgba(0,0,0,0.60). Apply behind modals, drawers, and dialogs to dim the content beneath."
+        },
+        "primary": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-primary)"
+            }
+          },
+          "$value": "{blue.500}",
+          "$type": "color",
+          "$description": "Semantic · Background · Primary action fill. Light: blue/600 (#2563EB) · Dark: blue/500 (#3B82F6). Use for primary buttons, active navigation items, and focused controls."
+        },
+        "primary-hover": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-primary-hover)"
+            }
+          },
+          "$value": "{blue.400}",
+          "$type": "color",
+          "$description": "Semantic · Background · Primary action hover. Light: blue/700 · Dark: blue/400. Applied on pointer hover over primary-filled elements."
+        },
+        "primary-active": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-primary-active)"
+            }
+          },
+          "$value": "{blue.300}",
+          "$type": "color",
+          "$description": "Semantic · Background · Primary action pressed. Light: blue/800 · Dark: blue/300. Applied on pointer down / active press of primary-filled elements."
+        },
+        "primary-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-primary-subtle)"
+            }
+          },
+          "$value": "{blue.900}",
+          "$type": "color",
+          "$description": "Semantic · Background · Primary tinted surface. Light: blue/100 (#EFF6FF) · Dark: blue/900 (#1E3A8A). Use for selected-state backgrounds, highlighted rows, and info banners."
+        },
+        "brand": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-brand)"
+            }
+          },
+          "$value": "{amber.500}",
+          "$type": "color",
+          "$description": "Semantic · Background · Brand fill. Light & Dark: amber/500 (#FE9A00). Use sparingly for signature brand moments — hero accents, marketing callouts, and brand badges."
+        },
+        "brand-hover": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-brand-hover)"
+            }
+          },
+          "$value": "{amber.600}",
+          "$type": "color",
+          "$description": "Semantic · Background · Brand hover. Light & Dark: amber/600 (#E17100). Applied on hover over brand-filled elements."
+        },
+        "brand-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-brand-subtle)"
+            }
+          },
+          "$value": "{amber.700}",
+          "$type": "color",
+          "$description": "Semantic · Background · Brand tinted surface. Light: amber/100 · Dark: amber/700. Use for brand-tinted info panels or promotional highlight areas."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-success)"
+            }
+          },
+          "$value": "{green.600}",
+          "$type": "color",
+          "$description": "Semantic · Background · Success fill. Light & Dark: green/600 (#00A63E). Use for success toasts, confirmation banners, and positive-state filled badges."
+        },
+        "success-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-success-subtle)"
+            }
+          },
+          "$value": "{green.800}",
+          "$type": "color",
+          "$description": "Semantic · Background · Success tinted surface. Light: green/50 · Dark: green/800. Use for success-state highlighted rows, inline validation backgrounds, and success banners."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-danger)"
+            }
+          },
+          "$value": "{red.600}",
+          "$type": "color",
+          "$description": "Semantic · Background · Danger fill. Light & Dark: red/600 (#DC2626). Use for destructive action buttons, error toasts, and critical-state filled badges."
+        },
+        "danger-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-danger-subtle)"
+            }
+          },
+          "$value": "{red.800}",
+          "$type": "color",
+          "$description": "Semantic · Background · Danger tinted surface. Light: red/50 · Dark: red/800. Use for error-state highlighted rows, inline validation backgrounds, and error banners."
+        },
+        "thinking": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-thinking)"
+            }
+          },
+          "$value": "{blue.900}",
+          "$type": "color",
+          "$description": "Semantic · Background · AI · Streaming/generating state. Light: blue/100 · Dark: blue/900. Apply as the background for components actively generating AI content. Pair with color/border/thinking and an animation for the full streaming effect."
+        }
+      },
+      "text": {
+        "default": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-default)"
+            }
+          },
+          "$value": "{neutral.0}",
+          "$type": "color",
+          "$description": "Semantic · Text · Primary body text. Light: neutral/900 (#0F172A) · Dark: neutral/0 (#FFFFFF). Use for headings, body copy, and any high-importance readable text."
+        },
+        "subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-subtle)"
+            }
+          },
+          "$value": "{neutral.400}",
+          "$type": "color",
+          "$description": "Semantic · Text · Secondary text. Light: neutral/600 (#475569) · Dark: neutral/400 (#94A3B8). Use for supporting copy, descriptions, and secondary labels."
+        },
+        "subtlest": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-subtlest)"
+            }
+          },
+          "$value": "{neutral.500}",
+          "$type": "color",
+          "$description": "Semantic · Text · Tertiary text. Light: neutral/400 · Dark: neutral/500. Use for placeholder text, hints, metadata, and very low-priority labels."
+        },
+        "disabled": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-disabled)"
+            }
+          },
+          "$value": "{neutral.600}",
+          "$type": "color",
+          "$description": "Semantic · Text · Disabled text. Light: neutral/400 · Dark: neutral/600. Apply to text inside disabled inputs, buttons, and interactive elements."
+        },
+        "inverse": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-inverse)"
+            }
+          },
+          "$value": "{neutral.900}",
+          "$type": "color",
+          "$description": "Semantic · Text · Inverse text. Light: neutral/0 (#FFFFFF) · Dark: neutral/900 (#0F172A). Use for text rendered on filled (non-white/black) backgrounds that need contrast reversal."
+        },
+        "on-primary": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-primary)"
+            }
+          },
+          "$value": "{white}",
+          "$type": "color",
+          "$description": "Semantic · Text · On-primary text. Light & Dark: white. Use for labels and icons rendered directly on color/background/primary surfaces."
+        },
+        "on-brand": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-brand)"
+            }
+          },
+          "$value": "{white}",
+          "$type": "color",
+          "$description": "Semantic · Text · On-brand text. Light & Dark: white. Use for labels and icons rendered directly on color/background/brand surfaces."
+        },
+        "on-success": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-success)"
+            }
+          },
+          "$value": "{white}",
+          "$type": "color",
+          "$description": "Semantic · Text · On-success text. Light & Dark: white. Use for labels inside success-filled badges, buttons, and toasts."
+        },
+        "on-danger": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-danger)"
+            }
+          },
+          "$value": "{white}",
+          "$type": "color",
+          "$description": "Semantic · Text · On-danger text. Light & Dark: white. Use for labels inside danger-filled buttons and error toasts."
+        },
+        "primary": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-primary)"
+            }
+          },
+          "$value": "{blue.400}",
+          "$type": "color",
+          "$description": "Semantic · Text · Primary action text color. Light: blue/600 (#2563EB) · Dark: blue/400 (#60A5FA). Use for links, interactive labels, and text-only action triggers."
+        },
+        "brand": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-brand)"
+            }
+          },
+          "$value": "{amber.500}",
+          "$type": "color",
+          "$description": "Semantic · Text · Brand text color. Light: amber/600 (#E17100) · Dark: amber/500 (#FE9A00). Use for brand-colored text links and inline brand accents."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-success)"
+            }
+          },
+          "$value": "{green.500}",
+          "$type": "color",
+          "$description": "Semantic · Text · Success text color. Light: green/600 · Dark: green/500. Use for positive validation messages and success status labels."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-danger)"
+            }
+          },
+          "$value": "{red.500}",
+          "$type": "color",
+          "$description": "Semantic · Text · Danger text color. Light: red/600 · Dark: red/500. Use for error messages, destructive action labels, and inline validation errors."
+        },
+        "code": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-code)"
+            }
+          },
+          "$value": "{neutral.200}",
+          "$type": "color",
+          "$description": "Semantic · Text · AI · Code text color. Light: neutral/700 (#334155) · Dark: neutral/200 (#E2E8F0). Use for text inside code blocks, inline code chips, and monospace AI output."
+        }
+      },
+      "border": {
+        "default": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-default)"
+            }
+          },
+          "$value": "{neutral.700}",
+          "$type": "color",
+          "$description": "Semantic · Border · Default divider and container outline. Light: neutral/200 (#E2E8F0) · Dark: neutral/700 (#334155). Use for cards, inputs, and section dividers at rest."
+        },
+        "bold": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-bold)"
+            }
+          },
+          "$value": "{neutral.600}",
+          "$type": "color",
+          "$description": "Semantic · Border · Emphasized border. Light: neutral/400 (#94A3B8) · Dark: neutral/600 (#475569). Use for stronger visual separation or hover state outlines."
+        },
+        "focused": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-focused)"
+            }
+          },
+          "$value": "{blue.500}",
+          "$type": "color",
+          "$description": "Semantic · Border · Keyboard focus outline. Light: blue/600 (#2563EB) · Dark: blue/500 (#3B82F6). Apply as the visible border on focused interactive elements. Always pair with color/focus-ring for accessibility."
+        },
+        "disabled": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-disabled)"
+            }
+          },
+          "$value": "{neutral.700}",
+          "$type": "color",
+          "$description": "Semantic · Border · Disabled element outline. Light: neutral/200 · Dark: neutral/700. Apply to the border of disabled inputs, buttons, and interactive containers."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-danger)"
+            }
+          },
+          "$value": "{red.500}",
+          "$type": "color",
+          "$description": "Semantic · Border · Error/danger outline. Light: red/600 (#DC2626) · Dark: red/500. Use for invalid input fields, error-state containers, and destructive confirmation borders."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-success)"
+            }
+          },
+          "$value": "{green.500}",
+          "$type": "color",
+          "$description": "Semantic · Border · Success outline. Light: green/600 (#00A63E) · Dark: green/500. Use for valid input fields and success-state component outlines."
+        },
+        "thinking": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-thinking)"
+            }
+          },
+          "$value": "{blue.500}",
+          "$type": "color",
+          "$description": "Semantic · Border · AI · Streaming/generating state border. Light: blue/400 (#60A5FA) · Dark: blue/500 (#3B82F6). Apply to containers actively streaming AI output. Pair with color/background/thinking and an animation for a pulsing ring effect."
+        }
+      },
+      "icon": {
+        "default": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-default)"
+            }
+          },
+          "$value": "{neutral.400}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Default icon fill. Light: neutral/600 (#475569) · Dark: neutral/400 (#94A3B8). Use for all standard UI icons at rest."
+        },
+        "subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-subtle)"
+            }
+          },
+          "$value": "{neutral.600}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Subtle icon fill. Light: neutral/400 (#94A3B8) · Dark: neutral/600 (#475569). Use for decorative, secondary, or low-priority icons."
+        },
+        "disabled": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-disabled)"
+            }
+          },
+          "$value": "{neutral.700}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Disabled icon fill. Light: neutral/300 (#CBD5E1) · Dark: neutral/700 (#334155). Apply to icons inside disabled controls."
+        },
+        "inverse": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-inverse)"
+            }
+          },
+          "$value": "{neutral.900}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Inverse icon fill. Light: white · Dark: neutral/900. Use for icons rendered on filled (dark or brand-colored) backgrounds."
+        },
+        "primary": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-primary)"
+            }
+          },
+          "$value": "{blue.400}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Primary action icon. Light: blue/600 (#2563EB) · Dark: blue/400 (#60A5FA). Use for icons that accompany or replace primary action text."
+        },
+        "brand": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-brand)"
+            }
+          },
+          "$value": "{amber.400}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Brand icon fill. Light: amber/500 (#FE9A00) · Dark: amber/400. Use for icons that carry the brand accent color."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-success)"
+            }
+          },
+          "$value": "{green.500}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Success icon fill. Light: green/600 (#00A63E) · Dark: green/500. Use for checkmarks, confirmation icons, and positive-state indicators."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-danger)"
+            }
+          },
+          "$value": "{red.500}",
+          "$type": "color",
+          "$description": "Semantic · Icon · Danger icon fill. Light: red/600 (#DC2626) · Dark: red/500. Use for error icons, destructive warnings, and critical-state indicators."
+        }
+      },
+      "surface": {
+        "assistant": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-surface-assistant)"
+            }
+          },
+          "$value": "{neutral.800}",
+          "$type": "color",
+          "$description": "Semantic · Surface · AI · Assistant message background. Light: neutral/50 (#F8FAFC) · Dark: neutral/800 (#1E293B). Use as the background for AI-generated message bubbles and assistant response containers. Visually distinct from user messages."
+        },
+        "user": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-surface-user)"
+            }
+          },
+          "$value": "{blue.900}",
+          "$type": "color",
+          "$description": "Semantic · Surface · AI · User message background. Light: blue/100 (#EFF6FF) · Dark: blue/900 (#1E3A8A). Use as the background for user-authored message bubbles in chat UIs."
+        },
+        "code": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-surface-code)"
+            }
+          },
+          "$value": "{neutral.1000}",
+          "$type": "color",
+          "$description": "Semantic · Surface · AI · Code block background. Light & Dark: neutral/900 → neutral/1000. Intentionally dark even in light mode to match the universal code-editor convention. Use for multi-line code blocks and syntax-highlighted content."
+        },
+        "code-inline": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-surface-code-inline)"
+            }
+          },
+          "$value": "{neutral.800}",
+          "$type": "color",
+          "$description": "Semantic · Surface · AI · Inline code chip background. Light: neutral/100 (#F1F5F9) · Dark: neutral/800 (#1E293B). Use for short inline code spans within prose — lighter than full code blocks."
+        }
+      },
+      "focus-ring": {
+        "$extensions": {
+          "com.figma.scopes": ["EFFECT_COLOR"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--color-focus-ring)"
+          }
+        },
+        "$value": "#3b82f666",
+        "$type": "color",
+        "$description": "Semantic · Effect · Keyboard focus ring glow. Light: rgba(37,99,235,0.40) — blue/600 at 40% opacity. Dark: rgba(59,130,246,0.40) — blue/500 at 40% opacity. Apply as a drop-shadow or outline offset effect on focused interactive elements alongside color/border/focused for WCAG-compliant focus visibility."
+      }
+    }
+  },
+  "Component/Value": {
+    "component": {
+      "button": {
+        "background": {
+          "primary": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-background-primary)"
+              }
+            },
+            "$value": "{color.background.primary}",
+            "$type": "color",
+            "$description": "Component · Button · Background · solid intent=primary. Aliases color/background/primary."
+          },
+          "success": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-background-success)"
+              }
+            },
+            "$value": "{color.background.success}",
+            "$type": "color",
+            "$description": "Component · Button · Background · solid intent=success. Aliases color/background/success."
+          },
+          "danger": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-background-danger)"
+              }
+            },
+            "$value": "{color.background.danger}",
+            "$type": "color",
+            "$description": "Component · Button · Background · solid intent=danger. Aliases color/background/danger."
+          },
+          "brand": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-background-brand)"
+              }
+            },
+            "$value": "{color.background.brand}",
+            "$type": "color",
+            "$description": "Component · Button · Background · solid intent=brand. Aliases color/background/brand."
+          },
+          "disabled": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-background-disabled)"
+              }
+            },
+            "$value": "{color.background.neutral-subtle}",
+            "$type": "color",
+            "$description": "Component · Button · Background · disabled state across all variants and intents. Aliases color/background/neutral-subtle."
+          }
+        },
+        "text": {
+          "on-filled": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-text-on-filled)"
+              }
+            },
+            "$value": "{color.text.on-primary}",
+            "$type": "color",
+            "$description": "Component · Button · Text · Label on solid/filled backgrounds for all intents. Always white. Aliases color/text/on-primary."
+          },
+          "disabled": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-text-disabled)"
+              }
+            },
+            "$value": "{color.text.disabled}",
+            "$type": "color",
+            "$description": "Component · Button · Text · Label in disabled state. Aliases color/text/disabled."
+          }
+        },
+        "border": {
+          "focused": {
+            "$extensions": {
+              "com.figma.scopes": ["STROKE_COLOR"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-border-focused)"
+              }
+            },
+            "$value": "{color.border.focused}",
+            "$type": "color",
+            "$description": "Component · Button · Border · Keyboard focus outline color. Aliases color/border/focused."
+          }
+        },
+        "focus-ring": {
+          "$extensions": {
+            "com.figma.scopes": ["EFFECT_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-button-focus-ring)"
+            }
+          },
+          "$value": "{color.focus-ring}",
+          "$type": "color",
+          "$description": "Component · Button · Effect · Focus ring glow applied on :focus-visible. Aliases color/focus-ring."
+        },
+        "radius": {
+          "$extensions": {
+            "com.figma.scopes": ["CORNER_RADIUS"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-button-radius)"
+            }
+          },
+          "$value": "{radius.md}",
+          "$type": "number",
+          "$description": "Component · Button · Shape · Border radius. Aliases radius/md (6px)."
+        },
+        "padding-x": {
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-padding-x-sm)"
+              }
+            },
+            "$value": "{space.150}",
+            "$type": "number",
+            "$description": "Component · Button · Space · Horizontal padding for size=sm (12px). Aliases space/150."
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-padding-x-md)"
+              }
+            },
+            "$value": "{space.200}",
+            "$type": "number",
+            "$description": "Component · Button · Space · Horizontal padding for size=md (16px). Aliases space/200."
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-padding-x-lg)"
+              }
+            },
+            "$value": "{space.300}",
+            "$type": "number",
+            "$description": "Component · Button · Space · Horizontal padding for size=lg (24px). Aliases space/300."
+          }
+        },
+        "padding-y": {
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-padding-y-sm)"
+              }
+            },
+            "$value": "{space.075}",
+            "$type": "number",
+            "$description": "Component · Button · Space · Vertical padding for size=sm (6px). Aliases space/075."
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-padding-y-md)"
+              }
+            },
+            "$value": "{space.100}",
+            "$type": "number",
+            "$description": "Component · Button · Space · Vertical padding for size=md (8px). Aliases space/100."
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-padding-y-lg)"
+              }
+            },
+            "$value": "{space.150}",
+            "$type": "number",
+            "$description": "Component · Button · Space · Vertical padding for size=lg (12px). Aliases space/150."
+          }
+        },
+        "icon-gap": {
+          "$extensions": {
+            "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-button-icon-gap)"
+            }
+          },
+          "$value": "{space.100}",
+          "$type": "number",
+          "$description": "Component · Button · Space · Gap between icon and label (8px). Aliases space/100."
+        },
+        "font-size": {
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": ["FONT_SIZE"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-font-size-sm)"
+              }
+            },
+            "$value": "{typography.font-size.sm}",
+            "$type": "number",
+            "$description": "Component · Button · Typography · Font size for size=sm (14px). Aliases typography/font-size/sm."
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": ["FONT_SIZE"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-font-size-md)"
+              }
+            },
+            "$value": "{typography.font-size.md}",
+            "$type": "number",
+            "$description": "Component · Button · Typography · Font size for size=md (16px). Aliases typography/font-size/md."
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": ["FONT_SIZE"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-font-size-lg)"
+              }
+            },
+            "$value": "{typography.font-size.lg}",
+            "$type": "number",
+            "$description": "Component · Button · Typography · Font size for size=lg (18px). Aliases typography/font-size/lg."
+          }
+        },
+        "font-weight": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_WEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-button-font-weight)"
+            }
+          },
+          "$value": "{typography.font-weight.medium}",
+          "$type": "number",
+          "$description": "Component · Button · Typography · Label weight (500/medium). Aliases typography/font-weight/medium."
+        },
+        "line-height": {
+          "$extensions": {
+            "com.figma.scopes": ["LINE_HEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-button-line-height)"
+            }
+          },
+          "$value": "{typography.line-height.tight}",
+          "$type": "number",
+          "$description": "Component · Button · Typography · Line height (1.25/tight). Aliases typography/line-height/tight."
+        },
+        "min-height": {
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-min-height-sm)"
+              }
+            },
+            "$value": 32,
+            "$type": "number",
+            "$description": "Component · Button · Size · Minimum height for size=sm (32px). Direct value — no semantic alias."
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-min-height-md)"
+              }
+            },
+            "$value": 40,
+            "$type": "number",
+            "$description": "Component · Button · Size · Minimum height for size=md (40px). Direct value — no semantic alias."
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-button-min-height-lg)"
+              }
+            },
+            "$value": 48,
+            "$type": "number",
+            "$description": "Component · Button · Size · Minimum height for size=lg (48px). Direct value — no semantic alias."
+          }
+        }
+      },
+      "badge": {
+        "background": {
+          "neutral": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-background-neutral)"
+              }
+            },
+            "$value": "{color.background.neutral-subtle}",
+            "$type": "color",
+            "$description": "Component · Badge · Background · intent=neutral. Subtle gray tint. Aliases color/background/neutral-subtle."
+          },
+          "primary": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-background-primary)"
+              }
+            },
+            "$value": "{color.background.primary-subtle}",
+            "$type": "color",
+            "$description": "Component · Badge · Background · intent=primary. Subtle blue tint. Aliases color/background/primary-subtle."
+          },
+          "success": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-background-success)"
+              }
+            },
+            "$value": "{color.background.success-subtle}",
+            "$type": "color",
+            "$description": "Component · Badge · Background · intent=success. Subtle green tint. Aliases color/background/success-subtle."
+          },
+          "danger": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-background-danger)"
+              }
+            },
+            "$value": "{color.background.danger-subtle}",
+            "$type": "color",
+            "$description": "Component · Badge · Background · intent=danger. Subtle red tint. Aliases color/background/danger-subtle."
+          },
+          "brand": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-background-brand)"
+              }
+            },
+            "$value": "{color.background.brand-subtle}",
+            "$type": "color",
+            "$description": "Component · Badge · Background · intent=brand. Subtle amber tint. Aliases color/background/brand-subtle."
+          }
+        },
+        "text": {
+          "neutral": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-text-neutral)"
+              }
+            },
+            "$value": "{color.text.subtle}",
+            "$type": "color",
+            "$description": "Component · Badge · Text · intent=neutral. Aliases color/text/subtle."
+          },
+          "primary": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-text-primary)"
+              }
+            },
+            "$value": "{color.text.primary}",
+            "$type": "color",
+            "$description": "Component · Badge · Text · intent=primary. Aliases color/text/primary."
+          },
+          "success": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-text-success)"
+              }
+            },
+            "$value": "{color.text.success}",
+            "$type": "color",
+            "$description": "Component · Badge · Text · intent=success. Aliases color/text/success."
+          },
+          "danger": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-text-danger)"
+              }
+            },
+            "$value": "{color.text.danger}",
+            "$type": "color",
+            "$description": "Component · Badge · Text · intent=danger. Aliases color/text/danger."
+          },
+          "brand": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-text-brand)"
+              }
+            },
+            "$value": "{color.text.brand}",
+            "$type": "color",
+            "$description": "Component · Badge · Text · intent=brand. Aliases color/text/brand."
+          }
+        },
+        "radius": {
+          "$extensions": {
+            "com.figma.scopes": ["CORNER_RADIUS"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-badge-radius)"
+            }
+          },
+          "$value": "{radius.md}",
+          "$type": "number",
+          "$description": "Component · Badge · Shape · Border radius. Aliases radius/md (6px)."
+        },
+        "padding-x": {
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-padding-x-sm)"
+              }
+            },
+            "$value": "{space.100}",
+            "$type": "number",
+            "$description": "Component · Badge · Space · Horizontal padding for size=sm (8px). Aliases space/100."
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-padding-x-md)"
+              }
+            },
+            "$value": "{space.150}",
+            "$type": "number",
+            "$description": "Component · Badge · Space · Horizontal padding for size=md (12px). Aliases space/150."
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-padding-x-lg)"
+              }
+            },
+            "$value": "{space.200}",
+            "$type": "number",
+            "$description": "Component · Badge · Space · Horizontal padding for size=lg (16px). Aliases space/200."
+          }
+        },
+        "padding-y": {
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-padding-y-sm)"
+              }
+            },
+            "$value": "{space.050}",
+            "$type": "number",
+            "$description": "Component · Badge · Space · Vertical padding for size=sm (4px). Aliases space/050."
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-padding-y-md)"
+              }
+            },
+            "$value": "{space.100}",
+            "$type": "number",
+            "$description": "Component · Badge · Space · Vertical padding for size=md (8px). Aliases space/100."
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--component-badge-padding-y-lg)"
+              }
+            },
+            "$value": "{space.150}",
+            "$type": "number",
+            "$description": "Component · Badge · Space · Vertical padding for size=lg (12px). Aliases space/150."
+          }
+        },
+        "font-size": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_SIZE"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-badge-font-size)"
+            }
+          },
+          "$value": "{typography.font-size.xs}",
+          "$type": "number",
+          "$description": "Component · Badge · Typography · Font size (12px/xs). Aliases typography/font-size/xs."
+        },
+        "font-weight": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_WEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-badge-font-weight)"
+            }
+          },
+          "$value": "{typography.font-weight.medium}",
+          "$type": "number",
+          "$description": "Component · Badge · Typography · Label weight (500/medium). Aliases typography/font-weight/medium."
+        },
+        "line-height": {
+          "$extensions": {
+            "com.figma.scopes": ["LINE_HEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-badge-line-height)"
+            }
+          },
+          "$value": "{typography.line-height.tight}",
+          "$type": "number",
+          "$description": "Component · Badge · Typography · Line height (1.25/tight). Aliases typography/line-height/tight."
+        }
+      },
+      "button-group": {
+        "gap": {
+          "$extensions": {
+            "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--component-button-group-gap)"
+            }
+          },
+          "$value": "{space.100}",
+          "$type": "number",
+          "$description": "Component · ButtonGroup · Space · Gap between sibling buttons (8px). Aliases space/100."
+        }
+      },
+      "chip": {
+        "background": {
+          "neutral": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-bg-default)"
+              }
+            },
+            "$value": "{color.background.neutral-subtle}",
+            "$type": "color"
+          },
+          "primary": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-bg-primary)"
+              }
+            },
+            "$value": "{color.background.primary-subtle}",
+            "$type": "color"
+          },
+          "success": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-bg-success)"
+              }
+            },
+            "$value": "{color.background.success-subtle}",
+            "$type": "color"
+          },
+          "danger": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-bg-danger)"
+              }
+            },
+            "$value": "{color.background.danger-subtle}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$extensions": {
+              "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-bg-disabled)"
+              }
+            },
+            "$value": "{color.background.neutral}",
+            "$type": "color"
+          }
+        },
+        "text": {
+          "neutral": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-text-default)"
+              }
+            },
+            "$value": "{color.text.default}",
+            "$type": "color"
+          },
+          "primary": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-text-primary)"
+              }
+            },
+            "$value": "{color.text.primary}",
+            "$type": "color"
+          },
+          "success": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-text-success)"
+              }
+            },
+            "$value": "{color.text.success}",
+            "$type": "color"
+          },
+          "danger": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-text-danger)"
+              }
+            },
+            "$value": "{color.text.danger}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$extensions": {
+              "com.figma.scopes": ["TEXT_FILL"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-text-disabled)"
+              }
+            },
+            "$value": "{color.text.disabled}",
+            "$type": "color"
+          }
+        },
+        "border": {
+          "default": {
+            "$extensions": {
+              "com.figma.scopes": ["STROKE_COLOR"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-border-default)"
+              }
+            },
+            "$value": "{color.border.default}",
+            "$type": "color"
+          },
+          "focused": {
+            "$extensions": {
+              "com.figma.scopes": ["STROKE_COLOR"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-border-focus)"
+              }
+            },
+            "$value": "{color.border.focused}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$extensions": {
+              "com.figma.scopes": ["STROKE_COLOR"],
+              "com.figma.hiddenFromPublishing": false,
+              "com.figma.codeSyntax": {
+                "Web": "var(--molecule-chip-border-disabled)"
+              }
+            },
+            "$value": "{color.border.disabled}",
+            "$type": "color"
+          }
+        },
+        "padding-x": {
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$value": "{space.100}",
+            "$type": "number"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$value": "{space.150}",
+            "$type": "number"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$value": "{space.200}",
+            "$type": "number"
+          }
+        },
+        "padding-y": {
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$value": "{space.050}",
+            "$type": "number"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$value": "{space.075}",
+            "$type": "number"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$value": "{space.100}",
+            "$type": "number"
+          }
+        },
+        "radius": {
+          "$extensions": {
+            "com.figma.scopes": ["CORNER_RADIUS"],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$value": "{radius.full}",
+          "$type": "number"
+        },
+        "font-size": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_SIZE"],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$value": "{typography.font-size.sm}",
+          "$type": "number"
+        },
+        "font-weight": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_WEIGHT"],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$value": "{typography.font-weight.medium}",
+          "$type": "number"
+        },
+        "line-height": {
+          "$extensions": {
+            "com.figma.scopes": ["LINE_HEIGHT"],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$value": "{typography.line-height.normal}",
+          "$type": "number"
+        }
+      }
+    }
+  },
+  "Typography/Value": {
+    "typography": {
+      "font-family": {
+        "sans": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_FAMILY"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-family-sans)"
+            }
+          },
+          "$value": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+          "$type": "text",
+          "$description": "Typography · Font family · System sans-serif stack. The default UI font. Falls back gracefully across all platforms."
+        },
+        "mono": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_FAMILY"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-family-mono)"
+            }
+          },
+          "$value": "\"Fira Code\", \"Cascadia Code\", \"JetBrains Mono\", Menlo, Consolas, \"Courier New\", monospace",
+          "$type": "text",
+          "$description": "Typography · Font family · Monospace stack (Fira Code, Cascadia Code, JetBrains Mono, Menlo, Consolas). Use for code blocks, inline code, terminal output, and AI-generated code responses."
+        }
+      },
+      "font-size": {
+        "xs": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_SIZE"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-size-xs)"
+            }
+          },
+          "$value": 12,
+          "$type": "number",
+          "$description": "Typography · Font size · 12px · Extra-small text. Use for captions, timestamps, legal text, and inline metadata."
+        },
+        "sm": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_SIZE"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-size-sm)"
+            }
+          },
+          "$value": 14,
+          "$type": "number",
+          "$description": "Typography · Font size · 14px · Small text. Use for secondary labels, helper text, and compact UI elements."
+        },
+        "md": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_SIZE"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-size-md)"
+            }
+          },
+          "$value": 16,
+          "$type": "number",
+          "$description": "Typography · Font size · 16px · Base body size. The default reading size for most UI text."
+        },
+        "lg": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_SIZE"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-size-lg)"
+            }
+          },
+          "$value": 18,
+          "$type": "number",
+          "$description": "Typography · Font size · 18px · Large body. Use for prominent body copy or comfortable reading in content-heavy views."
+        },
+        "xl": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_SIZE"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-size-xl)"
+            }
+          },
+          "$value": 20,
+          "$type": "number",
+          "$description": "Typography · Font size · 20px · Small heading. Use for card titles and sub-section headings."
+        },
+        "2xl": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_SIZE"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-size-2xl)"
+            }
+          },
+          "$value": 24,
+          "$type": "number",
+          "$description": "Typography · Font size · 24px · Medium heading. Use for section titles and dialog headings."
+        },
+        "3xl": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_SIZE"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-size-3xl)"
+            }
+          },
+          "$value": 30,
+          "$type": "number",
+          "$description": "Typography · Font size · 30px · Large heading. Use for page titles and hero text."
+        }
+      },
+      "font-weight": {
+        "normal": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_WEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-weight-normal)"
+            }
+          },
+          "$value": 400,
+          "$type": "number",
+          "$description": "Typography · Font weight · 400 · Regular weight. Default for body text, descriptions, and helper content."
+        },
+        "medium": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_WEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-weight-medium)"
+            }
+          },
+          "$value": 500,
+          "$type": "number",
+          "$description": "Typography · Font weight · 500 · Medium weight. Use for interactive labels, navigation items, and mild emphasis."
+        },
+        "semibold": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_WEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-weight-semibold)"
+            }
+          },
+          "$value": 600,
+          "$type": "number",
+          "$description": "Typography · Font weight · 600 · Semibold. Use for headings, button labels, and strong emphasis within body text."
+        },
+        "bold": {
+          "$extensions": {
+            "com.figma.scopes": ["FONT_WEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-font-weight-bold)"
+            }
+          },
+          "$value": 700,
+          "$type": "number",
+          "$description": "Typography · Font weight · 700 · Bold. Use for prominent headings, critical callouts, and maximum emphasis."
+        }
+      },
+      "line-height": {
+        "tight": {
+          "$extensions": {
+            "com.figma.scopes": ["LINE_HEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-line-height-tight)"
+            }
+          },
+          "$value": 1.25,
+          "$type": "number",
+          "$description": "Typography · Line height · 1.25 · Tight leading. Use for headings and single-line display text where vertical compactness matters."
+        },
+        "normal": {
+          "$extensions": {
+            "com.figma.scopes": ["LINE_HEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-line-height-normal)"
+            }
+          },
+          "$value": 1.5,
+          "$type": "number",
+          "$description": "Typography · Line height · 1.5 · Standard leading. The default for body text and multi-line UI copy."
+        },
+        "relaxed": {
+          "$extensions": {
+            "com.figma.scopes": ["LINE_HEIGHT"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--typography-line-height-relaxed)"
+            }
+          },
+          "$value": 1.75,
+          "$type": "number",
+          "$description": "Typography · Line height · 1.75 · Relaxed leading. Use for long-form reading, AI response text, and documentation content."
+        }
+      }
+    }
+  },
+  "Space/Value": {
+    "space": {
+      "100": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-100)"
+          }
+        },
+        "$value": 8,
+        "$type": "number",
+        "$description": "Space · 8px · Small spacing (sm in code). Use for gaps inside compact components and between grouped items."
+      },
+      "150": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-150)"
+          }
+        },
+        "$value": 12,
+        "$type": "number",
+        "$description": "Space · 12px · Medium-small spacing (md in code). Use for internal padding in small components like buttons and inputs."
+      },
+      "200": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-200)"
+          }
+        },
+        "$value": 16,
+        "$type": "number",
+        "$description": "Space · 16px · Base spacing (lg in code). The standard internal padding unit for most components and section gaps."
+      },
+      "250": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-250)"
+          }
+        },
+        "$value": 20,
+        "$type": "number",
+        "$description": "Space · 20px · Medium-large spacing. Use for slightly roomier component padding or moderate section separation."
+      },
+      "300": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-300)"
+          }
+        },
+        "$value": 24,
+        "$type": "number",
+        "$description": "Space · 24px · Large spacing (xl in code). Use for section gaps, card padding, and breathing room between content blocks."
+      },
+      "400": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-400)"
+          }
+        },
+        "$value": 32,
+        "$type": "number",
+        "$description": "Space · 32px · Extra-large spacing (xxl in code). Use for major section separations and generous layout gutters."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-500)"
+          }
+        },
+        "$value": 40,
+        "$type": "number",
+        "$description": "Space · 40px · 2x-large spacing. Use for wide layout gutters and prominent section breaks."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-600)"
+          }
+        },
+        "$value": 48,
+        "$type": "number",
+        "$description": "Space · 48px · 3x-large spacing. Use for page-level vertical rhythm between major content areas."
+      },
+      "800": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-800)"
+          }
+        },
+        "$value": 64,
+        "$type": "number",
+        "$description": "Space · 64px · 4x-large spacing. Use for hero-level separation between distinct page sections."
+      },
+      "050": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-050)"
+          }
+        },
+        "$value": 4,
+        "$type": "number",
+        "$description": "Space · 4px · Extra-tight spacing. Use for gaps between tightly related elements — icon-to-label, badge offsets, fine internal padding."
+      },
+      "075": {
+        "$extensions": {
+          "com.figma.scopes": ["WIDTH_HEIGHT", "GAP"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--space-075)"
+          }
+        },
+        "$value": 6,
+        "$type": "number",
+        "$description": "Space · 6px · Tight spacing. Use for compact vertical rhythm within dense components like tags and chips."
+      }
+    }
+  },
+  "Shape/Value": {
+    "radius": {
+      "none": {
+        "$extensions": {
+          "com.figma.scopes": ["CORNER_RADIUS"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--radius-none)"
+          }
+        },
+        "$value": 0,
+        "$type": "number",
+        "$description": "Shape · 0px · No rounding. Use for sharp-cornered elements like dividers, table cells, and full-bleed images."
+      },
+      "sm": {
+        "$extensions": {
+          "com.figma.scopes": ["CORNER_RADIUS"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--radius-sm)"
+          }
+        },
+        "$value": 4,
+        "$type": "number",
+        "$description": "Shape · 4px · Subtle rounding. Use for small components: badges, tags, chips, tooltips, and input fields."
+      },
+      "md": {
+        "$extensions": {
+          "com.figma.scopes": ["CORNER_RADIUS"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--radius-md)"
+          }
+        },
+        "$value": 6,
+        "$type": "number",
+        "$description": "Shape · 6px · Standard rounding. The default border radius for most interactive components: buttons, cards, and modals."
+      },
+      "lg": {
+        "$extensions": {
+          "com.figma.scopes": ["CORNER_RADIUS"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--radius-lg)"
+          }
+        },
+        "$value": 8,
+        "$type": "number",
+        "$description": "Shape · 8px · Generous rounding. Use for larger containers like panels, popovers, and drawers."
+      },
+      "xl": {
+        "$extensions": {
+          "com.figma.scopes": ["CORNER_RADIUS"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--radius-xl)"
+          }
+        },
+        "$value": 12,
+        "$type": "number",
+        "$description": "Shape · 12px · Extra rounding. Use for prominent cards, sheet surfaces, and floating panels in AI/app UIs."
+      },
+      "full": {
+        "$extensions": {
+          "com.figma.scopes": ["CORNER_RADIUS"],
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "var(--radius-full)"
+          }
+        },
+        "$value": 9999,
+        "$type": "number",
+        "$description": "Shape · 9999px · Full pill shape. Use for rounded buttons, avatar frames, toggle switches, and status indicators."
+      }
+    }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "global",
+      "Primitive/Value",
+      "Color/Light",
+      "Color/Dark",
+      "Component/Value",
+      "Typography/Value",
+      "Space/Value",
+      "Shape/Value"
+    ]
   }
 }
