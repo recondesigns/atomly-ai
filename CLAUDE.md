@@ -16,10 +16,10 @@ pnpm build
 pnpm build:types
 
 # Start Storybook for React (port 6006)
-pnpm storybook:react
+pnpm dev:storybook-react
 
 # Start Storybook for Vue
-pnpm storybook:vue
+pnpm dev:storybook-vue
 
 # Run tests (Storybook stories are the test suite, run via Vitest + Playwright)
 cd packages/react && pnpm vitest
@@ -37,12 +37,12 @@ pnpm format
 
 ### Package Structure
 
-| Package | Name | Role |
-|---|---|---|
-| `packages/types` | `@molecule-ui/types` | Shared TypeScript prop types — single source of truth for all component APIs |
-| `packages/react` | `@molecule-ui/react` | React component library |
-| `packages/vue` | `@molecule-ui/vue` | Vue component library |
-| `packages/website` | `@molecule-ui/website` | Next.js documentation site |
+| Package            | Name                   | Role                                                                         |
+| ------------------ | ---------------------- | ---------------------------------------------------------------------------- |
+| `packages/types`   | `@molecule-ui/types`   | Shared TypeScript prop types — single source of truth for all component APIs |
+| `packages/react`   | `@molecule-ui/react`   | React component library                                                      |
+| `packages/vue`     | `@molecule-ui/vue`     | Vue component library                                                        |
+| `packages/website` | `@molecule-ui/website` | Next.js documentation site                                                   |
 
 ### Component Organization (Atomic Design)
 
@@ -92,7 +92,7 @@ Vite builds the React package as an ES module library with three entry points (`
 
 3. **Wire up barrel exports**: add `export * from './<name>'` to `packages/react/src/atoms/index.ts`.
 
-4. **Develop** with `pnpm storybook:react`.
+4. **Develop** with `pnpm dev:storybook-react`.
 
 The same pattern applies for molecules under `src/molecules/`, and for adding an entry point to `vite.config.ts` if a new top-level category is introduced.
 
@@ -107,19 +107,19 @@ The same pattern applies for molecules under `src/molecules/`, and for adding an
 
 When making decisions about component APIs, token naming, accessibility patterns, or documentation structure, consult these established design systems. Prefer patterns that are consistent across multiple systems over one-off choices.
 
-| System | URL | Reference for |
-|---|---|---|
-| **Atlassian Design System** | https://atlassian.design/ | Prop API conventions, component composition, token naming, theming API, atomic design execution, documentation patterns |
-| **Radix UI / Radix Primitives** | https://www.radix-ui.com/ | Headless accessibility patterns — especially relevant since we use React Aria for the same goals |
-| **Chakra UI** | https://chakra-ui.com/ | Token naming conventions, theming API design, prop ergonomics |
-| **Primer (GitHub)** | https://primer.style/ | Atomic design execution, documentation patterns, component API consistency |
-| **Shoelace** | https://shoelace.style/ | Framework-agnostic patterns that work across React and Vue — good reference for the dual-package approach |
-| **Polaris (Shopify)** | https://polaris.shopify.com/ | Component API design, content guidelines, accessibility standards |
-| **Material UI** | https://mui.com/ | Component API conventions, `sx` prop patterns, theming overrides |
-| **Ant Design** | https://ant.design/ | Large-scale design system organization, prop naming consistency |
-| **Carbon (IBM)** | https://carbondesignsystem.com/ | Token naming conventions, accessibility implementation, documentation |
-| **Fluent UI (Microsoft)** | https://fluent2.microsoft.design/ | Component composition patterns, accessibility at scale |
-| **Base UI** | https://base-ui.com/ | Headless/unstyled component patterns, composition primitives |
+| System                          | URL                               | Reference for                                                                                                           |
+| ------------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Atlassian Design System**     | https://atlassian.design/         | Prop API conventions, component composition, token naming, theming API, atomic design execution, documentation patterns |
+| **Radix UI / Radix Primitives** | https://www.radix-ui.com/         | Headless accessibility patterns — especially relevant since we use React Aria for the same goals                        |
+| **Chakra UI**                   | https://chakra-ui.com/            | Token naming conventions, theming API design, prop ergonomics                                                           |
+| **Primer (GitHub)**             | https://primer.style/             | Atomic design execution, documentation patterns, component API consistency                                              |
+| **Shoelace**                    | https://shoelace.style/           | Framework-agnostic patterns that work across React and Vue — good reference for the dual-package approach               |
+| **Polaris (Shopify)**           | https://polaris.shopify.com/      | Component API design, content guidelines, accessibility standards                                                       |
+| **Material UI**                 | https://mui.com/                  | Component API conventions, `sx` prop patterns, theming overrides                                                        |
+| **Ant Design**                  | https://ant.design/               | Large-scale design system organization, prop naming consistency                                                         |
+| **Carbon (IBM)**                | https://carbondesignsystem.com/   | Token naming conventions, accessibility implementation, documentation                                                   |
+| **Fluent UI (Microsoft)**       | https://fluent2.microsoft.design/ | Component composition patterns, accessibility at scale                                                                  |
+| **Base UI**                     | https://base-ui.com/              | Headless/unstyled component patterns, composition primitives                                                            |
 
 ### How to use these references
 

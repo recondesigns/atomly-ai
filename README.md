@@ -14,12 +14,12 @@ A monorepo design system publishing React and Vue component libraries built on a
 
 ## Packages
 
-| Package | Description |
-|---|---|
-| [`@molecule-ui/react`](packages/react) | React component library (Emotion + React Aria) |
-| [`@molecule-ui/vue`](packages/vue) | Vue 3 component library |
-| [`@molecule-ui/types`](packages/types) | Shared TypeScript prop types |
-| [`@molecule-ui/website`](packages/website) | Documentation site (Next.js) |
+| Package                                    | Description                                    |
+| ------------------------------------------ | ---------------------------------------------- |
+| [`@molecule-ui/react`](packages/react)     | React component library (Emotion + React Aria) |
+| [`@molecule-ui/vue`](packages/vue)         | Vue 3 component library                        |
+| [`@molecule-ui/types`](packages/types)     | Shared TypeScript prop types                   |
+| [`@molecule-ui/website`](packages/website) | Documentation site (Next.js)                   |
 
 ## Requirements
 
@@ -36,10 +36,10 @@ pnpm install
 
 ```bash
 # React component development
-pnpm storybook:react        # Storybook on port 6006
+pnpm dev:storybook-react        # Storybook on port 6006
 
 # Vue component development
-pnpm storybook:vue          # Storybook on port 6007
+pnpm dev:storybook-vue          # Storybook on port 6007
 
 # Documentation site
 pnpm dev:website
