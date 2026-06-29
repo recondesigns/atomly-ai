@@ -180,12 +180,47 @@ const primitives = {
     fast: { $value: get('transition/fast', '120ms ease'), $type: 'duration' },
     normal: { $value: get('transition/normal', '200ms ease'), $type: 'duration' },
   },
+
+  chip: {
+    bg: {
+      default: { $value: get('chip/bg/default', '#F1F5F9'), $type: 'color' },
+      hover: { $value: get('chip/bg/hover', '#E2E8F0'), $type: 'color' },
+      primary: { $value: get('chip/bg/primary', '#EFF6FF'), $type: 'color' },
+      'primary-hover': { $value: get('chip/bg/primary-hover', '#DBEAFE'), $type: 'color' },
+      success: { $value: get('chip/bg/success', '#F0FDF4'), $type: 'color' },
+      'success-hover': { $value: get('chip/bg/success-hover', '#DCFCE7'), $type: 'color' },
+      danger: { $value: get('chip/bg/danger', '#FEF2F2'), $type: 'color' },
+      'danger-hover': { $value: get('chip/bg/danger-hover', '#FEE2E2'), $type: 'color' },
+      disabled: { $value: get('chip/bg/disabled', '#F1F5F9'), $type: 'color' },
+    },
+    text: {
+      default: { $value: get('chip/text/default', '#475569'), $type: 'color' },
+      primary: { $value: get('chip/text/primary', '#1D4ED8'), $type: 'color' },
+      success: { $value: get('chip/text/success', '#008236'), $type: 'color' },
+      danger: { $value: get('chip/text/danger', '#DC2626'), $type: 'color' },
+      disabled: { $value: get('chip/text/disabled', '#94A3B8'), $type: 'color' },
+    },
+    border: {
+      default: { $value: get('chip/border/default', '#E2E8F0'), $type: 'color' },
+      primary: { $value: get('chip/border/primary', '#BFDBFE'), $type: 'color' },
+      success: { $value: get('chip/border/success', '#DCFCE7'), $type: 'color' },
+      danger: { $value: get('chip/border/danger', '#FEE2E2'), $type: 'color' },
+      focus: { $value: get('chip/border/focus', '#2563EB'), $type: 'color' },
+      disabled: { $value: get('chip/border/disabled', '#E2E8F0'), $type: 'color' },
+    },
+  },
 };
 
 writeFileSync(join(root, 'tokens/primitives.json'), JSON.stringify(primitives, null, 2) + '\n');
+
+const chipTokenCount =
+  Object.keys(primitives.chip.bg).length +
+  Object.keys(primitives.chip.text).length +
+  Object.keys(primitives.chip.border).length;
 
 console.log('✔ tokens/primitives.json written');
 console.log(`  ${Object.keys(primitives.color).length} color tokens`);
 console.log(`  ${Object.keys(primitives.spacing).length} spacing tokens`);
 console.log(`  ${Object.keys(primitives['font-size']).length} font-size tokens`);
+console.log(`  ${chipTokenCount} chip tokens`);
 console.log('\nRun `pnpm build:tokens` to regenerate CSS and JS outputs.');

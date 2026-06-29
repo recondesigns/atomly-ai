@@ -225,5 +225,93 @@
       "$value": "200ms ease",
       "$type": "duration"
     }
+  },
+  "chip": {
+    "bg": {
+      "default": {
+        "$value": "#f1f5f9",
+        "$type": "color"
+      },
+      "hover": {
+        "$value": "#e2e8f0",
+        "$type": "color"
+      },
+      "primary": {
+        "$value": "#eff6ff",
+        "$type": "color"
+      },
+      "primary-hover": {
+        "$value": "#dbeafe",
+        "$type": "color"
+      },
+      "success": {
+        "$value": "#f0fdf4",
+        "$type": "color"
+      },
+      "success-hover": {
+        "$value": "#dcfce7",
+        "$type": "color"
+      },
+      "danger": {
+        "$value": "#fef2f2",
+        "$type": "color"
+      },
+      "danger-hover": {
+        "$value": "#fee2e2",
+        "$type": "color"
+      },
+      "disabled": {
+        "$value": "#f1f5f9",
+        "$type": "color"
+      }
+    },
+    "text": {
+      "default": {
+        "$value": "#475569",
+        "$type": "color"
+      },
+      "primary": {
+        "$value": "#1d4ed8",
+        "$type": "color"
+      },
+      "success": {
+        "$value": "#008236",
+        "$type": "color"
+      },
+      "danger": {
+        "$value": "#dc2626",
+        "$type": "color"
+      },
+      "disabled": {
+        "$value": "#94a3b8",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "#e2e8f0",
+        "$type": "color"
+      },
+      "primary": {
+        "$value": "#bfdbfe",
+        "$type": "color"
+      },
+      "success": {
+        "$value": "#dcfce7",
+        "$type": "color"
+      },
+      "danger": {
+        "$value": "#fee2e2",
+        "$type": "color"
+      },
+      "focus": {
+        "$value": "#2563eb",
+        "$type": "color"
+      },
+      "disabled": {
+        "$value": "#e2e8f0",
+        "$type": "color"
+      }
+    }
   }
 }

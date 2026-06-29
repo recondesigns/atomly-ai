@@ -483,6 +483,254 @@
       "$type": "color",
       "$description": "Primitive · Anchor · #000000 · Pure black. Base for alpha/black overlay scale."
     },
+    "chip": {
+      "bg": {
+        "default": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-bg-default"
+            },
+            "com.figma.scopes": ["ALL_FILLS"]
+          },
+          "$value": "#f1f5f9",
+          "$type": "color",
+          "$description": "Semantic · Chip · Background · #F1F5F9 · Default (neutral) chip background. Used for the filled neutral chip variant."
+        },
+        "hover": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-bg-hover"
+            },
+            "com.figma.scopes": ["ALL_FILLS"]
+          },
+          "$value": "#e2e8f0",
+          "$type": "color",
+          "$description": "Semantic · Chip · Background · #E2E8F0 · Neutral chip hover background. Applied on pointer-over for the default variant."
+        },
+        "primary": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-bg-primary"
+            },
+            "com.figma.scopes": ["ALL_FILLS"]
+          },
+          "$value": "#eff6ff",
+          "$type": "color",
+          "$description": "Semantic · Chip · Background · #EFF6FF · Primary chip background. Used for the filled primary (blue) chip variant."
+        },
+        "primary-hover": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-bg-primary-hover"
+            },
+            "com.figma.scopes": ["ALL_FILLS"]
+          },
+          "$value": "#dbeafe",
+          "$type": "color",
+          "$description": "Semantic · Chip · Background · #DBEAFE · Primary chip hover background. Applied on pointer-over for the primary variant."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-bg-success"
+            },
+            "com.figma.scopes": ["ALL_FILLS"]
+          },
+          "$value": "#f0fdf4",
+          "$type": "color",
+          "$description": "Semantic · Chip · Background · #F0FDF4 · Success chip background. Used for the filled success (green) chip variant."
+        },
+        "success-hover": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-bg-success-hover"
+            },
+            "com.figma.scopes": ["ALL_FILLS"]
+          },
+          "$value": "#dcfce7",
+          "$type": "color",
+          "$description": "Semantic · Chip · Background · #DCFCE7 · Success chip hover background. Applied on pointer-over for the success variant."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-bg-danger"
+            },
+            "com.figma.scopes": ["ALL_FILLS"]
+          },
+          "$value": "#fef2f2",
+          "$type": "color",
+          "$description": "Semantic · Chip · Background · #FEF2F2 · Danger chip background. Used for the filled danger (red) chip variant."
+        },
+        "danger-hover": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-bg-danger-hover"
+            },
+            "com.figma.scopes": ["ALL_FILLS"]
+          },
+          "$value": "#fee2e2",
+          "$type": "color",
+          "$description": "Semantic · Chip · Background · #FEE2E2 · Danger chip hover background. Applied on pointer-over for the danger variant."
+        },
+        "disabled": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-bg-disabled"
+            },
+            "com.figma.scopes": ["ALL_FILLS"]
+          },
+          "$value": "#f1f5f9",
+          "$type": "color",
+          "$description": "Semantic · Chip · Background · #F1F5F9 · Disabled chip background. Applied to all variants when isDisabled is true."
+        }
+      },
+      "text": {
+        "default": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-text-default"
+            },
+            "com.figma.scopes": ["TEXT_FILL"]
+          },
+          "$value": "#475569",
+          "$type": "color",
+          "$description": "Semantic · Chip · Text · #475569 · Default chip label color. Used for neutral variant chip labels and icons."
+        },
+        "primary": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-text-primary"
+            },
+            "com.figma.scopes": ["TEXT_FILL"]
+          },
+          "$value": "#1d4ed8",
+          "$type": "color",
+          "$description": "Semantic · Chip · Text · #1D4ED8 · Primary chip label color. Used for the primary (blue) chip variant label and icon."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-text-success"
+            },
+            "com.figma.scopes": ["TEXT_FILL"]
+          },
+          "$value": "#008236",
+          "$type": "color",
+          "$description": "Semantic · Chip · Text · #008236 · Success chip label color. Used for the success (green) chip variant label and icon."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-text-danger"
+            },
+            "com.figma.scopes": ["TEXT_FILL"]
+          },
+          "$value": "#dc2626",
+          "$type": "color",
+          "$description": "Semantic · Chip · Text · #DC2626 · Danger chip label color. Used for the danger (red) chip variant label and icon."
+        },
+        "disabled": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-text-disabled"
+            },
+            "com.figma.scopes": ["TEXT_FILL"]
+          },
+          "$value": "#94a3b8",
+          "$type": "color",
+          "$description": "Semantic · Chip · Text · #94A3B8 · Disabled chip label color. Applied to label and icon when isDisabled is true."
+        }
+      },
+      "border": {
+        "default": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-border-default"
+            },
+            "com.figma.scopes": ["STROKE_COLOR"]
+          },
+          "$value": "#e2e8f0",
+          "$type": "color",
+          "$description": "Semantic · Chip · Border · #E2E8F0 · Default chip border. Used for the outlined neutral chip variant stroke."
+        },
+        "primary": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-border-primary"
+            },
+            "com.figma.scopes": ["STROKE_COLOR"]
+          },
+          "$value": "#bfdbfe",
+          "$type": "color",
+          "$description": "Semantic · Chip · Border · #BFDBFE · Primary chip border. Used for the outlined primary (blue) chip variant stroke."
+        },
+        "success": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-border-success"
+            },
+            "com.figma.scopes": ["STROKE_COLOR"]
+          },
+          "$value": "#dcfce7",
+          "$type": "color",
+          "$description": "Semantic · Chip · Border · #DCFCE7 · Success chip border. Used for the outlined success (green) chip variant stroke."
+        },
+        "danger": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-border-danger"
+            },
+            "com.figma.scopes": ["STROKE_COLOR"]
+          },
+          "$value": "#fee2e2",
+          "$type": "color",
+          "$description": "Semantic · Chip · Border · #FEE2E2 · Danger chip border. Used for the outlined danger (red) chip variant stroke."
+        },
+        "focus": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-border-focus"
+            },
+            "com.figma.scopes": ["STROKE_COLOR"]
+          },
+          "$value": "#2563eb",
+          "$type": "color",
+          "$description": "Semantic · Chip · Border · #2563EB · Chip keyboard focus indicator. Rendered as a 2px outline on focus-visible for all chip variants."
+        },
+        "disabled": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "--component-chip-border-disabled"
+            },
+            "com.figma.scopes": ["STROKE_COLOR"]
+          },
+          "$value": "#e2e8f0",
+          "$type": "color",
+          "$description": "Semantic · Chip · Border · #E2E8F0 · Disabled chip border. Applied to the outlined variant border when isDisabled is true."
+        }
+      }
+    },
     "alpha": {
       "white": {
         "100": {
