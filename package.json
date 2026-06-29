@@ -10,6 +10,8 @@
     "dev:website": "pnpm -F @molecule-ui/website dev",
     "storybook:react": "pnpm -F @molecule-ui/react storybook",
     "storybook:vue": "pnpm -F @molecule-ui/vue storybook",
+    "sync:tokens": "node scripts/sync-figma-tokens.mjs && node style-dictionary.config.mjs",
+    "build:tokens": "node style-dictionary.config.mjs",
     "build:icons": "pnpm -F @molecule-ui/react build:icons && pnpm -F @molecule-ui/vue build:icons",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -33,6 +35,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "prettier": "^3.8.1",
+    "style-dictionary": "^5.5.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.62.0",
     "vue-eslint-parser": "^10.4.1"
