@@ -22,6 +22,10 @@ const sd = new StyleDictionary({
           destination: 'tokens.generated.js',
           format: 'javascript/es6',
         },
+        {
+          destination: 'tokens.generated.d.ts',
+          format: 'typescript/es6-declarations',
+        },
       ],
     },
   },

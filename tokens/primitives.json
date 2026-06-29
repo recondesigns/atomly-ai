@@ -28,7 +28,7 @@
     "border": { "$value": "#E2E8F0", "$type": "color" },
     "border-focus": { "$value": "#2563EB", "$type": "color" },
     "disabled": { "$value": "#F1F5F9", "$type": "color" },
-    "focus-ring": { "$value": "rgba(37, 99, 235, 0.4)", "$type": "color" }
+    "focus-ring": { "$value": "rgba(37, 99, 235, 0.4)" }
   },
   "spacing": {
     "xs": { "$value": "4px", "$type": "dimension" },
@@ -51,10 +51,10 @@
     "lg": { "$value": "1.125rem", "$type": "dimension" }
   },
   "font-weight": {
-    "normal": { "$value": "400", "$type": "fontWeight" },
-    "medium": { "$value": "500", "$type": "fontWeight" },
-    "semibold": { "$value": "600", "$type": "fontWeight" },
-    "bold": { "$value": "700", "$type": "fontWeight" }
+    "normal": { "$value": 400, "$type": "number" },
+    "medium": { "$value": 500, "$type": "number" },
+    "semibold": { "$value": 600, "$type": "number" },
+    "bold": { "$value": 700, "$type": "number" }
   },
   "line-height": {
     "tight": { "$value": "1.25", "$type": "number" },

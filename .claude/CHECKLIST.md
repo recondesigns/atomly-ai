@@ -41,8 +41,8 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `tokens/` folder scaffolded
 - [x] Style Dictionary installed and configured (`style-dictionary.config.mjs` at root; `pnpm build:tokens`)
 - [x] `tokens/primitives.json` populated (seeded from `defaultTheme.ts`; re-sync from Figma when token pipeline is validated)
-- [ ] Style Dictionary outputs CSS custom properties to `packages/vue/src/tokens/`
-- [ ] Style Dictionary outputs JS tokens consumed by `defaultTheme.ts`
+- [x] Style Dictionary outputs CSS custom properties to `packages/vue/src/tokens/` (imported in Vue `index.ts`)
+- [x] Style Dictionary outputs JS tokens consumed by `defaultTheme.ts` (+ `.d.ts` sidecar for TypeScript)
 - [ ] Token sync validated end-to-end (Figma → `tokens/` → theme → components)
 
 ---
