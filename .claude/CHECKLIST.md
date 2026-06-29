@@ -43,7 +43,7 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `tokens/primitives.json` populated (seeded from `defaultTheme.ts`; re-sync from Figma when token pipeline is validated)
 - [x] Style Dictionary outputs CSS custom properties to `packages/vue/src/tokens/` (imported in Vue `index.ts`)
 - [x] Style Dictionary outputs JS tokens consumed by `defaultTheme.ts` (+ `.d.ts` sidecar for TypeScript)
-- [ ] Token sync validated end-to-end (Figma → `tokens/` → theme → components)
+- [x] Token sync validated end-to-end — Figma primitive values match `tokens/primitives.json`; Style Dictionary → CSS + JS outputs confirmed clean
 
 ---
 
