@@ -8,29 +8,19 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  //   argTypes: {
-  //     buttonType: {
-  //       control: 'inline-radio',
-  //       options: ['contained', 'outlined', 'ghost'],
-  //     },
-  //     variant: {
-  //       control: 'inline-radio',
-  //       options: ['primary', 'brand', 'success', 'destructive'],
-  //     },
-  //     children: {
-  //       control: 'text',
-  //     },
-  //     size: {
-  //       control: 'inline-radio',
-  //       options: ['sm', 'md', 'lg'],
-  //     },
-  //     isLoading: {
-  //       control: 'boolean',
-  //     },
-  //     isDisabled: { control: 'boolean' },
-  //     fullWidth: { control: 'boolean' },
-  //     // onPress: { action: 'pressed' },
-  //   },
+  argTypes: {
+    intent: {
+      control: 'inline-radio',
+      options: ['neutral', 'primary', 'success', 'danger', 'brand'],
+    },
+    size: {
+      control: 'inline-radio',
+      options: ['sm', 'md', 'lg'],
+    },
+    content: {
+      control: 'text',
+    },
+  },
 } satisfies Meta<typeof Badge>;
 
 export default meta;
@@ -39,13 +29,34 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => <Badge {...args} />,
   args: {
-    status: 'primary',
+    intent: 'neutral',
     size: 'md',
-    content: 'Weeee',
+    content: 'Badge',
   },
-  //   parameters: {
-  //     controls: {
-  //       exclude: ['fullWidth', 'aria-label', 'data-testid'],
-  //     },
-  //   },
+};
+
+export const Intent: Story = {
+  ...Default,
+  args: {
+    intent: 'primary',
+    content: 'Badge',
+  },
+  parameters: {
+    controls: {
+      exclude: ['size'],
+    },
+  },
+};
+
+export const Size: Story = {
+  ...Default,
+  args: {
+    size: 'sm',
+    content: 'Badge',
+  },
+  parameters: {
+    controls: {
+      exclude: ['intent'],
+    },
+  },
 };

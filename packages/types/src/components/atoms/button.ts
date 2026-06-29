@@ -1,5 +1,5 @@
-export type ButtonType = 'contained' | 'outlined' | 'ghost';
-export type ButtonVariant = 'primary' | 'brand' | 'success' | 'destructive';
+export type ButtonVariant = 'solid' | 'outline' | 'ghost';
+export type ButtonIntent = 'primary' | 'success' | 'danger' | 'brand';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type FullWidth = boolean;
 export type IsLoading = boolean;
