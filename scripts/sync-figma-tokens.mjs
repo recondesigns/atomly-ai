@@ -79,28 +79,39 @@ for (const [key, val] of Object.entries(rawComponentLookup)) {
 // Helper: get a component token value by its path within Component/Value
 const compGet = (path, fallback) => componentLookup[`component/${path}`] ?? fallback;
 
+// Lookups for the remaining new collections
+const spaceLookup = buildLookup(raw['Space/Value'] ?? {});
+const shapeLookup = buildLookup(raw['Shape/Value'] ?? {});
+const typographyLookup = buildLookup(raw['Typography/Value'] ?? {});
+
 // Helper: get a value from the lookup, falling back to a hardcoded default
 const get = (name, fallback) => lookup[name] ?? fallback;
 
-// Helper: float pixel value → "Xpx" string (for spacing/radii exported as numbers)
-const px = (name, fallback) => {
-  const v = lookup[name];
+// Helper: number → "Xpx" — checks a lookup then falls back
+function toPx(lookupObj, name, fallback) {
+  const v = lookupObj[name];
   return v !== undefined ? (typeof v === 'number' ? `${v}px` : v) : fallback;
-};
+}
 
-// Helper: float pixel value → rem string (font sizes stored as px in Figma)
-const rem = (name, fallback) => {
-  const v = lookup[name];
+// Helper: number → rem — checks a lookup then falls back
+function toRem(lookupObj, name, fallback) {
+  const v = lookupObj[name];
   if (v === undefined) return fallback;
   if (typeof v === 'number') return `${+(v / 16).toFixed(4).replace(/\.?0+$/, '')}rem`;
   return v;
-};
+}
 
-// Helper: numeric value (font weights, line heights)
-const num = (name, fallback) => {
-  const v = lookup[name];
+// Helper: number value — checks a lookup then falls back
+function toNum(lookupObj, name, fallback) {
+  const v = lookupObj[name];
   return v !== undefined ? Number(v) : fallback;
-};
+}
+
+// Legacy helpers that read from the Primitive/Value collection (for colour tokens and
+// any token not yet covered by a dedicated collection)
+const px = (name, fallback) => toPx(lookup, name, fallback);
+const rem = (name, fallback) => toRem(lookup, name, fallback);
+const num = (name, fallback) => toNum(lookup, name, fallback);
 
 // Derive focus-ring from blue/600 at 40% opacity
 const blue600 = get('blue/600', '#2563EB');
@@ -159,49 +170,120 @@ const primitives = {
   },
 
   spacing: {
-    xs: { $value: px('spacing/xs', '4px'), $type: 'dimension' },
-    sm: { $value: px('spacing/sm', '8px'), $type: 'dimension' },
-    md: { $value: px('spacing/md', '12px'), $type: 'dimension' },
-    lg: { $value: px('spacing/lg', '16px'), $type: 'dimension' },
-    xl: { $value: px('spacing/xl', '24px'), $type: 'dimension' },
-    xxl: { $value: px('spacing/xxl', '32px'), $type: 'dimension' },
+    xs: { $value: toPx(spaceLookup, 'space/050', px('spacing/xs', '4px')), $type: 'dimension' },
+    sm: { $value: toPx(spaceLookup, 'space/100', px('spacing/sm', '8px')), $type: 'dimension' },
+    md: { $value: toPx(spaceLookup, 'space/150', px('spacing/md', '12px')), $type: 'dimension' },
+    lg: { $value: toPx(spaceLookup, 'space/200', px('spacing/lg', '16px')), $type: 'dimension' },
+    xl: { $value: toPx(spaceLookup, 'space/300', px('spacing/xl', '24px')), $type: 'dimension' },
+    xxl: { $value: toPx(spaceLookup, 'space/400', px('spacing/xxl', '32px')), $type: 'dimension' },
   },
 
   'font-family': {
     base: {
-      $value: get(
-        'font-family/base',
-        '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
-      ),
+      $value:
+        typographyLookup['typography/font-family/sans'] ??
+        get(
+          'font-family/base',
+          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+        ),
       $type: 'fontFamily',
     },
   },
 
   'font-size': {
-    xs: { $value: rem('font-size/xs', '0.75rem'), $type: 'dimension' },
-    sm: { $value: rem('font-size/sm', '0.875rem'), $type: 'dimension' },
-    md: { $value: rem('font-size/md', '1rem'), $type: 'dimension' },
-    lg: { $value: rem('font-size/lg', '1.125rem'), $type: 'dimension' },
+    xs: {
+      $value: toRem(typographyLookup, 'typography/font-size/xs', rem('font-size/xs', '0.75rem')),
+      $type: 'dimension',
+    },
+    sm: {
+      $value: toRem(typographyLookup, 'typography/font-size/sm', rem('font-size/sm', '0.875rem')),
+      $type: 'dimension',
+    },
+    md: {
+      $value: toRem(typographyLookup, 'typography/font-size/md', rem('font-size/md', '1rem')),
+      $type: 'dimension',
+    },
+    lg: {
+      $value: toRem(typographyLookup, 'typography/font-size/lg', rem('font-size/lg', '1.125rem')),
+      $type: 'dimension',
+    },
   },
 
   'font-weight': {
-    normal: { $value: num('font-weight/normal', 400), $type: 'number' },
-    medium: { $value: num('font-weight/medium', 500), $type: 'number' },
-    semibold: { $value: num('font-weight/semibold', 600), $type: 'number' },
-    bold: { $value: num('font-weight/bold', 700), $type: 'number' },
+    normal: {
+      $value: toNum(
+        typographyLookup,
+        'typography/font-weight/normal',
+        num('font-weight/normal', 400)
+      ),
+      $type: 'number',
+    },
+    medium: {
+      $value: toNum(
+        typographyLookup,
+        'typography/font-weight/medium',
+        num('font-weight/medium', 500)
+      ),
+      $type: 'number',
+    },
+    semibold: {
+      $value: toNum(
+        typographyLookup,
+        'typography/font-weight/semibold',
+        num('font-weight/semibold', 600)
+      ),
+      $type: 'number',
+    },
+    bold: {
+      $value: toNum(typographyLookup, 'typography/font-weight/bold', num('font-weight/bold', 700)),
+      $type: 'number',
+    },
   },
 
   'line-height': {
-    tight: { $value: num('line-height/tight', 1.25), $type: 'number' },
-    normal: { $value: num('line-height/normal', 1.5), $type: 'number' },
-    relaxed: { $value: num('line-height/relaxed', 1.75), $type: 'number' },
+    tight: {
+      $value: toNum(
+        typographyLookup,
+        'typography/line-height/tight',
+        num('line-height/tight', 1.25)
+      ),
+      $type: 'number',
+    },
+    normal: {
+      $value: toNum(
+        typographyLookup,
+        'typography/line-height/normal',
+        num('line-height/normal', 1.5)
+      ),
+      $type: 'number',
+    },
+    relaxed: {
+      $value: toNum(
+        typographyLookup,
+        'typography/line-height/relaxed',
+        num('line-height/relaxed', 1.75)
+      ),
+      $type: 'number',
+    },
   },
 
   'border-radius': {
-    sm: { $value: px('border-radius/sm', '4px'), $type: 'borderRadius' },
-    md: { $value: px('border-radius/md', '6px'), $type: 'borderRadius' },
-    lg: { $value: px('border-radius/lg', '8px'), $type: 'borderRadius' },
-    full: { $value: px('border-radius/full', '9999px'), $type: 'borderRadius' },
+    sm: {
+      $value: toPx(shapeLookup, 'radius/sm', px('border-radius/sm', '4px')),
+      $type: 'borderRadius',
+    },
+    md: {
+      $value: toPx(shapeLookup, 'radius/md', px('border-radius/md', '6px')),
+      $type: 'borderRadius',
+    },
+    lg: {
+      $value: toPx(shapeLookup, 'radius/lg', px('border-radius/lg', '8px')),
+      $type: 'borderRadius',
+    },
+    full: {
+      $value: toPx(shapeLookup, 'radius/full', px('border-radius/full', '9999px')),
+      $type: 'borderRadius',
+    },
   },
 
   transition: {
