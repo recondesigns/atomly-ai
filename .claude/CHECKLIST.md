@@ -26,21 +26,21 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `figma/figma.config.json` scaffolded for Code Connect
 - [x] Design tokens defined in Figma (primitives: color, spacing, typography, radii, transitions)
 - [x] Semantic/alias token layer in Figma
-- [ ] Component Library frames created for existing components (Button, Badge, ButtonGroup)
+- [x] Component Library frames created for existing components (Button, Badge, ButtonGroup)
 - [x] Component API aligned with industry conventions (Button + Badge prop rename)
 - [x] Figma library published — Design Tokens file
-- [ ] Figma library published — Component Library file
-- [ ] Code Connect published for Button
-- [ ] Code Connect published for Badge
-- [ ] Code Connect published for ButtonGroup
+- [x] Figma library published — Component Library file
+- [~] Code Connect published for Button — requires paid Figma plan
+- [~] Code Connect published for Badge — requires paid Figma plan
+- [~] Code Connect published for ButtonGroup — requires paid Figma plan
 
 ---
 
 ## Token Pipeline
 
 - [x] `tokens/` folder scaffolded
-- [ ] Style Dictionary installed and configured
-- [ ] `tokens/primitives.json` populated via `/sync-tokens`
+- [x] Style Dictionary installed and configured (`style-dictionary.config.mjs` at root; `pnpm build:tokens`)
+- [x] `tokens/primitives.json` populated (seeded from `defaultTheme.ts`; re-sync from Figma when token pipeline is validated)
 - [ ] Style Dictionary outputs CSS custom properties to `packages/vue/src/tokens/`
 - [ ] Style Dictionary outputs JS tokens consumed by `defaultTheme.ts`
 - [ ] Token sync validated end-to-end (Figma → `tokens/` → theme → components)
