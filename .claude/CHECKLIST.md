@@ -27,7 +27,9 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] Design tokens defined in Figma (primitives: color, spacing, typography, radii, transitions)
 - [x] Semantic/alias token layer in Figma
 - [ ] Component Library frames created for existing components (Button, Badge, ButtonGroup)
-- [ ] Figma libraries published (Design Tokens + Component Library)
+- [x] Component API aligned with industry conventions (Button + Badge prop rename)
+- [x] Figma library published — Design Tokens file
+- [ ] Figma library published — Component Library file
 - [ ] Code Connect published for Button
 - [ ] Code Connect published for Badge
 - [ ] Code Connect published for ButtonGroup
