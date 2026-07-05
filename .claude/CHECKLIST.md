@@ -90,7 +90,7 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `.changeset/config.json` — `access: public`, packages linked, `baseBranch: main`
 - [x] `changeset`, `version-packages`, and `release` scripts added to root `package.json`
 - [x] GitHub Actions release workflow — `changesets/action` creates version PR or publishes on merge to `main`
-- [ ] `NPM_TOKEN` secret added to GitHub repo settings
+- [x] `NPM_TOKEN` secret added to GitHub repo settings
 - [ ] `syncpack` installed to keep dependency versions consistent
 - [ ] First alpha publish of `@molecule-ui/react` and `@molecule-ui/vue`
 
