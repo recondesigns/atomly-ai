@@ -80,7 +80,22 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `pre-push` hook: `build:icons` diff-check (wired in during icon pipeline)
 - [x] GitHub Actions workflow: lint → build → test on PRs
 - [x] GitHub Actions workflow: Chromatic on PRs
-- [ ] GitHub Actions workflow: publish to npm on release
+- [ ] GitHub Actions workflow: publish to npm on release — blocked on rename to `@atomly-ai` first
+
+---
+
+## Rename: molecule-ui → @atomly-ai
+
+> Name history: `molecule-ai` and `ai-atoms` scopes were already taken on npm. Final name is `@atomly-ai`.
+
+- [x] Create npm org `atomly-ai` (Free plan, public packages)
+- [x] Rename all package names in `package.json` files (`@molecule-ui/*` → `@atomly-ai/*`) + `workspace:*` deps
+- [x] Update all import statements across the codebase (~11 React source files + website)
+- [x] Update all references in `CLAUDE.md`, `README.md`, `ROADMAP.md`, `.claude/` docs, config files, and workflows
+- [x] Update `.changeset/config.json` linked packages array
+- [x] Regenerate `pnpm-lock.yaml` (`pnpm install`) and verify build (`pnpm build:types && pnpm build` — ✅ passes)
+- [x] Rename GitHub repo to `atomly-ai`
+- [x] Update remote URL locally after GitHub rename
 
 ---
 
@@ -92,17 +107,17 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] GitHub Actions release workflow — `changesets/action` creates version PR or publishes on merge to `main`
 - [x] `NPM_TOKEN` secret added to GitHub repo settings
 - [ ] `syncpack` installed to keep dependency versions consistent
-- [ ] First alpha publish of `@molecule-ui/react` and `@molecule-ui/vue`
+- [ ] First alpha publish of `@atomly-ai/react` and `@atomly-ai/vue`
 
 ---
 
 ## Bundle Health
 
-- [ ] `size-limit` installed with per-package size budgets (`@molecule-ui/react`, `@molecule-ui/vue`)
+- [ ] `size-limit` installed with per-package size budgets (`@atomly-ai/react`, `@atomly-ai/vue`)
 - [ ] Size limit check added to GitHub Actions CI (fails PR if budget exceeded)
 - [ ] `rollup-plugin-visualizer` added to Vite config for bundle composition inspection
 - [ ] Baseline bundle sizes documented after first stable release
-- [ ] Tree-shaking validated — confirm per-category imports (`@molecule-ui/react/atoms`) are smaller than full import
+- [ ] Tree-shaking validated — confirm per-category imports (`@atomly-ai/react/atoms`) are smaller than full import
 
 ---
 
@@ -115,7 +130,7 @@ Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG so
 - [x] Add `build:icons` script to `packages/react` — Node.js script using `@svgr/core` to generate `AlertIcon.tsx` etc. into `src/atoms/icons/`, with `currentColor`, title prop, TypeScript output, and auto-generated `index.ts`
 - [x] Write `packages/vue/scripts/build-icons.mjs` — Node.js script that reads `icons/*.svg`, optimizes with `svgo`, and wraps each in a `<script lang="ts" setup>` Vue SFC with `inheritAttrs: false`
 - [x] Add `build:icons` script to `packages/vue`
-- [x] Add root `build:icons` script: `pnpm -F @molecule-ui/react build:icons && pnpm -F @molecule-ui/vue build:icons`
+- [x] Add root `build:icons` script: `pnpm -F @atomly-ai/react build:icons && pnpm -F @atomly-ai/vue build:icons`
 - [x] Generated icon components auto-exported from `packages/react/src/atoms/index.ts` and `packages/vue/src/atoms/index.ts`
 - [x] Add icon types to `packages/types` (`IconName` union, `IconSize`)
 - [x] Add Storybook stories for the icon set (AllIcons grid, Sizes, Colors — in both React and Vue)

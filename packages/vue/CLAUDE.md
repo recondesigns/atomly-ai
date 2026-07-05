@@ -1,4 +1,4 @@
-# packages/vue — @molecule-ui/vue
+# packages/vue — @atomly-ai/vue
 
 Vue 3 component library package. See the root `CLAUDE.md` for monorepo-wide conventions. This file covers Vue-specific implementation details.
 
@@ -21,7 +21,7 @@ Every component is a Single File Component (`.vue`) using `<script lang="ts" set
 </template>
 
 <script lang="ts" setup>
-import type { NameProp } from '@molecule-ui/types';
+import type { NameProp } from '@atomly-ai/types';
 
 withDefaults(
   defineProps<{
@@ -39,7 +39,7 @@ Rules:
 
 - Always include `<slot />` — Vue's equivalent of `children`
 - Always spread `data-testid` onto the root element (use `:data-testid="dataTestid"` after destructuring or bind directly)
-- Import prop type unions from `@molecule-ui/types` — do not redeclare them locally
+- Import prop type unions from `@atomly-ai/types` — do not redeclare them locally
 - Use `withDefaults` to document and enforce default prop values
 
 ## CSS conventions
@@ -97,4 +97,4 @@ A11y checks are configured as `test: 'error'` — violations fail the Vitest sto
 
 Same structure as the React package: ES module, `preserveModules`, three entry points (`index`, `atoms/index`, `molecules/index`). `vue` is externalized as a peer dependency.
 
-Run `pnpm build:types` first if `packages/types` changed, then `pnpm -F @molecule-ui/vue build`.
+Run `pnpm build:types` first if `packages/types` changed, then `pnpm -F @atomly-ai/vue build`.

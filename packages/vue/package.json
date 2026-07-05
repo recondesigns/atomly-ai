@@ -1,5 +1,5 @@
 {
-  "name": "@molecule-ui/vue",
+  "name": "@atomly-ai/vue",
   "version": "0.1.0",
   "type": "module",
   "description": "Molecule UI Vue components",
@@ -33,7 +33,7 @@
     "vue": "^3.4.0"
   },
   "dependencies": {
-    "@molecule-ui/types": "workspace:*"
+    "@atomly-ai/types": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.0.1",
@@ -72,14 +72,14 @@
     "name": "Stedman",
     "url": "https://github.com/recondesigns"
   },
-  "homepage": "https://github.com/recondesigns/molecule-ui#readme",
+  "homepage": "https://github.com/recondesigns/atomly-ai#readme",
   "bugs": {
-    "url": "https://github.com/recondesigns/molecule-ui/issues"
+    "url": "https://github.com/recondesigns/atomly-ai/issues"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.14.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/recondesigns/molecule-ui.git"
+    "url": "git+https://github.com/recondesigns/atomly-ai.git"
   }
 }

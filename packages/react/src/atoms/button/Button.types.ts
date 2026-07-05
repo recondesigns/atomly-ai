@@ -5,7 +5,7 @@ import type {
   ButtonSize,
   FullWidth,
   IsLoading,
-} from '@molecule-ui/types';
+} from '@atomly-ai/types';
 
 export type ButtonProps = Pick<UseButtonOptions, 'onPress' | 'onPressChange' | 'isDisabled'> & {
   variant?: ButtonVariant;

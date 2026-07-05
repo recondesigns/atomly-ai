@@ -1,8 +1,8 @@
-# @molecule-ui/website
+# @atomly-ai/website
 
 ## 0.0.2
 
 ### Patch Changes
 
 - Updated dependencies [5210a3a]
-  - @molecule-ui/react@0.1.0
+  - @atomly-ai/react@0.1.0

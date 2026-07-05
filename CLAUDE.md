@@ -31,18 +31,18 @@ pnpm lint
 pnpm format
 ```
 
-> Always run `pnpm build:types` before building `@molecule-ui/react` or `@molecule-ui/vue` if you've changed anything in `packages/types`.
+> Always run `pnpm build:types` before building `@atomly-ai/react` or `@atomly-ai/vue` if you've changed anything in `packages/types`.
 
 ## Architecture
 
 ### Package Structure
 
-| Package            | Name                   | Role                                                                         |
-| ------------------ | ---------------------- | ---------------------------------------------------------------------------- |
-| `packages/types`   | `@molecule-ui/types`   | Shared TypeScript prop types — single source of truth for all component APIs |
-| `packages/react`   | `@molecule-ui/react`   | React component library                                                      |
-| `packages/vue`     | `@molecule-ui/vue`     | Vue component library                                                        |
-| `packages/website` | `@molecule-ui/website` | Next.js documentation site                                                   |
+| Package            | Name                 | Role                                                                         |
+| ------------------ | -------------------- | ---------------------------------------------------------------------------- |
+| `packages/types`   | `@atomly-ai/types`   | Shared TypeScript prop types — single source of truth for all component APIs |
+| `packages/react`   | `@atomly-ai/react`   | React component library                                                      |
+| `packages/vue`     | `@atomly-ai/vue`     | Vue component library                                                        |
+| `packages/website` | `@atomly-ai/website` | Next.js documentation site                                                   |
 
 ### Component Organization (Atomic Design)
 
@@ -73,7 +73,7 @@ The Storybook `preview.tsx` wraps all stories in `MoleculeProvider` automaticall
 
 ### Type Flow
 
-Prop types are defined in `@molecule-ui/types` and imported into both framework packages. Adding a new prop value means changing it once in `packages/types/src/components/` and it propagates to React and Vue.
+Prop types are defined in `@atomly-ai/types` and imported into both framework packages. Adding a new prop value means changing it once in `packages/types/src/components/` and it propagates to React and Vue.
 
 ### Build & Exports
 
@@ -86,7 +86,7 @@ Vite builds the React package as an ES module library with three entry points (`
 2. **Create the component folder** at `packages/react/src/atoms/<name>/` with these five files:
    - `<Name>.tsx` — component using `React.forwardRef`; set `<Name>.displayName`
    - `<Name>.styles.ts` — Emotion `styled` component; use `$`-prefixed transient props to avoid DOM leakage
-   - `<Name>.types.ts` — imports from `@molecule-ui/types` and builds the public prop interface
+   - `<Name>.types.ts` — imports from `@atomly-ai/types` and builds the public prop interface
    - `<Name>.stories.tsx` — Storybook stories with `title: 'Atoms/<Name>'` and `tags: ['autodocs']`
    - `index.ts` — barrel: `export { default as <Name> } from './<Name>'` + `export type { <Name>Props }`
 
@@ -101,7 +101,7 @@ The same pattern applies for molecules under `src/molecules/`, and for adding an
 - **Transient props**: prefix styled-component-only props with `$` (e.g., `$size`, `$variant`, `$isDisabled`) to prevent them from forwarding to the DOM element.
 - **React Aria**: accessibility behavior (keyboard events, press states, ARIA attributes) is handled via hooks in `src/hooks/` that wrap `@react-aria/*`. Add new hooks there rather than importing React Aria directly in components.
 - **`useButton` hook**: wraps `@react-aria/button` and returns `{ buttonProps, isPressed, buttonRef }`. The component is responsible for merging `buttonRef` with any `forwardedRef` from consumers.
-- **Types package must be built first**: the React and Vue packages import from `@molecule-ui/types` at build time via the `workspace:*` protocol.
+- **Types package must be built first**: the React and Vue packages import from `@atomly-ai/types` at build time via the `workspace:*` protocol.
 
 ## Design System References
 

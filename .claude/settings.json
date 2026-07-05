@@ -8,8 +8,8 @@
       "Bash(pnpm dev:website)",
       "Bash(pnpm lint)",
       "Bash(pnpm format)",
-      "Bash(pnpm -F @molecule-ui/react vitest*)",
-      "Bash(pnpm -F @molecule-ui/vue vitest*)"
+      "Bash(pnpm -F @atomly-ai/react vitest*)",
+      "Bash(pnpm -F @atomly-ai/vue vitest*)"
     ]
   },
   "hooks": {

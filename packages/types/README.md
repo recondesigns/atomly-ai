@@ -1,3 +1,3 @@
-# @molecule-ui/types
+# @atomly-ai/types
 
 Shared types.

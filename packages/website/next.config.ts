@@ -1,8 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  transpilePackages: ['@molecule-ui/react']
+  transpilePackages: ['@atomly-ai/react'],
 };
 
 export default nextConfig;

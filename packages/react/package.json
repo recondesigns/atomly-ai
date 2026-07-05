@@ -1,5 +1,5 @@
 {
-  "name": "@molecule-ui/react",
+  "name": "@atomly-ai/react",
   "version": "0.1.0",
   "type": "module",
   "description": "Molecule UI React components",
@@ -36,7 +36,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@molecule-ui/types": "workspace:*",
+    "@atomly-ai/types": "workspace:*",
     "@react-aria/button": "^3.14.4",
     "@react-aria/focus": "^3.21.4",
     "@react-aria/interactions": "^3.27.0",
@@ -86,14 +86,14 @@
     "name": "Stedman",
     "url": "https://github.com/recondesigns"
   },
-  "homepage": "https://github.com/recondesigns/molecule-ui#readme",
+  "homepage": "https://github.com/recondesigns/atomly-ai#readme",
   "bugs": {
-    "url": "https://github.com/recondesigns/molecule-ui/issues"
+    "url": "https://github.com/recondesigns/atomly-ai/issues"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.14.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/recondesigns/molecule-ui.git"
+    "url": "git+https://github.com/recondesigns/atomly-ai.git"
   }
 }

@@ -1,4 +1,4 @@
-# @molecule-ui/vue
+# @atomly-ai/vue
 
 ## 0.1.0
 
@@ -9,4 +9,4 @@
 ### Patch Changes
 
 - Updated dependencies [5210a3a]
-  - @molecule-ui/types@0.1.0
+  - @atomly-ai/types@0.1.0
