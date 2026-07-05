@@ -24,7 +24,7 @@ Follow these steps:
 - `<file or package>`: <what changed>
 
 ## Test plan
-- [ ] `pnpm storybook:react` — verify affected stories render correctly
+- [ ] `pnpm dev:storybook-react` — verify affected stories render correctly
 - [ ] Check Controls panel for any new or changed props
 - [ ] <any other specific checks relevant to the diff>
 ```
