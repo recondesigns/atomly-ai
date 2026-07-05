@@ -73,6 +73,47 @@ figma/         # Figma Code Connect config
 tokens/        # Raw design token exports from Figma
 ```
 
+## Releasing
+
+This repo uses [Changesets](https://github.com/changesets/changesets) to manage versioning and publishing. All three publishable packages (`@molecule-ui/react`, `@molecule-ui/vue`, `@molecule-ui/types`) are linked — they always release at the same version.
+
+### Workflow for contributors
+
+Every PR that changes package behavior (new component, bug fix, API change) needs a changeset:
+
+```bash
+# 1. After making your changes, create a changeset
+pnpm changeset
+
+# Follow the interactive prompts:
+#   - Select which packages are affected
+#   - Choose the bump type: patch (bug fix), minor (new feature), major (breaking change)
+#   - Write a short summary of what changed (this becomes the changelog entry)
+
+# 2. Commit the generated .changeset/*.md file alongside your code changes
+git add .changeset/
+git commit -m "chore: add changeset"
+```
+
+The `.changeset/*.md` file that gets generated is human-readable and should be committed with your PR.
+
+### How releases work
+
+When PRs with changesets are merged into `main`, the release GitHub Action automatically opens a **"Version Packages" PR** that:
+
+- Bumps the version in each affected `package.json`
+- Updates `CHANGELOG.md` files with the changeset summaries
+- Deletes the consumed `.changeset/*.md` files
+
+Merging that PR triggers a second run of the action that **publishes to npm**.
+
+### What does not need a changeset
+
+- Documentation-only changes
+- Changes to `packages/website`
+- Internal tooling or CI changes (scripts, configs, workflows)
+- Test-only changes
+
 ## Contributing
 
 See [`CLAUDE.md`](CLAUDE.md) for architecture details and development conventions. See [`ROADMAP.md`](ROADMAP.md) for planned work.

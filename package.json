@@ -16,9 +16,13 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "typecheck": "pnpm -F @molecule-ui/types exec tsc --noEmit && pnpm -F @molecule-ui/react exec tsc --noEmit && pnpm -F @molecule-ui/vue exec tsc --noEmit",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish",
     "prepare": "husky || true"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "@commitlint/cli": "^21.1.0",
     "@commitlint/config-conventional": "^21.1.0",
     "@eslint/js": "^10.0.1",

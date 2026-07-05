@@ -86,8 +86,11 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 
 ## Versioning & Publishing
 
-- [ ] Changesets installed and configured
-- [ ] `.changeset/config.json` set up for the monorepo
+- [x] Changesets installed and configured (`@changesets/cli` at workspace root)
+- [x] `.changeset/config.json` — `access: public`, packages linked, `baseBranch: main`
+- [x] `changeset`, `version-packages`, and `release` scripts added to root `package.json`
+- [x] GitHub Actions release workflow — `changesets/action` creates version PR or publishes on merge to `main`
+- [ ] `NPM_TOKEN` secret added to GitHub repo settings
 - [ ] `syncpack` installed to keep dependency versions consistent
 - [ ] First alpha publish of `@molecule-ui/react` and `@molecule-ui/vue`
 
