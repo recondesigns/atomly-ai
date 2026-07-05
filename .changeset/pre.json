@@ -7,5 +7,7 @@
     "@atomly-ai/vue": "0.1.0",
     "@atomly-ai/website": "0.0.2"
   },
-  "changesets": []
+  "changesets": [
+    "initial-atomly-ai-alpha"
+  ]
 }
