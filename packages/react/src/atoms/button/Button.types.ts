@@ -1,13 +1,19 @@
-import type { UseButtonOptions } from "../../hooks";
-import type { ButtonType, ButtonVariant, ButtonSize, FullWidth, IsLoading } from '@molecule-ui/types'
+import type { UseButtonOptions } from '../../hooks';
+import type {
+  ButtonVariant,
+  ButtonIntent,
+  ButtonSize,
+  FullWidth,
+  IsLoading,
+} from '@molecule-ui/types';
 
 export type ButtonProps = Pick<UseButtonOptions, 'onPress' | 'onPressChange' | 'isDisabled'> & {
-    buttonType?: ButtonType;
-    variant?: ButtonVariant;
-    size?: ButtonSize;
-    fullWidth?: FullWidth;
-    children: React.ReactNode;
-    isLoading?: IsLoading;
-    'aria-label'?: string;
-    'data-testid'?: string;
-}
+  variant?: ButtonVariant;
+  intent?: ButtonIntent;
+  size?: ButtonSize;
+  fullWidth?: FullWidth;
+  children: React.ReactNode;
+  isLoading?: IsLoading;
+  'aria-label'?: string;
+  'data-testid'?: string;
+};

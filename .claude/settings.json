@@ -3,8 +3,8 @@
     "allow": [
       "Bash(pnpm build)",
       "Bash(pnpm build:types)",
-      "Bash(pnpm storybook:react)",
-      "Bash(pnpm storybook:vue)",
+      "Bash(pnpm dev:storybook-react)",
+      "Bash(pnpm dev:storybook-vue)",
       "Bash(pnpm dev:website)",
       "Bash(pnpm lint)",
       "Bash(pnpm format)",

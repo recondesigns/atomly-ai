@@ -1,36 +1,38 @@
-Sync design tokens from the Figma Design Tokens file into the codebase.
+Sync design tokens from Figma into the codebase via a Token Studio export.
 
 No arguments needed.
 
-The Figma Design Tokens file is at: https://www.figma.com/design/GFCI1ypTw7ZXlKJzrfGKdz/Design-tokens
+## Workflow
 
-The token values live in two files:
-- `packages/react/src/theme/defaultTheme.ts` — runtime token values
-- `packages/react/src/theme/theme.types.ts` — TypeScript shape of the theme
+1. **Export from Token Studio** — in Figma, open the Token Studio plugin, export all tokens, and save the file as `tokens/figma-export.json` (overwrite the existing file)
 
-Follow these steps:
+2. **Run `pnpm sync:tokens`** — this does two things in sequence:
+   - `scripts/sync-figma-tokens.mjs` reads `tokens/figma-export.json`, maps the primitive values to the theme structure, and writes `tokens/primitives.json`
+   - `style-dictionary.config.mjs` reads `tokens/primitives.json` and regenerates all outputs
 
-1. **Fetch token variables** from Figma using the MCP tool `get_variable_defs` on the Design Tokens file URL.
+3. **Verify the outputs** — confirm the following files were updated:
+   - `tokens/primitives.json` — source token values in DTCG format
+   - `packages/vue/src/tokens/primitives.css` — CSS custom properties
+   - `packages/react/src/theme/tokens.generated.js` — ES6 named exports
+   - `packages/react/src/theme/tokens.generated.d.ts` — TypeScript declarations
 
-2. **Write the raw Figma output to `tokens/primitives.json`** before making any other changes. This creates an auditable snapshot of exactly what came from Figma. If semantic/alias tokens exist as a separate collection, write those to `tokens/semantic.json`.
+4. **Run `pnpm typecheck`** to confirm the generated output still satisfies the `MoleculeUITheme` type shape.
 
-3. **Read `defaultTheme.ts` and `theme.types.ts`** in full before making any changes.
+5. **Report a diff summary**:
+   - Token values changed (list old → new)
+   - Any new tokens that were added
+   - Any tokens that fell back to hardcoded defaults (means the Figma variable name doesn't match the mapping in `scripts/sync-figma-tokens.mjs`)
 
-4. **Map Figma variable collections to theme keys** using this structure:
-   - Color variables → `defaultTheme.colors`
-   - Spacing variables → `defaultTheme.spacing`
-   - Typography variables → `defaultTheme.typography`
-   - Border radius variables → `defaultTheme.radii`
-   - Transition/duration variables → `defaultTheme.transitions`
+## Updating the mapping
 
-5. **Update `defaultTheme.ts`** with new or changed values. Rules:
-   - Do not remove existing keys — they may be referenced by components
-   - Add new keys if Figma introduces tokens that don't yet exist in the theme
-   - Flag any value changes to existing keys explicitly (these affect all components using that token)
+The script in `scripts/sync-figma-tokens.mjs` maps Figma primitive names (e.g. `blue/600`) to theme keys (e.g. `color.primary`). If new token categories are added in Figma that don't exist in the mapping, update the script and add the new entries to `tokens/primitives.json` and `packages/react/src/theme/theme.types.ts` as needed.
 
-6. **Update `theme.types.ts`** only if new token categories or keys were added. Do not remove or rename existing type properties.
+## Files committed after a sync
 
-7. **Report a diff summary**:
-   - New tokens added
-   - Existing token values changed (list old → new)
-   - Figma variables that could not be mapped to an existing theme key (flag for manual review)
+Commit all four generated files together with `tokens/figma-export.json`:
+
+- `tokens/figma-export.json`
+- `tokens/primitives.json`
+- `packages/vue/src/tokens/primitives.css`
+- `packages/react/src/theme/tokens.generated.js`
+- `packages/react/src/theme/tokens.generated.d.ts`

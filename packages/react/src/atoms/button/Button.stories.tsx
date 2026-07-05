@@ -9,13 +9,13 @@ const meta = {
     layout: 'centered',
   },
   argTypes: {
-    buttonType: {
-      control: 'inline-radio',
-      options: ['contained', 'outlined', 'ghost'],
-    },
     variant: {
       control: 'inline-radio',
-      options: ['primary', 'brand', 'success', 'destructive'],
+      options: ['solid', 'outline', 'ghost'],
+    },
+    intent: {
+      control: 'inline-radio',
+      options: ['primary', 'success', 'danger', 'brand'],
     },
     children: {
       control: 'text',
@@ -29,7 +29,6 @@ const meta = {
     },
     isDisabled: { control: 'boolean' },
     fullWidth: { control: 'boolean' },
-    // onPress: { action: 'pressed' },
   },
 } satisfies Meta<typeof Button>;
 
@@ -39,8 +38,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => <Button {...args} />,
   args: {
-    buttonType: 'contained',
-    variant: 'primary',
+    variant: 'solid',
+    intent: 'primary',
     size: 'md',
     children: 'Button',
     isLoading: false,
@@ -53,16 +52,16 @@ export const Default: Story = {
   },
 };
 
-export const Type: Story = {
+export const Variant: Story = {
   ...Default,
   args: {
-    buttonType: 'contained',
+    variant: 'solid',
     children: 'Button',
   },
   parameters: {
     controls: {
       exclude: [
-        'variant',
+        'intent',
         'size',
         'fullWidth',
         'isDisabled',
@@ -74,16 +73,16 @@ export const Type: Story = {
   },
 };
 
-export const Variant: Story = {
+export const Intent: Story = {
   ...Default,
   args: {
-    variant: 'primary',
+    intent: 'primary',
     children: 'Button',
   },
   parameters: {
     controls: {
       exclude: [
-        'buttonType',
+        'variant',
         'size',
         'fullWidth',
         'isDisabled',
@@ -145,8 +144,8 @@ export const Disabled: Story = {
     controls: {
       exclude: [
         'children',
-        'buttonType',
         'variant',
+        'intent',
         'size',
         'fullWidth',
         'isLoading',
@@ -156,17 +155,3 @@ export const Disabled: Story = {
     },
   },
 };
-
-/**
- * All variants side by side — useful for visual comparison.
- */
-// export const AllVariants: Story = {
-//   render: () => (
-//     <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-//       <Button variant="primary" onPress={() => {}}>Primary</Button>
-//       <Button variant="secondary" onPress={() => {}}>Secondary</Button>
-//       <Button variant="danger" onPress={() => {}}>Danger</Button>
-//       <Button variant="ghost" onPress={() => {}}>Ghost</Button>
-//     </div>
-//   ),
-// };

@@ -1,9 +1,9 @@
 import type { BadgeProps } from './Badge.types';
 import StyledBadge from './Badge.styles';
 
-const Badge = ({ status = 'primary', content, size = 'md' }: BadgeProps) => {
+const Badge = ({ intent = 'neutral', content, size = 'md' }: BadgeProps) => {
   return (
-    <StyledBadge $status={status} $size={size}>
+    <StyledBadge $intent={intent} $size={size}>
       {content}
     </StyledBadge>
   );

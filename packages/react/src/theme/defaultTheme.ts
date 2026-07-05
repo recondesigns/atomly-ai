@@ -1,90 +1,135 @@
-/**
- * Default light theme for Molecule UI.
- *
- * Every value here is a design token. When a consumer wants to
- * customize the look, they override values in this object rather
- * than writing CSS overrides. This keeps everything traceable.
- */
-
-import type { MoleculeUITheme } from "./theme.types"
+import type { MoleculeUITheme } from './theme.types';
+import {
+  ColorPrimary,
+  ColorPrimaryHover,
+  ColorPrimaryActive,
+  ColorPrimaryLight,
+  ColorBrand,
+  ColorBrandHover,
+  ColorBrandActive,
+  ColorBrandLight,
+  ColorSuccess,
+  ColorSuccessHover,
+  ColorSuccessActive,
+  ColorSuccessLight,
+  ColorDanger,
+  ColorDangerHover,
+  ColorDangerActive,
+  ColorDangerLight,
+  ColorBackground,
+  ColorSurface,
+  ColorSurfaceHover,
+  ColorTextPrimary,
+  ColorTextSuccess,
+  ColorTextOnPrimary,
+  ColorTextOnSecondary,
+  ColorTextOnDanger,
+  ColorTextDisabled,
+  ColorBorder,
+  ColorBorderFocus,
+  ColorDisabled,
+  ColorFocusRing,
+  SpacingXs,
+  SpacingSm,
+  SpacingMd,
+  SpacingLg,
+  SpacingXl,
+  SpacingXxl,
+  FontFamilyBase,
+  FontSizeXs,
+  FontSizeSm,
+  FontSizeMd,
+  FontSizeLg,
+  FontWeightNormal,
+  FontWeightMedium,
+  FontWeightSemibold,
+  FontWeightBold,
+  LineHeightTight,
+  LineHeightNormal,
+  LineHeightRelaxed,
+  BorderRadiusSm,
+  BorderRadiusMd,
+  BorderRadiusLg,
+  BorderRadiusFull,
+  TransitionFast,
+  TransitionNormal,
+} from './tokens.generated';
 
 export const defaultTheme: MoleculeUITheme = {
-    colors: {
-        primary: '#2563EB',
-        primaryHover: '#1D4ED8',
-        primaryActive: '#1E40AF',
-        primaryLight: '#EFF6FF',
+  colors: {
+    primary: ColorPrimary,
+    primaryHover: ColorPrimaryHover,
+    primaryActive: ColorPrimaryActive,
+    primaryLight: ColorPrimaryLight,
 
-        brand: '#FE9A00',
-        brandHover: '#E17100',
-        brandActive: '#E17100',
-        brandLight: '#FFFBEB',
+    brand: ColorBrand,
+    brandHover: ColorBrandHover,
+    brandActive: ColorBrandActive,
+    brandLight: ColorBrandLight,
 
-        success: '#00A63E',
-        successHover: '#008236',
-        successActive: '#016630',
-        successLight: '#F0FDF4',
+    success: ColorSuccess,
+    successHover: ColorSuccessHover,
+    successActive: ColorSuccessActive,
+    successLight: ColorSuccessLight,
 
-        danger: '#DC2626',
-        dangerHover: '#B91C1C',
-        dangerActive: '#991B1B',
-        dangerLight: '#FEF2F2',
+    danger: ColorDanger,
+    dangerHover: ColorDangerHover,
+    dangerActive: ColorDangerActive,
+    dangerLight: ColorDangerLight,
 
-        background: '#FFFFFF',
-        surface: '#F8FAFC',
-        surfaceHover: '#F1F5F9',
+    background: ColorBackground,
+    surface: ColorSurface,
+    surfaceHover: ColorSurfaceHover,
 
-        textPrimary: '#0F172A',
-        textSuccess: '#FFFFFF',
-        textOnPrimary: '#FFFFFF',
-        textOnSecondary: '#0F172A',
-        textOnDanger: '#FFFFFF',
-        textDisabled: '#94A3B8',
+    textPrimary: ColorTextPrimary,
+    textSuccess: ColorTextSuccess,
+    textOnPrimary: ColorTextOnPrimary,
+    textOnSecondary: ColorTextOnSecondary,
+    textOnDanger: ColorTextOnDanger,
+    textDisabled: ColorTextDisabled,
 
-        border: '#E2E8F0',
-        borderFocus: '#2563EB',
+    border: ColorBorder,
+    borderFocus: ColorBorderFocus,
 
-        disabled: '#F1F5F9',
-        focusRing: 'rgba(37, 99, 235, 0.4)',
-
+    disabled: ColorDisabled,
+    focusRing: ColorFocusRing,
+  },
+  spacing: {
+    xs: SpacingXs,
+    sm: SpacingSm,
+    md: SpacingMd,
+    lg: SpacingLg,
+    xl: SpacingXl,
+    xxl: SpacingXxl,
+  },
+  typography: {
+    fontFamily: FontFamilyBase,
+    fontSize: {
+      xs: FontSizeXs,
+      sm: FontSizeSm,
+      md: FontSizeMd,
+      lg: FontSizeLg,
     },
-    spacing: {
-        xs: '4px',
-        sm: '8px',
-        md: '12px',
-        lg: '16px',
-        xl: '24px',
-        xxl: '32px',
+    fontWeight: {
+      normal: FontWeightNormal,
+      medium: FontWeightMedium,
+      semibold: FontWeightSemibold,
+      bold: FontWeightBold,
     },
-    typography: {
-        fontFamily:
-            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-        fontSize: {
-            xs: '0.75rem',
-            sm: '0.875rem',
-            md: '1rem',
-            lg: '1.125rem',
-        },
-        fontWeight: {
-            normal: 400,
-            medium: 500,
-            semibold: 600,
-            bold: 700,
-        },
-        lineHeight: {
-            tight: '1.25',
-            normal: '1.5',
-            relaxed: '1.75',
-        },
+    lineHeight: {
+      tight: LineHeightTight,
+      normal: LineHeightNormal,
+      relaxed: LineHeightRelaxed,
     },
-    radii: {
-        sm: '4px',
-        md: '6px',
-        lg: '8px',
-        full: '9999px',
-    },
-    transitions: {
-        fast: '120ms ease',
-        normal: '200ms ease',
-    },
-}
+  },
+  radii: {
+    sm: BorderRadiusSm,
+    md: BorderRadiusMd,
+    lg: BorderRadiusLg,
+    full: BorderRadiusFull,
+  },
+  transitions: {
+    fast: TransitionFast,
+    normal: TransitionNormal,
+  },
+};

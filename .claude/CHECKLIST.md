@@ -26,22 +26,26 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `figma/figma.config.json` scaffolded for Code Connect
 - [x] Design tokens defined in Figma (primitives: color, spacing, typography, radii, transitions)
 - [x] Semantic/alias token layer in Figma
-- [ ] Component Library frames created for existing components (Button, Badge, ButtonGroup)
-- [ ] Figma libraries published (Design Tokens + Component Library)
-- [ ] Code Connect published for Button
-- [ ] Code Connect published for Badge
-- [ ] Code Connect published for ButtonGroup
+- [x] Component Library frames created for existing components (Button, Badge, ButtonGroup)
+- [x] Component API aligned with industry conventions (Button + Badge prop rename)
+- [x] Figma library published — Design Tokens file
+- [x] Figma library published — Component Library file
+- [~] Code Connect published for Button — requires paid Figma plan
+- [~] Code Connect published for Badge — requires paid Figma plan
+- [~] Code Connect published for ButtonGroup — requires paid Figma plan
 
 ---
 
 ## Token Pipeline
 
 - [x] `tokens/` folder scaffolded
-- [ ] Style Dictionary installed and configured
-- [ ] `tokens/primitives.json` populated via `/sync-tokens`
-- [ ] Style Dictionary outputs CSS custom properties to `packages/vue/src/tokens/`
-- [ ] Style Dictionary outputs JS tokens consumed by `defaultTheme.ts`
-- [ ] Token sync validated end-to-end (Figma → `tokens/` → theme → components)
+- [x] Style Dictionary installed and configured (`style-dictionary.config.mjs` at root; `pnpm build:tokens`)
+- [x] `tokens/primitives.json` populated (seeded from `defaultTheme.ts`; re-sync from Figma when token pipeline is validated)
+- [x] Style Dictionary outputs CSS custom properties to `packages/vue/src/tokens/` (imported in Vue `index.ts`)
+- [x] Style Dictionary outputs JS tokens consumed by `defaultTheme.ts` (+ `.d.ts` sidecar for TypeScript)
+- [x] Token sync validated end-to-end — Token Studio export → `tokens/figma-export.json` → `pnpm sync:tokens` → CSS + JS outputs confirmed clean
+- [x] `sync-figma-tokens.mjs` extended to resolve `Space/Value`, `Typography/Value`, and `Shape/Value` Token Studio collections
+- [x] Chip component tokens wired from `Component/Value` via three-layer alias chain (component → semantic → primitive)
 
 ---
 
@@ -114,6 +118,28 @@ Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG so
 - [x] Add Storybook stories for the icon set (AllIcons grid, Sizes, Colors — in both React and Vue)
 - [x] Husky `pre-push` hook — runs `pnpm build:icons` then `git diff --exit-code` on generated icon folders; blocks push if committed output is stale
 - [x] CI step — same regenerate + diff-check as pre-push, runs before lint/build as a backstop against `--no-verify`
+
+---
+
+## Components
+
+### Atoms
+
+- [x] Button — `solid`, `outline`, `ghost` variants; `primary`, `success`, `danger`, `brand` intents; `sm`/`md`/`lg` sizes; loading state; React Aria keyboard/press handling
+- [x] Badge — `filled` variant; `neutral`, `primary`, `success`, `danger`, `brand` intents; `sm`/`md`/`lg` sizes
+- [x] Chip — `filled`, `outlined`, `ghost` variants; `neutral`, `primary`, `success`, `danger` intents; `sm`/`md`/`lg` sizes; disabled state; token-backed colors from Token Studio
+
+### Molecules
+
+- [x] ButtonGroup — horizontal group wrapper for Button atoms
+
+### Planned
+
+- [ ] Input — text field with label, helper text, error state
+- [ ] Select — dropdown with intent and size variants
+- [ ] Toggle / Switch
+- [ ] Checkbox
+- [ ] Avatar
 
 ---
 
