@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import type { BadgeIntent, BadgeSize } from '@molecule-ui/types';
+import type { BadgeIntent, BadgeSize } from '@atomly-ai/types';
 
 const sizeStyles: Record<
   BadgeSize,

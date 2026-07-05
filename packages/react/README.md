@@ -1,3 +1,3 @@
-# @molecule-ui/react
+# @atomly-ai/react
 
 React UI components.

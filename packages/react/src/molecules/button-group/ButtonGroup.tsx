@@ -1,6 +1,6 @@
 // import React from 'react';
 // import { Button } from '../../atoms';
-// import { ButtonGroupProps } from '@molecule-ui/types';
+// import { ButtonGroupProps } from '@atomly-ai/types';
 
 type Action = {
   label: string;

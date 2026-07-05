@@ -1,4 +1,4 @@
-# packages/react — @molecule-ui/react
+# packages/react — @atomly-ai/react
 
 React component library package. See the root `CLAUDE.md` for monorepo-wide conventions. This file covers React-specific implementation details.
 
@@ -64,4 +64,4 @@ Vite builds to `dist/` as an ES module with `preserveModules` (one output file p
 
 All peer dependencies are externalized: `react`, `react-dom`, `react/jsx-runtime`, all `@emotion/*`, all `@react-aria/*`, all `@react-stately/*`.
 
-Run `pnpm build:types` (from repo root) first if `packages/types` changed, then `pnpm -F @molecule-ui/react build`.
+Run `pnpm build:types` (from repo root) first if `packages/types` changed, then `pnpm -F @atomly-ai/react build`.

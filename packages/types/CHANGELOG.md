@@ -1,4 +1,4 @@
-# @molecule-ui/types
+# @atomly-ai/types
 
 ## 0.1.0
 

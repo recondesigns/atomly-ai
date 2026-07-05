@@ -1,4 +1,4 @@
-import type { ChipVariant, ChipIntent, ChipSize } from '@molecule-ui/types';
+import type { ChipVariant, ChipIntent, ChipSize } from '@atomly-ai/types';
 
 export type ChipProps = {
   variant?: ChipVariant;

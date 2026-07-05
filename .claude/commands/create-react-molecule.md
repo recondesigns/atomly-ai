@@ -13,10 +13,10 @@ Molecules are composed components built from atoms. Follow these steps in order:
    Then add `export * from './<lowercase-name>'` to `packages/types/src/components/molecules/index.ts`.
 
 2. **Component folder** — Create `packages/react/src/molecules/<lowercase-name>/` with these five files:
-
-   - `<Name>.types.ts` — import the base types from `@molecule-ui/types` and extend them into the public `<Name>Props` interface. Include `React.RefAttributes<HTMLElement>` if using forwardRef.
+   - `<Name>.types.ts` — import the base types from `@atomly-ai/types` and extend them into the public `<Name>Props` interface. Include `React.RefAttributes<HTMLElement>` if using forwardRef.
 
    - `<Name>.styles.ts` — Emotion `styled` wrapper component(s). Use `$`-prefixed transient props. Always include at least one token-backed style with a fallback, e.g.:
+
      ```ts
      font-family: ${({ theme }) => theme.typography?.fontFamily ?? 'inherit'};
      ```

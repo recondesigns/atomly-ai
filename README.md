@@ -14,12 +14,12 @@ A monorepo design system publishing React and Vue component libraries built on a
 
 ## Packages
 
-| Package                                    | Description                                    |
-| ------------------------------------------ | ---------------------------------------------- |
-| [`@molecule-ui/react`](packages/react)     | React component library (Emotion + React Aria) |
-| [`@molecule-ui/vue`](packages/vue)         | Vue 3 component library                        |
-| [`@molecule-ui/types`](packages/types)     | Shared TypeScript prop types                   |
-| [`@molecule-ui/website`](packages/website) | Documentation site (Next.js)                   |
+| Package                                  | Description                                    |
+| ---------------------------------------- | ---------------------------------------------- |
+| [`@atomly-ai/react`](packages/react)     | React component library (Emotion + React Aria) |
+| [`@atomly-ai/vue`](packages/vue)         | Vue 3 component library                        |
+| [`@atomly-ai/types`](packages/types)     | Shared TypeScript prop types                   |
+| [`@atomly-ai/website`](packages/website) | Documentation site (Next.js)                   |
 
 ## Requirements
 
@@ -65,9 +65,9 @@ pnpm format
 
 ```
 packages/
-  react/       # @molecule-ui/react — atoms, molecules, hooks, theme
-  vue/         # @molecule-ui/vue — atoms, molecules, composables
-  types/       # @molecule-ui/types — shared prop type definitions
+  react/       # @atomly-ai/react — atoms, molecules, hooks, theme
+  vue/         # @atomly-ai/vue — atoms, molecules, composables
+  types/       # @atomly-ai/types — shared prop type definitions
   website/     # Documentation site
 figma/         # Figma Code Connect config
 tokens/        # Raw design token exports from Figma
@@ -75,7 +75,7 @@ tokens/        # Raw design token exports from Figma
 
 ## Releasing
 
-This repo uses [Changesets](https://github.com/changesets/changesets) to manage versioning and publishing. All three publishable packages (`@molecule-ui/react`, `@molecule-ui/vue`, `@molecule-ui/types`) are linked — they always release at the same version.
+This repo uses [Changesets](https://github.com/changesets/changesets) to manage versioning and publishing. All three publishable packages (`@atomly-ai/react`, `@atomly-ai/vue`, `@atomly-ai/types`) are linked — they always release at the same version.
 
 ### Workflow for contributors
 

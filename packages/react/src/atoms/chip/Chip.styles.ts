@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import type { ChipVariant, ChipIntent, ChipSize } from '@molecule-ui/types';
+import type { ChipVariant, ChipIntent, ChipSize } from '@atomly-ai/types';
 
 type ChipColors = { bg: string; border: string; text: string };
 
