@@ -1,5 +1,5 @@
 {
-  "name": "@molecule-ui/types",
+  "name": "@atomly-ai/types",
   "version": "0.1.0",
   "type": "module",
   "description": "Shared types for Molecule UI",
@@ -32,9 +32,9 @@
     "name": "Stedman",
     "url": "https://github.com/recondesigns"
   },
-  "homepage": "https://github.com/recondesigns/molecule-ui#readme",
+  "homepage": "https://github.com/recondesigns/atomly-ai#readme",
   "bugs": {
-    "url": "https://github.com/recondesigns/molecule-ui/issues"
+    "url": "https://github.com/recondesigns/atomly-ai/issues"
   },
   "license": "MIT"
 }

@@ -1,3 +1,3 @@
-# @molecule-ui/vue
+# @atomly-ai/vue
 
 Vue UI components.

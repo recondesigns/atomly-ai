@@ -7,10 +7,9 @@ Follow these steps:
 1. **Discover all components** by reading `packages/vue/src/atoms/index.ts` and `packages/vue/src/molecules/index.ts` to get the full list.
 
 2. **For each component**, check the following in `packages/vue/src/atoms/<lowercase>/` or `molecules/<lowercase>/`:
-
    - [ ] Type file exists in `packages/types/src/components/` (may be shared with React)
    - [ ] `<Name>.vue` uses `<script lang="ts" setup>`
-   - [ ] `<Name>.vue` uses `defineProps` + `withDefaults` and imports types from `@molecule-ui/types`
+   - [ ] `<Name>.vue` uses `defineProps` + `withDefaults` and imports types from `@atomly-ai/types`
    - [ ] `<Name>.vue` includes `<slot />` for children
    - [ ] `<Name>.vue` spreads `data-testid` onto the root element
    - [ ] `<name>.css` exists with at least one CSS custom property placeholder

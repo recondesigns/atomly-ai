@@ -1,21 +1,21 @@
 {
-  "name": "molecule-ui",
+  "name": "atomly-ai",
   "version": "0.0.1",
   "private": true,
   "type": "module",
   "description": "React and Vue component library for the molecule-ui design system.",
   "scripts": {
-    "build": "pnpm -F @molecule-ui/types build && pnpm -F @molecule-ui/react build && pnpm -F @molecule-ui/vue build",
-    "build:types": "pnpm -F @molecule-ui/types build",
-    "dev:website": "pnpm -F @molecule-ui/website dev",
-    "dev:storybook-react": "pnpm -F @molecule-ui/react storybook",
-    "dev:storybook-vue": "pnpm -F @molecule-ui/vue storybook",
+    "build": "pnpm -F @atomly-ai/types build && pnpm -F @atomly-ai/react build && pnpm -F @atomly-ai/vue build",
+    "build:types": "pnpm -F @atomly-ai/types build",
+    "dev:website": "pnpm -F @atomly-ai/website dev",
+    "dev:storybook-react": "pnpm -F @atomly-ai/react storybook",
+    "dev:storybook-vue": "pnpm -F @atomly-ai/vue storybook",
     "sync:tokens": "node scripts/sync-figma-tokens.mjs && node style-dictionary.config.mjs",
     "build:tokens": "node style-dictionary.config.mjs",
-    "build:icons": "pnpm -F @molecule-ui/react build:icons && pnpm -F @molecule-ui/vue build:icons",
+    "build:icons": "pnpm -F @atomly-ai/react build:icons && pnpm -F @atomly-ai/vue build:icons",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "typecheck": "pnpm -F @molecule-ui/types exec tsc --noEmit && pnpm -F @molecule-ui/react exec tsc --noEmit && pnpm -F @molecule-ui/vue exec tsc --noEmit",
+    "typecheck": "pnpm -F @atomly-ai/types exec tsc --noEmit && pnpm -F @atomly-ai/react exec tsc --noEmit && pnpm -F @atomly-ai/vue exec tsc --noEmit",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "pnpm build && changeset publish",
@@ -51,7 +51,7 @@
   "packageManager": "pnpm@10.14.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/recondesigns/molecule-ui.git"
+    "url": "git+https://github.com/recondesigns/atomly-ai.git"
   },
   "license": "MIT",
   "lint-staged": {

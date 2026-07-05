@@ -1,0 +1,11 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@atomly-ai/react": "0.1.0",
+    "@atomly-ai/types": "0.1.0",
+    "@atomly-ai/vue": "0.1.0",
+    "@atomly-ai/website": "0.0.2"
+  },
+  "changesets": []
+}

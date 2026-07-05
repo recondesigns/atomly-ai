@@ -12,12 +12,12 @@ Molecules are composed components built from atoms. Follow these steps in order:
    Then add `export * from './<lowercase-name>'` to `packages/types/src/components/molecules/index.ts`. Skip this step if the React molecule was already created and types exist.
 
 2. **Component folder** — Create `packages/vue/src/molecules/<lowercase-name>/` with these four files:
-
-   - `<Name>.vue` — Single File Component using `<script lang="ts" setup>`. Import and compose atom components from `../../atoms`. Define props with `defineProps` + `withDefaults`, importing prop types from `@molecule-ui/types`. Always include a default slot (`<slot />`) so the component accepts children. Spread `data-testid` onto the root element. Apply scoped CSS classes for styling.
+   - `<Name>.vue` — Single File Component using `<script lang="ts" setup>`. Import and compose atom components from `../../atoms`. Define props with `defineProps` + `withDefaults`, importing prop types from `@atomly-ai/types`. Always include a default slot (`<slot />`) so the component accepts children. Spread `data-testid` onto the root element. Apply scoped CSS classes for styling.
 
    - `<name>.css` — scoped styles for the component. Always include at least one placeholder rule using a CSS custom property where a design token will eventually be wired in, e.g.:
+
      ```css
-     .molecule-<name> {
+     .molecule-<name > {
        font-family: var(--molecule-font-family, inherit);
      }
      ```

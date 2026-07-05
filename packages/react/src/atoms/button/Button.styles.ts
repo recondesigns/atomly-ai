@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import type { ButtonVariant, ButtonIntent, ButtonSize } from '@molecule-ui/types';
+import type { ButtonVariant, ButtonIntent, ButtonSize } from '@atomly-ai/types';
 
 const sizeStyles: Record<
   ButtonSize,

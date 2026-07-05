@@ -1,10 +1,11 @@
-# packages/types — @molecule-ui/types
+# packages/types — @atomly-ai/types
 
-Shared TypeScript types package. This is the single source of truth for all component prop types — both `@molecule-ui/react` and `@molecule-ui/vue` import from here.
+Shared TypeScript types package. This is the single source of truth for all component prop types — both `@atomly-ai/react` and `@atomly-ai/vue` import from here.
 
 ## Purpose
 
 Centralizing types here means:
+
 - A prop value (e.g. a new `ButtonVariant`) is added once and propagates to both framework packages automatically
 - The type surface is auditable in one place
 - Consumers who use both packages get consistent types
@@ -30,11 +31,11 @@ src/components/
 1. Create `src/components/atoms/<name>.ts` (or `molecules/`)
 2. Export all union types and standalone types needed by the component
 3. Add `export * from './<name>'` to the category `index.ts`
-4. Run `pnpm build:types` from the repo root before building `@molecule-ui/react` or `@molecule-ui/vue`
+4. Run `pnpm build:types` from the repo root before building `@atomly-ai/react` or `@atomly-ai/vue`
 
 ## Build order
 
-This package **must be built first**. Both `@molecule-ui/react` and `@molecule-ui/vue` reference it via `workspace:*` and resolve the built `dist/` at build time. If you skip this step, downstream builds will fail with missing type errors.
+This package **must be built first**. Both `@atomly-ai/react` and `@atomly-ai/vue` reference it via `workspace:*` and resolve the built `dist/` at build time. If you skip this step, downstream builds will fail with missing type errors.
 
 ```bash
 pnpm build:types          # build this package

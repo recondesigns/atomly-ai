@@ -3,7 +3,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "fixed": [],
-  "linked": [["@molecule-ui/react", "@molecule-ui/vue", "@molecule-ui/types"]],
+  "linked": [["@atomly-ai/react", "@atomly-ai/vue", "@atomly-ai/types"]],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",

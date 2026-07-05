@@ -43,11 +43,11 @@ jobs:
 
       - name: Install Playwright browsers
         run: |
-          pnpm -F @molecule-ui/react exec playwright install chromium --with-deps
-          pnpm -F @molecule-ui/vue exec playwright install chromium --with-deps
+          pnpm -F @atomly-ai/react exec playwright install chromium --with-deps
+          pnpm -F @atomly-ai/vue exec playwright install chromium --with-deps
 
       - name: Test (React)
-        run: pnpm -F @molecule-ui/react vitest run
+        run: pnpm -F @atomly-ai/react vitest run
 
       - name: Test (Vue)
-        run: pnpm -F @molecule-ui/vue vitest run
+        run: pnpm -F @atomly-ai/vue vitest run

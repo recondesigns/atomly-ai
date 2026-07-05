@@ -9,8 +9,8 @@ High-level phases and goals for the project. Updated as priorities shift.
 Get the core infrastructure solid before building out the component library.
 
 - [x] Monorepo setup (pnpm workspaces, TypeScript, shared types package)
-- [x] React component library (`@molecule-ui/react`) with Emotion + React Aria
-- [x] Vue component library (`@molecule-ui/vue`)
+- [x] React component library (`@atomly-ai/react`) with Emotion + React Aria
+- [x] Vue component library (`@atomly-ai/vue`)
 - [x] Storybook for React and Vue
 - [x] Claude Code tooling (slash commands, CLAUDE.md files, specs, hooks)
 - [x] Figma project created (Design Tokens + Component Library files)
@@ -40,6 +40,7 @@ Establish the design token pipeline so components are tied to Figma.
 Build out the foundational atom and molecule set.
 
 **Atoms**
+
 - [x] Button
 - [x] Badge
 - [ ] Icon
@@ -55,6 +56,7 @@ Build out the foundational atom and molecule set.
 - [ ] Divider
 
 **Molecules**
+
 - [x] ButtonGroup
 - [ ] FormField (label + input + error)
 - [ ] Modal / Dialog
@@ -99,4 +101,4 @@ Build out the foundational atom and molecule set.
 - Motion / animation token category
 - Breakpoint tokens for responsive components
 - Figma library published for internal design use
-- React Native package (`@molecule-ui/native`)
+- React Native package (`@atomly-ai/native`)

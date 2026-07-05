@@ -14,7 +14,7 @@ Follow these steps:
    - [ ] Re-exported from the category types index
 
    Component files:
-   - [ ] `<Name>.types.ts` imports from `@molecule-ui/types`
+   - [ ] `<Name>.types.ts` imports from `@atomly-ai/types`
    - [ ] `<Name>.styles.ts` uses `$`-prefixed transient props and has at least one theme token with a fallback
    - [ ] `<Name>.tsx` uses `React.forwardRef`, sets `displayName`, has both named and default export
    - [ ] `<Name>.tsx` does not import directly from `@react-aria/*`
