@@ -179,9 +179,9 @@ Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG so
 
 ### Atoms
 
-- [x] Button — `solid`, `outline`, `ghost` variants; `primary`, `success`, `danger`, `brand` intents; `sm`/`md`/`lg` sizes; loading state; React Aria keyboard/press handling
-- [x] Badge — `filled` variant; `neutral`, `primary`, `success`, `danger`, `brand` intents; `sm`/`md`/`lg` sizes
-- [x] Chip — `filled`, `outlined`, `ghost` variants; `neutral`, `primary`, `success`, `danger` intents; `sm`/`md`/`lg` sizes; disabled state; token-backed colors from Token Studio
+- [x] Button — `solid`, `outline`, `ghost` variants; `primary`, `success`, `danger`, `brand`, `warning` intents; `sm`/`md`/`lg` sizes; loading state; React Aria keyboard/press handling; light + dark theme support
+- [x] Badge — `filled` variant; `neutral`, `primary`, `success`, `danger`, `brand`, `warning` intents; `sm`/`md`/`lg` sizes; light + dark theme support
+- [x] Chip — `filled`, `outlined`, `ghost` variants; `neutral`, `primary`, `success`, `danger`, `warning` intents; `sm`/`md`/`lg` sizes; disabled state; token-backed colors from Token Studio; light + dark theme support
 
 ### Molecules
 
