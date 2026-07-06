@@ -8,6 +8,7 @@
     "@atomly-ai/website": "0.0.2"
   },
   "changesets": [
+    "color-palette-dark-mode",
     "initial-atomly-ai-alpha"
   ]
 }
