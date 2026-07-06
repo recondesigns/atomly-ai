@@ -1,6 +1,6 @@
 {
   "name": "@atomly-ai/react",
-  "version": "0.2.0-alpha.1",
+  "version": "0.2.0",
   "type": "module",
   "description": "Molecule UI React components",
   "exports": {
