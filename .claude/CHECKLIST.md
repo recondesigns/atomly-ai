@@ -149,6 +149,7 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 
 ## Bundle Health
 
+- [x] Excluded `*.stories.tsx`/`*.test.ts` from `tsconfig.build.json` in React and Vue — these were leaking into the published npm tarball as `dist/**/*.stories.d.ts` / `dist/**/*.test.d.ts` (caught while explaining why recent Storybook-only PRs didn't need changesets). `tsconfig.build.json`'s `include: ["src"]` compiled every file under `src`, including dev-only ones; the base `tsconfig.json` used by `pnpm typecheck` is unaffected, so type-checking of stories/tests is unchanged. Verified via `npm pack --dry-run` before/after on both packages.
 - [ ] `size-limit` installed with per-package size budgets (`@atomly-ai/react`, `@atomly-ai/vue`)
 - [ ] Size limit check added to GitHub Actions CI (fails PR if budget exceeded)
 - [ ] `rollup-plugin-visualizer` added to Vite config for bundle composition inspection
@@ -179,9 +180,9 @@ Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG so
 
 ### Atoms
 
-- [x] Button — `solid`, `outline`, `ghost` variants; `primary`, `success`, `danger`, `brand` intents; `sm`/`md`/`lg` sizes; loading state; React Aria keyboard/press handling
-- [x] Badge — `filled` variant; `neutral`, `primary`, `success`, `danger`, `brand` intents; `sm`/`md`/`lg` sizes
-- [x] Chip — `filled`, `outlined`, `ghost` variants; `neutral`, `primary`, `success`, `danger` intents; `sm`/`md`/`lg` sizes; disabled state; token-backed colors from Token Studio
+- [x] Button — `solid`, `outline`, `ghost` variants; `primary`, `success`, `danger`, `brand`, `warning` intents; `sm`/`md`/`lg` sizes; loading state; React Aria keyboard/press handling; light + dark theme support
+- [x] Badge — `filled` variant; `neutral`, `primary`, `success`, `danger`, `brand`, `warning` intents; `sm`/`md`/`lg` sizes; light + dark theme support
+- [x] Chip — `filled`, `outlined`, `ghost` variants; `neutral`, `primary`, `success`, `danger`, `warning` intents; `sm`/`md`/`lg` sizes; disabled state; token-backed colors from Token Studio; light + dark theme support
 
 ### Molecules
 
@@ -199,8 +200,8 @@ Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG so
 
 ## Storybook Enhancements
 
-- [ ] `@storybook/addon-designs` installed — embeds Figma frames in story panels
-- [ ] Figma frame links added to all existing stories
+- [x] `@storybook/addon-designs` installed — embeds Figma frames in story panels. Added to both React and Vue Storybook configs (`addon-designs@11.1.3`, peer-compatible with our Storybook 10.2.10). Wired a `design` parameter on Button's story meta (using the Component Library file link from `.claude/specs/button.md`) as a working example — confirmed via Playwright screenshot that the "Design" tab appears and routes correctly in the addon panel. The embedded Figma iframe itself 403'd in the headless test browser (no Figma session/auth) — expected, since the file likely isn't set to public sharing; should render fine in an authenticated browser.
+- [ ] Figma frame links added to all existing stories — React: USER added node-scoped links (`?node-id=...`) to Button, Badge, and Chip. Vue: Button now has one too (reuses the same React Button frame — same component conceptually). Blocked on **ButtonGroup** and **Icons** — no Figma frames exist for them yet, so there's nothing to link to (a Figma-content gap, not a code gap). Vue's Badge/Chip don't exist yet either — only Button is built in `@atomly-ai/vue` so far.
 - [ ] Storybook deployed (Chromatic hosting or Vercel)
 
 ---
