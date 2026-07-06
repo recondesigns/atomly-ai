@@ -1,107 +1,17 @@
 {
   "Primitive/Value": {
-    "blue": {
-      "100": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-blue-100"
-          }
-        },
-        "$value": "#eff6ff",
-        "$type": "color",
-        "$description": "Primitive · Blue scale · #EFF6FF · Lightest blue tint. Used as subtle primary action backgrounds. Reference via color/background/primary-subtle."
-      },
-      "200": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-blue-200"
-          }
-        },
-        "$value": "#dbeafe",
-        "$type": "color",
-        "$description": "Primitive · Blue scale · #DBEAFE · Light blue. Available for hover states or additional tinting."
-      },
-      "300": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-blue-300"
-          }
-        },
-        "$value": "#bfdbfe",
-        "$type": "color",
-        "$description": "Primitive · Blue scale · #BFDBFE · Medium-light blue. Used for thinking/streaming border states."
-      },
-      "400": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-blue-400"
-          }
-        },
-        "$value": "#60a5fa",
-        "$type": "color",
-        "$description": "Primitive · Blue scale · #60A5FA · Accessible blue on dark surfaces. Used for dark-mode primary text and icon colors."
-      },
-      "500": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-blue-500"
-          }
-        },
-        "$value": "#3b82f6",
-        "$type": "color",
-        "$description": "Primitive · Blue scale · #3B82F6 · Mid-range blue. Used as the primary action color in dark mode."
-      },
-      "600": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-blue-600"
-          }
-        },
-        "$value": "#2563eb",
-        "$type": "color",
-        "$description": "Primitive · Blue scale · #2563EB · Core brand blue. Primary action color in light mode. Reference via color/background/primary or color/text/primary."
-      },
-      "700": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-blue-700"
-          }
-        },
-        "$value": "#1d4ed8",
-        "$type": "color",
-        "$description": "Primitive · Blue scale · #1D4ED8 · Darker blue for hover states over primary actions in light mode."
-      },
-      "800": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-blue-800"
-          }
-        },
-        "$value": "#1e40af",
-        "$type": "color",
-        "$description": "Primitive · Blue scale · #1E40AF · Deep blue for active/pressed states in light mode."
-      },
-      "900": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-blue-900"
-          }
-        },
-        "$value": "#1e3a8a",
-        "$type": "color",
-        "$description": "Primitive · Blue scale · #1E3A8A · Darkest blue. Used as primary-subtle background in dark mode."
-      }
-    },
     "amber": {
+      "50": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-50"
+          }
+        },
+        "$value": "#fffbeb",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #FFFBEB \u00b7 Lightest amber tint. Warning-subtle background in light mode."
+      },
       "100": {
         "$extensions": {
           "com.figma.hiddenFromPublishing": false,
@@ -109,9 +19,9 @@
             "Web": "--global-amber-100"
           }
         },
-        "$value": "#fffbeb",
+        "$value": "#fef3c7",
         "$type": "color",
-        "$description": "Primitive · Amber scale · #FFFBEB · Lightest amber tint. Used as brand-subtle background in light mode."
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #FEF3C7 \u00b7 Light amber. Available for additional warning tinting."
       },
       "200": {
         "$extensions": {
@@ -120,9 +30,20 @@
             "Web": "--global-amber-200"
           }
         },
-        "$value": "#fef3c7",
+        "$value": "#fde68a",
         "$type": "color",
-        "$description": "Primitive · Amber scale · #FEF3C7 · Light amber. Available for additional amber tinting."
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #FDE68A \u00b7 Medium-light amber. Available for additional warning tinting."
+      },
+      "300": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-300"
+          }
+        },
+        "$value": "#fcd34d",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #FCD34D \u00b7 Soft amber. Available for warning highlights."
       },
       "400": {
         "$extensions": {
@@ -131,9 +52,9 @@
             "Web": "--global-amber-400"
           }
         },
-        "$value": "#fcd34d",
+        "$value": "#fbbf24",
         "$type": "color",
-        "$description": "Primitive · Amber scale · #FCD34D · Medium amber. Available for brand accent highlights."
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #FBBF24 \u00b7 Accessible amber on dark surfaces. Warning text and icons in dark mode."
       },
       "500": {
         "$extensions": {
@@ -142,9 +63,9 @@
             "Web": "--global-amber-500"
           }
         },
-        "$value": "#fe9a00",
+        "$value": "#f59e0b",
         "$type": "color",
-        "$description": "Primitive · Amber scale · #FE9A00 · Core brand amber. The signature brand color. Reference via color/background/brand."
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #F59E0B \u00b7 Core warning amber. Reference via color/background/warning."
       },
       "600": {
         "$extensions": {
@@ -153,9 +74,9 @@
             "Web": "--global-amber-600"
           }
         },
-        "$value": "#e17100",
+        "$value": "#d97706",
         "$type": "color",
-        "$description": "Primitive · Amber scale · #E17100 · Darker amber for brand hover states and brand text in light mode."
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #D97706 \u00b7 Darker amber for warning text, borders, and icons in light mode."
       },
       "700": {
         "$extensions": {
@@ -166,75 +87,40 @@
         },
         "$value": "#b45309",
         "$type": "color",
-        "$description": "Primitive · Amber scale · #B45309 · Deep amber. Used as brand-subtle surface in dark mode."
-      }
-    },
-    "green": {
-      "50": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-green-50"
-          }
-        },
-        "$value": "#f0fdf4",
-        "$type": "color",
-        "$description": "Primitive · Green scale · #F0FDF4 · Lightest green tint. Success subtle background in light mode."
-      },
-      "100": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-green-100"
-          }
-        },
-        "$value": "#dcfce7",
-        "$type": "color",
-        "$description": "Primitive · Green scale · #DCFCE7 · Light green. Available for additional success tinting."
-      },
-      "500": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-green-500"
-          }
-        },
-        "$value": "#22c55e",
-        "$type": "color",
-        "$description": "Primitive · Green scale · #22C55E · Mid green. Used for success text/icons in dark mode."
-      },
-      "600": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-green-600"
-          }
-        },
-        "$value": "#00a63e",
-        "$type": "color",
-        "$description": "Primitive · Green scale · #00A63E · Core success green. Reference via color/background/success or color/text/success."
-      },
-      "700": {
-        "$extensions": {
-          "com.figma.hiddenFromPublishing": false,
-          "com.figma.codeSyntax": {
-            "Web": "--global-green-700"
-          }
-        },
-        "$value": "#008236",
-        "$type": "color",
-        "$description": "Primitive · Green scale · #008236 · Darker green for success hover states."
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #B45309 \u00b7 Deep amber step. Available for deep warning tinting."
       },
       "800": {
         "$extensions": {
           "com.figma.hiddenFromPublishing": false,
           "com.figma.codeSyntax": {
-            "Web": "--global-green-800"
+            "Web": "--global-amber-800"
           }
         },
-        "$value": "#016630",
+        "$value": "#92400e",
         "$type": "color",
-        "$description": "Primitive · Green scale · #016630 · Deep green. Success subtle background in dark mode."
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #92400E \u00b7 Deeper amber step."
+      },
+      "900": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-900"
+          }
+        },
+        "$value": "#78350f",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #78350F \u00b7 Darkest standard amber."
+      },
+      "950": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-amber-950"
+          }
+        },
+        "$value": "#451a03",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Amber scale \u00b7 #451A03 \u00b7 Deepest amber. Warning-subtle background in dark mode."
       }
     },
     "red": {
@@ -247,7 +133,7 @@
         },
         "$value": "#fef2f2",
         "$type": "color",
-        "$description": "Primitive · Red scale · #FEF2F2 · Lightest red tint. Danger subtle background in light mode."
+        "$description": "Primitive \u00b7 Red scale \u00b7 #FEF2F2 \u00b7 Lightest red tint. Danger subtle background in light mode."
       },
       "100": {
         "$extensions": {
@@ -258,7 +144,40 @@
         },
         "$value": "#fee2e2",
         "$type": "color",
-        "$description": "Primitive · Red scale · #FEE2E2 · Light red. Available for additional danger tinting."
+        "$description": "Primitive \u00b7 Red scale \u00b7 #FEE2E2 \u00b7 Light red. Available for additional danger tinting."
+      },
+      "200": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-200"
+          }
+        },
+        "$value": "#fecaca",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Red scale \u00b7 #FECACA \u00b7 Medium-light red. Available for additional danger tinting."
+      },
+      "300": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-300"
+          }
+        },
+        "$value": "#fca5a5",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Red scale \u00b7 #FCA5A5 \u00b7 Soft red. Available for danger highlights on dark surfaces."
+      },
+      "400": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-400"
+          }
+        },
+        "$value": "#f87171",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Red scale \u00b7 #F87171 \u00b7 Accessible red on dark surfaces. Available for danger accents."
       },
       "500": {
         "$extensions": {
@@ -269,7 +188,7 @@
         },
         "$value": "#ef4444",
         "$type": "color",
-        "$description": "Primitive · Red scale · #EF4444 · Mid red. Used for danger text/icons in dark mode."
+        "$description": "Primitive \u00b7 Red scale \u00b7 #EF4444 \u00b7 Mid red. Used for danger text/icons in dark mode."
       },
       "600": {
         "$extensions": {
@@ -280,7 +199,7 @@
         },
         "$value": "#dc2626",
         "$type": "color",
-        "$description": "Primitive · Red scale · #DC2626 · Core danger red. Reference via color/background/danger or color/text/danger."
+        "$description": "Primitive \u00b7 Red scale \u00b7 #DC2626 \u00b7 Core danger red. Reference via color/background/danger or color/text/danger."
       },
       "700": {
         "$extensions": {
@@ -291,7 +210,7 @@
         },
         "$value": "#b91c1c",
         "$type": "color",
-        "$description": "Primitive · Red scale · #B91C1C · Darker red for danger hover states."
+        "$description": "Primitive \u00b7 Red scale \u00b7 #B91C1C \u00b7 Darker red for danger hover states."
       },
       "800": {
         "$extensions": {
@@ -302,7 +221,29 @@
         },
         "$value": "#991b1b",
         "$type": "color",
-        "$description": "Primitive · Red scale · #991B1B · Deep red. Danger subtle background in dark mode."
+        "$description": "Primitive \u00b7 Red scale \u00b7 #991B1B \u00b7 Deep red step. Available for deep danger tinting."
+      },
+      "900": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-900"
+          }
+        },
+        "$value": "#7f1d1d",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Red scale \u00b7 #7F1D1D \u00b7 Darkest standard red."
+      },
+      "950": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-red-950"
+          }
+        },
+        "$value": "#450a0a",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Red scale \u00b7 #450A0A \u00b7 Deepest red. Danger-subtle background in dark mode."
       }
     },
     "neutral": {
@@ -315,7 +256,7 @@
         },
         "$value": "#ffffff",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #FFFFFF · Pure white. Default page background in light mode and inverse text."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #FFFFFF \u00b7 Pure white. Default page background in light mode and inverse text."
       },
       "50": {
         "$extensions": {
@@ -326,7 +267,7 @@
         },
         "$value": "#f8fafc",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #F8FAFC · Off-white. Subtle surface and assistant message background in light mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #F8FAFC \u00b7 Off-white. Subtle surface and assistant message background in light mode."
       },
       "100": {
         "$extensions": {
@@ -337,7 +278,7 @@
         },
         "$value": "#f1f5f9",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #F1F5F9 · Light gray. Sunken surfaces, disabled backgrounds, inline code in light mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #F1F5F9 \u00b7 Light gray. Sunken surfaces, disabled backgrounds, inline code in light mode."
       },
       "200": {
         "$extensions": {
@@ -348,7 +289,7 @@
         },
         "$value": "#e2e8f0",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #E2E8F0 · Soft gray. Default border color in light mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #E2E8F0 \u00b7 Soft gray. Default border color in light mode."
       },
       "300": {
         "$extensions": {
@@ -359,7 +300,7 @@
         },
         "$value": "#cbd5e1",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #CBD5E1 · Medium-light gray. Disabled icon color in light mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #CBD5E1 \u00b7 Medium-light gray. Disabled icon color in light mode."
       },
       "400": {
         "$extensions": {
@@ -370,7 +311,7 @@
         },
         "$value": "#94a3b8",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #94A3B8 · Mid gray. Disabled and subtlest text; subtle icon color in light mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #94A3B8 \u00b7 Mid gray. Disabled and subtlest text; subtle icon color in light mode."
       },
       "500": {
         "$extensions": {
@@ -381,7 +322,7 @@
         },
         "$value": "#64748b",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #64748B · Medium gray. Subtlest text in dark mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #64748B \u00b7 Medium gray. Subtlest text in dark mode."
       },
       "600": {
         "$extensions": {
@@ -392,7 +333,7 @@
         },
         "$value": "#475569",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #475569 · Dark-medium gray. Default icon color and subtle text in light mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #475569 \u00b7 Dark-medium gray. Default icon color and subtle text in light mode."
       },
       "700": {
         "$extensions": {
@@ -403,7 +344,7 @@
         },
         "$value": "#334155",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #334155 · Dark gray. Neutral-subtle surface and default border in dark mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #334155 \u00b7 Dark gray. Neutral-subtle surface and default border in dark mode."
       },
       "800": {
         "$extensions": {
@@ -414,7 +355,7 @@
         },
         "$value": "#1e293b",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #1E293B · Darker gray. Neutral surface, raised, and assistant surface in dark mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #1E293B \u00b7 Darker gray. Neutral surface, raised, and assistant surface in dark mode."
       },
       "900": {
         "$extensions": {
@@ -425,7 +366,7 @@
         },
         "$value": "#0f172a",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #0F172A · Near-black. Default page background in dark mode; primary text in light mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #0F172A \u00b7 Near-black. Default page background in dark mode; primary text in light mode."
       },
       "1000": {
         "$extensions": {
@@ -436,7 +377,7 @@
         },
         "$value": "#0a1628",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #0A1628 · Very dark. Sunken surface in dark mode."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #0A1628 \u00b7 Very dark. Sunken surface in dark mode."
       },
       "1100": {
         "$extensions": {
@@ -447,7 +388,7 @@
         },
         "$value": "#060d1c",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #060D1C · Almost black. Deep surface reserved for extreme contrast needs."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #060D1C \u00b7 Almost black. Deep surface reserved for extreme contrast needs."
       },
       "1200": {
         "$extensions": {
@@ -458,7 +399,7 @@
         },
         "$value": "#020509",
         "$type": "color",
-        "$description": "Primitive · Neutral scale · #020509 · Darkest neutral. Reserved for maximum depth."
+        "$description": "Primitive \u00b7 Neutral scale \u00b7 #020509 \u00b7 Darkest neutral. Reserved for maximum depth."
       }
     },
     "white": {
@@ -470,7 +411,7 @@
       },
       "$value": "#ffffff",
       "$type": "color",
-      "$description": "Primitive · Anchor · #FFFFFF · Alias for neutral/0. Used explicitly for on-color text (e.g. white text on filled buttons)."
+      "$description": "Primitive \u00b7 Anchor \u00b7 #FFFFFF \u00b7 Alias for neutral/0. Used explicitly for on-color text (e.g. white text on filled buttons)."
     },
     "black": {
       "$extensions": {
@@ -481,7 +422,7 @@
       },
       "$value": "#000000",
       "$type": "color",
-      "$description": "Primitive · Anchor · #000000 · Pure black. Base for alpha/black overlay scale."
+      "$description": "Primitive \u00b7 Anchor \u00b7 #000000 \u00b7 Pure black. Base for alpha/black overlay scale."
     },
     "alpha": {
       "white": {
@@ -494,7 +435,7 @@
           },
           "$value": "#ffffff0a",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(255,255,255,0.04) · 4% white overlay. Subtle highlight on dark surfaces."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(255,255,255,0.04) \u00b7 4% white overlay. Subtle highlight on dark surfaces."
         },
         "200": {
           "$extensions": {
@@ -505,7 +446,7 @@
           },
           "$value": "#ffffff14",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(255,255,255,0.08) · 8% white overlay. Hover state tint on dark surfaces."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(255,255,255,0.08) \u00b7 8% white overlay. Hover state tint on dark surfaces."
         },
         "300": {
           "$extensions": {
@@ -516,7 +457,7 @@
           },
           "$value": "#ffffff1f",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(255,255,255,0.12) · 12% white overlay. Active state tint on dark surfaces."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(255,255,255,0.12) \u00b7 12% white overlay. Active state tint on dark surfaces."
         },
         "400": {
           "$extensions": {
@@ -527,7 +468,7 @@
           },
           "$value": "#ffffff33",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(255,255,255,0.20) · 20% white overlay. Medium highlight on dark surfaces."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(255,255,255,0.20) \u00b7 20% white overlay. Medium highlight on dark surfaces."
         },
         "500": {
           "$extensions": {
@@ -538,7 +479,7 @@
           },
           "$value": "#ffffff5c",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(255,255,255,0.36) · 36% white overlay. Strong overlay for dark-mode scrims."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(255,255,255,0.36) \u00b7 36% white overlay. Strong overlay for dark-mode scrims."
         },
         "600": {
           "$extensions": {
@@ -549,7 +490,7 @@
           },
           "$value": "#ffffff99",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(255,255,255,0.60) · 60% white overlay. High-opacity scrim on dark surfaces."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(255,255,255,0.60) \u00b7 60% white overlay. High-opacity scrim on dark surfaces."
         }
       },
       "black": {
@@ -562,7 +503,7 @@
           },
           "$value": "#0000000a",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(0,0,0,0.04) · 4% black overlay. Subtle dimming on light surfaces."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(0,0,0,0.04) \u00b7 4% black overlay. Subtle dimming on light surfaces."
         },
         "200": {
           "$extensions": {
@@ -573,7 +514,7 @@
           },
           "$value": "#00000014",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(0,0,0,0.08) · 8% black overlay. Hover tint on light surfaces."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(0,0,0,0.08) \u00b7 8% black overlay. Hover tint on light surfaces."
         },
         "300": {
           "$extensions": {
@@ -584,7 +525,7 @@
           },
           "$value": "#0000001f",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(0,0,0,0.12) · 12% black overlay. Active tint on light surfaces."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(0,0,0,0.12) \u00b7 12% black overlay. Active tint on light surfaces."
         },
         "400": {
           "$extensions": {
@@ -595,7 +536,7 @@
           },
           "$value": "#00000033",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(0,0,0,0.20) · 20% black overlay. Medium dimming on light surfaces."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(0,0,0,0.20) \u00b7 20% black overlay. Medium dimming on light surfaces."
         },
         "500": {
           "$extensions": {
@@ -606,7 +547,7 @@
           },
           "$value": "#0000005c",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(0,0,0,0.36) · 36% black overlay. Default modal/drawer scrim in light mode."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(0,0,0,0.36) \u00b7 36% black overlay. Default modal/drawer scrim in light mode."
         },
         "600": {
           "$extensions": {
@@ -617,8 +558,507 @@
           },
           "$value": "#00000099",
           "$type": "color",
-          "$description": "Primitive · Alpha · rgba(0,0,0,0.60) · 60% black overlay. Strong scrim for dialogs in dark mode."
+          "$description": "Primitive \u00b7 Alpha \u00b7 rgba(0,0,0,0.60) \u00b7 60% black overlay. Strong scrim for dialogs in dark mode."
         }
+      }
+    },
+    "indigo": {
+      "50": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-50"
+          }
+        },
+        "$value": "#eef2ff",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #EEF2FF \u00b7 Lightest indigo tint. Primary-subtle surfaces and user message backgrounds in light mode."
+      },
+      "100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-100"
+          }
+        },
+        "$value": "#e0e7ff",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #E0E7FF \u00b7 Light indigo. Available for hover states or additional tinting."
+      },
+      "200": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-200"
+          }
+        },
+        "$value": "#c7d2fe",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #C7D2FE \u00b7 Medium-light indigo. Available for additional primary tinting."
+      },
+      "300": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-300"
+          }
+        },
+        "$value": "#a5b4fc",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #A5B4FC \u00b7 Soft indigo. Used for primary active/pressed states in dark mode."
+      },
+      "400": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-400"
+          }
+        },
+        "$value": "#818cf8",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #818CF8 \u00b7 Accessible indigo on dark surfaces. Used for dark-mode primary text, icons, and hover fills."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-500"
+          }
+        },
+        "$value": "#6366f1",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #6366F1 \u00b7 Mid-range indigo. Primary action color in dark mode; start point of the AI gradient."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-600"
+          }
+        },
+        "$value": "#4f46e5",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #4F46E5 \u00b7 Core primary indigo. Primary action color in light mode. Reference via color/background/primary."
+      },
+      "700": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-700"
+          }
+        },
+        "$value": "#4338ca",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #4338CA \u00b7 Darker indigo for hover states over primary actions in light mode."
+      },
+      "800": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-800"
+          }
+        },
+        "$value": "#3730a3",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #3730A3 \u00b7 Deep indigo for active/pressed states in light mode."
+      },
+      "900": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-900"
+          }
+        },
+        "$value": "#312e81",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #312E81 \u00b7 Darkest standard indigo. Available for deep tinting."
+      },
+      "950": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-indigo-950"
+          }
+        },
+        "$value": "#1e1b4b",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Indigo scale \u00b7 #1E1B4B \u00b7 Deepest indigo. Primary-subtle and user message backgrounds in dark mode."
+      }
+    },
+    "emerald": {
+      "50": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-50"
+          }
+        },
+        "$value": "#ecfdf5",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #ECFDF5 \u00b7 Lightest emerald tint. Success-subtle background in light mode."
+      },
+      "100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-100"
+          }
+        },
+        "$value": "#d1fae5",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #D1FAE5 \u00b7 Light emerald. Available for additional success tinting."
+      },
+      "200": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-200"
+          }
+        },
+        "$value": "#a7f3d0",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #A7F3D0 \u00b7 Medium-light emerald. Available for additional success tinting."
+      },
+      "300": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-300"
+          }
+        },
+        "$value": "#6ee7b7",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #6EE7B7 \u00b7 Soft emerald. Available for success highlights on dark surfaces."
+      },
+      "400": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-400"
+          }
+        },
+        "$value": "#34d399",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #34D399 \u00b7 Accessible emerald on dark surfaces. Available for success accents."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-500"
+          }
+        },
+        "$value": "#10b981",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #10B981 \u00b7 Mid-range emerald. Success text and icons in dark mode."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-600"
+          }
+        },
+        "$value": "#059669",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #059669 \u00b7 Core success emerald. Reference via color/background/success or color/text/success."
+      },
+      "700": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-700"
+          }
+        },
+        "$value": "#047857",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #047857 \u00b7 Darker emerald for success hover states."
+      },
+      "800": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-800"
+          }
+        },
+        "$value": "#065f46",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #065F46 \u00b7 Deep emerald step. Available for deep success tinting."
+      },
+      "900": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-900"
+          }
+        },
+        "$value": "#064e3b",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #064E3B \u00b7 Darkest standard emerald."
+      },
+      "950": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-emerald-950"
+          }
+        },
+        "$value": "#022c22",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Emerald scale \u00b7 #022C22 \u00b7 Deepest emerald. Success-subtle background in dark mode."
+      }
+    },
+    "coral": {
+      "50": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-50"
+          }
+        },
+        "$value": "#fff7ed",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #FFF7ED \u00b7 Lightest coral tint. Brand-subtle background in light mode."
+      },
+      "100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-100"
+          }
+        },
+        "$value": "#ffedd5",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #FFEDD5 \u00b7 Light coral. Available for additional brand tinting."
+      },
+      "200": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-200"
+          }
+        },
+        "$value": "#fed7aa",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #FED7AA \u00b7 Medium-light coral. Available for additional brand tinting."
+      },
+      "300": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-300"
+          }
+        },
+        "$value": "#fdba74",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #FDBA74 \u00b7 Soft coral. Brand active/pressed state in dark mode."
+      },
+      "400": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-400"
+          }
+        },
+        "$value": "#fb923c",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #FB923C \u00b7 Accessible coral on dark surfaces. Brand hover fills, text, and icons in dark mode."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-500"
+          }
+        },
+        "$value": "#f97316",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #F97316 \u00b7 Core brand coral. The signature brand color. Reference via color/background/brand."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-600"
+          }
+        },
+        "$value": "#ea580c",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #EA580C \u00b7 Darker coral for brand hover states and brand text in light mode."
+      },
+      "700": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-700"
+          }
+        },
+        "$value": "#c2410c",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #C2410C \u00b7 Deep coral for brand active/pressed states in light mode."
+      },
+      "800": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-800"
+          }
+        },
+        "$value": "#9a3412",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #9A3412 \u00b7 Deeper coral step. Available for deep brand tinting."
+      },
+      "900": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-900"
+          }
+        },
+        "$value": "#7c2d12",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #7C2D12 \u00b7 Darkest standard coral."
+      },
+      "950": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-coral-950"
+          }
+        },
+        "$value": "#431407",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Coral scale \u00b7 #431407 \u00b7 Deepest coral. Brand-subtle background in dark mode."
+      }
+    },
+    "violet": {
+      "50": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-50"
+          }
+        },
+        "$value": "#f5f3ff",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #F5F3FF \u00b7 Lightest violet tint. Available for subtle AI surface tinting."
+      },
+      "100": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-100"
+          }
+        },
+        "$value": "#ede9fe",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #EDE9FE \u00b7 Light violet. Thinking/streaming background in light mode."
+      },
+      "200": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-200"
+          }
+        },
+        "$value": "#ddd6fe",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #DDD6FE \u00b7 Medium-light violet. Available for additional AI tinting."
+      },
+      "300": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-300"
+          }
+        },
+        "$value": "#c4b5fd",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #C4B5FD \u00b7 Soft violet. Available for AI accents on dark surfaces."
+      },
+      "400": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-400"
+          }
+        },
+        "$value": "#a78bfa",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #A78BFA \u00b7 Accessible violet on dark surfaces. Thinking/streaming border in light mode."
+      },
+      "500": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-500"
+          }
+        },
+        "$value": "#8b5cf6",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #8B5CF6 \u00b7 Core AI violet. Thinking/streaming border in dark mode. Reserved for AI moments \u2014 never a general accent."
+      },
+      "600": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-600"
+          }
+        },
+        "$value": "#7c3aed",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #7C3AED \u00b7 Darker violet for AI accent hover states."
+      },
+      "700": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-700"
+          }
+        },
+        "$value": "#6d28d9",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #6D28D9 \u00b7 Deep violet. Available for deep AI tinting."
+      },
+      "800": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-800"
+          }
+        },
+        "$value": "#5b21b6",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #5B21B6 \u00b7 Deeper violet step for dark-mode AI tinting."
+      },
+      "900": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-900"
+          }
+        },
+        "$value": "#4c1d95",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #4C1D95 \u00b7 Darkest standard violet."
+      },
+      "950": {
+        "$extensions": {
+          "com.figma.hiddenFromPublishing": false,
+          "com.figma.codeSyntax": {
+            "Web": "--global-violet-950"
+          }
+        },
+        "$value": "#2e1065",
+        "$type": "color",
+        "$description": "Primitive \u00b7 Violet scale \u00b7 #2E1065 \u00b7 Deepest violet. Thinking/streaming background in dark mode."
+      }
+    },
+    "gradient": {
+      "ai": {
+        "$value": "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
+        "$type": "color",
+        "$description": "AI-moment gradient (indigo\u2192purple, 135\u00b0). Thinking shimmer, AI CTAs, hero moments. Code: linear-gradient(135deg, #6366f1, #a855f7)"
       }
     }
   },
@@ -635,7 +1075,7 @@
           },
           "$value": "{neutral.0}",
           "$type": "color",
-          "$description": "Semantic · Background · Default page canvas. Light: #FFFFFF · Dark: #0F172A. Apply to the root layout surface — the furthest back layer in any view."
+          "$description": "Semantic \u00b7 Background \u00b7 Default page canvas. Light: #FFFFFF \u00b7 Dark: #0F172A. Apply to the root layout surface \u2014 the furthest back layer in any view."
         },
         "neutral": {
           "$extensions": {
@@ -647,7 +1087,7 @@
           },
           "$value": "{neutral.50}",
           "$type": "color",
-          "$description": "Semantic · Background · Neutral surface. Light: #F8FAFC · Dark: #1E293B. Use for sidebars, panels, and cards that sit one level above the default background."
+          "$description": "Semantic \u00b7 Background \u00b7 Neutral surface. Light: #F8FAFC \u00b7 Dark: #1E293B. Use for sidebars, panels, and cards that sit one level above the default background."
         },
         "neutral-subtle": {
           "$extensions": {
@@ -659,7 +1099,7 @@
           },
           "$value": "{neutral.100}",
           "$type": "color",
-          "$description": "Semantic · Background · Subtle neutral. Light: #F1F5F9 · Dark: #334155. Use for hover states on neutral surfaces, zebra-striped rows, and section dividers."
+          "$description": "Semantic \u00b7 Background \u00b7 Subtle neutral. Light: #F1F5F9 \u00b7 Dark: #334155. Use for hover states on neutral surfaces, zebra-striped rows, and section dividers."
         },
         "raised": {
           "$extensions": {
@@ -671,7 +1111,7 @@
           },
           "$value": "{neutral.0}",
           "$type": "color",
-          "$description": "Semantic · Background · Raised surface. Light: #FFFFFF · Dark: #1E293B. Use for floating elements like cards and popovers that appear elevated above the page."
+          "$description": "Semantic \u00b7 Background \u00b7 Raised surface. Light: #FFFFFF \u00b7 Dark: #1E293B. Use for floating elements like cards and popovers that appear elevated above the page."
         },
         "sunken": {
           "$extensions": {
@@ -683,7 +1123,7 @@
           },
           "$value": "{neutral.100}",
           "$type": "color",
-          "$description": "Semantic · Background · Sunken surface. Light: #F1F5F9 · Dark: #0A1628. Use for inset content areas such as code editors, input interiors, and wells."
+          "$description": "Semantic \u00b7 Background \u00b7 Sunken surface. Light: #F1F5F9 \u00b7 Dark: #0A1628. Use for inset content areas such as code editors, input interiors, and wells."
         },
         "overlay": {
           "$extensions": {
@@ -695,7 +1135,7 @@
           },
           "$value": "{alpha.black.500}",
           "$type": "color",
-          "$description": "Semantic · Background · Modal scrim/overlay. Light: rgba(0,0,0,0.36) · Dark: rgba(0,0,0,0.60). Apply behind modals, drawers, and dialogs to dim the content beneath."
+          "$description": "Semantic \u00b7 Background \u00b7 Modal scrim/overlay. Light: rgba(0,0,0,0.36) \u00b7 Dark: rgba(0,0,0,0.60). Apply behind modals, drawers, and dialogs to dim the content beneath."
         },
         "primary": {
           "$extensions": {
@@ -705,9 +1145,9 @@
               "Web": "var(--color-background-primary)"
             }
           },
-          "$value": "{blue.600}",
+          "$value": "{indigo.600}",
           "$type": "color",
-          "$description": "Semantic · Background · Primary action fill. Light: blue/600 (#2563EB) · Dark: blue/500 (#3B82F6). Use for primary buttons, active navigation items, and focused controls."
+          "$description": "Semantic \u00b7 Background \u00b7 Primary action fill. Light: indigo/600 (#4F46E5) \u00b7 Dark: indigo/500 (#6366F1). Use for primary buttons, active navigation items, and focused controls."
         },
         "primary-hover": {
           "$extensions": {
@@ -717,9 +1157,9 @@
               "Web": "var(--color-background-primary-hover)"
             }
           },
-          "$value": "{blue.700}",
+          "$value": "{indigo.700}",
           "$type": "color",
-          "$description": "Semantic · Background · Primary action hover. Light: blue/700 · Dark: blue/400. Applied on pointer hover over primary-filled elements."
+          "$description": "Semantic \u00b7 Background \u00b7 Primary hover. Light: indigo/700 (#4338CA) \u00b7 Dark: indigo/400 (#818CF8). Applied on hover over primary-filled elements."
         },
         "primary-active": {
           "$extensions": {
@@ -729,9 +1169,9 @@
               "Web": "var(--color-background-primary-active)"
             }
           },
-          "$value": "{blue.800}",
+          "$value": "{indigo.800}",
           "$type": "color",
-          "$description": "Semantic · Background · Primary action pressed. Light: blue/800 · Dark: blue/300. Applied on pointer down / active press of primary-filled elements."
+          "$description": "Semantic \u00b7 Background \u00b7 Primary active. Light: indigo/800 (#3730A3) \u00b7 Dark: indigo/300 (#A5B4FC). Applied while primary-filled elements are pressed."
         },
         "primary-subtle": {
           "$extensions": {
@@ -741,9 +1181,9 @@
               "Web": "var(--color-background-primary-subtle)"
             }
           },
-          "$value": "{blue.100}",
+          "$value": "{indigo.50}",
           "$type": "color",
-          "$description": "Semantic · Background · Primary tinted surface. Light: blue/100 (#EFF6FF) · Dark: blue/900 (#1E3A8A). Use for selected-state backgrounds, highlighted rows, and info banners."
+          "$description": "Semantic \u00b7 Background \u00b7 Primary tinted surface. Light: indigo/50 (#EEF2FF) \u00b7 Dark: indigo/950 (#1E1B4B). Use for selected-state backgrounds, highlighted rows, and info banners."
         },
         "brand": {
           "$extensions": {
@@ -753,9 +1193,9 @@
               "Web": "var(--color-background-brand)"
             }
           },
-          "$value": "{amber.500}",
+          "$value": "{coral.500}",
           "$type": "color",
-          "$description": "Semantic · Background · Brand fill. Light & Dark: amber/500 (#FE9A00). Use sparingly for signature brand moments — hero accents, marketing callouts, and brand badges."
+          "$description": "Semantic \u00b7 Background \u00b7 Brand fill. Light & Dark: coral/500 (#F97316). Use sparingly for signature brand moments \u2014 hero accents, marketing callouts, and brand badges."
         },
         "brand-hover": {
           "$extensions": {
@@ -765,9 +1205,9 @@
               "Web": "var(--color-background-brand-hover)"
             }
           },
-          "$value": "{amber.600}",
+          "$value": "{coral.600}",
           "$type": "color",
-          "$description": "Semantic · Background · Brand hover. Light & Dark: amber/600 (#E17100). Applied on hover over brand-filled elements."
+          "$description": "Semantic \u00b7 Background \u00b7 Brand hover. Light: coral/600 (#EA580C) \u00b7 Dark: coral/400 (#FB923C). Applied on hover over brand-filled elements."
         },
         "brand-subtle": {
           "$extensions": {
@@ -777,9 +1217,9 @@
               "Web": "var(--color-background-brand-subtle)"
             }
           },
-          "$value": "{amber.100}",
+          "$value": "{coral.50}",
           "$type": "color",
-          "$description": "Semantic · Background · Brand tinted surface. Light: amber/100 · Dark: amber/700. Use for brand-tinted info panels or promotional highlight areas."
+          "$description": "Semantic \u00b7 Background \u00b7 Brand tinted surface. Light: coral/50 (#FFF7ED) \u00b7 Dark: coral/950 (#431407). Use for brand-tinted info panels or promotional highlight areas."
         },
         "success": {
           "$extensions": {
@@ -789,9 +1229,9 @@
               "Web": "var(--color-background-success)"
             }
           },
-          "$value": "{green.600}",
+          "$value": "{emerald.600}",
           "$type": "color",
-          "$description": "Semantic · Background · Success fill. Light & Dark: green/600 (#00A63E). Use for success toasts, confirmation banners, and positive-state filled badges."
+          "$description": "Semantic \u00b7 Background \u00b7 Success fill. Light & Dark: emerald/600 (#059669). Use for success toasts, confirmation banners, and positive-state filled badges."
         },
         "success-subtle": {
           "$extensions": {
@@ -801,9 +1241,9 @@
               "Web": "var(--color-background-success-subtle)"
             }
           },
-          "$value": "{green.50}",
+          "$value": "{emerald.50}",
           "$type": "color",
-          "$description": "Semantic · Background · Success tinted surface. Light: green/50 · Dark: green/800. Use for success-state highlighted rows, inline validation backgrounds, and success banners."
+          "$description": "Semantic \u00b7 Background \u00b7 Success tinted surface. Light: emerald/50 (#ECFDF5) \u00b7 Dark: emerald/950 (#022C22). Use for success-state highlighted rows, inline validation backgrounds, and success banners."
         },
         "danger": {
           "$extensions": {
@@ -815,7 +1255,7 @@
           },
           "$value": "{red.600}",
           "$type": "color",
-          "$description": "Semantic · Background · Danger fill. Light & Dark: red/600 (#DC2626). Use for destructive action buttons, error toasts, and critical-state filled badges."
+          "$description": "Semantic \u00b7 Background \u00b7 Danger fill. Light & Dark: red/600 (#DC2626). Use for destructive action buttons, error toasts, and critical-state filled badges."
         },
         "danger-subtle": {
           "$extensions": {
@@ -827,7 +1267,7 @@
           },
           "$value": "{red.50}",
           "$type": "color",
-          "$description": "Semantic · Background · Danger tinted surface. Light: red/50 · Dark: red/800. Use for error-state highlighted rows, inline validation backgrounds, and error banners."
+          "$description": "Semantic \u00b7 Background \u00b7 Danger tinted surface. Light: red/50 (#FEF2F2) \u00b7 Dark: red/950 (#450A0A). Use for error-state highlighted rows, inline validation backgrounds, and error banners."
         },
         "thinking": {
           "$extensions": {
@@ -837,9 +1277,45 @@
               "Web": "var(--color-background-thinking)"
             }
           },
-          "$value": "{blue.100}",
+          "$value": "{violet.100}",
           "$type": "color",
-          "$description": "Semantic · Background · AI · Streaming/generating state. Light: blue/100 · Dark: blue/900. Apply as the background for components actively generating AI content. Pair with color/border/thinking and an animation for the full streaming effect."
+          "$description": "Semantic \u00b7 Background \u00b7 AI \u00b7 Streaming/generating state. Light: violet/100 (#EDE9FE) \u00b7 Dark: violet/950 (#2E1065). Apply as the background for components actively generating AI content. Pair with color/border/thinking and an animation for the full streaming effect."
+        },
+        "brand-active": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-brand-active)"
+            }
+          },
+          "$value": "{coral.700}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Background \u00b7 Brand active. Light: coral/700 (#C2410C) \u00b7 Dark: coral/300 (#FDBA74). Applied while brand-filled elements are pressed."
+        },
+        "warning": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-warning)"
+            }
+          },
+          "$value": "{amber.500}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Background \u00b7 Warning fill. Light & Dark: amber/500 (#F59E0B). Use for warning toasts, caution banners, and attention-state filled badges. Pair with dark text \u2014 white on amber fails WCAG AA."
+        },
+        "warning-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-warning-subtle)"
+            }
+          },
+          "$value": "{amber.50}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Background \u00b7 Warning tinted surface. Light: amber/50 (#FFFBEB) \u00b7 Dark: amber/950 (#451A03). Use for warning-state highlighted rows, inline validation backgrounds, and caution banners."
         }
       },
       "text": {
@@ -853,7 +1329,7 @@
           },
           "$value": "{neutral.900}",
           "$type": "color",
-          "$description": "Semantic · Text · Primary body text. Light: neutral/900 (#0F172A) · Dark: neutral/0 (#FFFFFF). Use for headings, body copy, and any high-importance readable text."
+          "$description": "Semantic \u00b7 Text \u00b7 Primary body text. Light: neutral/900 (#0F172A) \u00b7 Dark: neutral/0 (#FFFFFF). Use for headings, body copy, and any high-importance readable text."
         },
         "subtle": {
           "$extensions": {
@@ -865,7 +1341,7 @@
           },
           "$value": "{neutral.600}",
           "$type": "color",
-          "$description": "Semantic · Text · Secondary text. Light: neutral/600 (#475569) · Dark: neutral/400 (#94A3B8). Use for supporting copy, descriptions, and secondary labels."
+          "$description": "Semantic \u00b7 Text \u00b7 Secondary text. Light: neutral/600 (#475569) \u00b7 Dark: neutral/400 (#94A3B8). Use for supporting copy, descriptions, and secondary labels."
         },
         "subtlest": {
           "$extensions": {
@@ -877,7 +1353,7 @@
           },
           "$value": "{neutral.400}",
           "$type": "color",
-          "$description": "Semantic · Text · Tertiary text. Light: neutral/400 · Dark: neutral/500. Use for placeholder text, hints, metadata, and very low-priority labels."
+          "$description": "Semantic \u00b7 Text \u00b7 Tertiary text. Light: neutral/400 \u00b7 Dark: neutral/500. Use for placeholder text, hints, metadata, and very low-priority labels."
         },
         "disabled": {
           "$extensions": {
@@ -889,7 +1365,7 @@
           },
           "$value": "{neutral.400}",
           "$type": "color",
-          "$description": "Semantic · Text · Disabled text. Light: neutral/400 · Dark: neutral/600. Apply to text inside disabled inputs, buttons, and interactive elements."
+          "$description": "Semantic \u00b7 Text \u00b7 Disabled text. Light: neutral/400 \u00b7 Dark: neutral/600. Apply to text inside disabled inputs, buttons, and interactive elements."
         },
         "inverse": {
           "$extensions": {
@@ -901,7 +1377,7 @@
           },
           "$value": "{neutral.0}",
           "$type": "color",
-          "$description": "Semantic · Text · Inverse text. Light: neutral/0 (#FFFFFF) · Dark: neutral/900 (#0F172A). Use for text rendered on filled (non-white/black) backgrounds that need contrast reversal."
+          "$description": "Semantic \u00b7 Text \u00b7 Inverse text. Light: neutral/0 (#FFFFFF) \u00b7 Dark: neutral/900 (#0F172A). Use for text rendered on filled (non-white/black) backgrounds that need contrast reversal."
         },
         "on-primary": {
           "$extensions": {
@@ -913,7 +1389,7 @@
           },
           "$value": "{white}",
           "$type": "color",
-          "$description": "Semantic · Text · On-primary text. Light & Dark: white. Use for labels and icons rendered directly on color/background/primary surfaces."
+          "$description": "Semantic \u00b7 Text \u00b7 On-primary text. Light & Dark: white. Use for labels and icons rendered directly on color/background/primary surfaces."
         },
         "on-brand": {
           "$extensions": {
@@ -925,7 +1401,7 @@
           },
           "$value": "{white}",
           "$type": "color",
-          "$description": "Semantic · Text · On-brand text. Light & Dark: white. Use for labels and icons rendered directly on color/background/brand surfaces."
+          "$description": "Semantic \u00b7 Text \u00b7 On-brand text. Light & Dark: white. Use for labels and icons rendered directly on color/background/brand surfaces."
         },
         "on-success": {
           "$extensions": {
@@ -937,7 +1413,7 @@
           },
           "$value": "{white}",
           "$type": "color",
-          "$description": "Semantic · Text · On-success text. Light & Dark: white. Use for labels inside success-filled badges, buttons, and toasts."
+          "$description": "Semantic \u00b7 Text \u00b7 On-success text. Light & Dark: white. Use for labels inside success-filled badges, buttons, and toasts."
         },
         "on-danger": {
           "$extensions": {
@@ -949,7 +1425,7 @@
           },
           "$value": "{white}",
           "$type": "color",
-          "$description": "Semantic · Text · On-danger text. Light & Dark: white. Use for labels inside danger-filled buttons and error toasts."
+          "$description": "Semantic \u00b7 Text \u00b7 On-danger text. Light & Dark: white. Use for labels inside danger-filled buttons and error toasts."
         },
         "primary": {
           "$extensions": {
@@ -959,9 +1435,9 @@
               "Web": "var(--color-text-primary)"
             }
           },
-          "$value": "{blue.600}",
+          "$value": "{indigo.600}",
           "$type": "color",
-          "$description": "Semantic · Text · Primary action text color. Light: blue/600 (#2563EB) · Dark: blue/400 (#60A5FA). Use for links, interactive labels, and text-only action triggers."
+          "$description": "Semantic \u00b7 Text \u00b7 Primary text color. Light: indigo/600 (#4F46E5) \u00b7 Dark: indigo/400 (#818CF8). Use for primary-colored text links and emphasized interactive text."
         },
         "brand": {
           "$extensions": {
@@ -971,9 +1447,9 @@
               "Web": "var(--color-text-brand)"
             }
           },
-          "$value": "{amber.600}",
+          "$value": "{coral.600}",
           "$type": "color",
-          "$description": "Semantic · Text · Brand text color. Light: amber/600 (#E17100) · Dark: amber/500 (#FE9A00). Use for brand-colored text links and inline brand accents."
+          "$description": "Semantic \u00b7 Text \u00b7 Brand text color. Light: coral/600 (#EA580C) \u00b7 Dark: coral/400 (#FB923C). Use for brand-colored text links and inline brand accents."
         },
         "success": {
           "$extensions": {
@@ -983,9 +1459,9 @@
               "Web": "var(--color-text-success)"
             }
           },
-          "$value": "{green.600}",
+          "$value": "{emerald.600}",
           "$type": "color",
-          "$description": "Semantic · Text · Success text color. Light: green/600 · Dark: green/500. Use for positive validation messages and success status labels."
+          "$description": "Semantic \u00b7 Text \u00b7 Success text color. Light: emerald/600 (#059669) \u00b7 Dark: emerald/500 (#10B981). Use for positive validation messages and success status labels."
         },
         "danger": {
           "$extensions": {
@@ -997,7 +1473,7 @@
           },
           "$value": "{red.600}",
           "$type": "color",
-          "$description": "Semantic · Text · Danger text color. Light: red/600 · Dark: red/500. Use for error messages, destructive action labels, and inline validation errors."
+          "$description": "Semantic \u00b7 Text \u00b7 Danger text color. Light: red/600 \u00b7 Dark: red/500. Use for error messages, destructive action labels, and inline validation errors."
         },
         "code": {
           "$extensions": {
@@ -1009,7 +1485,31 @@
           },
           "$value": "{neutral.700}",
           "$type": "color",
-          "$description": "Semantic · Text · AI · Code text color. Light: neutral/700 (#334155) · Dark: neutral/200 (#E2E8F0). Use for text inside code blocks, inline code chips, and monospace AI output."
+          "$description": "Semantic \u00b7 Text \u00b7 AI \u00b7 Code text color. Light: neutral/700 (#334155) \u00b7 Dark: neutral/200 (#E2E8F0). Use for text inside code blocks, inline code chips, and monospace AI output."
+        },
+        "warning": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-warning)"
+            }
+          },
+          "$value": "{amber.600}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Text \u00b7 Warning text color. Light: amber/600 (#D97706) \u00b7 Dark: amber/400 (#FBBF24). Use for caution messages and warning status labels."
+        },
+        "on-warning": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-warning)"
+            }
+          },
+          "$value": "{neutral.900}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Text \u00b7 On-warning text. Light: neutral/900 (#0F172A) \u00b7 Dark: neutral/0 (#FFFFFF). Deliberately dark, not white \u2014 white text on amber/500 is 2.15:1 contrast (fails WCAG AA); dark neutral gives 8.31:1. Use for labels inside warning-filled badges, buttons, and toasts."
         }
       },
       "border": {
@@ -1023,7 +1523,7 @@
           },
           "$value": "{neutral.200}",
           "$type": "color",
-          "$description": "Semantic · Border · Default divider and container outline. Light: neutral/200 (#E2E8F0) · Dark: neutral/700 (#334155). Use for cards, inputs, and section dividers at rest."
+          "$description": "Semantic \u00b7 Border \u00b7 Default divider and container outline. Light: neutral/200 (#E2E8F0) \u00b7 Dark: neutral/700 (#334155). Use for cards, inputs, and section dividers at rest."
         },
         "bold": {
           "$extensions": {
@@ -1035,7 +1535,7 @@
           },
           "$value": "{neutral.400}",
           "$type": "color",
-          "$description": "Semantic · Border · Emphasized border. Light: neutral/400 (#94A3B8) · Dark: neutral/600 (#475569). Use for stronger visual separation or hover state outlines."
+          "$description": "Semantic \u00b7 Border \u00b7 Emphasized border. Light: neutral/400 (#94A3B8) \u00b7 Dark: neutral/600 (#475569). Use for stronger visual separation or hover state outlines."
         },
         "focused": {
           "$extensions": {
@@ -1045,9 +1545,9 @@
               "Web": "var(--color-border-focused)"
             }
           },
-          "$value": "{blue.600}",
+          "$value": "{indigo.600}",
           "$type": "color",
-          "$description": "Semantic · Border · Keyboard focus outline. Light: blue/600 (#2563EB) · Dark: blue/500 (#3B82F6). Apply as the visible border on focused interactive elements. Always pair with color/focus-ring for accessibility."
+          "$description": "Semantic \u00b7 Border \u00b7 Keyboard focus outline. Light: indigo/600 (#4F46E5) \u00b7 Dark: indigo/500 (#6366F1). Apply as the visible border on focused interactive elements. Always pair with color/focus-ring for accessibility."
         },
         "disabled": {
           "$extensions": {
@@ -1059,7 +1559,7 @@
           },
           "$value": "{neutral.200}",
           "$type": "color",
-          "$description": "Semantic · Border · Disabled element outline. Light: neutral/200 · Dark: neutral/700. Apply to the border of disabled inputs, buttons, and interactive containers."
+          "$description": "Semantic \u00b7 Border \u00b7 Disabled element outline. Light: neutral/200 \u00b7 Dark: neutral/700. Apply to the border of disabled inputs, buttons, and interactive containers."
         },
         "danger": {
           "$extensions": {
@@ -1071,7 +1571,7 @@
           },
           "$value": "{red.600}",
           "$type": "color",
-          "$description": "Semantic · Border · Error/danger outline. Light: red/600 (#DC2626) · Dark: red/500. Use for invalid input fields, error-state containers, and destructive confirmation borders."
+          "$description": "Semantic \u00b7 Border \u00b7 Error/danger outline. Light: red/600 (#DC2626) \u00b7 Dark: red/500. Use for invalid input fields, error-state containers, and destructive confirmation borders."
         },
         "success": {
           "$extensions": {
@@ -1081,9 +1581,9 @@
               "Web": "var(--color-border-success)"
             }
           },
-          "$value": "{green.600}",
+          "$value": "{emerald.600}",
           "$type": "color",
-          "$description": "Semantic · Border · Success outline. Light: green/600 (#00A63E) · Dark: green/500. Use for valid input fields and success-state component outlines."
+          "$description": "Semantic \u00b7 Border \u00b7 Success outline. Light: emerald/600 (#059669) \u00b7 Dark: emerald/500 (#10B981). Use for valid input fields and success-state component outlines."
         },
         "thinking": {
           "$extensions": {
@@ -1093,9 +1593,21 @@
               "Web": "var(--color-border-thinking)"
             }
           },
-          "$value": "{blue.400}",
+          "$value": "{violet.400}",
           "$type": "color",
-          "$description": "Semantic · Border · AI · Streaming/generating state border. Light: blue/400 (#60A5FA) · Dark: blue/500 (#3B82F6). Apply to containers actively streaming AI output. Pair with color/background/thinking and an animation for a pulsing ring effect."
+          "$description": "Semantic \u00b7 Border \u00b7 AI \u00b7 Streaming/generating state border. Light: violet/400 (#A78BFA) \u00b7 Dark: violet/500 (#8B5CF6). Apply to containers actively streaming AI output. Pair with color/background/thinking and an animation for a pulsing ring effect."
+        },
+        "warning": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-warning)"
+            }
+          },
+          "$value": "{amber.600}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Border \u00b7 Warning outline. Light: amber/600 (#D97706) \u00b7 Dark: amber/500 (#F59E0B). Use for inputs needing attention and warning-state component outlines."
         }
       },
       "icon": {
@@ -1109,7 +1621,7 @@
           },
           "$value": "{neutral.600}",
           "$type": "color",
-          "$description": "Semantic · Icon · Default icon fill. Light: neutral/600 (#475569) · Dark: neutral/400 (#94A3B8). Use for all standard UI icons at rest."
+          "$description": "Semantic \u00b7 Icon \u00b7 Default icon fill. Light: neutral/600 (#475569) \u00b7 Dark: neutral/400 (#94A3B8). Use for all standard UI icons at rest."
         },
         "subtle": {
           "$extensions": {
@@ -1121,7 +1633,7 @@
           },
           "$value": "{neutral.400}",
           "$type": "color",
-          "$description": "Semantic · Icon · Subtle icon fill. Light: neutral/400 (#94A3B8) · Dark: neutral/600 (#475569). Use for decorative, secondary, or low-priority icons."
+          "$description": "Semantic \u00b7 Icon \u00b7 Subtle icon fill. Light: neutral/400 (#94A3B8) \u00b7 Dark: neutral/600 (#475569). Use for decorative, secondary, or low-priority icons."
         },
         "disabled": {
           "$extensions": {
@@ -1133,7 +1645,7 @@
           },
           "$value": "{neutral.300}",
           "$type": "color",
-          "$description": "Semantic · Icon · Disabled icon fill. Light: neutral/300 (#CBD5E1) · Dark: neutral/700 (#334155). Apply to icons inside disabled controls."
+          "$description": "Semantic \u00b7 Icon \u00b7 Disabled icon fill. Light: neutral/300 (#CBD5E1) \u00b7 Dark: neutral/700 (#334155). Apply to icons inside disabled controls."
         },
         "inverse": {
           "$extensions": {
@@ -1145,7 +1657,7 @@
           },
           "$value": "{white}",
           "$type": "color",
-          "$description": "Semantic · Icon · Inverse icon fill. Light: white · Dark: neutral/900. Use for icons rendered on filled (dark or brand-colored) backgrounds."
+          "$description": "Semantic \u00b7 Icon \u00b7 Inverse icon fill. Light: white \u00b7 Dark: neutral/900. Use for icons rendered on filled (dark or brand-colored) backgrounds."
         },
         "primary": {
           "$extensions": {
@@ -1155,9 +1667,9 @@
               "Web": "var(--color-icon-primary)"
             }
           },
-          "$value": "{blue.600}",
+          "$value": "{indigo.600}",
           "$type": "color",
-          "$description": "Semantic · Icon · Primary action icon. Light: blue/600 (#2563EB) · Dark: blue/400 (#60A5FA). Use for icons that accompany or replace primary action text."
+          "$description": "Semantic \u00b7 Icon \u00b7 Primary icon fill. Light: indigo/600 (#4F46E5) \u00b7 Dark: indigo/400 (#818CF8). Use for icons that carry the primary interactive color."
         },
         "brand": {
           "$extensions": {
@@ -1167,9 +1679,9 @@
               "Web": "var(--color-icon-brand)"
             }
           },
-          "$value": "{amber.500}",
+          "$value": "{coral.500}",
           "$type": "color",
-          "$description": "Semantic · Icon · Brand icon fill. Light: amber/500 (#FE9A00) · Dark: amber/400. Use for icons that carry the brand accent color."
+          "$description": "Semantic \u00b7 Icon \u00b7 Brand icon fill. Light: coral/500 (#F97316) \u00b7 Dark: coral/400 (#FB923C). Use for icons that carry the brand accent color."
         },
         "success": {
           "$extensions": {
@@ -1179,9 +1691,9 @@
               "Web": "var(--color-icon-success)"
             }
           },
-          "$value": "{green.600}",
+          "$value": "{emerald.600}",
           "$type": "color",
-          "$description": "Semantic · Icon · Success icon fill. Light: green/600 (#00A63E) · Dark: green/500. Use for checkmarks, confirmation icons, and positive-state indicators."
+          "$description": "Semantic \u00b7 Icon \u00b7 Success icon fill. Light: emerald/600 (#059669) \u00b7 Dark: emerald/500 (#10B981). Use for checkmarks, confirmation icons, and positive-state indicators."
         },
         "danger": {
           "$extensions": {
@@ -1193,7 +1705,19 @@
           },
           "$value": "{red.600}",
           "$type": "color",
-          "$description": "Semantic · Icon · Danger icon fill. Light: red/600 (#DC2626) · Dark: red/500. Use for error icons, destructive warnings, and critical-state indicators."
+          "$description": "Semantic \u00b7 Icon \u00b7 Danger icon fill. Light: red/600 (#DC2626) \u00b7 Dark: red/500. Use for error icons, destructive warnings, and critical-state indicators."
+        },
+        "warning": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-warning)"
+            }
+          },
+          "$value": "{amber.600}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Icon \u00b7 Warning icon fill. Light: amber/600 (#D97706) \u00b7 Dark: amber/400 (#FBBF24). Use for caution icons and attention-state indicators."
         }
       },
       "surface": {
@@ -1207,7 +1731,7 @@
           },
           "$value": "{neutral.50}",
           "$type": "color",
-          "$description": "Semantic · Surface · AI · Assistant message background. Light: neutral/50 (#F8FAFC) · Dark: neutral/800 (#1E293B). Use as the background for AI-generated message bubbles and assistant response containers. Visually distinct from user messages."
+          "$description": "Semantic \u00b7 Surface \u00b7 AI \u00b7 Assistant message background. Light: neutral/50 (#F8FAFC) \u00b7 Dark: neutral/800 (#1E293B). Use as the background for AI-generated message bubbles and assistant response containers. Visually distinct from user messages."
         },
         "user": {
           "$extensions": {
@@ -1217,9 +1741,9 @@
               "Web": "var(--color-surface-user)"
             }
           },
-          "$value": "{blue.100}",
+          "$value": "{indigo.50}",
           "$type": "color",
-          "$description": "Semantic · Surface · AI · User message background. Light: blue/100 (#EFF6FF) · Dark: blue/900 (#1E3A8A). Use as the background for user-authored message bubbles in chat UIs."
+          "$description": "Semantic \u00b7 Surface \u00b7 AI \u00b7 User message background. Light: indigo/50 (#EEF2FF) \u00b7 Dark: indigo/950 (#1E1B4B). Use as the background for user-authored message bubbles in chat UIs."
         },
         "code": {
           "$extensions": {
@@ -1231,7 +1755,7 @@
           },
           "$value": "{neutral.900}",
           "$type": "color",
-          "$description": "Semantic · Surface · AI · Code block background. Light & Dark: neutral/900 → neutral/1000. Intentionally dark even in light mode to match the universal code-editor convention. Use for multi-line code blocks and syntax-highlighted content."
+          "$description": "Semantic \u00b7 Surface \u00b7 AI \u00b7 Code block background. Light & Dark: neutral/900 \u2192 neutral/1000. Intentionally dark even in light mode to match the universal code-editor convention. Use for multi-line code blocks and syntax-highlighted content."
         },
         "code-inline": {
           "$extensions": {
@@ -1243,7 +1767,7 @@
           },
           "$value": "{neutral.100}",
           "$type": "color",
-          "$description": "Semantic · Surface · AI · Inline code chip background. Light: neutral/100 (#F1F5F9) · Dark: neutral/800 (#1E293B). Use for short inline code spans within prose — lighter than full code blocks."
+          "$description": "Semantic \u00b7 Surface \u00b7 AI \u00b7 Inline code chip background. Light: neutral/100 (#F1F5F9) \u00b7 Dark: neutral/800 (#1E293B). Use for short inline code spans within prose \u2014 lighter than full code blocks."
         }
       },
       "focus-ring": {
@@ -1254,9 +1778,9 @@
             "Web": "var(--color-focus-ring)"
           }
         },
-        "$value": "#2563eb66",
+        "$value": "#4f46e566",
         "$type": "color",
-        "$description": "Semantic · Effect · Keyboard focus ring glow. Light: rgba(37,99,235,0.40) — blue/600 at 40% opacity. Dark: rgba(59,130,246,0.40) — blue/500 at 40% opacity. Apply as a drop-shadow or outline offset effect on focused interactive elements alongside color/border/focused for WCAG-compliant focus visibility."
+        "$description": "Semantic \u00b7 Effect \u00b7 Keyboard focus ring glow. Light: rgba(79,70,229,0.40) \u2014 indigo/600 at 40% opacity. Dark: rgba(99,102,241,0.40) \u2014 indigo/500 at 40% opacity. Apply as a drop-shadow or outline offset effect on focused interactive elements alongside color/border/focused for WCAG-compliant focus visibility."
       }
     }
   },
@@ -1273,7 +1797,7 @@
           },
           "$value": "{neutral.900}",
           "$type": "color",
-          "$description": "Semantic · Background · Default page canvas. Light: #FFFFFF · Dark: #0F172A. Apply to the root layout surface — the furthest back layer in any view."
+          "$description": "Semantic \u00b7 Background \u00b7 Default page canvas. Light: #FFFFFF \u00b7 Dark: #0F172A. Apply to the root layout surface \u2014 the furthest back layer in any view."
         },
         "neutral": {
           "$extensions": {
@@ -1285,7 +1809,7 @@
           },
           "$value": "{neutral.800}",
           "$type": "color",
-          "$description": "Semantic · Background · Neutral surface. Light: #F8FAFC · Dark: #1E293B. Use for sidebars, panels, and cards that sit one level above the default background."
+          "$description": "Semantic \u00b7 Background \u00b7 Neutral surface. Light: #F8FAFC \u00b7 Dark: #1E293B. Use for sidebars, panels, and cards that sit one level above the default background."
         },
         "neutral-subtle": {
           "$extensions": {
@@ -1297,7 +1821,7 @@
           },
           "$value": "{neutral.700}",
           "$type": "color",
-          "$description": "Semantic · Background · Subtle neutral. Light: #F1F5F9 · Dark: #334155. Use for hover states on neutral surfaces, zebra-striped rows, and section dividers."
+          "$description": "Semantic \u00b7 Background \u00b7 Subtle neutral. Light: #F1F5F9 \u00b7 Dark: #334155. Use for hover states on neutral surfaces, zebra-striped rows, and section dividers."
         },
         "raised": {
           "$extensions": {
@@ -1309,7 +1833,7 @@
           },
           "$value": "{neutral.800}",
           "$type": "color",
-          "$description": "Semantic · Background · Raised surface. Light: #FFFFFF · Dark: #1E293B. Use for floating elements like cards and popovers that appear elevated above the page."
+          "$description": "Semantic \u00b7 Background \u00b7 Raised surface. Light: #FFFFFF \u00b7 Dark: #1E293B. Use for floating elements like cards and popovers that appear elevated above the page."
         },
         "sunken": {
           "$extensions": {
@@ -1321,7 +1845,7 @@
           },
           "$value": "{neutral.1000}",
           "$type": "color",
-          "$description": "Semantic · Background · Sunken surface. Light: #F1F5F9 · Dark: #0A1628. Use for inset content areas such as code editors, input interiors, and wells."
+          "$description": "Semantic \u00b7 Background \u00b7 Sunken surface. Light: #F1F5F9 \u00b7 Dark: #0A1628. Use for inset content areas such as code editors, input interiors, and wells."
         },
         "overlay": {
           "$extensions": {
@@ -1333,7 +1857,7 @@
           },
           "$value": "{alpha.black.600}",
           "$type": "color",
-          "$description": "Semantic · Background · Modal scrim/overlay. Light: rgba(0,0,0,0.36) · Dark: rgba(0,0,0,0.60). Apply behind modals, drawers, and dialogs to dim the content beneath."
+          "$description": "Semantic \u00b7 Background \u00b7 Modal scrim/overlay. Light: rgba(0,0,0,0.36) \u00b7 Dark: rgba(0,0,0,0.60). Apply behind modals, drawers, and dialogs to dim the content beneath."
         },
         "primary": {
           "$extensions": {
@@ -1343,9 +1867,9 @@
               "Web": "var(--color-background-primary)"
             }
           },
-          "$value": "{blue.500}",
+          "$value": "{indigo.500}",
           "$type": "color",
-          "$description": "Semantic · Background · Primary action fill. Light: blue/600 (#2563EB) · Dark: blue/500 (#3B82F6). Use for primary buttons, active navigation items, and focused controls."
+          "$description": "Semantic \u00b7 Background \u00b7 Primary action fill. Light: indigo/600 (#4F46E5) \u00b7 Dark: indigo/500 (#6366F1). Use for primary buttons, active navigation items, and focused controls."
         },
         "primary-hover": {
           "$extensions": {
@@ -1355,9 +1879,9 @@
               "Web": "var(--color-background-primary-hover)"
             }
           },
-          "$value": "{blue.400}",
+          "$value": "{indigo.400}",
           "$type": "color",
-          "$description": "Semantic · Background · Primary action hover. Light: blue/700 · Dark: blue/400. Applied on pointer hover over primary-filled elements."
+          "$description": "Semantic \u00b7 Background \u00b7 Primary hover. Light: indigo/700 (#4338CA) \u00b7 Dark: indigo/400 (#818CF8). Applied on hover over primary-filled elements."
         },
         "primary-active": {
           "$extensions": {
@@ -1367,9 +1891,9 @@
               "Web": "var(--color-background-primary-active)"
             }
           },
-          "$value": "{blue.300}",
+          "$value": "{indigo.300}",
           "$type": "color",
-          "$description": "Semantic · Background · Primary action pressed. Light: blue/800 · Dark: blue/300. Applied on pointer down / active press of primary-filled elements."
+          "$description": "Semantic \u00b7 Background \u00b7 Primary active. Light: indigo/800 (#3730A3) \u00b7 Dark: indigo/300 (#A5B4FC). Applied while primary-filled elements are pressed."
         },
         "primary-subtle": {
           "$extensions": {
@@ -1379,9 +1903,9 @@
               "Web": "var(--color-background-primary-subtle)"
             }
           },
-          "$value": "{blue.900}",
+          "$value": "{indigo.950}",
           "$type": "color",
-          "$description": "Semantic · Background · Primary tinted surface. Light: blue/100 (#EFF6FF) · Dark: blue/900 (#1E3A8A). Use for selected-state backgrounds, highlighted rows, and info banners."
+          "$description": "Semantic \u00b7 Background \u00b7 Primary tinted surface. Light: indigo/50 (#EEF2FF) \u00b7 Dark: indigo/950 (#1E1B4B). Use for selected-state backgrounds, highlighted rows, and info banners."
         },
         "brand": {
           "$extensions": {
@@ -1391,9 +1915,9 @@
               "Web": "var(--color-background-brand)"
             }
           },
-          "$value": "{amber.500}",
+          "$value": "{coral.500}",
           "$type": "color",
-          "$description": "Semantic · Background · Brand fill. Light & Dark: amber/500 (#FE9A00). Use sparingly for signature brand moments — hero accents, marketing callouts, and brand badges."
+          "$description": "Semantic \u00b7 Background \u00b7 Brand fill. Light & Dark: coral/500 (#F97316). Use sparingly for signature brand moments \u2014 hero accents, marketing callouts, and brand badges."
         },
         "brand-hover": {
           "$extensions": {
@@ -1403,9 +1927,9 @@
               "Web": "var(--color-background-brand-hover)"
             }
           },
-          "$value": "{amber.600}",
+          "$value": "{coral.400}",
           "$type": "color",
-          "$description": "Semantic · Background · Brand hover. Light & Dark: amber/600 (#E17100). Applied on hover over brand-filled elements."
+          "$description": "Semantic \u00b7 Background \u00b7 Brand hover. Light: coral/600 (#EA580C) \u00b7 Dark: coral/400 (#FB923C). Applied on hover over brand-filled elements."
         },
         "brand-subtle": {
           "$extensions": {
@@ -1415,9 +1939,9 @@
               "Web": "var(--color-background-brand-subtle)"
             }
           },
-          "$value": "{amber.700}",
+          "$value": "{coral.950}",
           "$type": "color",
-          "$description": "Semantic · Background · Brand tinted surface. Light: amber/100 · Dark: amber/700. Use for brand-tinted info panels or promotional highlight areas."
+          "$description": "Semantic \u00b7 Background \u00b7 Brand tinted surface. Light: coral/50 (#FFF7ED) \u00b7 Dark: coral/950 (#431407). Use for brand-tinted info panels or promotional highlight areas."
         },
         "success": {
           "$extensions": {
@@ -1427,9 +1951,9 @@
               "Web": "var(--color-background-success)"
             }
           },
-          "$value": "{green.600}",
+          "$value": "{emerald.600}",
           "$type": "color",
-          "$description": "Semantic · Background · Success fill. Light & Dark: green/600 (#00A63E). Use for success toasts, confirmation banners, and positive-state filled badges."
+          "$description": "Semantic \u00b7 Background \u00b7 Success fill. Light & Dark: emerald/600 (#059669). Use for success toasts, confirmation banners, and positive-state filled badges."
         },
         "success-subtle": {
           "$extensions": {
@@ -1439,9 +1963,9 @@
               "Web": "var(--color-background-success-subtle)"
             }
           },
-          "$value": "{green.800}",
+          "$value": "{emerald.950}",
           "$type": "color",
-          "$description": "Semantic · Background · Success tinted surface. Light: green/50 · Dark: green/800. Use for success-state highlighted rows, inline validation backgrounds, and success banners."
+          "$description": "Semantic \u00b7 Background \u00b7 Success tinted surface. Light: emerald/50 (#ECFDF5) \u00b7 Dark: emerald/950 (#022C22). Use for success-state highlighted rows, inline validation backgrounds, and success banners."
         },
         "danger": {
           "$extensions": {
@@ -1453,7 +1977,7 @@
           },
           "$value": "{red.600}",
           "$type": "color",
-          "$description": "Semantic · Background · Danger fill. Light & Dark: red/600 (#DC2626). Use for destructive action buttons, error toasts, and critical-state filled badges."
+          "$description": "Semantic \u00b7 Background \u00b7 Danger fill. Light & Dark: red/600 (#DC2626). Use for destructive action buttons, error toasts, and critical-state filled badges."
         },
         "danger-subtle": {
           "$extensions": {
@@ -1463,9 +1987,9 @@
               "Web": "var(--color-background-danger-subtle)"
             }
           },
-          "$value": "{red.800}",
+          "$value": "{red.950}",
           "$type": "color",
-          "$description": "Semantic · Background · Danger tinted surface. Light: red/50 · Dark: red/800. Use for error-state highlighted rows, inline validation backgrounds, and error banners."
+          "$description": "Semantic \u00b7 Background \u00b7 Danger tinted surface. Light: red/50 (#FEF2F2) \u00b7 Dark: red/950 (#450A0A). Use for error-state highlighted rows, inline validation backgrounds, and error banners."
         },
         "thinking": {
           "$extensions": {
@@ -1475,9 +1999,45 @@
               "Web": "var(--color-background-thinking)"
             }
           },
-          "$value": "{blue.900}",
+          "$value": "{violet.950}",
           "$type": "color",
-          "$description": "Semantic · Background · AI · Streaming/generating state. Light: blue/100 · Dark: blue/900. Apply as the background for components actively generating AI content. Pair with color/border/thinking and an animation for the full streaming effect."
+          "$description": "Semantic \u00b7 Background \u00b7 AI \u00b7 Streaming/generating state. Light: violet/100 (#EDE9FE) \u00b7 Dark: violet/950 (#2E1065). Apply as the background for components actively generating AI content. Pair with color/border/thinking and an animation for the full streaming effect."
+        },
+        "brand-active": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-brand-active)"
+            }
+          },
+          "$value": "{coral.300}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Background \u00b7 Brand active. Light: coral/700 (#C2410C) \u00b7 Dark: coral/300 (#FDBA74). Applied while brand-filled elements are pressed."
+        },
+        "warning": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-warning)"
+            }
+          },
+          "$value": "{amber.500}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Background \u00b7 Warning fill. Light & Dark: amber/500 (#F59E0B). Use for warning toasts, caution banners, and attention-state filled badges. Pair with dark text \u2014 white on amber fails WCAG AA."
+        },
+        "warning-subtle": {
+          "$extensions": {
+            "com.figma.scopes": ["FRAME_FILL", "SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-background-warning-subtle)"
+            }
+          },
+          "$value": "{amber.950}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Background \u00b7 Warning tinted surface. Light: amber/50 (#FFFBEB) \u00b7 Dark: amber/950 (#451A03). Use for warning-state highlighted rows, inline validation backgrounds, and caution banners."
         }
       },
       "text": {
@@ -1491,7 +2051,7 @@
           },
           "$value": "{neutral.0}",
           "$type": "color",
-          "$description": "Semantic · Text · Primary body text. Light: neutral/900 (#0F172A) · Dark: neutral/0 (#FFFFFF). Use for headings, body copy, and any high-importance readable text."
+          "$description": "Semantic \u00b7 Text \u00b7 Primary body text. Light: neutral/900 (#0F172A) \u00b7 Dark: neutral/0 (#FFFFFF). Use for headings, body copy, and any high-importance readable text."
         },
         "subtle": {
           "$extensions": {
@@ -1503,7 +2063,7 @@
           },
           "$value": "{neutral.400}",
           "$type": "color",
-          "$description": "Semantic · Text · Secondary text. Light: neutral/600 (#475569) · Dark: neutral/400 (#94A3B8). Use for supporting copy, descriptions, and secondary labels."
+          "$description": "Semantic \u00b7 Text \u00b7 Secondary text. Light: neutral/600 (#475569) \u00b7 Dark: neutral/400 (#94A3B8). Use for supporting copy, descriptions, and secondary labels."
         },
         "subtlest": {
           "$extensions": {
@@ -1515,7 +2075,7 @@
           },
           "$value": "{neutral.500}",
           "$type": "color",
-          "$description": "Semantic · Text · Tertiary text. Light: neutral/400 · Dark: neutral/500. Use for placeholder text, hints, metadata, and very low-priority labels."
+          "$description": "Semantic \u00b7 Text \u00b7 Tertiary text. Light: neutral/400 \u00b7 Dark: neutral/500. Use for placeholder text, hints, metadata, and very low-priority labels."
         },
         "disabled": {
           "$extensions": {
@@ -1527,7 +2087,7 @@
           },
           "$value": "{neutral.600}",
           "$type": "color",
-          "$description": "Semantic · Text · Disabled text. Light: neutral/400 · Dark: neutral/600. Apply to text inside disabled inputs, buttons, and interactive elements."
+          "$description": "Semantic \u00b7 Text \u00b7 Disabled text. Light: neutral/400 \u00b7 Dark: neutral/600. Apply to text inside disabled inputs, buttons, and interactive elements."
         },
         "inverse": {
           "$extensions": {
@@ -1539,7 +2099,7 @@
           },
           "$value": "{neutral.900}",
           "$type": "color",
-          "$description": "Semantic · Text · Inverse text. Light: neutral/0 (#FFFFFF) · Dark: neutral/900 (#0F172A). Use for text rendered on filled (non-white/black) backgrounds that need contrast reversal."
+          "$description": "Semantic \u00b7 Text \u00b7 Inverse text. Light: neutral/0 (#FFFFFF) \u00b7 Dark: neutral/900 (#0F172A). Use for text rendered on filled (non-white/black) backgrounds that need contrast reversal."
         },
         "on-primary": {
           "$extensions": {
@@ -1551,7 +2111,7 @@
           },
           "$value": "{white}",
           "$type": "color",
-          "$description": "Semantic · Text · On-primary text. Light & Dark: white. Use for labels and icons rendered directly on color/background/primary surfaces."
+          "$description": "Semantic \u00b7 Text \u00b7 On-primary text. Light & Dark: white. Use for labels and icons rendered directly on color/background/primary surfaces."
         },
         "on-brand": {
           "$extensions": {
@@ -1563,7 +2123,7 @@
           },
           "$value": "{white}",
           "$type": "color",
-          "$description": "Semantic · Text · On-brand text. Light & Dark: white. Use for labels and icons rendered directly on color/background/brand surfaces."
+          "$description": "Semantic \u00b7 Text \u00b7 On-brand text. Light & Dark: white. Use for labels and icons rendered directly on color/background/brand surfaces."
         },
         "on-success": {
           "$extensions": {
@@ -1575,7 +2135,7 @@
           },
           "$value": "{white}",
           "$type": "color",
-          "$description": "Semantic · Text · On-success text. Light & Dark: white. Use for labels inside success-filled badges, buttons, and toasts."
+          "$description": "Semantic \u00b7 Text \u00b7 On-success text. Light & Dark: white. Use for labels inside success-filled badges, buttons, and toasts."
         },
         "on-danger": {
           "$extensions": {
@@ -1587,7 +2147,7 @@
           },
           "$value": "{white}",
           "$type": "color",
-          "$description": "Semantic · Text · On-danger text. Light & Dark: white. Use for labels inside danger-filled buttons and error toasts."
+          "$description": "Semantic \u00b7 Text \u00b7 On-danger text. Light & Dark: white. Use for labels inside danger-filled buttons and error toasts."
         },
         "primary": {
           "$extensions": {
@@ -1597,9 +2157,9 @@
               "Web": "var(--color-text-primary)"
             }
           },
-          "$value": "{blue.400}",
+          "$value": "{indigo.400}",
           "$type": "color",
-          "$description": "Semantic · Text · Primary action text color. Light: blue/600 (#2563EB) · Dark: blue/400 (#60A5FA). Use for links, interactive labels, and text-only action triggers."
+          "$description": "Semantic \u00b7 Text \u00b7 Primary text color. Light: indigo/600 (#4F46E5) \u00b7 Dark: indigo/400 (#818CF8). Use for primary-colored text links and emphasized interactive text."
         },
         "brand": {
           "$extensions": {
@@ -1609,9 +2169,9 @@
               "Web": "var(--color-text-brand)"
             }
           },
-          "$value": "{amber.500}",
+          "$value": "{coral.400}",
           "$type": "color",
-          "$description": "Semantic · Text · Brand text color. Light: amber/600 (#E17100) · Dark: amber/500 (#FE9A00). Use for brand-colored text links and inline brand accents."
+          "$description": "Semantic \u00b7 Text \u00b7 Brand text color. Light: coral/600 (#EA580C) \u00b7 Dark: coral/400 (#FB923C). Use for brand-colored text links and inline brand accents."
         },
         "success": {
           "$extensions": {
@@ -1621,9 +2181,9 @@
               "Web": "var(--color-text-success)"
             }
           },
-          "$value": "{green.500}",
+          "$value": "{emerald.500}",
           "$type": "color",
-          "$description": "Semantic · Text · Success text color. Light: green/600 · Dark: green/500. Use for positive validation messages and success status labels."
+          "$description": "Semantic \u00b7 Text \u00b7 Success text color. Light: emerald/600 (#059669) \u00b7 Dark: emerald/500 (#10B981). Use for positive validation messages and success status labels."
         },
         "danger": {
           "$extensions": {
@@ -1635,7 +2195,7 @@
           },
           "$value": "{red.500}",
           "$type": "color",
-          "$description": "Semantic · Text · Danger text color. Light: red/600 · Dark: red/500. Use for error messages, destructive action labels, and inline validation errors."
+          "$description": "Semantic \u00b7 Text \u00b7 Danger text color. Light: red/600 \u00b7 Dark: red/500. Use for error messages, destructive action labels, and inline validation errors."
         },
         "code": {
           "$extensions": {
@@ -1647,7 +2207,31 @@
           },
           "$value": "{neutral.200}",
           "$type": "color",
-          "$description": "Semantic · Text · AI · Code text color. Light: neutral/700 (#334155) · Dark: neutral/200 (#E2E8F0). Use for text inside code blocks, inline code chips, and monospace AI output."
+          "$description": "Semantic \u00b7 Text \u00b7 AI \u00b7 Code text color. Light: neutral/700 (#334155) \u00b7 Dark: neutral/200 (#E2E8F0). Use for text inside code blocks, inline code chips, and monospace AI output."
+        },
+        "warning": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-warning)"
+            }
+          },
+          "$value": "{amber.400}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Text \u00b7 Warning text color. Light: amber/600 (#D97706) \u00b7 Dark: amber/400 (#FBBF24). Use for caution messages and warning status labels."
+        },
+        "on-warning": {
+          "$extensions": {
+            "com.figma.scopes": ["TEXT_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-text-on-warning)"
+            }
+          },
+          "$value": "{neutral.900}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Text \u00b7 On-warning text. Light & Dark: neutral/900 (#0F172A). Deliberately dark in both modes \u2014 background/warning stays the same bright amber/500 in Light and Dark (never shifted), so white text fails WCAG AA (2.15:1) in both modes too; dark neutral gives 8.31:1 either way. Use for labels inside warning-filled badges, buttons, and toasts."
         }
       },
       "border": {
@@ -1661,7 +2245,7 @@
           },
           "$value": "{neutral.700}",
           "$type": "color",
-          "$description": "Semantic · Border · Default divider and container outline. Light: neutral/200 (#E2E8F0) · Dark: neutral/700 (#334155). Use for cards, inputs, and section dividers at rest."
+          "$description": "Semantic \u00b7 Border \u00b7 Default divider and container outline. Light: neutral/200 (#E2E8F0) \u00b7 Dark: neutral/700 (#334155). Use for cards, inputs, and section dividers at rest."
         },
         "bold": {
           "$extensions": {
@@ -1673,7 +2257,7 @@
           },
           "$value": "{neutral.600}",
           "$type": "color",
-          "$description": "Semantic · Border · Emphasized border. Light: neutral/400 (#94A3B8) · Dark: neutral/600 (#475569). Use for stronger visual separation or hover state outlines."
+          "$description": "Semantic \u00b7 Border \u00b7 Emphasized border. Light: neutral/400 (#94A3B8) \u00b7 Dark: neutral/600 (#475569). Use for stronger visual separation or hover state outlines."
         },
         "focused": {
           "$extensions": {
@@ -1683,9 +2267,9 @@
               "Web": "var(--color-border-focused)"
             }
           },
-          "$value": "{blue.500}",
+          "$value": "{indigo.500}",
           "$type": "color",
-          "$description": "Semantic · Border · Keyboard focus outline. Light: blue/600 (#2563EB) · Dark: blue/500 (#3B82F6). Apply as the visible border on focused interactive elements. Always pair with color/focus-ring for accessibility."
+          "$description": "Semantic \u00b7 Border \u00b7 Keyboard focus outline. Light: indigo/600 (#4F46E5) \u00b7 Dark: indigo/500 (#6366F1). Apply as the visible border on focused interactive elements. Always pair with color/focus-ring for accessibility."
         },
         "disabled": {
           "$extensions": {
@@ -1697,7 +2281,7 @@
           },
           "$value": "{neutral.700}",
           "$type": "color",
-          "$description": "Semantic · Border · Disabled element outline. Light: neutral/200 · Dark: neutral/700. Apply to the border of disabled inputs, buttons, and interactive containers."
+          "$description": "Semantic \u00b7 Border \u00b7 Disabled element outline. Light: neutral/200 \u00b7 Dark: neutral/700. Apply to the border of disabled inputs, buttons, and interactive containers."
         },
         "danger": {
           "$extensions": {
@@ -1709,7 +2293,7 @@
           },
           "$value": "{red.500}",
           "$type": "color",
-          "$description": "Semantic · Border · Error/danger outline. Light: red/600 (#DC2626) · Dark: red/500. Use for invalid input fields, error-state containers, and destructive confirmation borders."
+          "$description": "Semantic \u00b7 Border \u00b7 Error/danger outline. Light: red/600 (#DC2626) \u00b7 Dark: red/500. Use for invalid input fields, error-state containers, and destructive confirmation borders."
         },
         "success": {
           "$extensions": {
@@ -1719,9 +2303,9 @@
               "Web": "var(--color-border-success)"
             }
           },
-          "$value": "{green.500}",
+          "$value": "{emerald.500}",
           "$type": "color",
-          "$description": "Semantic · Border · Success outline. Light: green/600 (#00A63E) · Dark: green/500. Use for valid input fields and success-state component outlines."
+          "$description": "Semantic \u00b7 Border \u00b7 Success outline. Light: emerald/600 (#059669) \u00b7 Dark: emerald/500 (#10B981). Use for valid input fields and success-state component outlines."
         },
         "thinking": {
           "$extensions": {
@@ -1731,9 +2315,21 @@
               "Web": "var(--color-border-thinking)"
             }
           },
-          "$value": "{blue.500}",
+          "$value": "{violet.500}",
           "$type": "color",
-          "$description": "Semantic · Border · AI · Streaming/generating state border. Light: blue/400 (#60A5FA) · Dark: blue/500 (#3B82F6). Apply to containers actively streaming AI output. Pair with color/background/thinking and an animation for a pulsing ring effect."
+          "$description": "Semantic \u00b7 Border \u00b7 AI \u00b7 Streaming/generating state border. Light: violet/400 (#A78BFA) \u00b7 Dark: violet/500 (#8B5CF6). Apply to containers actively streaming AI output. Pair with color/background/thinking and an animation for a pulsing ring effect."
+        },
+        "warning": {
+          "$extensions": {
+            "com.figma.scopes": ["STROKE_COLOR"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-border-warning)"
+            }
+          },
+          "$value": "{amber.500}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Border \u00b7 Warning outline. Light: amber/600 (#D97706) \u00b7 Dark: amber/500 (#F59E0B). Use for inputs needing attention and warning-state component outlines."
         }
       },
       "icon": {
@@ -1747,7 +2343,7 @@
           },
           "$value": "{neutral.400}",
           "$type": "color",
-          "$description": "Semantic · Icon · Default icon fill. Light: neutral/600 (#475569) · Dark: neutral/400 (#94A3B8). Use for all standard UI icons at rest."
+          "$description": "Semantic \u00b7 Icon \u00b7 Default icon fill. Light: neutral/600 (#475569) \u00b7 Dark: neutral/400 (#94A3B8). Use for all standard UI icons at rest."
         },
         "subtle": {
           "$extensions": {
@@ -1759,7 +2355,7 @@
           },
           "$value": "{neutral.600}",
           "$type": "color",
-          "$description": "Semantic · Icon · Subtle icon fill. Light: neutral/400 (#94A3B8) · Dark: neutral/600 (#475569). Use for decorative, secondary, or low-priority icons."
+          "$description": "Semantic \u00b7 Icon \u00b7 Subtle icon fill. Light: neutral/400 (#94A3B8) \u00b7 Dark: neutral/600 (#475569). Use for decorative, secondary, or low-priority icons."
         },
         "disabled": {
           "$extensions": {
@@ -1771,7 +2367,7 @@
           },
           "$value": "{neutral.700}",
           "$type": "color",
-          "$description": "Semantic · Icon · Disabled icon fill. Light: neutral/300 (#CBD5E1) · Dark: neutral/700 (#334155). Apply to icons inside disabled controls."
+          "$description": "Semantic \u00b7 Icon \u00b7 Disabled icon fill. Light: neutral/300 (#CBD5E1) \u00b7 Dark: neutral/700 (#334155). Apply to icons inside disabled controls."
         },
         "inverse": {
           "$extensions": {
@@ -1783,7 +2379,7 @@
           },
           "$value": "{neutral.900}",
           "$type": "color",
-          "$description": "Semantic · Icon · Inverse icon fill. Light: white · Dark: neutral/900. Use for icons rendered on filled (dark or brand-colored) backgrounds."
+          "$description": "Semantic \u00b7 Icon \u00b7 Inverse icon fill. Light: white \u00b7 Dark: neutral/900. Use for icons rendered on filled (dark or brand-colored) backgrounds."
         },
         "primary": {
           "$extensions": {
@@ -1793,9 +2389,9 @@
               "Web": "var(--color-icon-primary)"
             }
           },
-          "$value": "{blue.400}",
+          "$value": "{indigo.400}",
           "$type": "color",
-          "$description": "Semantic · Icon · Primary action icon. Light: blue/600 (#2563EB) · Dark: blue/400 (#60A5FA). Use for icons that accompany or replace primary action text."
+          "$description": "Semantic \u00b7 Icon \u00b7 Primary icon fill. Light: indigo/600 (#4F46E5) \u00b7 Dark: indigo/400 (#818CF8). Use for icons that carry the primary interactive color."
         },
         "brand": {
           "$extensions": {
@@ -1805,9 +2401,9 @@
               "Web": "var(--color-icon-brand)"
             }
           },
-          "$value": "{amber.400}",
+          "$value": "{coral.400}",
           "$type": "color",
-          "$description": "Semantic · Icon · Brand icon fill. Light: amber/500 (#FE9A00) · Dark: amber/400. Use for icons that carry the brand accent color."
+          "$description": "Semantic \u00b7 Icon \u00b7 Brand icon fill. Light: coral/500 (#F97316) \u00b7 Dark: coral/400 (#FB923C). Use for icons that carry the brand accent color."
         },
         "success": {
           "$extensions": {
@@ -1817,9 +2413,9 @@
               "Web": "var(--color-icon-success)"
             }
           },
-          "$value": "{green.500}",
+          "$value": "{emerald.500}",
           "$type": "color",
-          "$description": "Semantic · Icon · Success icon fill. Light: green/600 (#00A63E) · Dark: green/500. Use for checkmarks, confirmation icons, and positive-state indicators."
+          "$description": "Semantic \u00b7 Icon \u00b7 Success icon fill. Light: emerald/600 (#059669) \u00b7 Dark: emerald/500 (#10B981). Use for checkmarks, confirmation icons, and positive-state indicators."
         },
         "danger": {
           "$extensions": {
@@ -1831,7 +2427,19 @@
           },
           "$value": "{red.500}",
           "$type": "color",
-          "$description": "Semantic · Icon · Danger icon fill. Light: red/600 (#DC2626) · Dark: red/500. Use for error icons, destructive warnings, and critical-state indicators."
+          "$description": "Semantic \u00b7 Icon \u00b7 Danger icon fill. Light: red/600 (#DC2626) \u00b7 Dark: red/500. Use for error icons, destructive warnings, and critical-state indicators."
+        },
+        "warning": {
+          "$extensions": {
+            "com.figma.scopes": ["SHAPE_FILL"],
+            "com.figma.hiddenFromPublishing": false,
+            "com.figma.codeSyntax": {
+              "Web": "var(--color-icon-warning)"
+            }
+          },
+          "$value": "{amber.400}",
+          "$type": "color",
+          "$description": "Semantic \u00b7 Icon \u00b7 Warning icon fill. Light: amber/600 (#D97706) \u00b7 Dark: amber/400 (#FBBF24). Use for caution icons and attention-state indicators."
         }
       },
       "surface": {
@@ -1845,7 +2453,7 @@
           },
           "$value": "{neutral.800}",
           "$type": "color",
-          "$description": "Semantic · Surface · AI · Assistant message background. Light: neutral/50 (#F8FAFC) · Dark: neutral/800 (#1E293B). Use as the background for AI-generated message bubbles and assistant response containers. Visually distinct from user messages."
+          "$description": "Semantic \u00b7 Surface \u00b7 AI \u00b7 Assistant message background. Light: neutral/50 (#F8FAFC) \u00b7 Dark: neutral/800 (#1E293B). Use as the background for AI-generated message bubbles and assistant response containers. Visually distinct from user messages."
         },
         "user": {
           "$extensions": {
@@ -1855,9 +2463,9 @@
               "Web": "var(--color-surface-user)"
             }
           },
-          "$value": "{blue.900}",
+          "$value": "{indigo.950}",
           "$type": "color",
-          "$description": "Semantic · Surface · AI · User message background. Light: blue/100 (#EFF6FF) · Dark: blue/900 (#1E3A8A). Use as the background for user-authored message bubbles in chat UIs."
+          "$description": "Semantic \u00b7 Surface \u00b7 AI \u00b7 User message background. Light: indigo/50 (#EEF2FF) \u00b7 Dark: indigo/950 (#1E1B4B). Use as the background for user-authored message bubbles in chat UIs."
         },
         "code": {
           "$extensions": {
@@ -1869,7 +2477,7 @@
           },
           "$value": "{neutral.1000}",
           "$type": "color",
-          "$description": "Semantic · Surface · AI · Code block background. Light & Dark: neutral/900 → neutral/1000. Intentionally dark even in light mode to match the universal code-editor convention. Use for multi-line code blocks and syntax-highlighted content."
+          "$description": "Semantic \u00b7 Surface \u00b7 AI \u00b7 Code block background. Light & Dark: neutral/900 \u2192 neutral/1000. Intentionally dark even in light mode to match the universal code-editor convention. Use for multi-line code blocks and syntax-highlighted content."
         },
         "code-inline": {
           "$extensions": {
@@ -1881,7 +2489,7 @@
           },
           "$value": "{neutral.800}",
           "$type": "color",
-          "$description": "Semantic · Surface · AI · Inline code chip background. Light: neutral/100 (#F1F5F9) · Dark: neutral/800 (#1E293B). Use for short inline code spans within prose — lighter than full code blocks."
+          "$description": "Semantic \u00b7 Surface \u00b7 AI \u00b7 Inline code chip background. Light: neutral/100 (#F1F5F9) \u00b7 Dark: neutral/800 (#1E293B). Use for short inline code spans within prose \u2014 lighter than full code blocks."
         }
       },
       "focus-ring": {
@@ -1892,9 +2500,9 @@
             "Web": "var(--color-focus-ring)"
           }
         },
-        "$value": "#3b82f666",
+        "$value": "#6366f166",
         "$type": "color",
-        "$description": "Semantic · Effect · Keyboard focus ring glow. Light: rgba(37,99,235,0.40) — blue/600 at 40% opacity. Dark: rgba(59,130,246,0.40) — blue/500 at 40% opacity. Apply as a drop-shadow or outline offset effect on focused interactive elements alongside color/border/focused for WCAG-compliant focus visibility."
+        "$description": "Semantic \u00b7 Effect \u00b7 Keyboard focus ring glow. Light: rgba(79,70,229,0.40) \u2014 indigo/600 at 40% opacity. Dark: rgba(99,102,241,0.40) \u2014 indigo/500 at 40% opacity. Apply as a drop-shadow or outline offset effect on focused interactive elements alongside color/border/focused for WCAG-compliant focus visibility."
       }
     }
   },
@@ -1912,7 +2520,7 @@
             },
             "$value": "{color.background.primary}",
             "$type": "color",
-            "$description": "Component · Button · Background · solid intent=primary. Aliases color/background/primary."
+            "$description": "Component \u00b7 Button \u00b7 Background \u00b7 solid intent=primary. Aliases color/background/primary."
           },
           "success": {
             "$extensions": {
@@ -1924,7 +2532,7 @@
             },
             "$value": "{color.background.success}",
             "$type": "color",
-            "$description": "Component · Button · Background · solid intent=success. Aliases color/background/success."
+            "$description": "Component \u00b7 Button \u00b7 Background \u00b7 solid intent=success. Aliases color/background/success."
           },
           "danger": {
             "$extensions": {
@@ -1936,7 +2544,7 @@
             },
             "$value": "{color.background.danger}",
             "$type": "color",
-            "$description": "Component · Button · Background · solid intent=danger. Aliases color/background/danger."
+            "$description": "Component \u00b7 Button \u00b7 Background \u00b7 solid intent=danger. Aliases color/background/danger."
           },
           "brand": {
             "$extensions": {
@@ -1948,7 +2556,7 @@
             },
             "$value": "{color.background.brand}",
             "$type": "color",
-            "$description": "Component · Button · Background · solid intent=brand. Aliases color/background/brand."
+            "$description": "Component \u00b7 Button \u00b7 Background \u00b7 solid intent=brand. Aliases color/background/brand."
           },
           "disabled": {
             "$extensions": {
@@ -1960,7 +2568,7 @@
             },
             "$value": "{color.background.neutral-subtle}",
             "$type": "color",
-            "$description": "Component · Button · Background · disabled state across all variants and intents. Aliases color/background/neutral-subtle."
+            "$description": "Component \u00b7 Button \u00b7 Background \u00b7 disabled state across all variants and intents. Aliases color/background/neutral-subtle."
           }
         },
         "text": {
@@ -1974,7 +2582,7 @@
             },
             "$value": "{color.text.on-primary}",
             "$type": "color",
-            "$description": "Component · Button · Text · Label on solid/filled backgrounds for all intents. Always white. Aliases color/text/on-primary."
+            "$description": "Component \u00b7 Button \u00b7 Text \u00b7 Label on solid/filled backgrounds for all intents. Always white. Aliases color/text/on-primary."
           },
           "disabled": {
             "$extensions": {
@@ -1986,7 +2594,7 @@
             },
             "$value": "{color.text.disabled}",
             "$type": "color",
-            "$description": "Component · Button · Text · Label in disabled state. Aliases color/text/disabled."
+            "$description": "Component \u00b7 Button \u00b7 Text \u00b7 Label in disabled state. Aliases color/text/disabled."
           }
         },
         "border": {
@@ -2000,7 +2608,7 @@
             },
             "$value": "{color.border.focused}",
             "$type": "color",
-            "$description": "Component · Button · Border · Keyboard focus outline color. Aliases color/border/focused."
+            "$description": "Component \u00b7 Button \u00b7 Border \u00b7 Keyboard focus outline color. Aliases color/border/focused."
           }
         },
         "focus-ring": {
@@ -2013,7 +2621,7 @@
           },
           "$value": "{color.focus-ring}",
           "$type": "color",
-          "$description": "Component · Button · Effect · Focus ring glow applied on :focus-visible. Aliases color/focus-ring."
+          "$description": "Component \u00b7 Button \u00b7 Effect \u00b7 Focus ring glow applied on :focus-visible. Aliases color/focus-ring."
         },
         "radius": {
           "$extensions": {
@@ -2025,7 +2633,7 @@
           },
           "$value": "{radius.md}",
           "$type": "number",
-          "$description": "Component · Button · Shape · Border radius. Aliases radius/md (6px)."
+          "$description": "Component \u00b7 Button \u00b7 Shape \u00b7 Border radius. Aliases radius/md (6px)."
         },
         "padding-x": {
           "sm": {
@@ -2038,7 +2646,7 @@
             },
             "$value": "{space.150}",
             "$type": "number",
-            "$description": "Component · Button · Space · Horizontal padding for size=sm (12px). Aliases space/150."
+            "$description": "Component \u00b7 Button \u00b7 Space \u00b7 Horizontal padding for size=sm (12px). Aliases space/150."
           },
           "md": {
             "$extensions": {
@@ -2050,7 +2658,7 @@
             },
             "$value": "{space.200}",
             "$type": "number",
-            "$description": "Component · Button · Space · Horizontal padding for size=md (16px). Aliases space/200."
+            "$description": "Component \u00b7 Button \u00b7 Space \u00b7 Horizontal padding for size=md (16px). Aliases space/200."
           },
           "lg": {
             "$extensions": {
@@ -2062,7 +2670,7 @@
             },
             "$value": "{space.300}",
             "$type": "number",
-            "$description": "Component · Button · Space · Horizontal padding for size=lg (24px). Aliases space/300."
+            "$description": "Component \u00b7 Button \u00b7 Space \u00b7 Horizontal padding for size=lg (24px). Aliases space/300."
           }
         },
         "padding-y": {
@@ -2076,7 +2684,7 @@
             },
             "$value": "{space.075}",
             "$type": "number",
-            "$description": "Component · Button · Space · Vertical padding for size=sm (6px). Aliases space/075."
+            "$description": "Component \u00b7 Button \u00b7 Space \u00b7 Vertical padding for size=sm (6px). Aliases space/075."
           },
           "md": {
             "$extensions": {
@@ -2088,7 +2696,7 @@
             },
             "$value": "{space.100}",
             "$type": "number",
-            "$description": "Component · Button · Space · Vertical padding for size=md (8px). Aliases space/100."
+            "$description": "Component \u00b7 Button \u00b7 Space \u00b7 Vertical padding for size=md (8px). Aliases space/100."
           },
           "lg": {
             "$extensions": {
@@ -2100,7 +2708,7 @@
             },
             "$value": "{space.150}",
             "$type": "number",
-            "$description": "Component · Button · Space · Vertical padding for size=lg (12px). Aliases space/150."
+            "$description": "Component \u00b7 Button \u00b7 Space \u00b7 Vertical padding for size=lg (12px). Aliases space/150."
           }
         },
         "icon-gap": {
@@ -2113,7 +2721,7 @@
           },
           "$value": "{space.100}",
           "$type": "number",
-          "$description": "Component · Button · Space · Gap between icon and label (8px). Aliases space/100."
+          "$description": "Component \u00b7 Button \u00b7 Space \u00b7 Gap between icon and label (8px). Aliases space/100."
         },
         "font-size": {
           "sm": {
@@ -2126,7 +2734,7 @@
             },
             "$value": "{typography.font-size.sm}",
             "$type": "number",
-            "$description": "Component · Button · Typography · Font size for size=sm (14px). Aliases typography/font-size/sm."
+            "$description": "Component \u00b7 Button \u00b7 Typography \u00b7 Font size for size=sm (14px). Aliases typography/font-size/sm."
           },
           "md": {
             "$extensions": {
@@ -2138,7 +2746,7 @@
             },
             "$value": "{typography.font-size.md}",
             "$type": "number",
-            "$description": "Component · Button · Typography · Font size for size=md (16px). Aliases typography/font-size/md."
+            "$description": "Component \u00b7 Button \u00b7 Typography \u00b7 Font size for size=md (16px). Aliases typography/font-size/md."
           },
           "lg": {
             "$extensions": {
@@ -2150,7 +2758,7 @@
             },
             "$value": "{typography.font-size.lg}",
             "$type": "number",
-            "$description": "Component · Button · Typography · Font size for size=lg (18px). Aliases typography/font-size/lg."
+            "$description": "Component \u00b7 Button \u00b7 Typography \u00b7 Font size for size=lg (18px). Aliases typography/font-size/lg."
           }
         },
         "font-weight": {
@@ -2163,7 +2771,7 @@
           },
           "$value": "{typography.font-weight.medium}",
           "$type": "number",
-          "$description": "Component · Button · Typography · Label weight (500/medium). Aliases typography/font-weight/medium."
+          "$description": "Component \u00b7 Button \u00b7 Typography \u00b7 Label weight (500/medium). Aliases typography/font-weight/medium."
         },
         "line-height": {
           "$extensions": {
@@ -2175,7 +2783,7 @@
           },
           "$value": "{typography.line-height.tight}",
           "$type": "number",
-          "$description": "Component · Button · Typography · Line height (1.25/tight). Aliases typography/line-height/tight."
+          "$description": "Component \u00b7 Button \u00b7 Typography \u00b7 Line height (1.25/tight). Aliases typography/line-height/tight."
         },
         "min-height": {
           "sm": {
@@ -2188,7 +2796,7 @@
             },
             "$value": 32,
             "$type": "number",
-            "$description": "Component · Button · Size · Minimum height for size=sm (32px). Direct value — no semantic alias."
+            "$description": "Component \u00b7 Button \u00b7 Size \u00b7 Minimum height for size=sm (32px). Direct value \u2014 no semantic alias."
           },
           "md": {
             "$extensions": {
@@ -2200,7 +2808,7 @@
             },
             "$value": 40,
             "$type": "number",
-            "$description": "Component · Button · Size · Minimum height for size=md (40px). Direct value — no semantic alias."
+            "$description": "Component \u00b7 Button \u00b7 Size \u00b7 Minimum height for size=md (40px). Direct value \u2014 no semantic alias."
           },
           "lg": {
             "$extensions": {
@@ -2212,7 +2820,7 @@
             },
             "$value": 48,
             "$type": "number",
-            "$description": "Component · Button · Size · Minimum height for size=lg (48px). Direct value — no semantic alias."
+            "$description": "Component \u00b7 Button \u00b7 Size \u00b7 Minimum height for size=lg (48px). Direct value \u2014 no semantic alias."
           }
         }
       },
@@ -2228,7 +2836,7 @@
             },
             "$value": "{color.background.neutral-subtle}",
             "$type": "color",
-            "$description": "Component · Badge · Background · intent=neutral. Subtle gray tint. Aliases color/background/neutral-subtle."
+            "$description": "Component \u00b7 Badge \u00b7 Background \u00b7 intent=neutral. Subtle gray tint. Aliases color/background/neutral-subtle."
           },
           "primary": {
             "$extensions": {
@@ -2240,7 +2848,7 @@
             },
             "$value": "{color.background.primary-subtle}",
             "$type": "color",
-            "$description": "Component · Badge · Background · intent=primary. Subtle blue tint. Aliases color/background/primary-subtle."
+            "$description": "Component \u00b7 Badge \u00b7 Background \u00b7 intent=primary. Subtle indigo tint. Aliases color/background/primary-subtle."
           },
           "success": {
             "$extensions": {
@@ -2252,7 +2860,7 @@
             },
             "$value": "{color.background.success-subtle}",
             "$type": "color",
-            "$description": "Component · Badge · Background · intent=success. Subtle green tint. Aliases color/background/success-subtle."
+            "$description": "Component \u00b7 Badge \u00b7 Background \u00b7 intent=success. Subtle emerald tint. Aliases color/background/success-subtle."
           },
           "danger": {
             "$extensions": {
@@ -2264,7 +2872,7 @@
             },
             "$value": "{color.background.danger-subtle}",
             "$type": "color",
-            "$description": "Component · Badge · Background · intent=danger. Subtle red tint. Aliases color/background/danger-subtle."
+            "$description": "Component \u00b7 Badge \u00b7 Background \u00b7 intent=danger. Subtle red tint. Aliases color/background/danger-subtle."
           },
           "brand": {
             "$extensions": {
@@ -2276,7 +2884,7 @@
             },
             "$value": "{color.background.brand-subtle}",
             "$type": "color",
-            "$description": "Component · Badge · Background · intent=brand. Subtle amber tint. Aliases color/background/brand-subtle."
+            "$description": "Component \u00b7 Badge \u00b7 Background \u00b7 intent=brand. Subtle coral tint. Aliases color/background/brand-subtle."
           }
         },
         "text": {
@@ -2290,7 +2898,7 @@
             },
             "$value": "{color.text.subtle}",
             "$type": "color",
-            "$description": "Component · Badge · Text · intent=neutral. Aliases color/text/subtle."
+            "$description": "Component \u00b7 Badge \u00b7 Text \u00b7 intent=neutral. Aliases color/text/subtle."
           },
           "primary": {
             "$extensions": {
@@ -2302,7 +2910,7 @@
             },
             "$value": "{color.text.primary}",
             "$type": "color",
-            "$description": "Component · Badge · Text · intent=primary. Aliases color/text/primary."
+            "$description": "Component \u00b7 Badge \u00b7 Text \u00b7 intent=primary. Aliases color/text/primary."
           },
           "success": {
             "$extensions": {
@@ -2314,7 +2922,7 @@
             },
             "$value": "{color.text.success}",
             "$type": "color",
-            "$description": "Component · Badge · Text · intent=success. Aliases color/text/success."
+            "$description": "Component \u00b7 Badge \u00b7 Text \u00b7 intent=success. Aliases color/text/success."
           },
           "danger": {
             "$extensions": {
@@ -2326,7 +2934,7 @@
             },
             "$value": "{color.text.danger}",
             "$type": "color",
-            "$description": "Component · Badge · Text · intent=danger. Aliases color/text/danger."
+            "$description": "Component \u00b7 Badge \u00b7 Text \u00b7 intent=danger. Aliases color/text/danger."
           },
           "brand": {
             "$extensions": {
@@ -2338,7 +2946,7 @@
             },
             "$value": "{color.text.brand}",
             "$type": "color",
-            "$description": "Component · Badge · Text · intent=brand. Aliases color/text/brand."
+            "$description": "Component \u00b7 Badge \u00b7 Text \u00b7 intent=brand. Aliases color/text/brand."
           }
         },
         "radius": {
@@ -2351,7 +2959,7 @@
           },
           "$value": "{radius.md}",
           "$type": "number",
-          "$description": "Component · Badge · Shape · Border radius. Aliases radius/md (6px)."
+          "$description": "Component \u00b7 Badge \u00b7 Shape \u00b7 Border radius. Aliases radius/md (6px)."
         },
         "padding-x": {
           "sm": {
@@ -2364,7 +2972,7 @@
             },
             "$value": "{space.100}",
             "$type": "number",
-            "$description": "Component · Badge · Space · Horizontal padding for size=sm (8px). Aliases space/100."
+            "$description": "Component \u00b7 Badge \u00b7 Space \u00b7 Horizontal padding for size=sm (8px). Aliases space/100."
           },
           "md": {
             "$extensions": {
@@ -2376,7 +2984,7 @@
             },
             "$value": "{space.150}",
             "$type": "number",
-            "$description": "Component · Badge · Space · Horizontal padding for size=md (12px). Aliases space/150."
+            "$description": "Component \u00b7 Badge \u00b7 Space \u00b7 Horizontal padding for size=md (12px). Aliases space/150."
           },
           "lg": {
             "$extensions": {
@@ -2388,7 +2996,7 @@
             },
             "$value": "{space.200}",
             "$type": "number",
-            "$description": "Component · Badge · Space · Horizontal padding for size=lg (16px). Aliases space/200."
+            "$description": "Component \u00b7 Badge \u00b7 Space \u00b7 Horizontal padding for size=lg (16px). Aliases space/200."
           }
         },
         "padding-y": {
@@ -2402,7 +3010,7 @@
             },
             "$value": "{space.050}",
             "$type": "number",
-            "$description": "Component · Badge · Space · Vertical padding for size=sm (4px). Aliases space/050."
+            "$description": "Component \u00b7 Badge \u00b7 Space \u00b7 Vertical padding for size=sm (4px). Aliases space/050."
           },
           "md": {
             "$extensions": {
@@ -2414,7 +3022,7 @@
             },
             "$value": "{space.100}",
             "$type": "number",
-            "$description": "Component · Badge · Space · Vertical padding for size=md (8px). Aliases space/100."
+            "$description": "Component \u00b7 Badge \u00b7 Space \u00b7 Vertical padding for size=md (8px). Aliases space/100."
           },
           "lg": {
             "$extensions": {
@@ -2426,7 +3034,7 @@
             },
             "$value": "{space.150}",
             "$type": "number",
-            "$description": "Component · Badge · Space · Vertical padding for size=lg (12px). Aliases space/150."
+            "$description": "Component \u00b7 Badge \u00b7 Space \u00b7 Vertical padding for size=lg (12px). Aliases space/150."
           }
         },
         "font-size": {
@@ -2439,7 +3047,7 @@
           },
           "$value": "{typography.font-size.xs}",
           "$type": "number",
-          "$description": "Component · Badge · Typography · Font size (12px/xs). Aliases typography/font-size/xs."
+          "$description": "Component \u00b7 Badge \u00b7 Typography \u00b7 Font size (12px/xs). Aliases typography/font-size/xs."
         },
         "font-weight": {
           "$extensions": {
@@ -2451,7 +3059,7 @@
           },
           "$value": "{typography.font-weight.medium}",
           "$type": "number",
-          "$description": "Component · Badge · Typography · Label weight (500/medium). Aliases typography/font-weight/medium."
+          "$description": "Component \u00b7 Badge \u00b7 Typography \u00b7 Label weight (500/medium). Aliases typography/font-weight/medium."
         },
         "line-height": {
           "$extensions": {
@@ -2463,7 +3071,7 @@
           },
           "$value": "{typography.line-height.tight}",
           "$type": "number",
-          "$description": "Component · Badge · Typography · Line height (1.25/tight). Aliases typography/line-height/tight."
+          "$description": "Component \u00b7 Badge \u00b7 Typography \u00b7 Line height (1.25/tight). Aliases typography/line-height/tight."
         }
       },
       "button-group": {
@@ -2477,7 +3085,7 @@
           },
           "$value": "{space.100}",
           "$type": "number",
-          "$description": "Component · ButtonGroup · Space · Gap between sibling buttons (8px). Aliases space/100."
+          "$description": "Component \u00b7 ButtonGroup \u00b7 Space \u00b7 Gap between sibling buttons (8px). Aliases space/100."
         }
       },
       "chip": {
@@ -2730,7 +3338,7 @@
           },
           "$value": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
           "$type": "text",
-          "$description": "Typography · Font family · System sans-serif stack. The default UI font. Falls back gracefully across all platforms."
+          "$description": "Typography \u00b7 Font family \u00b7 System sans-serif stack. The default UI font. Falls back gracefully across all platforms."
         },
         "mono": {
           "$extensions": {
@@ -2742,7 +3350,7 @@
           },
           "$value": "\"Fira Code\", \"Cascadia Code\", \"JetBrains Mono\", Menlo, Consolas, \"Courier New\", monospace",
           "$type": "text",
-          "$description": "Typography · Font family · Monospace stack (Fira Code, Cascadia Code, JetBrains Mono, Menlo, Consolas). Use for code blocks, inline code, terminal output, and AI-generated code responses."
+          "$description": "Typography \u00b7 Font family \u00b7 Monospace stack (Fira Code, Cascadia Code, JetBrains Mono, Menlo, Consolas). Use for code blocks, inline code, terminal output, and AI-generated code responses."
         }
       },
       "font-size": {
@@ -2756,7 +3364,7 @@
           },
           "$value": 12,
           "$type": "number",
-          "$description": "Typography · Font size · 12px · Extra-small text. Use for captions, timestamps, legal text, and inline metadata."
+          "$description": "Typography \u00b7 Font size \u00b7 12px \u00b7 Extra-small text. Use for captions, timestamps, legal text, and inline metadata."
         },
         "sm": {
           "$extensions": {
@@ -2768,7 +3376,7 @@
           },
           "$value": 14,
           "$type": "number",
-          "$description": "Typography · Font size · 14px · Small text. Use for secondary labels, helper text, and compact UI elements."
+          "$description": "Typography \u00b7 Font size \u00b7 14px \u00b7 Small text. Use for secondary labels, helper text, and compact UI elements."
         },
         "md": {
           "$extensions": {
@@ -2780,7 +3388,7 @@
           },
           "$value": 16,
           "$type": "number",
-          "$description": "Typography · Font size · 16px · Base body size. The default reading size for most UI text."
+          "$description": "Typography \u00b7 Font size \u00b7 16px \u00b7 Base body size. The default reading size for most UI text."
         },
         "lg": {
           "$extensions": {
@@ -2792,7 +3400,7 @@
           },
           "$value": 18,
           "$type": "number",
-          "$description": "Typography · Font size · 18px · Large body. Use for prominent body copy or comfortable reading in content-heavy views."
+          "$description": "Typography \u00b7 Font size \u00b7 18px \u00b7 Large body. Use for prominent body copy or comfortable reading in content-heavy views."
         },
         "xl": {
           "$extensions": {
@@ -2804,7 +3412,7 @@
           },
           "$value": 20,
           "$type": "number",
-          "$description": "Typography · Font size · 20px · Small heading. Use for card titles and sub-section headings."
+          "$description": "Typography \u00b7 Font size \u00b7 20px \u00b7 Small heading. Use for card titles and sub-section headings."
         },
         "2xl": {
           "$extensions": {
@@ -2816,7 +3424,7 @@
           },
           "$value": 24,
           "$type": "number",
-          "$description": "Typography · Font size · 24px · Medium heading. Use for section titles and dialog headings."
+          "$description": "Typography \u00b7 Font size \u00b7 24px \u00b7 Medium heading. Use for section titles and dialog headings."
         },
         "3xl": {
           "$extensions": {
@@ -2828,7 +3436,7 @@
           },
           "$value": 30,
           "$type": "number",
-          "$description": "Typography · Font size · 30px · Large heading. Use for page titles and hero text."
+          "$description": "Typography \u00b7 Font size \u00b7 30px \u00b7 Large heading. Use for page titles and hero text."
         }
       },
       "font-weight": {
@@ -2842,7 +3450,7 @@
           },
           "$value": 400,
           "$type": "number",
-          "$description": "Typography · Font weight · 400 · Regular weight. Default for body text, descriptions, and helper content."
+          "$description": "Typography \u00b7 Font weight \u00b7 400 \u00b7 Regular weight. Default for body text, descriptions, and helper content."
         },
         "medium": {
           "$extensions": {
@@ -2854,7 +3462,7 @@
           },
           "$value": 500,
           "$type": "number",
-          "$description": "Typography · Font weight · 500 · Medium weight. Use for interactive labels, navigation items, and mild emphasis."
+          "$description": "Typography \u00b7 Font weight \u00b7 500 \u00b7 Medium weight. Use for interactive labels, navigation items, and mild emphasis."
         },
         "semibold": {
           "$extensions": {
@@ -2866,7 +3474,7 @@
           },
           "$value": 600,
           "$type": "number",
-          "$description": "Typography · Font weight · 600 · Semibold. Use for headings, button labels, and strong emphasis within body text."
+          "$description": "Typography \u00b7 Font weight \u00b7 600 \u00b7 Semibold. Use for headings, button labels, and strong emphasis within body text."
         },
         "bold": {
           "$extensions": {
@@ -2878,7 +3486,7 @@
           },
           "$value": 700,
           "$type": "number",
-          "$description": "Typography · Font weight · 700 · Bold. Use for prominent headings, critical callouts, and maximum emphasis."
+          "$description": "Typography \u00b7 Font weight \u00b7 700 \u00b7 Bold. Use for prominent headings, critical callouts, and maximum emphasis."
         }
       },
       "line-height": {
@@ -2892,7 +3500,7 @@
           },
           "$value": 1.25,
           "$type": "number",
-          "$description": "Typography · Line height · 1.25 · Tight leading. Use for headings and single-line display text where vertical compactness matters."
+          "$description": "Typography \u00b7 Line height \u00b7 1.25 \u00b7 Tight leading. Use for headings and single-line display text where vertical compactness matters."
         },
         "normal": {
           "$extensions": {
@@ -2904,7 +3512,7 @@
           },
           "$value": 1.5,
           "$type": "number",
-          "$description": "Typography · Line height · 1.5 · Standard leading. The default for body text and multi-line UI copy."
+          "$description": "Typography \u00b7 Line height \u00b7 1.5 \u00b7 Standard leading. The default for body text and multi-line UI copy."
         },
         "relaxed": {
           "$extensions": {
@@ -2916,7 +3524,7 @@
           },
           "$value": 1.75,
           "$type": "number",
-          "$description": "Typography · Line height · 1.75 · Relaxed leading. Use for long-form reading, AI response text, and documentation content."
+          "$description": "Typography \u00b7 Line height \u00b7 1.75 \u00b7 Relaxed leading. Use for long-form reading, AI response text, and documentation content."
         }
       }
     }
@@ -2933,7 +3541,7 @@
         },
         "$value": 8,
         "$type": "number",
-        "$description": "Space · 8px · Small spacing (sm in code). Use for gaps inside compact components and between grouped items."
+        "$description": "Space \u00b7 8px \u00b7 Small spacing (sm in code). Use for gaps inside compact components and between grouped items."
       },
       "150": {
         "$extensions": {
@@ -2945,7 +3553,7 @@
         },
         "$value": 12,
         "$type": "number",
-        "$description": "Space · 12px · Medium-small spacing (md in code). Use for internal padding in small components like buttons and inputs."
+        "$description": "Space \u00b7 12px \u00b7 Medium-small spacing (md in code). Use for internal padding in small components like buttons and inputs."
       },
       "200": {
         "$extensions": {
@@ -2957,7 +3565,7 @@
         },
         "$value": 16,
         "$type": "number",
-        "$description": "Space · 16px · Base spacing (lg in code). The standard internal padding unit for most components and section gaps."
+        "$description": "Space \u00b7 16px \u00b7 Base spacing (lg in code). The standard internal padding unit for most components and section gaps."
       },
       "250": {
         "$extensions": {
@@ -2969,7 +3577,7 @@
         },
         "$value": 20,
         "$type": "number",
-        "$description": "Space · 20px · Medium-large spacing. Use for slightly roomier component padding or moderate section separation."
+        "$description": "Space \u00b7 20px \u00b7 Medium-large spacing. Use for slightly roomier component padding or moderate section separation."
       },
       "300": {
         "$extensions": {
@@ -2981,7 +3589,7 @@
         },
         "$value": 24,
         "$type": "number",
-        "$description": "Space · 24px · Large spacing (xl in code). Use for section gaps, card padding, and breathing room between content blocks."
+        "$description": "Space \u00b7 24px \u00b7 Large spacing (xl in code). Use for section gaps, card padding, and breathing room between content blocks."
       },
       "400": {
         "$extensions": {
@@ -2993,7 +3601,7 @@
         },
         "$value": 32,
         "$type": "number",
-        "$description": "Space · 32px · Extra-large spacing (xxl in code). Use for major section separations and generous layout gutters."
+        "$description": "Space \u00b7 32px \u00b7 Extra-large spacing (xxl in code). Use for major section separations and generous layout gutters."
       },
       "500": {
         "$extensions": {
@@ -3005,7 +3613,7 @@
         },
         "$value": 40,
         "$type": "number",
-        "$description": "Space · 40px · 2x-large spacing. Use for wide layout gutters and prominent section breaks."
+        "$description": "Space \u00b7 40px \u00b7 2x-large spacing. Use for wide layout gutters and prominent section breaks."
       },
       "600": {
         "$extensions": {
@@ -3017,7 +3625,7 @@
         },
         "$value": 48,
         "$type": "number",
-        "$description": "Space · 48px · 3x-large spacing. Use for page-level vertical rhythm between major content areas."
+        "$description": "Space \u00b7 48px \u00b7 3x-large spacing. Use for page-level vertical rhythm between major content areas."
       },
       "800": {
         "$extensions": {
@@ -3029,7 +3637,7 @@
         },
         "$value": 64,
         "$type": "number",
-        "$description": "Space · 64px · 4x-large spacing. Use for hero-level separation between distinct page sections."
+        "$description": "Space \u00b7 64px \u00b7 4x-large spacing. Use for hero-level separation between distinct page sections."
       },
       "050": {
         "$extensions": {
@@ -3041,7 +3649,7 @@
         },
         "$value": 4,
         "$type": "number",
-        "$description": "Space · 4px · Extra-tight spacing. Use for gaps between tightly related elements — icon-to-label, badge offsets, fine internal padding."
+        "$description": "Space \u00b7 4px \u00b7 Extra-tight spacing. Use for gaps between tightly related elements \u2014 icon-to-label, badge offsets, fine internal padding."
       },
       "075": {
         "$extensions": {
@@ -3053,7 +3661,7 @@
         },
         "$value": 6,
         "$type": "number",
-        "$description": "Space · 6px · Tight spacing. Use for compact vertical rhythm within dense components like tags and chips."
+        "$description": "Space \u00b7 6px \u00b7 Tight spacing. Use for compact vertical rhythm within dense components like tags and chips."
       }
     }
   },
@@ -3069,7 +3677,7 @@
         },
         "$value": 0,
         "$type": "number",
-        "$description": "Shape · 0px · No rounding. Use for sharp-cornered elements like dividers, table cells, and full-bleed images."
+        "$description": "Shape \u00b7 0px \u00b7 No rounding. Use for sharp-cornered elements like dividers, table cells, and full-bleed images."
       },
       "sm": {
         "$extensions": {
@@ -3081,7 +3689,7 @@
         },
         "$value": 4,
         "$type": "number",
-        "$description": "Shape · 4px · Subtle rounding. Use for small components: badges, tags, chips, tooltips, and input fields."
+        "$description": "Shape \u00b7 4px \u00b7 Subtle rounding. Use for small components: badges, tags, chips, tooltips, and input fields."
       },
       "md": {
         "$extensions": {
@@ -3093,7 +3701,7 @@
         },
         "$value": 6,
         "$type": "number",
-        "$description": "Shape · 6px · Standard rounding. The default border radius for most interactive components: buttons, cards, and modals."
+        "$description": "Shape \u00b7 6px \u00b7 Standard rounding. The default border radius for most interactive components: buttons, cards, and modals."
       },
       "lg": {
         "$extensions": {
@@ -3105,7 +3713,7 @@
         },
         "$value": 8,
         "$type": "number",
-        "$description": "Shape · 8px · Generous rounding. Use for larger containers like panels, popovers, and drawers."
+        "$description": "Shape \u00b7 8px \u00b7 Generous rounding. Use for larger containers like panels, popovers, and drawers."
       },
       "xl": {
         "$extensions": {
@@ -3117,7 +3725,7 @@
         },
         "$value": 12,
         "$type": "number",
-        "$description": "Shape · 12px · Extra rounding. Use for prominent cards, sheet surfaces, and floating panels in AI/app UIs."
+        "$description": "Shape \u00b7 12px \u00b7 Extra rounding. Use for prominent cards, sheet surfaces, and floating panels in AI/app UIs."
       },
       "full": {
         "$extensions": {
@@ -3129,7 +3737,7 @@
         },
         "$value": 9999,
         "$type": "number",
-        "$description": "Shape · 9999px · Full pill shape. Use for rounded buttons, avatar frames, toggle switches, and status indicators."
+        "$description": "Shape \u00b7 9999px \u00b7 Full pill shape. Use for rounded buttons, avatar frames, toggle switches, and status indicators."
       }
     }
   },

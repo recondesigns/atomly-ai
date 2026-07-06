@@ -1,6 +1,7 @@
 import { ThemeProvider as EmotionThemProvider } from '@emotion/react';
 import type { MoleculeUITheme } from './theme.types';
 import { defaultTheme } from './defaultTheme';
+import { darkTheme } from './darkTheme';
 
 /**
  * Props for the MoleculeProvider.
@@ -10,6 +11,8 @@ import { defaultTheme } from './defaultTheme';
  */
 export type MoleculeProviderProps = {
   theme?: Partial<MoleculeUITheme>;
+  /** Base theme to apply `theme` overrides on top of. Defaults to `'light'`. */
+  colorScheme?: 'light' | 'dark';
   children: React.ReactNode;
 };
 
@@ -62,10 +65,31 @@ function deepMerge<T extends Record<string, unknown>>(base: T, override: Partial
  * <MoleculeProvider theme={{ colors: { primary: '#8B5CF6' } }}>
  *   <App />
  * </MoleculeProvider>
+ *
+ * // Dark mode
+ * <MoleculeProvider colorScheme="dark">
+ *   <App />
+ * </MoleculeProvider>
  * ```
  */
-export function MoleculeProvider({ theme: themeOverrides, children }: MoleculeProviderProps) {
-  const mergedTheme = themeOverrides ? deepMerge(defaultTheme, themeOverrides) : defaultTheme;
+export function MoleculeProvider({
+  theme: themeOverrides,
+  colorScheme = 'light',
+  children,
+}: MoleculeProviderProps) {
+  const baseTheme = colorScheme === 'dark' ? darkTheme : defaultTheme;
+  const mergedTheme = themeOverrides ? deepMerge(baseTheme, themeOverrides) : baseTheme;
 
-  return <EmotionThemProvider theme={mergedTheme}>{children}</EmotionThemProvider>;
+  return (
+    <EmotionThemProvider theme={mergedTheme}>
+      {/*
+        Establishes the default text color (and therefore `currentColor`) for this
+        subtree. Without this, anything that doesn't set its own `color` explicitly —
+        bare icons, plain text — falls back to the browser's initial black regardless
+        of `colorScheme`, which is invisible against a dark theme's background.
+        `display: contents` keeps this element out of the box/layout tree entirely.
+      */}
+      <span style={{ display: 'contents', color: mergedTheme.colors.textPrimary }}>{children}</span>
+    </EmotionThemProvider>
+  );
 }

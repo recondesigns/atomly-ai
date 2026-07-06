@@ -18,18 +18,44 @@ const sizeStyles: Record<
   },
 };
 
-const intentColors: Record<BadgeIntent, { background: string; border: string; text: string }> = {
-  neutral: { background: '#F8FAFC', border: '#CBD5E1', text: '#475569' },
-  primary: { background: '#EFF6FF', border: '#2563EB', text: '#1D4ED8' },
-  success: { background: '#F0FDF4', border: '#00A63E', text: '#008236' },
-  danger: { background: '#FEF2F2', border: '#DC2626', text: '#B91C1C' },
-  brand: { background: '#FFF7ED', border: '#FE9A00', text: '#C27A00' },
-};
-
 const StyledBadge = styled.span<{
   $intent: BadgeIntent;
   $size: BadgeSize;
 }>(({ theme, $intent, $size }) => {
+  const colors = theme.colors ?? {
+    primary: '#4F46E5',
+    primaryLight: '#EEF2FF',
+    success: '#059669',
+    successLight: '#ECFDF5',
+    danger: '#DC2626',
+    dangerLight: '#FEF2F2',
+    brand: '#F97316',
+    brandLight: '#FFF7ED',
+    warningActive: '#B45309',
+    warningLight: '#FFFBEB',
+    primaryText: '#4F46E5',
+    successText: '#047857',
+    dangerText: '#DC2626',
+    brandText: '#C2410C',
+    warningText: '#B45309',
+  };
+
+  // Text/border for each intent uses the theme's `<intent>Text` step — dark
+  // enough for 4.5:1 text contrast against the paired light background in
+  // both light and dark themes. See color-palette spec / Button.styles.ts.
+  const intentColors: Record<BadgeIntent, { background: string; border: string; text: string }> = {
+    neutral: { background: '#F8FAFC', border: '#CBD5E1', text: '#475569' },
+    primary: { background: colors.primaryLight, border: colors.primary, text: colors.primaryText },
+    success: { background: colors.successLight, border: colors.success, text: colors.successText },
+    danger: { background: colors.dangerLight, border: colors.danger, text: colors.dangerText },
+    brand: { background: colors.brandLight, border: colors.brand, text: colors.brandText },
+    warning: {
+      background: colors.warningLight,
+      border: colors.warningActive,
+      text: colors.warningText,
+    },
+  };
+
   const intent = intentColors[$intent];
   const size = sizeStyles[$size];
 

@@ -1,51 +1,51 @@
 {
   "color": {
     "primary": {
-      "$value": "#2563eb",
+      "$value": "#4f46e5",
       "$type": "color"
     },
     "primary-hover": {
-      "$value": "#1d4ed8",
+      "$value": "#4338ca",
       "$type": "color"
     },
     "primary-active": {
-      "$value": "#1e40af",
+      "$value": "#3730a3",
       "$type": "color"
     },
     "primary-light": {
-      "$value": "#eff6ff",
+      "$value": "#eef2ff",
       "$type": "color"
     },
     "brand": {
-      "$value": "#fe9a00",
+      "$value": "#f97316",
       "$type": "color"
     },
     "brand-hover": {
-      "$value": "#e17100",
+      "$value": "#ea580c",
       "$type": "color"
     },
     "brand-active": {
-      "$value": "#e17100",
+      "$value": "#c2410c",
       "$type": "color"
     },
     "brand-light": {
-      "$value": "#fffbeb",
+      "$value": "#fff7ed",
       "$type": "color"
     },
     "success": {
-      "$value": "#00a63e",
+      "$value": "#059669",
       "$type": "color"
     },
     "success-hover": {
-      "$value": "#008236",
+      "$value": "#047857",
       "$type": "color"
     },
     "success-active": {
-      "$value": "#016630",
+      "$value": "#065f46",
       "$type": "color"
     },
     "success-light": {
-      "$value": "#f0fdf4",
+      "$value": "#ecfdf5",
       "$type": "color"
     },
     "danger": {
@@ -62,6 +62,22 @@
     },
     "danger-light": {
       "$value": "#fef2f2",
+      "$type": "color"
+    },
+    "warning": {
+      "$value": "#f59e0b",
+      "$type": "color"
+    },
+    "warning-hover": {
+      "$value": "#d97706",
+      "$type": "color"
+    },
+    "warning-active": {
+      "$value": "#b45309",
+      "$type": "color"
+    },
+    "warning-light": {
+      "$value": "#fffbeb",
       "$type": "color"
     },
     "background": {
@@ -96,6 +112,10 @@
       "$value": "#ffffff",
       "$type": "color"
     },
+    "text-on-warning": {
+      "$value": "#0f172a",
+      "$type": "color"
+    },
     "text-disabled": {
       "$value": "#94a3b8",
       "$type": "color"
@@ -105,7 +125,7 @@
       "$type": "color"
     },
     "border-focus": {
-      "$value": "#2563eb",
+      "$value": "#4f46e5",
       "$type": "color"
     },
     "disabled": {
@@ -113,7 +133,184 @@
       "$type": "color"
     },
     "focus-ring": {
-      "$value": "rgba(37, 99, 235, 0.4)"
+      "$value": "rgba(79, 70, 229, 0.4)"
+    },
+    "primary-text": {
+      "$value": "#4f46e5",
+      "$type": "color"
+    },
+    "brand-text": {
+      "$value": "#c2410c",
+      "$type": "color"
+    },
+    "success-text": {
+      "$value": "#047857",
+      "$type": "color"
+    },
+    "danger-text": {
+      "$value": "#b91c1c",
+      "$type": "color"
+    },
+    "warning-text": {
+      "$value": "#b45309",
+      "$type": "color"
+    }
+  },
+  "colorDark": {
+    "primary": {
+      "$value": "#6366f1",
+      "$type": "color"
+    },
+    "primary-hover": {
+      "$value": "#818cf8",
+      "$type": "color"
+    },
+    "primary-active": {
+      "$value": "#a5b4fc",
+      "$type": "color"
+    },
+    "primary-light": {
+      "$value": "#1e1b4b",
+      "$type": "color"
+    },
+    "brand": {
+      "$value": "#f97316",
+      "$type": "color"
+    },
+    "brand-hover": {
+      "$value": "#fb923c",
+      "$type": "color"
+    },
+    "brand-active": {
+      "$value": "#fdba74",
+      "$type": "color"
+    },
+    "brand-light": {
+      "$value": "#431407",
+      "$type": "color"
+    },
+    "success": {
+      "$value": "#059669",
+      "$type": "color"
+    },
+    "success-hover": {
+      "$value": "#34d399",
+      "$type": "color"
+    },
+    "success-active": {
+      "$value": "#6ee7b7",
+      "$type": "color"
+    },
+    "success-light": {
+      "$value": "#022c22",
+      "$type": "color"
+    },
+    "danger": {
+      "$value": "#dc2626",
+      "$type": "color"
+    },
+    "danger-hover": {
+      "$value": "#f87171",
+      "$type": "color"
+    },
+    "danger-active": {
+      "$value": "#fca5a5",
+      "$type": "color"
+    },
+    "danger-light": {
+      "$value": "#450a0a",
+      "$type": "color"
+    },
+    "warning": {
+      "$value": "#f59e0b",
+      "$type": "color"
+    },
+    "warning-hover": {
+      "$value": "#fbbf24",
+      "$type": "color"
+    },
+    "warning-active": {
+      "$value": "#fcd34d",
+      "$type": "color"
+    },
+    "warning-light": {
+      "$value": "#451a03",
+      "$type": "color"
+    },
+    "background": {
+      "$value": "#0f172a",
+      "$type": "color"
+    },
+    "surface": {
+      "$value": "#1e293b",
+      "$type": "color"
+    },
+    "surface-hover": {
+      "$value": "#334155",
+      "$type": "color"
+    },
+    "text-primary": {
+      "$value": "#ffffff",
+      "$type": "color"
+    },
+    "text-success": {
+      "$value": "#ffffff",
+      "$type": "color"
+    },
+    "text-on-primary": {
+      "$value": "#ffffff",
+      "$type": "color"
+    },
+    "text-on-secondary": {
+      "$value": "#ffffff",
+      "$type": "color"
+    },
+    "text-on-danger": {
+      "$value": "#ffffff",
+      "$type": "color"
+    },
+    "text-on-warning": {
+      "$value": "#0f172a",
+      "$type": "color"
+    },
+    "text-disabled": {
+      "$value": "#475569",
+      "$type": "color"
+    },
+    "border": {
+      "$value": "#334155",
+      "$type": "color"
+    },
+    "border-focus": {
+      "$value": "#6366f1",
+      "$type": "color"
+    },
+    "disabled": {
+      "$value": "#334155",
+      "$type": "color"
+    },
+    "focus-ring": {
+      "$value": "rgba(99, 102, 241, 0.4)"
+    },
+    "primary-text": {
+      "$value": "#818cf8",
+      "$type": "color"
+    },
+    "brand-text": {
+      "$value": "#fb923c",
+      "$type": "color"
+    },
+    "success-text": {
+      "$value": "#10b981",
+      "$type": "color"
+    },
+    "danger-text": {
+      "$value": "#f87171",
+      "$type": "color"
+    },
+    "warning-text": {
+      "$value": "#fbbf24",
+      "$type": "color"
     }
   },
   "spacing": {
@@ -237,19 +434,19 @@
         "$type": "color"
       },
       "primary": {
-        "$value": "#eff6ff",
+        "$value": "#eef2ff",
         "$type": "color"
       },
       "primary-hover": {
-        "$value": "#dbeafe",
+        "$value": "#c7d2fe",
         "$type": "color"
       },
       "success": {
-        "$value": "#f0fdf4",
+        "$value": "#ecfdf5",
         "$type": "color"
       },
       "success-hover": {
-        "$value": "#dcfce7",
+        "$value": "#d1fae5",
         "$type": "color"
       },
       "danger": {
@@ -271,11 +468,11 @@
         "$type": "color"
       },
       "primary": {
-        "$value": "#2563eb",
+        "$value": "#4f46e5",
         "$type": "color"
       },
       "success": {
-        "$value": "#00a63e",
+        "$value": "#059669",
         "$type": "color"
       },
       "danger": {
@@ -293,11 +490,11 @@
         "$type": "color"
       },
       "primary": {
-        "$value": "#bfdbfe",
+        "$value": "#a5b4fc",
         "$type": "color"
       },
       "success": {
-        "$value": "#dcfce7",
+        "$value": "#d1fae5",
         "$type": "color"
       },
       "danger": {
@@ -305,7 +502,7 @@
         "$type": "color"
       },
       "focus": {
-        "$value": "#2563eb",
+        "$value": "#4f46e5",
         "$type": "color"
       },
       "disabled": {
