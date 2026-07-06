@@ -149,6 +149,7 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 
 ## Bundle Health
 
+- [x] Excluded `*.stories.tsx`/`*.test.ts` from `tsconfig.build.json` in React and Vue — these were leaking into the published npm tarball as `dist/**/*.stories.d.ts` / `dist/**/*.test.d.ts` (caught while explaining why recent Storybook-only PRs didn't need changesets). `tsconfig.build.json`'s `include: ["src"]` compiled every file under `src`, including dev-only ones; the base `tsconfig.json` used by `pnpm typecheck` is unaffected, so type-checking of stories/tests is unchanged. Verified via `npm pack --dry-run` before/after on both packages.
 - [ ] `size-limit` installed with per-package size budgets (`@atomly-ai/react`, `@atomly-ai/vue`)
 - [ ] Size limit check added to GitHub Actions CI (fails PR if budget exceeded)
 - [ ] `rollup-plugin-visualizer` added to Vite config for bundle composition inspection

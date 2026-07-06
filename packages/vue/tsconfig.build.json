@@ -5,5 +5,6 @@
     "declarationMap": true,
     "emitDeclarationOnly": true
   },
-  "include": ["src", "src/**/*.vue"]
+  "include": ["src", "src/**/*.vue"],
+  "exclude": ["**/*.stories.tsx", "**/*.stories.ts", "**/*.test.ts", "**/*.test.tsx"]
 }
