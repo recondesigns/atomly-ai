@@ -4,7 +4,7 @@ High-level phases and goals for the project. Updated as priorities shift.
 
 ---
 
-## Phase 1 — Foundation (current)
+## Phase 1 — Foundation (complete)
 
 Get the core infrastructure solid before building out the component library.
 
@@ -15,42 +15,44 @@ Get the core infrastructure solid before building out the component library.
 - [x] Claude Code tooling (slash commands, CLAUDE.md files, specs, hooks)
 - [x] Figma project created (Design Tokens + Component Library files)
 - [x] Figma Code Connect config scaffolded
-- [ ] Unit testing setup (Vitest for hooks and utilities)
-- [ ] Husky + commitlint + lint-staged
-- [ ] GitHub Actions CI pipeline (lint → build → test)
-- [ ] Changesets for monorepo versioning
-- [ ] First npm publish (alpha/beta)
+- [x] Unit testing setup (Vitest for hooks and utilities)
+- [x] Husky + commitlint + lint-staged
+- [x] GitHub Actions CI pipeline (lint → build → test)
+- [x] Changesets for monorepo versioning
+- [x] First npm publish (alpha, later exited pre-release mode for a clean `0.2.0`)
 
 ---
 
-## Phase 2 — Token System
+## Phase 2 — Token System (complete)
 
 Establish the design token pipeline so components are tied to Figma.
 
-- [ ] Design tokens defined in Figma (primitives + semantic)
-- [ ] Style Dictionary setup to transform tokens to CSS custom properties and JS
-- [ ] `sync-tokens` workflow validated end-to-end
-- [ ] Vue package wired to CSS custom properties from token output
+- [x] Design tokens defined in Figma (primitives + semantic)
+- [x] Style Dictionary setup to transform tokens to CSS custom properties and JS
+- [x] `sync-tokens` workflow validated end-to-end
+- [x] Vue package wired to CSS custom properties from token output
 - [ ] Token documentation in Storybook
+- [x] AI-native color palette redesign — indigo primary, violet AI accent, coral brand, amber promoted to a full `warning` intent, emerald success (see `.claude/specs/color-palette.md`)
+- [x] Dark mode theming layer — `colorDark` token block sourced from Figma's `Color/Dark` collection, `darkTheme` export, `MoleculeProvider` `colorScheme` prop, Storybook light/dark toggle
 
 ---
 
-## Phase 3 — Core Component Library
+## Phase 3 — Core Component Library (current)
 
 Build out the foundational atom and molecule set.
 
 **Atoms**
 
-- [x] Button
-- [x] Badge
-- [ ] Icon
+- [x] Button (`solid`/`outline`/`ghost`; `primary`/`success`/`danger`/`brand`/`warning` intents)
+- [x] Badge (`filled`; `neutral`/`primary`/`success`/`danger`/`brand`/`warning` intents)
+- [x] Icon (`AlertIcon`, `CheckIcon`, `CloseIcon` — shared SVG source, generated per-framework)
 - [ ] Avatar
 - [ ] Input
 - [ ] Checkbox
 - [ ] Radio
 - [ ] Toggle / Switch
 - [ ] Select
-- [ ] Tag / Chip
+- [x] Tag / Chip (`filled`/`outlined`/`ghost`; `neutral`/`primary`/`success`/`danger`/`warning` intents)
 - [ ] Spinner / Loader
 - [ ] Tooltip
 - [ ] Divider
@@ -74,12 +76,12 @@ Build out the foundational atom and molecule set.
 
 ## Phase 4 — Quality & Design Collaboration
 
-- [ ] Chromatic visual regression testing on all stories
+- [x] Chromatic visual regression testing on all stories
 - [ ] `@storybook/addon-designs` (Figma frames embedded in Storybook)
-- [ ] Figma Code Connect published for all core components
-- [ ] Accessibility audit passing at WCAG 2.1 AA for all components
+- [ ] Figma Code Connect published for all core components (blocked — requires a paid Figma plan)
+- [x] Accessibility audit passing at WCAG 2.1 AA for all components (Vitest + Playwright + `@storybook/addon-a11y` set to `error`, 26/26 tests passing; a handful of pre-existing contrast bugs found and fixed along the way)
 - [ ] `size-limit` bundle size budgets in CI
-- [ ] Component specs complete for all Phase 3 components
+- [ ] Component specs complete for all Phase 3 components (only Button has one so far)
 
 ---
 
@@ -97,7 +99,6 @@ Build out the foundational atom and molecule set.
 ## Backlog / Ideas
 
 - Organism-level components (data tables, page headers, navigation shells)
-- Dark mode token layer
 - Motion / animation token category
 - Breakpoint tokens for responsive components
 - Figma library published for internal design use
