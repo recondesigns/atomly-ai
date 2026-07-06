@@ -1,5 +1,12 @@
 # @atomly-ai/website
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [b6c0ef4]
+  - @atomly-ai/react@0.2.1
+
 ## 0.0.3
 
 ### Patch Changes
