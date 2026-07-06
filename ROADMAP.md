@@ -77,7 +77,7 @@ Build out the foundational atom and molecule set.
 ## Phase 4 — Quality & Design Collaboration
 
 - [x] Chromatic visual regression testing on all stories
-- [ ] `@storybook/addon-designs` (Figma frames embedded in Storybook)
+- [x] `@storybook/addon-designs` (Figma frames embedded in Storybook) — installed in both React and Vue. Frame links added to React's Button/Badge/Chip and Vue's Button; still missing on ButtonGroup and Icons (no Figma frames exist for them yet — a content gap, not a code one)
 - [ ] Figma Code Connect published for all core components (blocked — requires a paid Figma plan)
 - [x] Accessibility audit passing at WCAG 2.1 AA for all components (Vitest + Playwright + `@storybook/addon-a11y` set to `error`, 26/26 tests passing; a handful of pre-existing contrast bugs found and fixed along the way)
 - [ ] `size-limit` bundle size budgets in CI
