@@ -20,6 +20,19 @@ export type MoleculeUITheme = {
     dangerActive: string;
     dangerLight: string;
 
+    warning: string;
+    warningHover: string;
+    warningActive: string;
+    warningLight: string;
+
+    // Text-safe step per intent — for text/icon color on outline/ghost
+    // variants, where the base fill color doesn't always hit 4.5:1 contrast.
+    primaryText: string;
+    brandText: string;
+    successText: string;
+    dangerText: string;
+    warningText: string;
+
     background: string;
     surface: string;
     surfaceHover: string;
@@ -29,6 +42,7 @@ export type MoleculeUITheme = {
     textOnPrimary: string;
     textOnSecondary: string;
     textOnDanger: string;
+    textOnWarning: string;
     textDisabled: string;
 
     border: string;

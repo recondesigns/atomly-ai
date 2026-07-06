@@ -49,6 +49,39 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 
 ---
 
+## Color Palette Overhaul (branch: `feat/color-palette-overhaul`)
+
+> AI-native palette redesign. Full design intent, ramp hexes, and migration order in `.claude/specs/color-palette.md`. Working audit notes: sync script only wires `chip/*` component tokens; Badge styles fully hardcoded; Button fallback colors stale.
+
+- [x] Spec written — `.claude/specs/color-palette.md` (indigo primary, violet AI accent, coral brand, amber→warning, emerald success, 50–950 ramps, gradient token)
+- [x] `tokens/README.md` corrected (manual Token Studio export, real file structure, rename gotcha)
+- [x] Figma: primitive ramps updated — Primitive collection 55 → 94 vars (blue→indigo + green→emerald renamed/revalued, amber revalued as warning, red gaps filled, coral + violet created; all ramps 50–950)
+- [x] Figma: semantic layer re-aliased — Color collection 52 → 58 vars (brand→coral, thinking→violet, focus-ring→indigo@40%, surface/user→indigo, dark `*-subtle`→950 steps; new: `background/brand-active` + 5 `warning` tokens)
+- [x] Figma: `gradient/ai` paint style created (indigo→purple 135°; gradients can't be variables)
+- [x] Figma: descriptions + code syntax updated across all changed variables (61 primitive + 28 semantic + 3 component descriptions)
+- [x] USER: Token Studio export → `tokens/figma-export.json` (stale duplicate `blue`/`green` primitive groups stripped on write — Token Studio's own store still has them; delete inside Token Studio next time you're in there so future exports come out clean)
+- [x] `scripts/sync-figma-tokens.mjs` lookup keys updated (`blue/*`→`indigo/*`, `green/*`→`emerald/*`, brand→`coral/*`); new `warning` color group added (base/hover/active/light from `amber/*`); `pnpm sync:tokens` run, 34 color tokens generated and verified against spec
+- [x] `warning*` + `textOnWarning` added to `theme.types.ts` / `defaultTheme.ts`; `pnpm typecheck` clean
+- [x] **Open question resolved — white-on-amber contrast:** white on amber-500 is 2.15:1 (fails WCAG AA); `textOnWarning` = neutral-900 (8.31:1). Added matching `color/text/on-warning` Figma semantic variable (aliases neutral/900 light, neutral/0 dark).
+- [x] **Open question resolved — warning as a full component intent:** added to `ButtonIntent`/`BadgeIntent`/chip intent unions in `@atomly-ai/types`, wired into Button/Badge/Chip styles (Badge and Chip converted from fully-hardcoded to theme-driven in the process — the original task #6 fix). **Real finding along the way:** amber is lighter at every step than the other ramps, so the "base=600 doubles as solid-fill AND text-safe color" trick that works for primary/success/danger/brand breaks for warning — amber-500/600 both fail 4.5:1 as text/border on light backgrounds. Resolved by using amber-700 (`warningActive`, ~5:1) for warning's text/border everywhere, reserving amber-500/600 for solid fills only. Button gained a dedicated `outlineText` field to carry this distinction. Known minor residual: Button's warning _outline/ghost hover_ state still uses `warningHover` (amber-600, ~3.2:1) — passes the 3:1 UI-component minimum but not the 4.5:1 text minimum; flagged, not silently fixed, since it's a transient hover-only state.
+- [x] Storybook story option lists updated (Button/Badge/Chip `intent` controls + Chip's hardcoded story arrays) to include `warning`
+- [x] Storybook test suite run for real (Vitest + Playwright — Playwright's Chromium binary wasn't installed locally; installed it to get a genuine result instead of a skipped/false-pass). **Found 2 real a11y contrast failures on Chip** (`success`/`danger` intents, `color-contrast` axe rule) — confirmed via manual WCAG math these were **pre-existing bugs predating the rebrand**, not a regression: red's contrast is byte-identical before/after (4.41:1, untouched by the palette work) and old green-600 was already failing too (3.22:1 vs the new emerald-600's 3.77:1, both fail). Root cause: Chip used the intent's base `-600` fill color directly as text, the same "base color isn't always text-safe" issue we'd already found for `warning` — just less obviously, since red/green were only marginally below 4.5:1 rather than badly (like amber). Fixed by having Chip's text use `successHover`/`dangerHover` (emerald-700/red-700, ~5.2–6.5:1) instead of the base color, mirroring how Badge already did it correctly. All 26 tests pass now; `pnpm typecheck` and `pnpm lint` both clean. Manual light/dark eyeball pass in a running Storybook still open for the user.
+- [ ] Deferred: Figma `Component/Value` collection has no `warning` tokens for button/badge/chip yet (e.g. `component/badge/background/warning`). Not blocking — none of the three React components actually consume `Component/Value` today (confirmed: all three read `theme.colors` directly), so this is a design-file completeness gap, not a functional one. Worth adding whenever there's a reason to also touch Figma again (avoids a low-value Token Studio round-trip right now).
+- [x] Component Library file: confirmed variable bindings are correct (not hardcoded) — Button/Badge refreshed to the new palette after the library was republished + update accepted. **Chip did not refresh** — traced to a stale cached `blue/100` primitive import specific to that file (Figma library-sync quirk, not fixable via the plugin API; no local hardcoded value to fix on our end). Revisit if it's still stale next time the file is opened.
+- [x] Color-page swatch artboard (node 20:2) — **full rebuild**, not just relabel: renamed Blue→Indigo and Green→Emerald, rebuilt all 6 changed ramps to their live 50–950 steps (11 each), added new Coral and Violet ramp rows, added the 7 missing semantic rows (`background/brand-active`, `background/warning`, `background/warning-subtle`, `text/on-warning`, `text/warning`, `border/warning`, `icon/warning`). Auto-layout throughout meant no manual position math — verified via screenshot, height grew exactly as predicted (4788→5474, +686px).
+- [x] Component-tokens artboard (node 27:2): fixed the only two stale references — Chip card's `border/primary`/`border/success` rows said `→ blue/300`/`→ green/100`, now `→ indigo/300`/`→ emerald/100`. Full-page sweep (198 text nodes) confirmed no other stale primitive names remain.
+- [ ] Still cosmetic/optional: Cover page stats ("186 Tokens") are now even more stale than before (real count is higher) — low priority, no functional impact.
+- [x] **Dark mode added to `@atomly-ai/react`** (previously didn't exist in code at all — user caught this while checking Storybook). `sync-figma-tokens.mjs` now also reads Figma's `Color/Dark` collection into a parallel `colorDark` block in `primitives.json` (auto-flattens to `ColorDark*` constants via style-dictionary, zero config changes needed); new `darkTheme.ts` mirrors `defaultTheme.ts`, reusing light's spacing/typography/radii/transitions (mode-independent) and only swapping `colors`. `MoleculeProvider` gained a `colorScheme?: 'light' | 'dark'` prop (default `'light'`) selecting the base theme before applying overrides. Storybook toolbar has a light/dark toggle (`globalTypes.colorScheme`) wired through the preview decorator, plus a background wrapper so the canvas itself flips dark.
+- [x] **Introduced 5 new canonical theme fields** (`primaryText`/`brandText`/`successText`/`dangerText`/`warningText`) to replace the ad-hoc "reuse base/hover color as text" pattern in Button/Badge/Chip. Each is independently WCAG-verified per theme against both white/neutral-900 and the intent's own light/dark subtle background.
+- [x] **Found and fixed 3 more pre-existing WCAG contrast bugs** while doing this consolidation (on top of the 2 found earlier in Chip, see above) — never caught before because only Chip has an "all variants × all intents" story; Button/Badge don't, so these slipped through the a11y test suite: Button's `brand` outline/ghost text (coral-500 vs white = 2.8:1) and `success` outline/ghost text (emerald-600 vs white = 3.77:1); Badge's `brand` text (coral-600/`brandHover` vs white = 3.56:1). Fixed via the new `brandText`=coral-700 (5.18:1) and `successText`=emerald-700 (5.48:1).
+- [x] **Own bug caught before shipping:** while writing the sync-script edit, initially set light-mode `danger-text` to red-600 (unchanged from base) instead of the already-verified red-700 — would have reintroduced the exact Chip `danger` contrast failure fixed earlier (4.41:1, fails). Caught by the a11y test suite immediately (`pnpm vitest run` failed 2 tests), fixed, tests green again.
+- [x] **Visual dark-mode bug found via manual Storybook check** (not caught by the automated a11y suite, since it only runs against the light-theme default): Chip's `neutral` intent had hardcoded text (`#0f172a`) and border/bg colors, unaware of theme at all. In dark mode, the `outlined`/`ghost` variants (transparent background) rendered `#0f172a` text directly on the dark page background (`neutral-900` = `#0f172a`) — invisible, same color as its background. Fixed by wiring Chip's neutral intent (and its disabled state, same issue) to theme's generic `textPrimary`/`border`/`surfaceHover`/`disabled`/`textDisabled` tokens instead of hardcoded hex, so it flips correctly with the theme. Confirmed via Playwright screenshot before/after. Button has no `neutral` intent and Badge has no variant/transparent-bg concept, so neither was affected.
+- [x] Verified end-to-end: `pnpm sync:tokens`, `pnpm typecheck` (react package), `pnpm lint` (root), `pnpm vitest run` (26/26 pass) all clean; manual Playwright screenshot pass of Chip (`AllVariantsAndIntents`) and Button (ad-hoc outline/ghost × all-intents grid) in both light and dark confirms correct rendering.
+
+> **Model guidance:** Fable is **not needed** for any remaining step. Everything left is either a live browser check (Sonnet) or cosmetic Figma cleanup (Sonnet, Opus only if redesigning the artboard layout).
+
+---
+
 ## Testing
 
 - [x] Vitest unit test setup for `packages/react/src/hooks/`
@@ -80,7 +113,7 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `pre-push` hook: `build:icons` diff-check (wired in during icon pipeline)
 - [x] GitHub Actions workflow: lint → build → test on PRs
 - [x] GitHub Actions workflow: Chromatic on PRs
-- [ ] GitHub Actions workflow: publish to npm on release — blocked on rename to `@atomly-ai` first
+- [x] GitHub Actions workflow: publish to npm on release (changesets Release workflow — first publish succeeded)
 
 ---
 
@@ -107,7 +140,9 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] GitHub Actions release workflow — `changesets/action` creates version PR or publishes on merge to `main`
 - [x] `NPM_TOKEN` secret added to GitHub repo settings
 - [ ] `syncpack` installed to keep dependency versions consistent
-- [ ] First alpha publish of `@atomly-ai/react` and `@atomly-ai/vue`
+- [x] First alpha publish of `@atomly-ai/react` and `@atomly-ai/vue` (`0.2.0-alpha.0`, `alpha` dist-tag)
+- [ ] Migrate release to npm Trusted Publishing (OIDC) — add `id-token: write` + npm ≥ 11.5.1 in `release.yml`, configure trusted publisher, then delete `NPM_TOKEN` secret
+- [ ] Exit changesets alpha pre-release mode (`pnpm changeset pre exit`) when ready for a stable release
 
 ---
 

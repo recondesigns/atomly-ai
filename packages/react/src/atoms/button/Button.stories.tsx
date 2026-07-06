@@ -15,7 +15,7 @@ const meta = {
     },
     intent: {
       control: 'inline-radio',
-      options: ['primary', 'success', 'danger', 'brand'],
+      options: ['primary', 'success', 'danger', 'brand', 'warning'],
     },
     children: {
       control: 'text',

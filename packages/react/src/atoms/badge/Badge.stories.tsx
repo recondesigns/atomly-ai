@@ -11,7 +11,7 @@ const meta = {
   argTypes: {
     intent: {
       control: 'inline-radio',
-      options: ['neutral', 'primary', 'success', 'danger', 'brand'],
+      options: ['neutral', 'primary', 'success', 'danger', 'brand', 'warning'],
     },
     size: {
       control: 'inline-radio',
