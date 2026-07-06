@@ -1,6 +1,6 @@
 {
   "name": "@atomly-ai/website",
-  "version": "0.0.3-alpha.1",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
