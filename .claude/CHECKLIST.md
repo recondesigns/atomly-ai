@@ -141,8 +141,9 @@ Granular checklist for tooling, DX, and infrastructure work. Claude updates this
 - [x] `NPM_TOKEN` secret added to GitHub repo settings
 - [ ] `syncpack` installed to keep dependency versions consistent
 - [x] First alpha publish of `@atomly-ai/react` and `@atomly-ai/vue` (`0.2.0-alpha.0`, `alpha` dist-tag)
+- [x] Second alpha publish (`0.2.0-alpha.1`, color palette + dark mode). **Found a real npm dist-tag bug while verifying it published correctly:** `latest` pointed at `0.2.0-alpha.1` while `alpha` was frozen at `0.2.0-alpha.0` — backwards from intended. Root-caused to `@changesets/cli`'s own publish logic (`getReleaseTag`/`getUnpublishedPackages` in `changesets-cli.cjs.js`): while a package's `publishedState` is `"only-pre"` (every published version so far shares the pre-release tag, i.e. no "regular" release has ever happened), changesets deliberately publishes to `latest` instead of the configured tag — intentional, so `npm install` isn't stuck on the very first alpha forever. Consequence: the `alpha` tag can never move again, and every future alpha release would repeat the same "latest = newest alpha" pattern, for as long as pre-release mode continues.
 - [ ] Migrate release to npm Trusted Publishing (OIDC) — add `id-token: write` + npm ≥ 11.5.1 in `release.yml`, configure trusted publisher, then delete `NPM_TOKEN` secret
-- [ ] Exit changesets alpha pre-release mode (`pnpm changeset pre exit`) when ready for a stable release
+- [x] Exit changesets alpha pre-release mode (`pnpm changeset pre exit`, PR #51) — the actual fix for the dist-tag issue above, not a workaround: collapses the two accumulated alpha changesets into a single clean `0.2.0` (no prerelease suffix) on the next release, which correctly publishes to `latest` since it's a real release. Pre-release mode can be safely re-entered later (`pnpm changeset pre enter <tag>`, e.g. a `beta` phase before a future major) without hitting this same issue, since the `only-pre` condition only triggers when a package has _never_ had a regular release.
 
 ---
 
