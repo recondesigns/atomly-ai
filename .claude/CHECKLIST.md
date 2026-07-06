@@ -199,8 +199,8 @@ Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG so
 
 ## Storybook Enhancements
 
-- [ ] `@storybook/addon-designs` installed — embeds Figma frames in story panels
-- [ ] Figma frame links added to all existing stories
+- [x] `@storybook/addon-designs` installed — embeds Figma frames in story panels. Added to both React and Vue Storybook configs (`addon-designs@11.1.3`, peer-compatible with our Storybook 10.2.10). Wired a `design` parameter on Button's story meta (using the Component Library file link from `.claude/specs/button.md`) as a working example — confirmed via Playwright screenshot that the "Design" tab appears and routes correctly in the addon panel. The embedded Figma iframe itself 403'd in the headless test browser (no Figma session/auth) — expected, since the file likely isn't set to public sharing; should render fine in an authenticated browser.
+- [ ] Figma frame links added to all existing stories (only Button has one so far, added as part of the above)
 - [ ] Storybook deployed (Chromatic hosting or Vercel)
 
 ---
