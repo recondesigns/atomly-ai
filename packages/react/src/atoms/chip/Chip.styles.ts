@@ -3,38 +3,90 @@ import type { ChipVariant, ChipIntent, ChipSize } from '@atomly-ai/types';
 
 type ChipColors = { bg: string; border: string; text: string };
 
-const filledColors: Record<ChipIntent, ChipColors> = {
-  neutral: { bg: '#f1f5f9', border: '#e2e8f0', text: '#0f172a' },
-  primary: { bg: '#eff6ff', border: '#bfdbfe', text: '#2563eb' },
-  success: { bg: '#f0fdf4', border: '#dcfce7', text: '#00a63e' },
-  danger: { bg: '#fef2f2', border: '#fee2e2', text: '#dc2626' },
+type ChipThemeColors = {
+  primary: string;
+  success: string;
+  danger: string;
+  // Text uses the theme's `<intent>Text` step — a step darker (light theme) or
+  // lighter (dark theme) than the intent's base fill, independently WCAG-verified
+  // to hit 4.5:1 against both white/neutral-900 and the intent's own light/dark
+  // background. Border/bg keep using the base color — only text needs the shift.
+  primaryText: string;
+  successText: string;
+  dangerText: string;
+  warningText: string;
+  warningActive: string;
+  primaryLight: string;
+  successLight: string;
+  dangerLight: string;
+  warningLight: string;
+  // Neutral intent (and the disabled state) has no dedicated palette — it
+  // rides the theme's generic text/border/surface tokens so it flips
+  // correctly between light and dark (a hardcoded near-black text color
+  // would be invisible against a dark page background on the outlined/ghost
+  // variants' transparent bg).
+  textPrimary: string;
+  textDisabled: string;
+  border: string;
+  surfaceHover: string;
+  disabled: string;
 };
 
-const outlinedColors: Record<ChipIntent, ChipColors> = {
-  neutral: { bg: 'transparent', border: '#e2e8f0', text: '#0f172a' },
-  primary: { bg: 'transparent', border: '#2563eb', text: '#2563eb' },
-  success: { bg: 'transparent', border: '#00a63e', text: '#00a63e' },
-  danger: { bg: 'transparent', border: '#dc2626', text: '#dc2626' },
+const defaultColors: ChipThemeColors = {
+  primary: '#4F46E5',
+  success: '#059669',
+  danger: '#DC2626',
+  primaryText: '#4F46E5',
+  successText: '#047857',
+  dangerText: '#DC2626',
+  warningText: '#B45309',
+  warningActive: '#B45309',
+  primaryLight: '#EEF2FF',
+  successLight: '#ECFDF5',
+  dangerLight: '#FEF2F2',
+  warningLight: '#FFFBEB',
+  textPrimary: '#0F172A',
+  textDisabled: '#94A3B8',
+  border: '#E2E8F0',
+  surfaceHover: '#F1F5F9',
+  disabled: '#F1F5F9',
 };
 
-const ghostColors: Record<ChipIntent, ChipColors> = {
-  neutral: { bg: 'transparent', border: 'transparent', text: '#0f172a' },
-  primary: { bg: 'transparent', border: 'transparent', text: '#2563eb' },
-  success: { bg: 'transparent', border: 'transparent', text: '#00a63e' },
-  danger: { bg: 'transparent', border: 'transparent', text: '#dc2626' },
-};
+function buildVariantColors(
+  colors: ChipThemeColors
+): Record<ChipVariant, Record<ChipIntent, ChipColors>> {
+  return {
+    filled: {
+      neutral: { bg: colors.surfaceHover, border: colors.border, text: colors.textPrimary },
+      primary: { bg: colors.primaryLight, border: colors.primary, text: colors.primaryText },
+      success: { bg: colors.successLight, border: colors.success, text: colors.successText },
+      danger: { bg: colors.dangerLight, border: colors.danger, text: colors.dangerText },
+      warning: { bg: colors.warningLight, border: colors.warningActive, text: colors.warningText },
+    },
+    outlined: {
+      neutral: { bg: 'transparent', border: colors.border, text: colors.textPrimary },
+      primary: { bg: 'transparent', border: colors.primary, text: colors.primaryText },
+      success: { bg: 'transparent', border: colors.success, text: colors.successText },
+      danger: { bg: 'transparent', border: colors.danger, text: colors.dangerText },
+      warning: { bg: 'transparent', border: colors.warningActive, text: colors.warningText },
+    },
+    ghost: {
+      neutral: { bg: 'transparent', border: 'transparent', text: colors.textPrimary },
+      primary: { bg: 'transparent', border: 'transparent', text: colors.primaryText },
+      success: { bg: 'transparent', border: 'transparent', text: colors.successText },
+      danger: { bg: 'transparent', border: 'transparent', text: colors.dangerText },
+      warning: { bg: 'transparent', border: 'transparent', text: colors.warningText },
+    },
+  };
+}
 
-const variantColors: Record<ChipVariant, Record<ChipIntent, ChipColors>> = {
-  filled: filledColors,
-  outlined: outlinedColors,
-  ghost: ghostColors,
-};
-
-const disabledColors: Record<ChipVariant, ChipColors> = {
-  filled: { bg: '#f8fafc', border: '#e2e8f0', text: '#94a3b8' },
-  outlined: { bg: 'transparent', border: '#e2e8f0', text: '#94a3b8' },
-  ghost: { bg: 'transparent', border: 'transparent', text: '#94a3b8' },
-};
+function buildDisabledColors(colors: ChipThemeColors): Record<ChipVariant, ChipColors> {
+  return {
+    filled: { bg: colors.disabled, border: colors.border, text: colors.textDisabled },
+    outlined: { bg: 'transparent', border: colors.border, text: colors.textDisabled },
+    ghost: { bg: 'transparent', border: 'transparent', text: colors.textDisabled },
+  };
+}
 
 type SizeStyle = { paddingX: string; paddingY: string; fontSize: string };
 
@@ -53,6 +105,9 @@ type StyledChipProps = {
 
 const StyledChip = styled.span<StyledChipProps>(
   ({ theme, $variant, $intent, $size, $isDisabled }) => {
+    const themeColors = theme.colors ?? defaultColors;
+    const variantColors = buildVariantColors(themeColors);
+    const disabledColors = buildDisabledColors(themeColors);
     const colors = $isDisabled ? disabledColors[$variant] : variantColors[$variant][$intent];
     const size = sizeStyles[$size];
 

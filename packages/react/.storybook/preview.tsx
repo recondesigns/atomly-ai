@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react-vite';
-import { MoleculeProvider } from '../src/theme';
+import { MoleculeProvider, defaultTheme, darkTheme } from '../src/theme';
 
 const preview: Preview = {
   parameters: {
@@ -17,12 +17,37 @@ const preview: Preview = {
       test: 'error',
     },
   },
+  globalTypes: {
+    colorScheme: {
+      description: 'Light/dark color scheme',
+      toolbar: {
+        title: 'Theme',
+        icon: 'circlehollow',
+        items: [
+          { value: 'light', icon: 'sun', title: 'Light' },
+          { value: 'dark', icon: 'moon', title: 'Dark' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+  initialGlobals: {
+    colorScheme: 'light',
+  },
   decorators: [
-    (Story) => (
-      <MoleculeProvider>
-        <Story />
-      </MoleculeProvider>
-    ),
+    (Story, context) => {
+      const colorScheme = context.globals.colorScheme === 'dark' ? 'dark' : 'light';
+      const background =
+        colorScheme === 'dark' ? darkTheme.colors.background : defaultTheme.colors.background;
+
+      return (
+        <MoleculeProvider colorScheme={colorScheme}>
+          <div style={{ background, minHeight: '100vh', padding: '1rem' }}>
+            <Story />
+          </div>
+        </MoleculeProvider>
+      );
+    },
   ],
 };
 

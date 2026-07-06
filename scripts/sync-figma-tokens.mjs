@@ -28,7 +28,7 @@ try {
 }
 
 // Build a flat lookup: "family/scale" → hex value string
-// Handles both nested tokens (blue/600) and flat tokens (white, black)
+// Handles both nested tokens (indigo/600) and flat tokens (white, black)
 function buildLookup(collection) {
   const lookup = {};
 
@@ -113,39 +113,49 @@ const px = (name, fallback) => toPx(lookup, name, fallback);
 const rem = (name, fallback) => toRem(lookup, name, fallback);
 const num = (name, fallback) => toNum(lookup, name, fallback);
 
-// Derive focus-ring from blue/600 at 40% opacity
-const blue600 = get('blue/600', '#2563EB');
-const r = parseInt(blue600.slice(1, 3), 16);
-const g = parseInt(blue600.slice(3, 5), 16);
-const b = parseInt(blue600.slice(5, 7), 16);
-const focusRing = `rgba(${r}, ${g}, ${b}, 0.4)`;
+// Derive an rgba(...) at 40% opacity from a hex color
+function alpha40(hex) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, 0.4)`;
+}
+
+const focusRing = alpha40(get('indigo/600', '#4F46E5'));
+const focusRingDark = alpha40(get('indigo/500', '#6366F1'));
 
 // Map Token Studio primitives → tokens/primitives.json (DTCG format)
 const primitives = {
   color: {
-    // Primary (blue scale)
-    primary: { $value: get('blue/600', '#2563EB'), $type: 'color' },
-    'primary-hover': { $value: get('blue/700', '#1D4ED8'), $type: 'color' },
-    'primary-active': { $value: get('blue/800', '#1E40AF'), $type: 'color' },
-    'primary-light': { $value: get('blue/100', '#EFF6FF'), $type: 'color' },
+    // Primary (indigo scale — was blue)
+    primary: { $value: get('indigo/600', '#4F46E5'), $type: 'color' },
+    'primary-hover': { $value: get('indigo/700', '#4338CA'), $type: 'color' },
+    'primary-active': { $value: get('indigo/800', '#3730A3'), $type: 'color' },
+    'primary-light': { $value: get('indigo/50', '#EEF2FF'), $type: 'color' },
 
-    // Brand (amber scale)
-    brand: { $value: get('amber/500', '#FE9A00'), $type: 'color' },
-    'brand-hover': { $value: get('amber/600', '#E17100'), $type: 'color' },
-    'brand-active': { $value: get('amber/600', '#E17100'), $type: 'color' },
-    'brand-light': { $value: get('amber/100', '#FFFBEB'), $type: 'color' },
+    // Brand (coral scale — was amber)
+    brand: { $value: get('coral/500', '#F97316'), $type: 'color' },
+    'brand-hover': { $value: get('coral/600', '#EA580C'), $type: 'color' },
+    'brand-active': { $value: get('coral/700', '#C2410C'), $type: 'color' },
+    'brand-light': { $value: get('coral/50', '#FFF7ED'), $type: 'color' },
 
-    // Success (green scale)
-    success: { $value: get('green/600', '#00A63E'), $type: 'color' },
-    'success-hover': { $value: get('green/700', '#008236'), $type: 'color' },
-    'success-active': { $value: get('green/800', '#016630'), $type: 'color' },
-    'success-light': { $value: get('green/50', '#F0FDF4'), $type: 'color' },
+    // Success (emerald scale — was green)
+    success: { $value: get('emerald/600', '#059669'), $type: 'color' },
+    'success-hover': { $value: get('emerald/700', '#047857'), $type: 'color' },
+    'success-active': { $value: get('emerald/800', '#065F46'), $type: 'color' },
+    'success-light': { $value: get('emerald/50', '#ECFDF5'), $type: 'color' },
 
-    // Danger (red scale)
+    // Danger (red scale — unchanged)
     danger: { $value: get('red/600', '#DC2626'), $type: 'color' },
     'danger-hover': { $value: get('red/700', '#B91C1C'), $type: 'color' },
     'danger-active': { $value: get('red/800', '#991B1B'), $type: 'color' },
     'danger-light': { $value: get('red/50', '#FEF2F2'), $type: 'color' },
+
+    // Warning (amber scale — newly freed up now that brand moved to coral)
+    warning: { $value: get('amber/500', '#F59E0B'), $type: 'color' },
+    'warning-hover': { $value: get('amber/600', '#D97706'), $type: 'color' },
+    'warning-active': { $value: get('amber/700', '#B45309'), $type: 'color' },
+    'warning-light': { $value: get('amber/50', '#FFFBEB'), $type: 'color' },
 
     // Surfaces
     background: { $value: get('neutral/0', '#FFFFFF'), $type: 'color' },
@@ -158,15 +168,87 @@ const primitives = {
     'text-on-primary': { $value: get('white', '#FFFFFF'), $type: 'color' },
     'text-on-secondary': { $value: get('neutral/900', '#0F172A'), $type: 'color' },
     'text-on-danger': { $value: get('white', '#FFFFFF'), $type: 'color' },
+    // Dark, not white — white-on-amber-500 is 2.15:1 (fails WCAG AA); neutral/900 is 8.31:1.
+    'text-on-warning': { $value: get('neutral/900', '#0F172A'), $type: 'color' },
     'text-disabled': { $value: get('neutral/400', '#94A3B8'), $type: 'color' },
 
     // Borders
     border: { $value: get('neutral/200', '#E2E8F0'), $type: 'color' },
-    'border-focus': { $value: get('blue/600', '#2563EB'), $type: 'color' },
+    'border-focus': { $value: get('indigo/600', '#4F46E5'), $type: 'color' },
 
     // States
     disabled: { $value: get('neutral/100', '#F1F5F9'), $type: 'color' },
     'focus-ring': { $value: focusRing },
+
+    // Text-safe step per intent, for use as text/icon color on outline/ghost
+    // variants. The base fill color isn't always dark enough to hit 4.5:1 —
+    // this fixed real WCAG failures in Button (brand/success outline text)
+    // and Badge (brand text) that were using the base -500/-600 color directly.
+    'primary-text': { $value: get('indigo/600', '#4F46E5'), $type: 'color' },
+    'brand-text': { $value: get('coral/700', '#C2410C'), $type: 'color' },
+    'success-text': { $value: get('emerald/700', '#047857'), $type: 'color' },
+    'danger-text': { $value: get('red/700', '#B91C1C'), $type: 'color' },
+    'warning-text': { $value: get('amber/700', '#B45309'), $type: 'color' },
+  },
+
+  // Dark-mode counterpart of `color` above. Values follow Figma's Color/Dark
+  // collection: primary/brand/success/danger/warning shift to lighter, less
+  // saturated steps so they read against dark surfaces (or stay the same
+  // base step where the Figma dark collection kept it unchanged, e.g. brand/
+  // success/danger/warning solid fills). `<intent>-text` values are
+  // independently WCAG-verified against both the intent's own dark subtle
+  // background and the neutral-900 page background.
+  colorDark: {
+    primary: { $value: get('indigo/500', '#6366F1'), $type: 'color' },
+    'primary-hover': { $value: get('indigo/400', '#818CF8'), $type: 'color' },
+    'primary-active': { $value: get('indigo/300', '#A5B4FC'), $type: 'color' },
+    'primary-light': { $value: get('indigo/950', '#1E1B4B'), $type: 'color' },
+
+    brand: { $value: get('coral/500', '#F97316'), $type: 'color' },
+    'brand-hover': { $value: get('coral/400', '#FB923C'), $type: 'color' },
+    'brand-active': { $value: get('coral/300', '#FDBA74'), $type: 'color' },
+    'brand-light': { $value: get('coral/950', '#431407'), $type: 'color' },
+
+    success: { $value: get('emerald/600', '#059669'), $type: 'color' },
+    'success-hover': { $value: get('emerald/400', '#34D399'), $type: 'color' },
+    'success-active': { $value: get('emerald/300', '#6EE7B7'), $type: 'color' },
+    'success-light': { $value: get('emerald/950', '#022C22'), $type: 'color' },
+
+    danger: { $value: get('red/600', '#DC2626'), $type: 'color' },
+    'danger-hover': { $value: get('red/400', '#F87171'), $type: 'color' },
+    'danger-active': { $value: get('red/300', '#FCA5A5'), $type: 'color' },
+    'danger-light': { $value: get('red/950', '#450A0A'), $type: 'color' },
+
+    warning: { $value: get('amber/500', '#F59E0B'), $type: 'color' },
+    'warning-hover': { $value: get('amber/400', '#FBBF24'), $type: 'color' },
+    'warning-active': { $value: get('amber/300', '#FCD34D'), $type: 'color' },
+    'warning-light': { $value: get('amber/950', '#451A03'), $type: 'color' },
+
+    background: { $value: get('neutral/900', '#0F172A'), $type: 'color' },
+    surface: { $value: get('neutral/800', '#1E293B'), $type: 'color' },
+    'surface-hover': { $value: get('neutral/700', '#334155'), $type: 'color' },
+
+    'text-primary': { $value: get('neutral/0', '#FFFFFF'), $type: 'color' },
+    'text-success': { $value: get('white', '#FFFFFF'), $type: 'color' },
+    'text-on-primary': { $value: get('white', '#FFFFFF'), $type: 'color' },
+    'text-on-secondary': { $value: get('neutral/0', '#FFFFFF'), $type: 'color' },
+    'text-on-danger': { $value: get('white', '#FFFFFF'), $type: 'color' },
+    // Same reasoning as light mode: background/warning stays amber-500 in dark
+    // too, so white-on-amber-500 still fails — neutral/900 still passes.
+    'text-on-warning': { $value: get('neutral/900', '#0F172A'), $type: 'color' },
+    'text-disabled': { $value: get('neutral/600', '#475569'), $type: 'color' },
+
+    border: { $value: get('neutral/700', '#334155'), $type: 'color' },
+    'border-focus': { $value: get('indigo/500', '#6366F1'), $type: 'color' },
+
+    disabled: { $value: get('neutral/700', '#334155'), $type: 'color' },
+    'focus-ring': { $value: focusRingDark },
+
+    'primary-text': { $value: get('indigo/400', '#818CF8'), $type: 'color' },
+    'brand-text': { $value: get('coral/400', '#FB923C'), $type: 'color' },
+    'success-text': { $value: get('emerald/500', '#10B981'), $type: 'color' },
+    'danger-text': { $value: get('red/400', '#F87171'), $type: 'color' },
+    'warning-text': { $value: get('amber/400', '#FBBF24'), $type: 'color' },
   },
 
   spacing: {
@@ -296,9 +378,9 @@ const primitives = {
       default: { $value: compGet('chip/background/neutral', '#F1F5F9'), $type: 'color' },
       hover: { $value: get('neutral/200', '#E2E8F0'), $type: 'color' },
       primary: { $value: compGet('chip/background/primary', '#EFF6FF'), $type: 'color' },
-      'primary-hover': { $value: get('blue/200', '#DBEAFE'), $type: 'color' },
+      'primary-hover': { $value: get('indigo/200', '#C7D2FE'), $type: 'color' },
       success: { $value: compGet('chip/background/success', '#F0FDF4'), $type: 'color' },
-      'success-hover': { $value: get('green/100', '#DCFCE7'), $type: 'color' },
+      'success-hover': { $value: get('emerald/100', '#D1FAE5'), $type: 'color' },
       danger: { $value: compGet('chip/background/danger', '#FEF2F2'), $type: 'color' },
       'danger-hover': { $value: get('red/100', '#FEE2E2'), $type: 'color' },
       disabled: { $value: compGet('chip/background/disabled', '#F1F5F9'), $type: 'color' },
@@ -312,8 +394,8 @@ const primitives = {
     },
     border: {
       default: { $value: compGet('chip/border/default', '#E2E8F0'), $type: 'color' },
-      primary: { $value: get('blue/300', '#BFDBFE'), $type: 'color' },
-      success: { $value: get('green/100', '#DCFCE7'), $type: 'color' },
+      primary: { $value: get('indigo/300', '#A5B4FC'), $type: 'color' },
+      success: { $value: get('emerald/100', '#D1FAE5'), $type: 'color' },
       danger: { $value: get('red/100', '#FEE2E2'), $type: 'color' },
       focus: { $value: compGet('chip/border/focused', '#2563EB'), $type: 'color' },
       disabled: { $value: compGet('chip/border/disabled', '#E2E8F0'), $type: 'color' },

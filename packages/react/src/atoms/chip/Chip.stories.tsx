@@ -22,7 +22,7 @@ const meta = {
     },
     intent: {
       control: 'inline-radio',
-      options: ['neutral', 'primary', 'success', 'danger'],
+      options: ['neutral', 'primary', 'success', 'danger', 'warning'],
     },
     size: {
       control: 'inline-radio',
@@ -54,6 +54,7 @@ export const Intents: Story = {
       <Chip intent="primary">Primary</Chip>
       <Chip intent="success">Success</Chip>
       <Chip intent="danger">Danger</Chip>
+      <Chip intent="warning">Warning</Chip>
     </div>
   ),
 };
@@ -73,7 +74,7 @@ export const AllVariantsAndIntents: Story = {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
       {(['filled', 'outlined', 'ghost'] as const).map((variant) => (
         <div key={variant} style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-          {(['neutral', 'primary', 'success', 'danger'] as const).map((intent) => (
+          {(['neutral', 'primary', 'success', 'danger', 'warning'] as const).map((intent) => (
             <Chip key={intent} variant={variant} intent={intent}>
               {intent}
             </Chip>

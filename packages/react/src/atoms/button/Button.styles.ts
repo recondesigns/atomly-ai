@@ -63,26 +63,36 @@ export const StyledButton = styled.button<{
   /* Intent + variant colors */
   ${({ theme, $variant, $intent, $isPressed, $isDisabled }) => {
     const colors = theme.colors ?? {
-      primary: '#2563EB',
-      primaryHover: '#1D4ED8',
-      primaryActive: '#1E40AF',
-      primaryLight: '#EFF6FF',
-      success: '#00A63E',
-      successHover: '#008236',
-      successActive: '#016630',
-      successLight: '#F0FDF4',
+      primary: '#4F46E5',
+      primaryHover: '#4338CA',
+      primaryActive: '#3730A3',
+      primaryLight: '#EEF2FF',
+      success: '#059669',
+      successHover: '#047857',
+      successActive: '#065F46',
+      successLight: '#ECFDF5',
       danger: '#DC2626',
       dangerHover: '#B91C1C',
       dangerActive: '#991B1B',
       dangerLight: '#FEF2F2',
-      brand: '#FE9A00',
-      brandHover: '#E08800',
-      brandActive: '#C27A00',
+      brand: '#F97316',
+      brandHover: '#EA580C',
+      brandActive: '#C2410C',
       brandLight: '#FFF7ED',
+      warning: '#F59E0B',
+      warningHover: '#D97706',
+      warningActive: '#B45309',
+      warningLight: '#FFFBEB',
+      primaryText: '#4F46E5',
+      brandText: '#C2410C',
+      successText: '#047857',
+      dangerText: '#DC2626',
+      warningText: '#B45309',
       textOnPrimary: '#FFFFFF',
+      textOnWarning: '#0F172A',
       textDisabled: '#94A3B8',
       disabled: '#CBD5E1',
-      focusRing: 'rgba(37, 99, 235, 0.4)',
+      focusRing: 'rgba(79, 70, 229, 0.4)',
     };
 
     if ($isDisabled) {
@@ -101,6 +111,12 @@ export const StyledButton = styled.button<{
         active: string;
         light: string;
         contrastText: string;
+        // Text/border color for outline & ghost variants (rendered directly on the
+        // page background). Uses the theme's `<intent>Text` step, which is
+        // independently WCAG-verified against the page background for both
+        // light and dark themes — the base fill color isn't always dark/light
+        // enough on its own (e.g. brand/success base colors fail against white).
+        outlineText: string;
       }
     > = {
       primary: {
@@ -109,6 +125,7 @@ export const StyledButton = styled.button<{
         active: colors.primaryActive,
         light: colors.primaryLight,
         contrastText: colors.textOnPrimary,
+        outlineText: colors.primaryText,
       },
       success: {
         base: colors.success,
@@ -116,6 +133,7 @@ export const StyledButton = styled.button<{
         active: colors.successActive,
         light: colors.successLight,
         contrastText: colors.textOnPrimary,
+        outlineText: colors.successText,
       },
       danger: {
         base: colors.danger,
@@ -123,6 +141,7 @@ export const StyledButton = styled.button<{
         active: colors.dangerActive,
         light: colors.dangerLight,
         contrastText: colors.textOnPrimary,
+        outlineText: colors.dangerText,
       },
       brand: {
         base: colors.brand,
@@ -130,6 +149,15 @@ export const StyledButton = styled.button<{
         active: colors.brandActive,
         light: colors.brandLight,
         contrastText: colors.textOnPrimary,
+        outlineText: colors.brandText,
+      },
+      warning: {
+        base: colors.warning,
+        hover: colors.warningHover,
+        active: colors.warningActive,
+        light: colors.warningLight,
+        contrastText: colors.textOnWarning,
+        outlineText: colors.warningText,
       },
     };
 
@@ -145,8 +173,8 @@ export const StyledButton = styled.button<{
       `,
       outline: `
         background: ${$isPressed ? `${c.light}` : 'transparent'};
-        color: ${c.base};
-        border: 1px solid ${c.base};
+        color: ${c.outlineText};
+        border: 1px solid ${c.outlineText};
         &:hover:not(:disabled) {
           background: ${c.light};
           border-color: ${c.hover};
@@ -154,10 +182,10 @@ export const StyledButton = styled.button<{
         }
       `,
       ghost: `
-        background: ${$isPressed ? `${c.base}14` : 'transparent'};
-        color: ${c.base};
+        background: ${$isPressed ? `${c.outlineText}14` : 'transparent'};
+        color: ${c.outlineText};
         &:hover:not(:disabled) {
-          background: ${c.base}0A;
+          background: ${c.outlineText}0A;
         }
       `,
     };
@@ -167,7 +195,7 @@ export const StyledButton = styled.button<{
 
   /* Focus ring — visible on keyboard focus, not click */
   &:focus-visible {
-    outline: 2px solid ${({ theme }) => theme.colors?.focusRing ?? 'rgba(37, 99, 235, 0.4)'};
+    outline: 2px solid ${({ theme }) => theme.colors?.focusRing ?? 'rgba(79, 70, 229, 0.4)'};
     outline-offset: 2px;
   }
 `;

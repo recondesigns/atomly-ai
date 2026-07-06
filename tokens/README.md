@@ -6,15 +6,25 @@ Raw design token exports from the Figma Design Tokens file. This is the source o
 
 ```
 tokens/
-  primitives.json    ← raw color, spacing, typography, radii, transition values
-  semantic.json      ← role-based tokens (e.g. color.action.primary) when added
+  figma-export.json  ← raw Token Studio export from Figma (all collections, all modes)
+  primitives.json    ← mapped DTCG-format values consumed by Style Dictionary
 ```
 
 ## Workflow
 
-1. `/sync-tokens` fetches variables from Figma and writes raw output here
-2. The command then maps the values into `packages/react/src/theme/defaultTheme.ts`
-3. If token structure changes in Figma, this file reflects it — diff it to understand what changed
+The export from Figma is **manual** — nothing here talks to the Figma API.
+
+1. In Figma, open the **Token Studio** plugin → export all tokens → save the file as `tokens/figma-export.json` (overwrite the existing file)
+2. Run `pnpm sync:tokens`, which does two things in sequence:
+   - `scripts/sync-figma-tokens.mjs` reads `figma-export.json`, maps primitive names (e.g. `blue/600`) to the theme structure, and writes `primitives.json`
+   - `style-dictionary.config.mjs` reads `primitives.json` and regenerates the consumer outputs: `packages/vue/src/tokens/primitives.css`, `packages/react/src/theme/tokens.generated.js`, and its `.d.ts`
+3. Diff `figma-export.json` to understand what changed in Figma
+
+See `.claude/commands/sync-tokens.md` for the full checklist (verification, typecheck, which files to commit together).
+
+## If token names change in Figma
+
+`sync-figma-tokens.mjs` looks up primitives **by name** (e.g. `get('blue/600', fallback)`). If a ramp is renamed or restructured in Figma, update the lookup keys in the script in the same pass — otherwise the sync succeeds but silently falls back to hardcoded (stale) values.
 
 ## Do not hand-edit these files
 
