@@ -19,7 +19,7 @@ Get the core infrastructure solid before building out the component library.
 - [x] Husky + commitlint + lint-staged
 - [x] GitHub Actions CI pipeline (lint → build → test)
 - [x] Changesets for monorepo versioning
-- [x] First npm publish (alpha, later exited pre-release mode for a clean `0.2.0`)
+- [x] First npm publish (alpha, later exited pre-release mode for a clean `0.2.0`, re-entered alpha while Phase 3 buildout continues)
 
 ---
 
@@ -56,6 +56,7 @@ Build out the foundational atom and molecule set.
 - [ ] Spinner / Loader
 - [ ] Tooltip
 - [ ] Divider
+- [ ] StatusDot
 
 **Molecules**
 
@@ -87,6 +88,8 @@ Build out the foundational atom and molecule set.
 
 ## Phase 5 — Documentation Site
 
+- [x] Site-only `Button` component for website chrome (built from Figma "Website" file, node 43:538) — not part of `@atomly-ai/react`
+- [x] Emotion SSR cache registry (`EmotionRegistry`) wired into the root layout — fixes a hydration mismatch from missing `useServerInsertedHTML` setup
 - [ ] Documentation site structure (`packages/website`)
 - [ ] Component pages with live examples, props table, usage guidelines
 - [ ] Design token reference page

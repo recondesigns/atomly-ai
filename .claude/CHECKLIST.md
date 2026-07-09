@@ -195,6 +195,7 @@ Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG so
 - [ ] Toggle / Switch
 - [ ] Checkbox
 - [ ] Avatar
+- [ ] StatusDot — small colored dot indicating status (online/offline/away, or intent-based)
 
 ---
 
