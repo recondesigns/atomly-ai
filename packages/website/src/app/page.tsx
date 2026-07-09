@@ -1,12 +1,14 @@
 'use client';
 import Image from 'next/image';
 import styles from './page.module.css';
-import { Button } from '@atomly-ai/react';
+import { Button } from '@/components/button';
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Button label="Click me" onClick={() => alert('Button clicked.')} />
+      <Button variant="contained" size="lg" icon onClick={() => alert('Button clicked.')}>
+        Click me
+      </Button>
       <main className={styles.main}>
         <Image
           className={styles.logo}
