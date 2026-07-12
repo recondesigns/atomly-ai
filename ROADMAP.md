@@ -34,14 +34,13 @@ Establish the design token pipeline so components are tied to Figma.
 - [ ] Token documentation in Storybook
 - [x] AI-native color palette redesign — indigo primary, violet AI accent, coral brand, amber promoted to a full `warning` intent, emerald success (see `.claude/specs/color-palette.md`)
 - [x] Dark mode theming layer — `colorDark` token block sourced from Figma's `Color/Dark` collection, `darkTheme` export, `MoleculeProvider` `colorScheme` prop, Storybook light/dark toggle
+- [ ] Sync new `color/background/{intent}-alpha-20` / `-alpha-40` semantic variables (added directly in the Design Tokens Figma file, 8 intents × 2 alpha steps) through `tokens/figma-export.json` → `sync-figma-tokens.mjs`, and update `.claude/specs/color-palette.md` to document them — planned for a separate branch
 
 ---
 
 ## Phase 3 — Core Component Library (current)
 
-Build out the foundational atom and molecule set.
-
-**Atoms**
+Build out the foundational component set.
 
 - [x] Button (`solid`/`outline`/`ghost`; `primary`/`success`/`danger`/`brand`/`warning` intents)
 - [x] Badge (`filled`; `neutral`/`primary`/`success`/`danger`/`brand`/`warning` intents)
@@ -56,10 +55,11 @@ Build out the foundational atom and molecule set.
 - [ ] Spinner / Loader
 - [ ] Tooltip
 - [ ] Divider
-- [ ] StatusDot
-
-**Molecules**
-
+- [ ] StatusDot — code implementation removed, restarting from scratch. Target shape unchanged: `neutral`/`primary`/`success`/`danger`/`warning` intents; `sm`/`md`/`lg` sizes; optional `breathing`/`tool-calling` animations (Figma component library, node 88:104)
+- [ ] AI Label — based on Carbon Design System's AI Label component; small badge marking AI-generated/AI-assisted content, opens a popover on interaction that explains what the AI did and why (depends on the planned Popover molecule below)
+- [ ] AIButton — needs research; likely a Button variant that composes the AI Label pattern (Carbon-style)
+- [ ] AIBadge — needs research; likely a Badge variant that composes the AI Label pattern
+- [ ] AITextField — needs research; likely a text input variant that composes the AI Label pattern
 - [x] ButtonGroup
 - [ ] FormField (label + input + error)
 - [ ] Modal / Dialog
@@ -95,7 +95,9 @@ Build out the foundational atom and molecule set.
 - [ ] Design token reference page
 - [ ] Getting started / installation guide
 - [ ] Contribution guide
-- [ ] Changelog page (driven by Changesets)
+- [ ] Changelog infrastructure (sourced from Changesets), surfaced in two places:
+  - [ ] Website changelog page
+  - [ ] Per-package changelog in each Storybook — React's Storybook shows only `@atomly-ai/react` changes, Vue's shows only `@atomly-ai/vue` changes (not a combined feed)
 
 ---
 
