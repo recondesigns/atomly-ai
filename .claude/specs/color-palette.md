@@ -73,6 +73,16 @@ amber ramp has no third dark step).
 | ---- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
 | Hex  | `#fef2f2` | `#fee2e2` | `#fecaca` | `#fca5a5` | `#f87171` | `#ef4444` | `#dc2626` | `#b91c1c` | `#991b1b` | `#7f1d1d` | `#450a0a` |
 
+### Blue — `info` (net-new, added 2026-07-09)
+
+Revived rather than removed — see the resolved open question below. Same Tailwind-standard
+blue scale this repo used for `primary` before the indigo migration (600 step is the exact
+`#2563eb` the old hardcoded focus-ring used).
+
+| Step | 50        | 100       | 200       | 300       | 400       | 500       | 600 ★     | 700       | 800       | 900       | 950       |
+| ---- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| Hex  | `#eff6ff` | `#dbeafe` | `#bfdbfe` | `#93c5fd` | `#60a5fa` | `#3b82f6` | `#2563eb` | `#1d4ed8` | `#1e40af` | `#1e3a8a` | `#172554` |
+
 ### Unchanged
 
 - **neutral** 0–1200 (slate + navy-tinted deep end) — the deep 1000–1200 steps are the dark
@@ -88,19 +98,21 @@ amber ramp has no third dark step).
 
 ## Semantic re-aliasing highlights
 
-| Semantic token                                                                            | Today                     | Becomes                                              |
-| ----------------------------------------------------------------------------------------- | ------------------------- | ---------------------------------------------------- |
-| `background/primary` (+hover/active/subtle)                                               | `blue.600/700/800/100`    | `indigo.600/700/800/50`                              |
-| `background/brand` (+hover/subtle)                                                        | `amber.500/600/100`       | `coral.500/600/50`; add `brand-active` → `coral.700` |
-| `background/thinking`, `border/thinking`                                                  | `blue.100`, `blue.400`    | `violet.100`, `violet.400`                           |
-| `background/success` (+subtle)                                                            | `green.600/50`            | `emerald.600/50`                                     |
-| `text/primary`, `border/focused`, `icon/primary`                                          | `blue.600`                | `indigo.600`                                         |
-| `text/brand`, `icon/brand`                                                                | `amber.600` / `amber.500` | `coral.600` / `coral.500`                            |
-| `text/success`, `border/success`, `icon/success`                                          | `green.600`               | `emerald.600`                                        |
-| `focus-ring`                                                                              | `#2563eb66` (blue @ 40%)  | indigo @ 40% (`#4f46e566`)                           |
-| `surface/user`                                                                            | `blue.100`                | `indigo.50`                                          |
-| **New:** `background/warning` (+subtle), `text/warning`, `border/warning`, `icon/warning` | —                         | alias `amber.*`                                      |
-| **Dark mode `*-subtle` backgrounds**                                                      | reuse light steps         | alias the new `950` steps                            |
+| Semantic token                                                                            | Today                     | Becomes                                                                          |
+| ----------------------------------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------------- |
+| `background/primary` (+hover/active/subtle)                                               | `blue.600/700/800/100`    | `indigo.600/700/800/50`                                                          |
+| `background/brand` (+hover/subtle)                                                        | `amber.500/600/100`       | `coral.500/600/50`; add `brand-active` → `coral.700`                             |
+| `background/thinking`, `border/thinking`                                                  | `blue.100`, `blue.400`    | `violet.100`, `violet.400`                                                       |
+| `background/success` (+subtle)                                                            | `green.600/50`            | `emerald.600/50`                                                                 |
+| `text/primary`, `border/focused`, `icon/primary`                                          | `blue.600`                | `indigo.600`                                                                     |
+| `text/brand`, `icon/brand`                                                                | `amber.600` / `amber.500` | `coral.600` / `coral.500`                                                        |
+| `text/success`, `border/success`, `icon/success`                                          | `green.600`               | `emerald.600`                                                                    |
+| `focus-ring`                                                                              | `#2563eb66` (blue @ 40%)  | indigo @ 40% (`#4f46e566`)                                                       |
+| `surface/user`                                                                            | `blue.100`                | `indigo.50`                                                                      |
+| **New:** `background/warning` (+subtle), `text/warning`, `border/warning`, `icon/warning` | —                         | alias `amber.*`                                                                  |
+| **New:** `background/info` (+subtle), `text/info`, `border/info`, `icon/info`             | —                         | alias `blue.*` — same shape as `success`/`warning` (no hover/active)             |
+| **New:** `background/ai` (+subtle), `text/ai`, `border/ai`, `icon/ai`                     | —                         | alias `violet.*` — additive to the existing `thinking` tokens, not a replacement |
+| **Dark mode `*-subtle` backgrounds**                                                      | reuse light steps         | alias the new `950` steps                                                        |
 
 ## Impact on code (do not change until Figma + sync are done)
 
@@ -124,6 +136,17 @@ amber ramp has no third dark step).
 
 - **Coral vs terracotta:** proposed coral anchors on `#f97316`; the softer Claude-like
   alternative anchors on `#d97757`. Decision: trying coral first (2026-07-05).
-- Should `blue` survive as an `info` ramp, or is indigo+violet enough? (Proposal: remove.)
+- ~~Should `blue` survive as an `info` ramp, or is indigo+violet enough? (Proposal: remove.)~~
+  **Resolved (2026-07-09): kept.** Revived as a full `info` intent (`background`/`text`/`border`/`icon`,
+  same shape as `success`/`warning` — no hover/active) — matches Atlassian/Polaris/Carbon/Fluent,
+  all of which keep a semantic tone distinct from primary for neutral/informational messaging.
 - Does `warning` become a full component intent (Button/Badge/Chip) or semantic-only for now?
+  Still semantic-only — `info` follows the same precedent (2026-07-09): semantic tokens land
+  first, component-intent promotion (Button/Badge/Chip unions) is a separate later decision.
 - Cover-page stats in Figma ("186 Tokens") are already stale — update after the overhaul.
+- **AI moments beyond thinking (2026-07-09):** `background/thinking` and `border/thinking`
+  already existed (aliased to violet). Added `background/ai` (+subtle), `text/ai`, `border/ai`,
+  `icon/ai` as a general AI-accent intent (assistant labels, "AI" badges, generated-content
+  indicators) — distinct from the streaming-specific `thinking` tokens, both alias `violet.*`.
+  Not yet in scope: role-based chat surface tokens (user vs. assistant bubble background),
+  exposing the full neutral scale through `MoleculeUITheme`, and Vue theme-consumption parity.

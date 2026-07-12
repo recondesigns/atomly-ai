@@ -178,15 +178,11 @@ Components are named `AlertIcon`, `CloseIcon`, etc. (noun + Icon suffix). SVG so
 
 ## Components
 
-### Atoms
-
 - [x] Button — `solid`, `outline`, `ghost` variants; `primary`, `success`, `danger`, `brand`, `warning` intents; `sm`/`md`/`lg` sizes; loading state; React Aria keyboard/press handling; light + dark theme support
 - [x] Badge — `filled` variant; `neutral`, `primary`, `success`, `danger`, `brand`, `warning` intents; `sm`/`md`/`lg` sizes; light + dark theme support
 - [x] Chip — `filled`, `outlined`, `ghost` variants; `neutral`, `primary`, `success`, `danger`, `warning` intents; `sm`/`md`/`lg` sizes; disabled state; token-backed colors from Token Studio; light + dark theme support
-
-### Molecules
-
-- [x] ButtonGroup — horizontal group wrapper for Button atoms
+- [ ] StatusDot — code implementation removed, restarting from scratch. Target shape unchanged: `neutral`/`primary`/`success`/`danger`/`warning` intents; `sm`/`md`/`lg` sizes; optional `breathing`/`tool-calling` animations (Figma component library, node 88:104). Figma-side work (component + variant descriptions, designer/developer documentation frames, and the new `color/background/{intent}-alpha-20/-40` semantic tokens in the Design Tokens file) remains valid and is not being redone.
+- [x] ButtonGroup — horizontal group wrapper for Button
 
 ### Planned
 
